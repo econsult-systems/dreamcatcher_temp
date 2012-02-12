@@ -105,6 +105,40 @@ public class XMLManager {
         }
         return tElements;
     }
+      public ArrayList getAllSceneItems() throws ProjectSettingsException {
+        //Get all the tagged items as an array of tagged elements
+        ArrayList<SceneElement> tElements = new ArrayList<SceneElement>();
+        NodeList nodelist = null;
+        NodeList nodesOfInterest;
+        NodeList nodeOfInterest;
+        if (currentProjectTagPath.equals("")) {
+            throw new ProjectSettingsException("The file containing project setting could not be found");
+        } else {
+            getDocument(getCurrentTagPath());
+            NodeList elementById = dom.getDocumentElement().getElementsByTagName(getSceneTag());
+            if (elementById.getLength() > 0) {
+                Node node = elementById.item(0);
+                if (node.getNodeType() == Node.ELEMENT_NODE) {
+                    nodesOfInterest = node.getChildNodes();
+                    for (int j = 1; j < nodesOfInterest.getLength(); j++) {
+                
+                        
+                        if (nodesOfInterest.item(j).hasChildNodes()) {
+                            nodeOfInterest = nodesOfInterest.item(j).getChildNodes();
+
+                            SceneElement ti = new SceneElement(nodeOfInterest.item(3).getTextContent());
+                            
+                            ti.setSceneType(nodeOfInterest.item(4).getNodeValue());
+                            //ti.setSceneType(nodeOfInterest.item(4).getTextContent());
+                            tElements.add(ti);
+                        }
+                    }
+
+                }
+            }
+        }
+        return tElements;
+    }
 
     public void createSkeleton(String path, String pname, String desc, String OPath, String CPath) throws ProjectSettingsException {
         createDocument();

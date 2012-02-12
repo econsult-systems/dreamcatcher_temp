@@ -13,12 +13,14 @@ import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.Collections;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.DefaultListModel;
 import javax.swing.JTextPane;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.DefaultHighlighter;
 import javax.swing.text.Document;
 import javax.swing.text.Highlighter;
 import javax.swing.text.JTextComponent;
+import javax.swing.text.Style;
 import javax.swing.text.StyledDocument;
 import org.dreamcatcher.breakdown.BreakdownTopComponent;
 import org.dreamcatcher.util.APIObject;
@@ -50,7 +52,7 @@ preferredID = "ScriptViewerTopComponent")
 public final class ScriptViewerTopComponent extends TopComponent {
 
     private final InstanceContent content = new InstanceContent();
-    public String Script = "";
+    public String Script = "", projectName="";
     String[] initStyles = {"bold", "italic", "bold", "small", "large",
         "regular", "button", "regular", "icon",
         "regular"
@@ -139,7 +141,8 @@ public final class ScriptViewerTopComponent extends TopComponent {
         
         jButton1.setEnabled(false);
         jButton2.setEnabled(false);
-
+        
+        projectName=name;
     }
 
     public void open(String script, int scenes, String name, ArrayList SceneContent) throws ScriptLoadError, TagHighlightException {
@@ -196,6 +199,15 @@ public final class ScriptViewerTopComponent extends TopComponent {
         jPanel2 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextPane2 = new javax.swing.JTextPane();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList();
+        jLabel1 = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jList2 = new javax.swing.JList();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jList3 = new javax.swing.JList();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         org.openide.awt.Mnemonics.setLocalizedText(Actor, org.openide.util.NbBundle.getMessage(ScriptViewerTopComponent.class, "ScriptViewerTopComponent.Actor.text")); // NOI18N
         Actor.addActionListener(new java.awt.event.ActionListener() {
@@ -438,20 +450,47 @@ public final class ScriptViewerTopComponent extends TopComponent {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 649, Short.MAX_VALUE)
-            .addComponent(jToolBar1, javax.swing.GroupLayout.DEFAULT_SIZE, 649, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 839, Short.MAX_VALUE)
+            .addComponent(jToolBar1, javax.swing.GroupLayout.DEFAULT_SIZE, 839, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 286, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 383, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab(org.openide.util.NbBundle.getMessage(ScriptViewerTopComponent.class, "ScriptViewerTopComponent.jPanel1.TabConstraints.tabTitle"), jPanel1); // NOI18N
 
         jScrollPane2.setViewportView(jTextPane2);
+
+        jList1.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane3.setViewportView(jList1);
+
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel1, org.openide.util.NbBundle.getMessage(ScriptViewerTopComponent.class, "ScriptViewerTopComponent.jLabel1.text")); // NOI18N
+
+        jList2.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane4.setViewportView(jList2);
+
+        jList3.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane5.setViewportView(jList3);
+
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel2, org.openide.util.NbBundle.getMessage(ScriptViewerTopComponent.class, "ScriptViewerTopComponent.jLabel2.text")); // NOI18N
+
+        org.openide.awt.Mnemonics.setLocalizedText(jLabel3, org.openide.util.NbBundle.getMessage(ScriptViewerTopComponent.class, "ScriptViewerTopComponent.jLabel3.text")); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -459,14 +498,42 @@ public final class ScriptViewerTopComponent extends TopComponent {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 625, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 815, Short.MAX_VALUE)
+                        .addContainerGap())
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addGap(177, 177, 177))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 312, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(12, 12, 12))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 322, Short.MAX_VALUE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
+                    .addComponent(jScrollPane4, 0, 0, Short.MAX_VALUE)
+                    .addComponent(jScrollPane5, 0, 0, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 228, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab(org.openide.util.NbBundle.getMessage(ScriptViewerTopComponent.class, "ScriptViewerTopComponent.jPanel2.TabConstraints.tabTitle"), jPanel2); // NOI18N
@@ -475,11 +542,11 @@ public final class ScriptViewerTopComponent extends TopComponent {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 657, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 851, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 372, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 475, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -1023,11 +1090,20 @@ private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GE
     private javax.swing.JMenuItem greenery;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JList jList1;
+    private javax.swing.JList jList2;
+    private javax.swing.JList jList3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JToolBar.Separator jSeparator1;
     private javax.swing.JToolBar.Separator jSeparator2;
     private javax.swing.JToolBar.Separator jSeparator4;
@@ -1066,7 +1142,7 @@ private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GE
         APIObject obj2 = new APIObject(SceneContent);
         // content.set(Collections.singleton(obj), null);
         content.set(Collections.singleton(obj2), null);
-
+        breakdownReport(projectName);
     }
 
     @Override
@@ -1220,4 +1296,57 @@ private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GE
             System.out.println(e.getMessage());
         }
     }
+    private void breakdownReport(String projectName){
+       DefaultListModel listModel= new DefaultListModel();
+        String heading = projectName;
+        String Headings="";
+        String Characters="Character";
+        String Locations="Location";
+         String Props="Props";
+        
+         try{
+       
+        ArrayList<SceneElement> sceneElements = new ArrayList<SceneElement>();
+          jList1.setModel(listModel);
+         
+        sceneElements= XMLManager.getInstance().getAllSceneItems();
+        for(int i=0; i<sceneElements.size(); i++){
+        populateSceneBreakdown(jTextPane1, sceneElements.get(i).getSceneName(), Color.GRAY);
+        String sceneHeading =sceneElements.get(i).getSceneName();
+        Headings= Headings+sceneElements.get(i).getSceneType()+" - "+sceneElements.get(i).getSceneName()
+                
+                +"\n"
+                +Characters
+                 +"\n"
+                +Locations
+                 +"\n"
+                +Props;
+        
+        int modelsize = jList1.getModel().getSize();
+               
+        listModel.add(modelsize, sceneHeading);
+                
+        }
+        }catch (Exception e) {
+            //throw new TagHighlightException("Text highlight error: " + e.getMessage());
+            System.out.println(e.getMessage());
+        }
+         
+         //XMLManager.getInstance().
+        
+        
+        StyledDocument doc = jTextPane2.getStyledDocument();
+        Style style = doc.addStyle("table", null);
+        //StyleConstants.setComponent(style, getTableComponent());
+
+        try {
+            doc.insertString(doc.getLength(), heading+"\n\n"+Headings
+                   , doc.getStyle("table"));
+         }
+        catch (BadLocationException ex) {
+        }
+    
+    
+    
+}
 }
