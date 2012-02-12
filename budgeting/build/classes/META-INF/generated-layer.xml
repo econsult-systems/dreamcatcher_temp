@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.2//EN"
+                            "http://www.netbeans.org/dtds/filesystem-1_2.dtd">
+<filesystem>
+    <folder name="Actions">
+        <folder name="File">
+            <file name="org-dreamcatcher-budget-budgetTopComponentMenu.instance">
+                <!--org.dreamcatcher.budget.ViewBudget-->
+                <attr
+                    bundlevalue="org.dreamcatcher.budget.Bundle#CTL_budgetTopComponentMenu" name="displayName"/>
+                <attr
+                    methodvalue="org.openide.awt.Actions.alwaysEnabled" name="instanceCreate"/>
+                <attr name="delegate" newvalue="org.dreamcatcher.budget.ViewBudget"/>
+                <attr name="iconBase" stringvalue="org/dreamcatcher/budget/budget.png"/>
+                <attr boolvalue="false" name="noIconInMenu"/>
+            </file>
+        </folder>
+        <folder name="Window">
+            <file name="org-dreamcatcher-budget-budgetTopComponent.instance">
+                <!--org.dreamcatcher.budget.budgetTopComponent-->
+                <attr
+                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
+                <attr name="component" newvalue="org.dreamcatcher.budget.budgetTopComponent"/>
+                <attr name="preferredID" stringvalue="budgetTopComponent"/>
+                <attr
+                    bundlevalue="org.dreamcatcher.budget.Bundle#CTL_budgetAction" name="displayName"/>
+                <attr name="iconBase" stringvalue="org/dreamcatcher/budget/budget.png"/>
+            </file>
+        </folder>
+    </folder>
+    <folder name="Menu">
+        <folder name="Project">
+            <file name="org-dreamcatcher-budget-budgetTopComponentMenu.shadow">
+                <!--org.dreamcatcher.budget.ViewBudget-->
+                <attr name="originalFile" stringvalue="Actions/File/org-dreamcatcher-budget-budgetTopComponentMenu.instance"/>
+                <attr intvalue="300" name="position"/>
+            </file>
+            <file name="org-dreamcatcher-budget-budgetTopComponentMenu-separatorAfter.instance">
+                <!--org.dreamcatcher.budget.ViewBudget-->
+                <attr name="instanceCreate" newvalue="javax.swing.JSeparator"/>
+                <attr intvalue="350" name="position"/>
+            </file>
+        </folder>
+        <folder name="Window">
+            <file name="org-dreamcatcher-budget-budgetTopComponent.shadow">
+                <!--org.dreamcatcher.budget.budgetTopComponent-->
+                <attr name="originalFile" stringvalue="Actions/Window/org-dreamcatcher-budget-budgetTopComponent.instance"/>
+            </file>
+        </folder>
+    </folder>
+    <folder name="Toolbars">
+        <folder name="File">
+            <file name="org-dreamcatcher-budget-budgetTopComponentMenu.shadow">
+                <!--org.dreamcatcher.budget.ViewBudget-->
+                <attr name="originalFile" stringvalue="Actions/File/org-dreamcatcher-budget-budgetTopComponentMenu.instance"/>
+                <attr intvalue="400" name="position"/>
+            </file>
+        </folder>
+    </folder>
+    <folder name="Windows2">
+        <folder name="Components">
+            <file name="budgetTopComponent.settings">
+                <!--org.dreamcatcher.budget.budgetTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="org.dreamcatcher.budget.budgetTopComponent"/>
+</settings>
+]]></file>
+        </folder>
+        <folder name="Modes">
+            <folder name="editor">
+                <file name="budgetTopComponent.wstcref">
+                    <!--org.dreamcatcher.budget.budgetTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="budgetTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+            </folder>
+        </folder>
+    </folder>
+    <folder name="xml">
+        <folder name="entities">
+            <folder name="org_dreamcatcher_budget">
+                <file name="budget" url="nbres:/org/netbeans/modules/settings/resources/properties-1_0.dtd">
+                    <!--org.dreamcatcher.budget.budgetTopComponent-->
+                    <attr name="hint.originalPublicID" stringvalue="-//org.dreamcatcher.budget//budget//EN"/>
+                </file>
+            </folder>
+        </folder>
+        <folder name="memory">
+            <folder name="org">
+                <folder name="dreamcatcher">
+                    <folder name="budget">
+                        <file name="budgetTopComponent">
+                            <!--org.dreamcatcher.budget.budgetTopComponent-->
+                            <attr name="settings.providerPath" stringvalue="xml/lookups//org_dreamcatcher_budget/budget.instance"/>
+                        </file>
+                    </folder>
+                </folder>
+            </folder>
+        </folder>
+        <folder name="lookups">
+            <folder name="org_dreamcatcher_budget">
+                <file name="budget.instance">
+                    <!--org.dreamcatcher.budget.budgetTopComponent-->
+                    <attr
+                        methodvalue="org.netbeans.api.settings.Factory.create" name="instanceCreate"/>
+                    <attr
+                        methodvalue="org.netbeans.api.settings.Factory.properties" name="settings.convertor"/>
+                    <attr name="settings.instanceClass" stringvalue="org.dreamcatcher.budget.budgetTopComponent"/>
+                    <attr name="settings.instanceOf" stringvalue="org.dreamcatcher.budget.budgetTopComponent"/>
+                    <attr boolvalue="true" name="xmlproperties.preventStoring"/>
+                </file>
+            </folder>
+        </folder>
+    </folder>
+</filesystem>

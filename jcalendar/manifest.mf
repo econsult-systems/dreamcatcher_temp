@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+OpenIDE-Module: org.gabwell.jcalender
+OpenIDE-Module-Localizing-Bundle: org/gabwell/jcalender/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.0
+

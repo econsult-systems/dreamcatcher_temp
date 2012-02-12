@@ -1,0 +1,409 @@
+-------------------------------------------------------------------------------
+>Log Session: Wednesday, February 8, 2012 7:28:36 PM EAT
+>System Info: 
+  Product Version         = Dreamcatcher
+  Operating System        = Linux version 3.0.0-15-generic-pae running on i386
+  Java; VM; Vendor        = 1.7.0_147-icedtea; OpenJDK Server VM 21.0-b17; Oracle Corporation
+  Runtime                 = OpenJDK Runtime Environment 1.7.0_147-icedtea-b147
+  Java Home               = /usr/lib/jvm/java-7-openjdk-i386/jre
+  System Locale; Encoding = en_US (dreamcatcher); UTF-8
+  Home Directory          = /home/royrutto
+  Current Directory       = /home/royrutto/Desktop/work/dc/dreamcatcher
+  User Directory          = /home/royrutto/Desktop/work/dc/dreamcatcher/build/testuserdir
+  Installation            = /home/royrutto/Desktop/work/dc/dreamcatcher/build/cluster
+                            /home/royrutto/netbeans-7.0.1/ide
+                            /home/royrutto/netbeans-7.0.1/java
+                            /home/royrutto/netbeans-7.0.1/platform
+                            /home/royrutto/netbeans-7.0.1/platform
+  Boot & Ext. Classpath   = /usr/lib/jvm/java-7-openjdk-i386/jre/lib/resources.jar:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/rt.jar:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/jsse.jar:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/jce.jar:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/charsets.jar:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/netx.jar:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/plugin.jar:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/rhino.jar:/usr/lib/jvm/java-7-openjdk-i386/jre/classes:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/zipfs.jar:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/gnome-java-bridge.jar:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/pulse-java.jar:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/sunpkcs11.jar:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/sunjce_provider.jar:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/dnsns.jar:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/localedata.jar
+  Application Classpath   = /home/royrutto/netbeans-7.0.1/platform/lib/boot.jar:/home/royrutto/netbeans-7.0.1/platform/lib/org-openide-modules.jar:/home/royrutto/netbeans-7.0.1/platform/lib/org-openide-util-lookup.jar:/home/royrutto/netbeans-7.0.1/platform/lib/org-openide-util.jar:/home/royrutto/netbeans-7.0.1/platform/lib/locale/boot_ja.jar:/home/royrutto/netbeans-7.0.1/platform/lib/locale/boot_pt_BR.jar:/home/royrutto/netbeans-7.0.1/platform/lib/locale/boot_ru.jar:/home/royrutto/netbeans-7.0.1/platform/lib/locale/boot_zh_CN.jar:/home/royrutto/netbeans-7.0.1/platform/lib/locale/org-openide-modules_ja.jar:/home/royrutto/netbeans-7.0.1/platform/lib/locale/org-openide-modules_pt_BR.jar:/home/royrutto/netbeans-7.0.1/platform/lib/locale/org-openide-modules_ru.jar:/home/royrutto/netbeans-7.0.1/platform/lib/locale/org-openide-modules_zh_CN.jar:/home/royrutto/netbeans-7.0.1/platform/lib/locale/org-openide-util-lookup_ja.jar:/home/royrutto/netbeans-7.0.1/platform/lib/locale/org-openide-util-lookup_pt_BR.jar:/home/royrutto/netbeans-7.0.1/platform/lib/locale/org-openide-util-lookup_ru.jar:/home/royrutto/netbeans-7.0.1/platform/lib/locale/org-openide-util-lookup_zh_CN.jar:/home/royrutto/netbeans-7.0.1/platform/lib/locale/org-openide-util_ja.jar:/home/royrutto/netbeans-7.0.1/platform/lib/locale/org-openide-util_pt_BR.jar:/home/royrutto/netbeans-7.0.1/platform/lib/locale/org-openide-util_ru.jar:/home/royrutto/netbeans-7.0.1/platform/lib/locale/org-openide-util_zh_CN.jar:/usr/lib/jvm/java-7-openjdk-i386/lib/dt.jar:/usr/lib/jvm/java-7-openjdk-i386/lib/tools.jar
+  Startup Classpath       = /home/royrutto/netbeans-7.0.1/platform/core/core.jar:/home/royrutto/netbeans-7.0.1/platform/core/org-openide-filesystems.jar:/home/royrutto/netbeans-7.0.1/platform/core/locale/org-openide-filesystems_ru.jar:/home/royrutto/netbeans-7.0.1/platform/core/locale/core_pt_BR.jar:/home/royrutto/netbeans-7.0.1/platform/core/locale/org-openide-filesystems_zh_CN.jar:/home/royrutto/netbeans-7.0.1/platform/core/locale/core_ru.jar:/home/royrutto/netbeans-7.0.1/platform/core/locale/org-openide-filesystems_ja.jar:/home/royrutto/netbeans-7.0.1/platform/core/locale/core_zh_CN.jar:/home/royrutto/netbeans-7.0.1/platform/core/locale/org-openide-filesystems_pt_BR.jar:/home/royrutto/netbeans-7.0.1/platform/core/locale/core_ja.jar:/home/royrutto/Desktop/work/dc/dreamcatcher/build/cluster/core/locale/core_dreamcatcher.jar
+-------------------------------------------------------------------------------
+WARNING [org.netbeans.core.startup.NbEvents]: The extension /home/royrutto/Desktop/work/dc/dreamcatcher/build/cluster/modules/ext/commons-logging-1.1.1.jar may be multiply loaded by modules: [/home/royrutto/Desktop/work/dc/dreamcatcher/build/cluster/modules/org-dreamcatcher-logging.jar, /home/royrutto/Desktop/work/dc/dreamcatcher/build/cluster/modules/org-dreamcatcher-apachepdfbox.jar]; see: http://www.netbeans.org/download/dev/javadoc/org-openide-modules/org/openide/modules/doc-files/classpath.html#class-path
+WARNING [org.netbeans.core.startup.NbEvents]: The extension /home/royrutto/Desktop/work/dc/dreamcatcher/build/cluster/modules/ext/jempbox-1.6.0.jar may be multiply loaded by modules: [/home/royrutto/Desktop/work/dc/dreamcatcher/build/cluster/modules/org-dreamcatcher-jempbox.jar, /home/royrutto/Desktop/work/dc/dreamcatcher/build/cluster/modules/org-dreamcatcher-apachepdfbox.jar]; see: http://www.netbeans.org/download/dev/javadoc/org-openide-modules/org/openide/modules/doc-files/classpath.html#class-path
+WARNING [org.netbeans.core.startup.NbEvents]: The extension /home/royrutto/Desktop/work/dc/dreamcatcher/build/cluster/modules/ext/fontbox-1.6.0.jar may be multiply loaded by modules: [/home/royrutto/Desktop/work/dc/dreamcatcher/build/cluster/modules/org-dreamcatcher-font.jar, /home/royrutto/Desktop/work/dc/dreamcatcher/build/cluster/modules/org-dreamcatcher-apachepdfbox.jar]; see: http://www.netbeans.org/download/dev/javadoc/org-openide-modules/org/openide/modules/doc-files/classpath.html#class-path
+WARNING [org.netbeans.core.modules]: the modules [org.netbeans.modules.diff, org.netbeans.modules.editor.codetemplates, org.netbeans.modules.editor.indent.project, org.netbeans.modules.jumpto, org.netbeans.modules.options.editor, org.netbeans.modules.refactoring.api] use org.jdesktop.layout which is deprecated: Use javax.swing.GroupLayout instead. (In form editor: select Form ... in Inspector; change Layout Generation Style to Standard Java 6 code.)
+WARNING [org.netbeans.core.projects.cache]: Inefficient to include an empty layer in a module: jar:file:/home/royrutto/Desktop/work/dc/dreamcatcher/build/cluster/modules/org-dreamcatcher-util.jar!/org/dreamcatcher/util/layer.xml
+WARNING [org.netbeans.core.projects.cache]: Inefficient to include an empty layer in a module: jar:file:/home/royrutto/Desktop/work/dc/dreamcatcher/build/cluster/modules/org-dreamcatcher-selection.jar!/org/dreamcatcher/selection/layer.xml
+WARNING [org.netbeans.core.projects.cache]: Inefficient to include an empty layer in a module: jar:file:/home/royrutto/Desktop/work/dc/dreamcatcher/build/cluster/modules/org-dreamcatcher-editorsuite.jar!/org/dreamcatcher/editorsuite/layer.xml
+WARNING [org.openide.filesystems.Ordering]: Not all children in Services/MIMEResolver/ marked with the position attribute: [ScriptResolver.xml, editorResolver.xml, EditorResolver.xml], but some are: [instance-mime-resolver.xml, Diff.xml, org-netbeans-modules-editor-settings-storage-mime-resolver.xml, org-netbeans-modules-editor-codetemplates-mime-resolver.xml]
+INFO [org.netbeans.modules.openide.filesystems.declmime.DefaultParser]
+While parsing: MultiFileObject@a6eba7[Services/MIMEResolver/ScriptResolver.xml]
+While parsing: MultiFileObject@a6eba7[Services/MIMEResolver/ScriptResolver.xml]
+Caused: java.io.FileNotFoundException: jar:file:/home/royrutto/Desktop/work/dc/dreamcatcher/build/cluster/modules/org-dreamcatcher-main.jar!/org/dreamcatcher/main/ScriptResolver.xml
+	at org.netbeans.JarClassLoader$NbJarURLConnection.connect(JarClassLoader.java:944)
+	at org.netbeans.JarClassLoader$NbJarURLConnection.getInputStream(JarClassLoader.java:980)
+	at org.netbeans.core.startup.layers.BinaryFS$BFSFile.getInputStream(BinaryFS.java:759)
+Caused: java.io.FileNotFoundException
+	at org.netbeans.core.startup.layers.BinaryFS$BFSFile.getInputStream(BinaryFS.java:763)
+	at org.openide.filesystems.MultiFileObject.getInputStream(MultiFileObject.java:645)
+	at org.openide.filesystems.MultiFileObject.getInputStream(MultiFileObject.java:645)
+[catch] at org.netbeans.modules.openide.filesystems.declmime.DefaultParser.parse(DefaultParser.java:134)
+	at org.netbeans.modules.openide.filesystems.declmime.DefaultParser.parse(DefaultParser.java:188)
+	at org.netbeans.modules.openide.filesystems.declmime.MIMEResolverImpl$Impl.parseDesc(MIMEResolverImpl.java:343)
+	at org.netbeans.modules.openide.filesystems.declmime.MIMEResolverImpl$Impl.init(MIMEResolverImpl.java:334)
+	at org.netbeans.modules.openide.filesystems.declmime.MIMEResolverImpl$Impl.findMIMEType(MIMEResolverImpl.java:308)
+	at org.openide.filesystems.MIMESupport$CachedFileObject.resolveMIME(MIMESupport.java:375)
+	at org.openide.filesystems.MIMESupport$CachedFileObject.getMIMEType(MIMESupport.java:316)
+	at org.openide.filesystems.MIMESupport.findMIMEType(MIMESupport.java:137)
+	at org.openide.filesystems.FileUtil.getMIMEType(FileUtil.java:1466)
+	at org.openide.filesystems.FileObject.getMIMEType(FileObject.java:571)
+	at org.openide.filesystems.MultiFileObject.getMIMEType(MultiFileObject.java:628)
+	at org.openide.filesystems.MultiFileObject.getMIMEType(MultiFileObject.java:628)
+	at org.openide.loaders.DataLoaderPool.allLoaders(DataLoaderPool.java:332)
+	at org.openide.loaders.DataLoaderPool.findDataObject(DataLoaderPool.java:530)
+	at org.openide.loaders.FolderList.createBoth(FolderList.java:799)
+	at org.openide.loaders.FolderList.getObjects(FolderList.java:595)
+	at org.openide.loaders.FolderList.access$200(FolderList.java:77)
+	at org.openide.loaders.FolderList$ListTask.computeResult(FolderList.java:994)
+	at org.openide.loaders.FolderList$ListTask.run(FolderList.java:970)
+	at org.openide.util.RequestProcessor$Task.run(RequestProcessor.java:1424)
+	at org.openide.util.RequestProcessor$Processor.doEvaluate(RequestProcessor.java:2012)
+	at org.openide.util.RequestProcessor$Task.waitFinished(RequestProcessor.java:1659)
+	at org.openide.loaders.FolderInstance.waitFinished(FolderInstance.java:333)
+	at org.openide.loaders.FolderInstance.instanceCreate(FolderInstance.java:282)
+	at org.openide.loaders.FolderLookup.instanceForCookie(FolderLookup.java:222)
+	at org.openide.loaders.FolderInstance$HoldInstance.instanceCreate(FolderInstance.java:1138)
+	at org.openide.loaders.FolderLookup.createInstance(FolderLookup.java:166)
+	at org.openide.loaders.FolderInstance.defaultProcessObjectsFinal(FolderInstance.java:873)
+	at org.openide.loaders.FolderInstance$1R.run(FolderInstance.java:738)
+	at org.openide.loaders.FolderLookup.postCreationTask(FolderLookup.java:260)
+	at org.openide.loaders.FolderInstance.processObjects(FolderInstance.java:758)
+	at org.openide.loaders.FolderInstance$Listener.finished(FolderInstance.java:1040)
+	at org.openide.loaders.FolderList.createBoth(FolderList.java:910)
+	at org.openide.loaders.FolderList.getObjects(FolderList.java:595)
+	at org.openide.loaders.FolderList.access$200(FolderList.java:77)
+	at org.openide.loaders.FolderList$ListTask.computeResult(FolderList.java:994)
+	at org.openide.loaders.FolderList$ListTask.run(FolderList.java:970)
+	at org.openide.util.RequestProcessor$Task.run(RequestProcessor.java:1424)
+	at org.openide.util.RequestProcessor$Processor.run(RequestProcessor.java:1968)
+ALL [null]: While parsing: MultiFileObject@a6eba7[Services/MIMEResolver/ScriptResolver.xml]
+INFO [org.netbeans.modules.openide.filesystems.declmime.DefaultParser]
+While parsing: MultiFileObject@1465143[Services/MIMEResolver/editorResolver.xml]
+While parsing: MultiFileObject@1465143[Services/MIMEResolver/editorResolver.xml]
+Caused: java.io.FileNotFoundException: jar:file:/home/royrutto/Desktop/work/dc/dreamcatcher/build/cluster/modules/org-dreamcatcher-main.jar!/org/dreamcatcher/main/editorResolver.xml
+	at org.netbeans.JarClassLoader$NbJarURLConnection.connect(JarClassLoader.java:944)
+	at org.netbeans.JarClassLoader$NbJarURLConnection.getInputStream(JarClassLoader.java:980)
+	at org.netbeans.core.startup.layers.BinaryFS$BFSFile.getInputStream(BinaryFS.java:759)
+Caused: java.io.FileNotFoundException
+	at org.netbeans.core.startup.layers.BinaryFS$BFSFile.getInputStream(BinaryFS.java:763)
+	at org.openide.filesystems.MultiFileObject.getInputStream(MultiFileObject.java:645)
+	at org.openide.filesystems.MultiFileObject.getInputStream(MultiFileObject.java:645)
+[catch] at org.netbeans.modules.openide.filesystems.declmime.DefaultParser.parse(DefaultParser.java:134)
+	at org.netbeans.modules.openide.filesystems.declmime.DefaultParser.parse(DefaultParser.java:188)
+	at org.netbeans.modules.openide.filesystems.declmime.MIMEResolverImpl$Impl.parseDesc(MIMEResolverImpl.java:343)
+	at org.netbeans.modules.openide.filesystems.declmime.MIMEResolverImpl$Impl.init(MIMEResolverImpl.java:334)
+	at org.netbeans.modules.openide.filesystems.declmime.MIMEResolverImpl$Impl.findMIMEType(MIMEResolverImpl.java:308)
+	at org.openide.filesystems.MIMESupport$CachedFileObject.resolveMIME(MIMESupport.java:375)
+	at org.openide.filesystems.MIMESupport$CachedFileObject.getMIMEType(MIMESupport.java:316)
+	at org.openide.filesystems.MIMESupport.findMIMEType(MIMESupport.java:137)
+	at org.openide.filesystems.FileUtil.getMIMEType(FileUtil.java:1466)
+	at org.openide.filesystems.FileObject.getMIMEType(FileObject.java:571)
+	at org.openide.filesystems.MultiFileObject.getMIMEType(MultiFileObject.java:628)
+	at org.openide.filesystems.MultiFileObject.getMIMEType(MultiFileObject.java:628)
+	at org.openide.loaders.DataLoaderPool.allLoaders(DataLoaderPool.java:332)
+	at org.openide.loaders.DataLoaderPool.findDataObject(DataLoaderPool.java:530)
+	at org.openide.loaders.FolderList.createBoth(FolderList.java:799)
+	at org.openide.loaders.FolderList.getObjects(FolderList.java:595)
+	at org.openide.loaders.FolderList.access$200(FolderList.java:77)
+	at org.openide.loaders.FolderList$ListTask.computeResult(FolderList.java:994)
+	at org.openide.loaders.FolderList$ListTask.run(FolderList.java:970)
+	at org.openide.util.RequestProcessor$Task.run(RequestProcessor.java:1424)
+	at org.openide.util.RequestProcessor$Processor.doEvaluate(RequestProcessor.java:2012)
+	at org.openide.util.RequestProcessor$Task.waitFinished(RequestProcessor.java:1659)
+	at org.openide.loaders.FolderInstance.waitFinished(FolderInstance.java:333)
+	at org.openide.loaders.FolderInstance.instanceCreate(FolderInstance.java:282)
+	at org.openide.loaders.FolderLookup.instanceForCookie(FolderLookup.java:222)
+	at org.openide.loaders.FolderInstance$HoldInstance.instanceCreate(FolderInstance.java:1138)
+	at org.openide.loaders.FolderLookup.createInstance(FolderLookup.java:166)
+	at org.openide.loaders.FolderInstance.defaultProcessObjectsFinal(FolderInstance.java:873)
+	at org.openide.loaders.FolderInstance$1R.run(FolderInstance.java:738)
+	at org.openide.loaders.FolderLookup.postCreationTask(FolderLookup.java:260)
+	at org.openide.loaders.FolderInstance.processObjects(FolderInstance.java:758)
+	at org.openide.loaders.FolderInstance$Listener.finished(FolderInstance.java:1040)
+	at org.openide.loaders.FolderList.createBoth(FolderList.java:910)
+	at org.openide.loaders.FolderList.getObjects(FolderList.java:595)
+	at org.openide.loaders.FolderList.access$200(FolderList.java:77)
+	at org.openide.loaders.FolderList$ListTask.computeResult(FolderList.java:994)
+	at org.openide.loaders.FolderList$ListTask.run(FolderList.java:970)
+	at org.openide.util.RequestProcessor$Task.run(RequestProcessor.java:1424)
+	at org.openide.util.RequestProcessor$Processor.run(RequestProcessor.java:1968)
+ALL [null]: While parsing: MultiFileObject@1465143[Services/MIMEResolver/editorResolver.xml]
+WARNING [org.openide.filesystems.Ordering]: Not all children in Services/MIMEResolver/ marked with the position attribute: [EditorResolver.xml, ScriptResolver.xml, editorResolver.xml], but some are: [instance-mime-resolver.xml, Diff.xml, org-netbeans-modules-editor-settings-storage-mime-resolver.xml, org-netbeans-modules-editor-codetemplates-mime-resolver.xml]
+INFO [org.openide.loaders.XMLDataObject]: I/O exception while opening MultiFileObject@a6eba7[Services/MIMEResolver/ScriptResolver.xml]
+java.io.FileNotFoundException: jar:file:/home/royrutto/Desktop/work/dc/dreamcatcher/build/cluster/modules/org-dreamcatcher-main.jar!/org/dreamcatcher/main/ScriptResolver.xml
+	at org.netbeans.JarClassLoader$NbJarURLConnection.connect(JarClassLoader.java:944)
+	at org.netbeans.JarClassLoader$NbJarURLConnection.getInputStream(JarClassLoader.java:980)
+	at org.netbeans.core.startup.layers.BinaryFS$BFSFile.getInputStream(BinaryFS.java:759)
+Caused: java.io.FileNotFoundException
+	at org.netbeans.core.startup.layers.BinaryFS$BFSFile.getInputStream(BinaryFS.java:763)
+	at org.openide.filesystems.MultiFileObject.getInputStream(MultiFileObject.java:645)
+	at org.openide.filesystems.MultiFileObject.getInputStream(MultiFileObject.java:645)
+[catch] at org.openide.loaders.XMLDataObjectInfoParser.waitFinished(XMLDataObjectInfoParser.java:237)
+	at org.openide.loaders.XMLDataObjectInfoParser.waitFinished(XMLDataObjectInfoParser.java:187)
+	at org.openide.loaders.XMLDataObject.getCookie(XMLDataObject.java:326)
+	at org.openide.loaders.FolderInstance.acceptDataObject(FolderInstance.java:422)
+	at org.openide.loaders.FolderInstance.defaultProcessObjects(FolderInstance.java:783)
+	at org.openide.loaders.FolderInstance.access$000(FolderInstance.java:104)
+	at org.openide.loaders.FolderInstance$1R.init(FolderInstance.java:701)
+	at org.openide.loaders.FolderInstance$1R.run(FolderInstance.java:736)
+	at org.openide.loaders.FolderLookup.postCreationTask(FolderLookup.java:260)
+	at org.openide.loaders.FolderInstance.processObjects(FolderInstance.java:758)
+	at org.openide.loaders.FolderInstance$Listener.finished(FolderInstance.java:1040)
+	at org.openide.loaders.FolderList.createBoth(FolderList.java:910)
+	at org.openide.loaders.FolderList.getObjects(FolderList.java:595)
+	at org.openide.loaders.FolderList.access$200(FolderList.java:77)
+	at org.openide.loaders.FolderList$ListTask.computeResult(FolderList.java:994)
+	at org.openide.loaders.FolderList$ListTask.run(FolderList.java:970)
+	at org.openide.util.RequestProcessor$Task.run(RequestProcessor.java:1424)
+	at org.openide.util.RequestProcessor$Processor.doEvaluate(RequestProcessor.java:2012)
+	at org.openide.util.RequestProcessor$Task.waitFinished(RequestProcessor.java:1659)
+	at org.openide.loaders.FolderInstance.waitFinished(FolderInstance.java:333)
+	at org.openide.loaders.FolderInstance.instanceCreate(FolderInstance.java:282)
+	at org.openide.loaders.FolderLookup.instanceForCookie(FolderLookup.java:222)
+	at org.openide.loaders.FolderInstance$HoldInstance.instanceCreate(FolderInstance.java:1138)
+	at org.openide.loaders.FolderLookup.createInstance(FolderLookup.java:166)
+	at org.openide.loaders.FolderInstance.defaultProcessObjectsFinal(FolderInstance.java:873)
+	at org.openide.loaders.FolderInstance$1R.run(FolderInstance.java:738)
+	at org.openide.loaders.FolderLookup.postCreationTask(FolderLookup.java:260)
+	at org.openide.loaders.FolderInstance.processObjects(FolderInstance.java:758)
+	at org.openide.loaders.FolderInstance$Listener.finished(FolderInstance.java:1040)
+	at org.openide.loaders.FolderList.createBoth(FolderList.java:910)
+	at org.openide.loaders.FolderList.getObjects(FolderList.java:595)
+	at org.openide.loaders.FolderList.access$200(FolderList.java:77)
+	at org.openide.loaders.FolderList$ListTask.computeResult(FolderList.java:994)
+	at org.openide.loaders.FolderList$ListTask.run(FolderList.java:970)
+	at org.openide.util.RequestProcessor$Task.run(RequestProcessor.java:1424)
+	at org.openide.util.RequestProcessor$Processor.run(RequestProcessor.java:1968)
+INFO [org.openide.loaders.XMLDataObject]: I/O exception while opening MultiFileObject@1465143[Services/MIMEResolver/editorResolver.xml]
+java.io.FileNotFoundException: jar:file:/home/royrutto/Desktop/work/dc/dreamcatcher/build/cluster/modules/org-dreamcatcher-main.jar!/org/dreamcatcher/main/editorResolver.xml
+	at org.netbeans.JarClassLoader$NbJarURLConnection.connect(JarClassLoader.java:944)
+	at org.netbeans.JarClassLoader$NbJarURLConnection.getInputStream(JarClassLoader.java:980)
+	at org.netbeans.core.startup.layers.BinaryFS$BFSFile.getInputStream(BinaryFS.java:759)
+Caused: java.io.FileNotFoundException
+	at org.netbeans.core.startup.layers.BinaryFS$BFSFile.getInputStream(BinaryFS.java:763)
+	at org.openide.filesystems.MultiFileObject.getInputStream(MultiFileObject.java:645)
+	at org.openide.filesystems.MultiFileObject.getInputStream(MultiFileObject.java:645)
+[catch] at org.openide.loaders.XMLDataObjectInfoParser.waitFinished(XMLDataObjectInfoParser.java:237)
+	at org.openide.loaders.XMLDataObjectInfoParser.waitFinished(XMLDataObjectInfoParser.java:187)
+	at org.openide.loaders.XMLDataObject.getCookie(XMLDataObject.java:326)
+	at org.openide.loaders.FolderInstance.acceptDataObject(FolderInstance.java:422)
+	at org.openide.loaders.FolderInstance.defaultProcessObjects(FolderInstance.java:783)
+	at org.openide.loaders.FolderInstance.access$000(FolderInstance.java:104)
+	at org.openide.loaders.FolderInstance$1R.init(FolderInstance.java:701)
+	at org.openide.loaders.FolderInstance$1R.run(FolderInstance.java:736)
+	at org.openide.loaders.FolderLookup.postCreationTask(FolderLookup.java:260)
+	at org.openide.loaders.FolderInstance.processObjects(FolderInstance.java:758)
+	at org.openide.loaders.FolderInstance$Listener.finished(FolderInstance.java:1040)
+	at org.openide.loaders.FolderList.createBoth(FolderList.java:910)
+	at org.openide.loaders.FolderList.getObjects(FolderList.java:595)
+	at org.openide.loaders.FolderList.access$200(FolderList.java:77)
+	at org.openide.loaders.FolderList$ListTask.computeResult(FolderList.java:994)
+	at org.openide.loaders.FolderList$ListTask.run(FolderList.java:970)
+	at org.openide.util.RequestProcessor$Task.run(RequestProcessor.java:1424)
+	at org.openide.util.RequestProcessor$Processor.doEvaluate(RequestProcessor.java:2012)
+	at org.openide.util.RequestProcessor$Task.waitFinished(RequestProcessor.java:1659)
+	at org.openide.loaders.FolderInstance.waitFinished(FolderInstance.java:333)
+	at org.openide.loaders.FolderInstance.instanceCreate(FolderInstance.java:282)
+	at org.openide.loaders.FolderLookup.instanceForCookie(FolderLookup.java:222)
+	at org.openide.loaders.FolderInstance$HoldInstance.instanceCreate(FolderInstance.java:1138)
+	at org.openide.loaders.FolderLookup.createInstance(FolderLookup.java:166)
+	at org.openide.loaders.FolderInstance.defaultProcessObjectsFinal(FolderInstance.java:873)
+	at org.openide.loaders.FolderInstance$1R.run(FolderInstance.java:738)
+	at org.openide.loaders.FolderLookup.postCreationTask(FolderLookup.java:260)
+	at org.openide.loaders.FolderInstance.processObjects(FolderInstance.java:758)
+	at org.openide.loaders.FolderInstance$Listener.finished(FolderInstance.java:1040)
+	at org.openide.loaders.FolderList.createBoth(FolderList.java:910)
+	at org.openide.loaders.FolderList.getObjects(FolderList.java:595)
+	at org.openide.loaders.FolderList.access$200(FolderList.java:77)
+	at org.openide.loaders.FolderList$ListTask.computeResult(FolderList.java:994)
+	at org.openide.loaders.FolderList$ListTask.run(FolderList.java:970)
+	at org.openide.util.RequestProcessor$Task.run(RequestProcessor.java:1424)
+	at org.openide.util.RequestProcessor$Processor.run(RequestProcessor.java:1968)
+INFO [org.netbeans.core.startup.NbEvents]: Turning on modules:
+	org.openide.util.lookup [8.8.1 201107282000]
+	org.openide.util [8.15.1 201107282000]
+	org.openide.modules [7.23.1 201107282000]
+	org.openide.filesystems [7.47.1 201107282000]
+	org.netbeans.modules.queries/1 [1.23.1 201107282000]
+	org.openide.awt [7.31.2 201109141524]
+	org.netbeans.api.progress/1 [1.24.1 201107282000]
+	org.openide.dialogs [7.20.1 201107282000]
+	org.openide.nodes [7.21.1 201107282000]
+	org.openide.windows [6.40.1 201107282000]
+	org.netbeans.swing.tabcontrol [1.25.1 201107282000]
+	org.netbeans.swing.outline [1.14.1 201107282000]
+	org.openide.explorer [6.35.1 201107282000]
+	org.netbeans.modules.editor.mimelookup/1 [1.22.1 201107282000]
+	org.openide.text [6.37.1 201107282000]
+	org.openide.actions [6.22.1 201107282000]
+	org.openide.loaders [7.21.1 201107282000]
+	org.openidex.util/3 [3.29.1 201107282000]
+	org.openide.io [1.27.1 201107282000]
+	org.openide.execution [1.22.1 201107282000]
+	org.netbeans.swing.plaf [1.20.2 201108310202]
+	org.netbeans.spi.tasklist/1 [1.15.1.1 1 201107282000]
+	org.netbeans.api.annotations.common/1 [1.9.1 201107282000]
+	org.netbeans.spi.quicksearch [1.10.1 201107282000]
+	org.netbeans.modules.editor.settings/1 [1.36.1 201107282000]
+	org.netbeans.modules.editor.util/1 [1.42.1 201107282000]
+	org.netbeans.modules.lexer/2 [1.39.1.1 1 201107282000]
+	org.netbeans.modules.editor.lib2/1 [1.43.1.10 10 201107282000]
+	org.netbeans.modules.editor.fold/1 [1.25.1.10 201107282000]
+	org.netbeans.modules.editor.indent/2 [1.24.1 201107282000]
+	org.netbeans.modules.editor.lib/3 [3.9.1.13.10 13 201107282000]
+	org.netbeans.spi.editor.hints/0 [1.18.1.7.10 7 201107282000]
+	org.netbeans.api.xml/1 [1.26.1 201107282000]
+	org.apache.xml.resolver [1.15.1.12 12 201107282000]
+	org.netbeans.modules.xml.catalog/2 [1.24.1.4 4 201107282000]
+	org.netbeans.bootstrap/1 [2.40.1 201107282000]
+	org.netbeans.core.startup/1 [1.31.1 201107282000]
+	org.netbeans.modules.settings/1 [1.31.1 201107282000]
+	org.netbeans.modules.editor.errorstripe.api/1 [2.16.1.1 1 201107282000]
+	org.netbeans.modules.editor.errorstripe/2 [2.17.1.1.1 1 201107282000]
+	org.netbeans.modules.keyring [1.6.1 201107282000]
+	org.netbeans.core/2 [3.25.2 201108310202]
+	org.netbeans.modules.options.api/1 [1.22.1 201107282000]
+	org.netbeans.modules.projectapi/1 [1.36.1 201107282000]
+	org.netbeans.modules.javahelp/1 [2.22.1 201107282000]
+	org.netbeans.modules.editor.settings.storage/1 [1.29.1 201107282000]
+	org.jdesktop.layout/1 [1.17.1 201107282000]
+	org.netbeans.modules.editor/3 [1.57.2.5.13.10 5 201108310202]
+	org.netbeans.modules.options.keymap [1.14.1 201107282000]
+	org.netbeans.modules.options.editor/1 [1.25.1 201107282000]
+	org.netbeans.modules.diff/1 [1.33.1.42.1 42 201107282000]
+	org.netbeans.modules.projectuiapi/1 [1.51.2.8 8 201108310202]
+	org.netbeans.modules.editor.guards/1 [1.12.1 201107282000]
+	org.netbeans.modules.refactoring.api [1.16.1 201107282000]
+	org.netbeans.core.execution/1 [1.24.1 201107282000]
+	org.netbeans.core.ui/1 [1.27.1 201107282000]
+	org.netbeans.libs.jna/1 [1.14.1 201107282000]
+	org.netbeans.modules.masterfs/2 [2.32.2 201108310202]
+	org.netbeans.modules.favorites/1 [1.25.1 201107282000]
+	org.netbeans.modules.projectui [1.26.2.8 201108310202]
+	org.netbeans.modules.project.libraries/1 [1.29.1 201107282000]
+	org.netbeans.modules.progress.ui [1.16.1 201107282000]
+	org.netbeans.modules.print [7.9.1 201107282000]
+	org.netbeans.libs.lucene/3 [3.2.1 201107282000]
+	org.netbeans.modules.parsing.lucene [1.5.1 201107282000]
+	org.netbeans.api.java.classpath/1 [1.29.1 201107282000]
+	org.netbeans.modules.parsing.api/1 [1.43.1.6 6 201107282000]
+	org.netbeans.modules.languages.diff [1.16.1 201107282000]
+	org.netbeans.modules.keyring.impl [1.3.2 201108310202]
+	org.netbeans.modules.jumpto/1 [1.23.1.1 1 201107282000]
+	org.netbeans.modules.editor.mimelookup.impl/1 [1.14.1 201107282000]
+	org.netbeans.modules.editor.indent.project/0 [1.5.1 201107282000]
+	org.netbeans.modules.editor.completion/1 [1.26.1.1 1 201107282000]
+	org.netbeans.modules.editor.codetemplates/1 [1.22.1.1 1 201107282000]
+	org.netbeans.modules.editor.actions/1 [1.9.1.10 201107282000]
+	org.netbeans.modules.autoupdate.services [1.26.1 201107282000]
+	org.netbeans.modules.autoupdate.ui [1.23.1 201107282000]
+	org.netbeans.libs.osgi [1.5.1 201107282000]
+	org.netbeans.libs.felix [1.5.1 201107282000]
+	org.netbeans.core.windows/2 [2.28.1 201107282000]
+	org.netbeans.modules.core.kit [1.12.1 201107282000]
+	org.netbeans.libs.commons_logging/1 [1.17.1.11 11 201107282000]
+	org.netbeans.core.output2/1 [1.22.1 201107282000]
+	org.netbeans.core.netigso [1.9.1 201107282000]
+	org.netbeans.core.nativeaccess/1 [1.12.1 201107282000]
+	org.netbeans.core.io.ui/1 [1.12.1 201107282000]
+	org.jdesktop.beansbinding/1 [1.11.1.121 121 201107282000]
+	org.gabwell.jcalender [1.0 120208]
+	org.dreamcathcer.commons [1.0 120208]
+	org.dreamcatcher.util [1.0 120208]
+	org.dreamcatcher.textFilter [1.0 120208]
+	org.dreamcatcher.selection [1.0 120208]
+	org.dreamcatcher.scheduling [1.0 120208]
+	org.dreamcatcher.main [1.0 120208]
+	org.dreamcatcher.logging [1.0 120208]
+	org.dreamcatcher.editorsuite [1.0 120208]
+	org.dreamcatcher.apachepdfbox [1.0 120208]
+	org.dreamcatcher.filesAPI [1.0 120208]
+	org.dreamcatcher.drmProjectType [1.0 120208]
+	org.dreamcatcher.budget [1.0 120208]
+WARNING [org.openide.filesystems.Ordering]: Found same position 300 for both Toolbars/File/org-dreamcatcher-filesAPI-NewProjectWizardAction.shadow and Toolbars/File/org-netbeans-modules-project-ui-OpenProject.shadow
+WARNING [org.openide.filesystems.Ordering]: Not all children in Windows2/Modes/explorer/ marked with the position attribute: [projectsTopComponent.wstcref], but some are: [projectTabLogical_tc.wstcref, projectTab_tc.wstcref, favorites.wstcref]
+WARNING [org.openide.filesystems.Ordering]: Not all children in Windows2/Modes/output/ marked with the position attribute: [outputTopComponent.wstcref], but some are: [refactoring-preview.wstcref, find-usages.wstcref, output.wstcref]
+Diagnostic information
+Input arguments:
+	-Djdk.home=/usr/lib/jvm/java-7-openjdk-i386
+	-Dnetbeans.system_socks_proxy=192.168.170.50:3135
+	-Dnetbeans.system_http_proxy=192.168.170.50:3135
+	-Dnetbeans.system_http_non_proxy_hosts=[localhost,127.0.0.0/8,*.local
+	-Dnetbeans.dirs=/home/royrutto/Desktop/work/dc/dreamcatcher/build/cluster:/home/royrutto/netbeans-7.0.1/ide:/home/royrutto/netbeans-7.0.1/java:/home/royrutto/netbeans-7.0.1/platform
+	-Dnetbeans.home=/home/royrutto/netbeans-7.0.1/platform
+	-Dnetbeans.logger.console=true
+	-ea
+Compiler: HotSpot Tiered Compilers
+Heap memory usage: initial 61.3MB maximum 872.9MB
+Non heap memory usage: initial 18.2MB maximum 176.0MB
+Garbage collector: PS Scavenge (Collections=5 Total time spent=0s)
+Garbage collector: PS MarkSweep (Collections=0 Total time spent=0s)
+Classes: loaded=4585 total loaded=4585 unloaded 0
+INFO [org.netbeans.core.ui.warmup.DiagnosticTask]: Total memory 4,116,926,464
+INFO [null]: Total physical memory 4,116,926,464
+WARNING [org.openide.filesystems.MIMESupport]: org.netbeans.modules.openide.filesystems.declmime.MIMEResolverImpl$Impl's constructor should call super(String...) with list of resolvable MIME types.
+WARNING [org.netbeans.ProxyClassLoader]: Will not load class org.apache.commons.logging.impl.Log4JLogger arbitrarily from one of ModuleCL@110be08[org.netbeans.libs.commons_logging] and ModuleCL@557e48[org.dreamcatcher.logging] starting from SystemClassLoader[100 modules]; see http://wiki.netbeans.org/DevFaqModuleCCE
+WARNING [org.netbeans.ProxyClassLoader]: Will not load class org.apache.commons.logging.impl.Jdk14Logger arbitrarily from one of ModuleCL@110be08[org.netbeans.libs.commons_logging] and ModuleCL@557e48[org.dreamcatcher.logging] starting from SystemClassLoader[100 modules]; see http://wiki.netbeans.org/DevFaqModuleCCE
+javax.swing.text.PlainDocument@d8628fI have been updatedjavax.swing.text.PlainDocument@d8628fI have been updatedjavax.swing.text.PlainDocument@d8628fI have been updatedjavax.swing.text.PlainDocument@d8628fI have been updatedjavax.swing.text.PlainDocument@d8628fI have been updated/home/royrutto/Desktop/work/dc/NEPOTISM-THE OFFICE CLAN.pdf
+No Look up sourceNo Look up sourceNo Look up sourceOliver
+No Look up sourceNo Look up sourceNo Look up sourceNo Look up sourceOliver
+PHILIP
+Oliver
+PHILIP
+president
+Oliver
+PHILIP
+president
+Oliver
+PHILIP
+president
+Oliver
+PHILIP
+president
+Oliver
+PHILIP
+president
+Oliver
+PHILIP
+president
+Oliver
+PHILIP
+president
+Oliver
+PHILIP
+president
+Oliver
+PHILIP
+president
+Oliver
+PHILIP
+president
+Oliver
+PHILIP
+president
+Oliver
+PHILIP
+president
+Oliver
+PHILIP
+president
+Oliver
+PHILIP
+president
+Oliver
+PHILIP
+president
+Oliver
+PHILIP
+president
+Oliver
+PHILIP
+president
+Oliver
+PHILIP
+president
+Oliver
+PHILIP
+president
+Mckoy

@@ -1,0 +1,1431 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f9d18511717, pid=6132, tid=140312355849984
+#
+# JRE version: 7.0_147-b147
+# Java VM: OpenJDK 64-Bit Server VM (21.0-b17 mixed mode linux-amd64 compressed oops)
+# Derivative: IcedTea7 2.0pre
+# Distribution: Ubuntu oneiric (development branch), package 7~b147-2.0~pre6-1ubuntu1
+# Problematic frame:
+# V  [libjvm.so+0x743717]  SignatureIterator::iterate_parameters()+0x37
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please include
+# instructions on how to reproduce the bug and visit:
+#   https://bugs.launchpad.net/ubuntu/+source/openjdk-7/
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000001e45000):  JavaThread "AWT-EventQueue-0" [_thread_in_vm, id=6164, stack(0x00007f9d0410c000,0x00007f9d0420d000)]
+
+siginfo:si_signo=SIGSEGV: si_errno=0, si_code=1 (SEGV_MAPERR), si_addr=0x000000000000000a
+
+Registers:
+RAX=0x0000000000000000, RBX=0x00007f9d04209650, RCX=0x0000000000000001, RDX=0x0000000000000000
+RSP=0x00007f9d04209520, RBP=0x00007f9d04209640, RSI=0x0000000000000000, RDI=0x00007f9d04209650
+R8 =0x00007f9d19640000, R9 =0x0000000000000017, R10=0x00007f9d18a08680, R11=0x0000000000000800
+R12=0x00000000000000b6, R13=0x0000000001e441a0, R14=0x00007f9d042096c0, R15=0x00007f9d0c42d790
+RIP=0x00007f9d18511717, EFLAGS=0x0000000000010246, CSGSFS=0x0000000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007f9d04209520)
+0x00007f9d04209520:   0000000001e45000 0000000000000028
+0x00007f9d04209530:   00007f9d04209540 00007f9d1836e744
+0x00007f9d04209540:   00007f9d04209570 00007f9d18354e69
+0x00007f9d04209550:   00007f9d0c0f43b0 00007f9d16fe9ec0
+0x00007f9d04209560:   0000000002e39470 00007f9d16fe9ec0
+0x00007f9d04209570:   00007f9d042095b0 00007f9d16dd5659
+0x00007f9d04209580:   00007f9d0c42d410 00007f9d16fe9ec0
+0x00007f9d04209590:   0000000002e39470 00007f9d16fe9ec0
+0x00007f9d042095a0:   0000000002e39470 00007f9d16fe9ec0
+0x00007f9d042095b0:   00007f9d04209670 00007f9d16dc69b4
+0x00007f9d042095c0:   00007f9d04209640 00007f9d1827a20d
+0x00007f9d042095d0:   00007f9d04209650 0000000000000017
+0x00007f9d042095e0:   00007f9d042095f0 0000000001e451d0
+0x00007f9d042095f0:   0000000000000001 0000000001dde230
+0x00007f9d04209600:   0000000001dde238 0000000002e39470
+0x00007f9d04209610:   0000000000000028 0000000000000000
+0x00007f9d04209620:   0000000000000000 d761263146177100
+0x00007f9d04209630:   00007f9d042096c0 00000000000000b6
+0x00007f9d04209640:   00007f9d04209690 00007f9d181fabcf
+0x00007f9d04209650:   00007f9d189b96f0 0000000000000000
+0x00007f9d04209660:   0000000000000000 0000000000000063
+0x00007f9d04209670:   00007f9d00000000 0000000001e45000
+0x00007f9d04209680:   00000000000000b6 0000000001e45000
+0x00007f9d04209690:   00007f9d042098c0 00007f9d182a95cd
+0x00007f9d042096a0:   0000000000000000 00007f9d042096f0
+0x00007f9d042096b0:   00007f9d0c42db78 00007f9d0c42d7a0
+0x00007f9d042096c0:   00007f9d042098d8 00007f9d12aa9763
+0x00007f9d042096d0:   00007f9d12a87250 00007f9d00000000
+0x00007f9d042096e0:   00007f9d04209930 00007f9d042098d8
+0x00007f9d042096f0:   00007f9d042098d8 00007f9d12aa9763
+0x00007f9d04209700:   00007f9d12a87250 00007f9d00000000
+0x00007f9d04209710:   00007f9d04209930 00007f9d042098d8 
+
+Instructions: (pc=0x00007f9d18511717)
+0x00007f9d185116f7:   8b 57 08 c7 47 10 00 00 00 00 64 48 8b 04 25 28
+0x00007f9d18511707:   00 00 00 48 89 45 e8 31 c0 c7 47 14 00 00 00 00
+0x00007f9d18511717:   80 7a 0a 28 b0 01 74 44 48 8d 35 5e 61 11 00 48
+0x00007f9d18511727:   8d bd e0 fe ff ff 31 c0 ba 28 00 00 00 e8 97 24 
+
+Register to memory mapping:
+
+RAX=0x0000000000000000 is an unknown value
+RBX=0x00007f9d04209650 is pointing into the stack for thread: 0x0000000001e45000
+RCX=0x0000000000000001 is an unknown value
+RDX=0x0000000000000000 is an unknown value
+RSP=0x00007f9d04209520 is pointing into the stack for thread: 0x0000000001e45000
+RBP=0x00007f9d04209640 is pointing into the stack for thread: 0x0000000001e45000
+RSI=0x0000000000000000 is an unknown value
+RDI=0x00007f9d04209650 is pointing into the stack for thread: 0x0000000001e45000
+R8 =0x00007f9d19640000 is an unknown value
+R9 =0x0000000000000017 is an unknown value
+R10=0x00007f9d18a08680: <offset 0xc3a680> in /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/server/libjvm.so at 0x00007f9d17dce000
+R11=0x0000000000000800 is an unknown value
+R12=0x00000000000000b6 is an unknown value
+R13=0x0000000001e441a0 is an unknown value
+R14=0x00007f9d042096c0 is pointing into the stack for thread: 0x0000000001e45000
+R15=0x00007f9d0c42d790 is an unknown value
+
+
+Stack: [0x00007f9d0410c000,0x00007f9d0420d000],  sp=0x00007f9d04209520,  free space=1013k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0x743717]  SignatureIterator::iterate_parameters()+0x37
+V  [libjvm.so+0x42cbcf]  frame::interpreter_callee_receiver_addr(Symbol*)+0x3f
+V  [libjvm.so+0x4db5cd]  InterpreterRuntime::resolve_invoke(JavaThread*, Bytecodes::Code)+0x5fd
+j  org.dreamcatcher.breakdown.breakdown_sheetTopComponent.getModelIndex(Ljava/lang/String;)I+40
+j  org.dreamcatcher.breakdown.breakdown_sheetTopComponent.resultChanged(Lorg/openide/util/LookupEvent;)V+227
+j  org.openide.util.lookup.AbstractLookup$NotifyListeners.run()V+39
+j  org.openide.util.lookup.AbstractLookup.notifyIn(Ljava/util/concurrent/Executor;Ljava/util/HashSet;)V+21
+j  org.openide.util.lookup.AbstractLookup.setPairs(Ljava/util/Collection;Ljava/util/concurrent/Executor;)V+9
+j  org.openide.util.lookup.AbstractLookup$Content.setPairs(Ljava/util/Collection;)V+21
+j  org.openide.util.lookup.InstanceContent.set(Ljava/util/Collection;Lorg/openide/util/lookup/InstanceContent$Convertor;)V+93
+j  org.dreamcatcher.customEditor.sceneViewerTopComponent.AnimalActionPerformed(Ljava/awt/event/ActionEvent;)V+80
+j  org.dreamcatcher.customEditor.sceneViewerTopComponent.access$200(Lorg/dreamcatcher/customEditor/sceneViewerTopComponent;Ljava/awt/event/ActionEvent;)V+2
+j  org.dreamcatcher.customEditor.sceneViewerTopComponent$3.actionPerformed(Ljava/awt/event/ActionEvent;)V+5
+j  javax.swing.AbstractButton.fireActionPerformed(Ljava/awt/event/ActionEvent;)V+84
+j  javax.swing.AbstractButton$Handler.actionPerformed(Ljava/awt/event/ActionEvent;)V+5
+j  javax.swing.DefaultButtonModel.fireActionPerformed(Ljava/awt/event/ActionEvent;)V+35
+j  javax.swing.DefaultButtonModel.setPressed(Z)V+117
+j  javax.swing.AbstractButton.doClick(I)V+64
+j  javax.swing.plaf.basic.BasicMenuItemUI.doClick(Ljavax/swing/MenuSelectionManager;)V+53
+j  javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(Ljava/awt/event/MouseEvent;)V+76
+j  java.awt.Component.processMouseEvent(Ljava/awt/event/MouseEvent;)V+64
+j  javax.swing.JComponent.processMouseEvent(Ljava/awt/event/MouseEvent;)V+23
+j  java.awt.Component.processEvent(Ljava/awt/AWTEvent;)V+81
+j  java.awt.Container.processEvent(Ljava/awt/AWTEvent;)V+18
+j  java.awt.Component.dispatchEventImpl(Ljava/awt/AWTEvent;)V+581
+j  java.awt.Container.dispatchEventImpl(Ljava/awt/AWTEvent;)V+42
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  org.dreamcatcher.breakdown.breakdown_sheetTopComponent.getModelIndex(Ljava/lang/String;)I+40
+j  org.dreamcatcher.breakdown.breakdown_sheetTopComponent.resultChanged(Lorg/openide/util/LookupEvent;)V+227
+j  org.openide.util.lookup.AbstractLookup$NotifyListeners.run()V+39
+j  org.openide.util.lookup.AbstractLookup.notifyIn(Ljava/util/concurrent/Executor;Ljava/util/HashSet;)V+21
+j  org.openide.util.lookup.AbstractLookup.setPairs(Ljava/util/Collection;Ljava/util/concurrent/Executor;)V+9
+j  org.openide.util.lookup.AbstractLookup$Content.setPairs(Ljava/util/Collection;)V+21
+j  org.openide.util.lookup.InstanceContent.set(Ljava/util/Collection;Lorg/openide/util/lookup/InstanceContent$Convertor;)V+93
+j  org.dreamcatcher.customEditor.sceneViewerTopComponent.AnimalActionPerformed(Ljava/awt/event/ActionEvent;)V+80
+j  org.dreamcatcher.customEditor.sceneViewerTopComponent.access$200(Lorg/dreamcatcher/customEditor/sceneViewerTopComponent;Ljava/awt/event/ActionEvent;)V+2
+j  org.dreamcatcher.customEditor.sceneViewerTopComponent$3.actionPerformed(Ljava/awt/event/ActionEvent;)V+5
+j  javax.swing.AbstractButton.fireActionPerformed(Ljava/awt/event/ActionEvent;)V+84
+j  javax.swing.AbstractButton$Handler.actionPerformed(Ljava/awt/event/ActionEvent;)V+5
+j  javax.swing.DefaultButtonModel.fireActionPerformed(Ljava/awt/event/ActionEvent;)V+35
+j  javax.swing.DefaultButtonModel.setPressed(Z)V+117
+j  javax.swing.AbstractButton.doClick(I)V+64
+j  javax.swing.plaf.basic.BasicMenuItemUI.doClick(Ljavax/swing/MenuSelectionManager;)V+53
+j  javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(Ljava/awt/event/MouseEvent;)V+76
+j  java.awt.Component.processMouseEvent(Ljava/awt/event/MouseEvent;)V+64
+j  javax.swing.JComponent.processMouseEvent(Ljava/awt/event/MouseEvent;)V+23
+j  java.awt.Component.processEvent(Ljava/awt/AWTEvent;)V+81
+j  java.awt.Container.processEvent(Ljava/awt/AWTEvent;)V+18
+j  java.awt.Component.dispatchEventImpl(Ljava/awt/AWTEvent;)V+581
+j  java.awt.Container.dispatchEventImpl(Ljava/awt/AWTEvent;)V+42
+J  java.awt.LightweightDispatcher.retargetMouseEvent(Ljava/awt/Component;ILjava/awt/event/MouseEvent;)V
+j  java.awt.LightweightDispatcher.processMouseEvent(Ljava/awt/event/MouseEvent;)Z+139
+j  java.awt.LightweightDispatcher.dispatchEvent(Ljava/awt/AWTEvent;)Z+50
+j  java.awt.Container.dispatchEventImpl(Ljava/awt/AWTEvent;)V+12
+j  java.awt.Window.dispatchEventImpl(Ljava/awt/AWTEvent;)V+19
+j  java.awt.Component.dispatchEvent(Ljava/awt/AWTEvent;)V+2
+j  java.awt.EventQueue.dispatchEventImpl(Ljava/awt/AWTEvent;Ljava/lang/Object;)V+41
+j  java.awt.EventQueue.access$000(Ljava/awt/EventQueue;Ljava/awt/AWTEvent;Ljava/lang/Object;)V+3
+j  java.awt.EventQueue$3.run()Ljava/lang/Void;+12
+j  java.awt.EventQueue$3.run()Ljava/lang/Object;+1
+v  ~StubRoutines::call_stub
+J  java.security.AccessController.doPrivileged(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;)Ljava/lang/Object;
+j  java.security.ProtectionDomain$1.doIntersectionPrivilege(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;Ljava/security/AccessControlContext;)Ljava/lang/Object;+28
+j  java.security.ProtectionDomain$1.doIntersectionPrivilege(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;)Ljava/lang/Object;+6
+j  java.awt.EventQueue$4.run()Ljava/lang/Void;+11
+j  java.awt.EventQueue$4.run()Ljava/lang/Object;+1
+v  ~StubRoutines::call_stub
+J  java.security.AccessController.doPrivileged(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;)Ljava/lang/Object;
+J  java.awt.EventDispatchThread.pumpOneEventForFilters(I)Z
+j  java.awt.EventDispatchThread.pumpEventsForFilter(ILjava/awt/Conditional;Ljava/awt/EventFilter;)V+35
+j  java.awt.EventDispatchThread.pumpEventsForHierarchy(ILjava/awt/Conditional;Ljava/awt/Component;)V+11
+j  java.awt.EventDispatchThread.pumpEvents(ILjava/awt/Conditional;)V+4
+j  java.awt.EventDispatchThread.pumpEvents(Ljava/awt/Conditional;)V+3
+j  java.awt.EventDispatchThread.run()V+9
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0000000002e88800 JavaThread "File Watcher" [_thread_in_native, id=6175, stack(0x00007f9d0af67000,0x00007f9d0b068000)]
+  0x00007f9d0c2bc000 JavaThread "DestroyJavaVM" [_thread_blocked, id=6133, stack(0x00007f9d19700000,0x00007f9d19801000)]
+  0x0000000002903800 JavaThread "TimerQueue" daemon [_thread_blocked, id=6171, stack(0x00007f9cfde8e000,0x00007f9cfdf8f000)]
+  0x00000000028f1800 JavaThread "Thread-2" daemon [_thread_blocked, id=6170, stack(0x00007f9cfe0d3000,0x00007f9cfe1d4000)]
+  0x0000000002b16800 JavaThread "FelixPackageAdmin" daemon [_thread_blocked, id=6167, stack(0x00007f9cff8ff000,0x00007f9cffa00000)]
+  0x00007f9d0c7c9800 JavaThread "FelixStartLevel" daemon [_thread_blocked, id=6166, stack(0x00007f9cffa00000,0x00007f9cffb01000)]
+  0x00007f9d0c6e8800 JavaThread "FelixDispatchQueue" [_thread_blocked, id=6165, stack(0x00007f9cffb01000,0x00007f9cffc02000)]
+=>0x0000000001e45000 JavaThread "AWT-EventQueue-0" [_thread_in_vm, id=6164, stack(0x00007f9d0410c000,0x00007f9d0420d000)]
+  0x0000000001e43000 JavaThread "AWT-Shutdown" [_thread_blocked, id=6163, stack(0x00007f9d0420d000,0x00007f9d0430e000)]
+  0x0000000001d72000 JavaThread "AWT-XAWT" daemon [_thread_in_native, id=6159, stack(0x00007f9d0454b000,0x00007f9d0464c000)]
+  0x0000000001ccb800 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=6158, stack(0x00007f9d0464c000,0x00007f9d0474d000)]
+  0x0000000001afb800 JavaThread "CLI Requests Server" daemon [_thread_in_native, id=6155, stack(0x00007f9d100e8000,0x00007f9d101e9000)]
+  0x00007f9d0c22c000 JavaThread "Active Reference Queue Daemon" daemon [_thread_blocked, id=6154, stack(0x00007f9d10d1e000,0x00007f9d10e1f000)]
+  0x00007f9d0c20f800 JavaThread "Timer-0" daemon [_thread_blocked, id=6153, stack(0x00007f9d10e1f000,0x00007f9d10f20000)]
+  0x00007f9d0c0ff800 JavaThread "Service Thread" daemon [_thread_blocked, id=6151, stack(0x00007f9d11036000,0x00007f9d11137000)]
+  0x00007f9d0c0fc800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=6150, stack(0x00007f9d11137000,0x00007f9d11238000)]
+  0x00007f9d0c0f9000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=6149, stack(0x00007f9d11238000,0x00007f9d11339000)]
+  0x0000000001a08000 JavaThread "JDWP Command Reader" daemon [_thread_in_native, id=6145, stack(0x00007f9d11339000,0x00007f9d1143a000)]
+  0x00007f9d0c0f6000 JavaThread "JDWP Event Helper Thread" daemon [_thread_blocked, id=6144, stack(0x00007f9d1143a000,0x00007f9d1153b000)]
+  0x00007f9d0c0f2800 JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_blocked, id=6143, stack(0x00007f9d1153b000,0x00007f9d1163c000)]
+  0x00007f9d0c0e5800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=6142, stack(0x00007f9d11841000,0x00007f9d11942000)]
+  0x00007f9d0c090000 JavaThread "Finalizer" daemon [_thread_blocked, id=6141, stack(0x00007f9d11942000,0x00007f9d11a43000)]
+  0x00007f9d0c08d800 JavaThread "Reference Handler" daemon [_thread_blocked, id=6140, stack(0x00007f9d11a43000,0x00007f9d11b44000)]
+
+Other Threads:
+  0x00007f9d0c085000 VMThread [stack: 0x00007f9d11b44000,0x00007f9d11c45000] [id=6139]
+  0x00007f9d0c10a000 WatcherThread [stack: 0x00007f9d10f35000,0x00007f9d11036000] [id=6152]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 184960K, used 70926K [0x00000000f1560000, 0x00000000fef70000, 0x0000000100000000)
+  eden space 184064K, 38% used [0x00000000f1560000,0x00000000f5aa3b78,0x00000000fc920000)
+  from space 896K, 0% used [0x00000000fd8c0000,0x00000000fd8c0000,0x00000000fd9a0000)
+  to   space 16384K, 0% used [0x00000000fdf70000,0x00000000fdf70000,0x00000000fef70000)
+ PSOldGen        total 60992K, used 38146K [0x00000000d4000000, 0x00000000d7b90000, 0x00000000f1560000)
+  object space 60992K, 62% used [0x00000000d4000000,0x00000000d6540ac8,0x00000000d7b90000)
+ PSPermGen       total 97344K, used 45878K [0x00000000c9a00000, 0x00000000cf910000, 0x00000000d4000000)
+  object space 97344K, 47% used [0x00000000c9a00000,0x00000000cc6cdb60,0x00000000cf910000)
+
+Code Cache  [0x00007f9d12a82000, 0x00007f9d12f62000, 0x00007f9d15a82000)
+ total_blobs=2085 nmethods=1448 adapters=595 free_code_cache=44502Kb largest_free_block=45279424
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 08:07 4077011                            /usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java
+00600000-00601000 r--p 00000000 08:07 4077011                            /usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java
+00601000-00602000 rw-p 00001000 08:07 4077011                            /usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java
+019e1000-03270000 rw-p 00000000 00:00 0                                  [heap]
+c9a00000-cf910000 rw-p 00000000 00:00 0 
+cf910000-d4000000 rw-p 00000000 00:00 0 
+d4000000-d7b90000 rw-p 00000000 00:00 0 
+d7b90000-f1560000 rw-p 00000000 00:00 0 
+f1560000-fef70000 rw-p 00000000 00:00 0 
+fef70000-100000000 ---p 00000000 00:00 0 
+7f9cfa217000-7f9cfa2b8000 rw-s 00000000 00:04 16089130                   /SYSV00000000 (deleted)
+7f9cfa39b000-7f9cfa3ef000 rw-s 00000000 00:04 16023592                   /SYSV00000000 (deleted)
+7f9cfa3ef000-7f9cfa54b000 rw-s 00000000 00:04 15794200                   /SYSV00000000 (deleted)
+7f9cfa54b000-7f9cfa54e000 ---p 00000000 00:00 0 
+7f9cfa54e000-7f9cfa64c000 rw-p 00000000 00:00 0 
+7f9cfa64c000-7f9cfa64f000 ---p 00000000 00:00 0 
+7f9cfa64f000-7f9cfa74d000 rw-p 00000000 00:00 0 
+7f9cfa74d000-7f9cfa750000 ---p 00000000 00:00 0 
+7f9cfa750000-7f9cfa84e000 rw-p 00000000 00:00 0 
+7f9cfa9b2000-7f9cfa9ba000 r-xp 00000000 08:07 4076968                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libmanagement.so
+7f9cfa9ba000-7f9cfabb9000 ---p 00008000 08:07 4076968                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libmanagement.so
+7f9cfabb9000-7f9cfabba000 r--p 00007000 08:07 4076968                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libmanagement.so
+7f9cfabba000-7f9cfabbb000 rw-p 00008000 08:07 4076968                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libmanagement.so
+7f9cfabbb000-7f9cfac8c000 r-xp 00000000 08:07 4076969                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libmlib_image.so
+7f9cfac8c000-7f9cfae8b000 ---p 000d1000 08:07 4076969                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libmlib_image.so
+7f9cfae8b000-7f9cfae8c000 r--p 000d0000 08:07 4076969                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libmlib_image.so
+7f9cfae8c000-7f9cfae8d000 rw-p 000d1000 08:07 4076969                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libmlib_image.so
+7f9cfae8d000-7f9cfb26e000 rw-s 00000000 00:04 14942215                   /SYSV00000000 (deleted)
+7f9cfb26e000-7f9cfb283000 r-xp 00000000 08:07 529038                     /tmp/jna6215680212224695840.tmp
+7f9cfb283000-7f9cfb382000 ---p 00015000 08:07 529038                     /tmp/jna6215680212224695840.tmp
+7f9cfb382000-7f9cfb384000 rw-p 00014000 08:07 529038                     /tmp/jna6215680212224695840.tmp
+7f9cfb384000-7f9cfb387000 ---p 00000000 00:00 0 
+7f9cfb387000-7f9cfb485000 rw-p 00000000 00:00 0 
+7f9cfb485000-7f9cfb488000 ---p 00000000 00:00 0 
+7f9cfb488000-7f9cfb586000 rw-p 00000000 00:00 0 
+7f9cfb586000-7f9cfb589000 ---p 00000000 00:00 0 
+7f9cfb589000-7f9cfb687000 rw-p 00000000 00:00 0 
+7f9cfb687000-7f9cfb688000 ---p 00000000 00:00 0 
+7f9cfb688000-7f9cfbe88000 rw-p 00000000 00:00 0 
+7f9cfbe88000-7f9cfbe89000 ---p 00000000 00:00 0 
+7f9cfbe89000-7f9cfc689000 rw-p 00000000 00:00 0 
+7f9cfc689000-7f9cfc6a0000 r-xp 00000000 08:07 4066120                    /usr/lib/libdbusmenu-glib.so.4.0.5
+7f9cfc6a0000-7f9cfc8a0000 ---p 00017000 08:07 4066120                    /usr/lib/libdbusmenu-glib.so.4.0.5
+7f9cfc8a0000-7f9cfc8a1000 r--p 00017000 08:07 4066120                    /usr/lib/libdbusmenu-glib.so.4.0.5
+7f9cfc8a1000-7f9cfc8a2000 rw-p 00018000 08:07 4066120                    /usr/lib/libdbusmenu-glib.so.4.0.5
+7f9cfc8a2000-7f9cfc8b3000 r-xp 00000000 08:07 4066122                    /usr/lib/libdbusmenu-gtk.so.4.0.5
+7f9cfc8b3000-7f9cfcab2000 ---p 00011000 08:07 4066122                    /usr/lib/libdbusmenu-gtk.so.4.0.5
+7f9cfcab2000-7f9cfcab3000 r--p 00010000 08:07 4066122                    /usr/lib/libdbusmenu-gtk.so.4.0.5
+7f9cfcab3000-7f9cfcab4000 rw-p 00011000 08:07 4066122                    /usr/lib/libdbusmenu-gtk.so.4.0.5
+7f9cfcab4000-7f9cfcab9000 r-xp 00000000 08:07 4068316                    /usr/lib/gtk-2.0/2.10.0/menuproxies/libappmenu.so
+7f9cfcab9000-7f9cfccb8000 ---p 00005000 08:07 4068316                    /usr/lib/gtk-2.0/2.10.0/menuproxies/libappmenu.so
+7f9cfccb8000-7f9cfccb9000 r--p 00004000 08:07 4068316                    /usr/lib/gtk-2.0/2.10.0/menuproxies/libappmenu.so
+7f9cfccb9000-7f9cfccba000 rw-p 00005000 08:07 4068316                    /usr/lib/gtk-2.0/2.10.0/menuproxies/libappmenu.so
+7f9cfccba000-7f9cfcccd000 r-xp 00000000 08:07 4067823                    /usr/lib/gio/modules/libgioremote-volume-monitor.so
+7f9cfcccd000-7f9cfcecc000 ---p 00013000 08:07 4067823                    /usr/lib/gio/modules/libgioremote-volume-monitor.so
+7f9cfcecc000-7f9cfcecd000 r--p 00012000 08:07 4067823                    /usr/lib/gio/modules/libgioremote-volume-monitor.so
+7f9cfcecd000-7f9cfcece000 rw-p 00013000 08:07 4067823                    /usr/lib/gio/modules/libgioremote-volume-monitor.so
+7f9cfcece000-7f9cfcedb000 r-xp 00000000 08:07 266032                     /lib/x86_64-linux-gnu/libudev.so.0.12.0
+7f9cfcedb000-7f9cfd0da000 ---p 0000d000 08:07 266032                     /lib/x86_64-linux-gnu/libudev.so.0.12.0
+7f9cfd0da000-7f9cfd0db000 r--p 0000c000 08:07 266032                     /lib/x86_64-linux-gnu/libudev.so.0.12.0
+7f9cfd0db000-7f9cfd0dc000 rw-p 0000d000 08:07 266032                     /lib/x86_64-linux-gnu/libudev.so.0.12.0
+7f9cfd0dc000-7f9cfd0f2000 r-xp 00000000 08:07 4068379                    /usr/lib/gvfs/libgvfscommon.so
+7f9cfd0f2000-7f9cfd2f1000 ---p 00016000 08:07 4068379                    /usr/lib/gvfs/libgvfscommon.so
+7f9cfd2f1000-7f9cfd2f2000 r--p 00015000 08:07 4068379                    /usr/lib/gvfs/libgvfscommon.so
+7f9cfd2f2000-7f9cfd2f3000 rw-p 00016000 08:07 4068379                    /usr/lib/gvfs/libgvfscommon.so
+7f9cfd2f3000-7f9cfd31c000 r-xp 00000000 08:07 4067824                    /usr/lib/gio/modules/libgvfsdbus.so
+7f9cfd31c000-7f9cfd51c000 ---p 00029000 08:07 4067824                    /usr/lib/gio/modules/libgvfsdbus.so
+7f9cfd51c000-7f9cfd51d000 r--p 00029000 08:07 4067824                    /usr/lib/gio/modules/libgvfsdbus.so
+7f9cfd51d000-7f9cfd51e000 rw-p 0002a000 08:07 4067824                    /usr/lib/gio/modules/libgvfsdbus.so
+7f9cfd51e000-7f9cfd51f000 rw-p 00000000 00:00 0 
+7f9cfd51f000-7f9cfd526000 r-xp 00000000 08:07 4067822                    /usr/lib/gio/modules/libdconfsettings.so
+7f9cfd526000-7f9cfd726000 ---p 00007000 08:07 4067822                    /usr/lib/gio/modules/libdconfsettings.so
+7f9cfd726000-7f9cfd727000 r--p 00007000 08:07 4067822                    /usr/lib/gio/modules/libdconfsettings.so
+7f9cfd727000-7f9cfd728000 rw-p 00008000 08:07 4067822                    /usr/lib/gio/modules/libdconfsettings.so
+7f9cfd728000-7f9cfd768000 r-xp 00000000 08:07 4066392                    /usr/lib/libibus-1.0.so.0.0.0
+7f9cfd768000-7f9cfd968000 ---p 00040000 08:07 4066392                    /usr/lib/libibus-1.0.so.0.0.0
+7f9cfd968000-7f9cfd969000 r--p 00040000 08:07 4066392                    /usr/lib/libibus-1.0.so.0.0.0
+7f9cfd969000-7f9cfd96a000 rw-p 00041000 08:07 4066392                    /usr/lib/libibus-1.0.so.0.0.0
+7f9cfd96a000-7f9cfd96b000 rw-p 00000000 00:00 0 
+7f9cfd980000-7f9cfd986000 r-xp 00000000 08:07 4457601                    /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/immodules/im-ibus.so
+7f9cfd986000-7f9cfdb85000 ---p 00006000 08:07 4457601                    /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/immodules/im-ibus.so
+7f9cfdb85000-7f9cfdb86000 r--p 00005000 08:07 4457601                    /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/immodules/im-ibus.so
+7f9cfdb86000-7f9cfdb87000 rw-p 00006000 08:07 4457601                    /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/immodules/im-ibus.so
+7f9cfdb87000-7f9cfdbd9000 r--p 00000000 08:07 134682                     /usr/share/fonts/truetype/ttf-dejavu/DejaVuSansMono.ttf
+7f9cfdbd9000-7f9cfdbf6000 r--p 00000000 08:07 4469071                    /usr/share/fonts/macfonts/lucon.ttf
+7f9cfdbf6000-7f9cfdbf8000 r-xp 00000000 08:07 4457675                    /usr/lib/x86_64-linux-gnu/pango/1.6.0/modules/pango-basic-fc.so
+7f9cfdbf8000-7f9cfddf7000 ---p 00002000 08:07 4457675                    /usr/lib/x86_64-linux-gnu/pango/1.6.0/modules/pango-basic-fc.so
+7f9cfddf7000-7f9cfddf8000 r--p 00001000 08:07 4457675                    /usr/lib/x86_64-linux-gnu/pango/1.6.0/modules/pango-basic-fc.so
+7f9cfddf8000-7f9cfddf9000 rw-p 00002000 08:07 4457675                    /usr/lib/x86_64-linux-gnu/pango/1.6.0/modules/pango-basic-fc.so
+7f9cfde0e000-7f9cfde39000 rw-s 00000000 00:04 16187436                   /SYSV00000000 (deleted)
+7f9cfde39000-7f9cfde4c000 rw-s 00000000 00:04 16121899                   /SYSV00000000 (deleted)
+7f9cfde4c000-7f9cfde55000 rw-s 00000000 00:04 15990823                   /SYSV00000000 (deleted)
+7f9cfde7c000-7f9cfde86000 rw-s 00000000 00:04 15958054                   /SYSV00000000 (deleted)
+7f9cfde86000-7f9cfde8e000 r--s 000d7000 08:07 1574497                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-bugzilla.jar
+7f9cfde8e000-7f9cfde91000 ---p 00000000 00:00 0 
+7f9cfde91000-7f9cfdf8f000 rw-p 00000000 00:00 0 
+7f9cfdf90000-7f9cfdf95000 rw-s 00000000 00:04 16220205                   /SYSV00000000 (deleted)
+7f9cfdf95000-7f9cfdf9f000 rw-s 00000000 00:04 15925285                   /SYSV00000000 (deleted)
+7f9cfdf9f000-7f9cfdfb4000 rw-s 00000000 00:04 15859747                   /SYSV00000000 (deleted)
+7f9cfdfb4000-7f9cfdfc9000 rw-s 00000000 00:04 15826978                   /SYSV00000000 (deleted)
+7f9cfdfcc000-7f9cfdfd1000 rw-s 00000000 00:04 16154651                   /SYSV00000000 (deleted)
+7f9cfdffb000-7f9cfe05b000 rw-s 00000000 00:04 14974985                   /SYSV00000000 (deleted)
+7f9cfe069000-7f9cfe07a000 rw-s 00000000 00:04 15433748                   /SYSV00000000 (deleted)
+7f9cfe0a8000-7f9cfe0b7000 r--s 001e3000 08:07 1574461                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-mercurial.jar
+7f9cfe0b7000-7f9cfe0bd000 r--s 000a5000 08:07 1574364                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-project-ant.jar
+7f9cfe0bd000-7f9cfe0c2000 r--s 00062000 08:07 1183870                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-netbeans-core-ui.jar
+7f9cfe0c2000-7f9cfe0cb000 r--s 0013a000 08:07 1183881                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-openide-loaders.jar
+7f9cfe0d3000-7f9cfe0d6000 ---p 00000000 00:00 0 
+7f9cfe0d6000-7f9cfe1d4000 rw-p 00000000 00:00 0 
+7f9cfe1d4000-7f9cfe1dd000 r--s 00000000 08:07 137993                     /var/cache/fontconfig/945677eb7aeaf62f1d50efc3fb3ec7d8-le64.cache-3
+7f9cfe1dd000-7f9cfe1e6000 r-xp 00000000 08:07 4468107                    /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/engines/libpixmap.so
+7f9cfe1e6000-7f9cfe3e6000 ---p 00009000 08:07 4468107                    /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/engines/libpixmap.so
+7f9cfe3e6000-7f9cfe3e7000 r--p 00009000 08:07 4468107                    /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/engines/libpixmap.so
+7f9cfe3e7000-7f9cfe3e8000 rw-p 0000a000 08:07 4468107                    /usr/lib/x86_64-linux-gnu/gtk-2.0/2.10.0/engines/libpixmap.so
+7f9cfe3e8000-7f9cfe417000 r-xp 00000000 08:07 4068313                    /usr/lib/gtk-2.0/2.10.0/engines/libmurrine.so
+7f9cfe417000-7f9cfe617000 ---p 0002f000 08:07 4068313                    /usr/lib/gtk-2.0/2.10.0/engines/libmurrine.so
+7f9cfe617000-7f9cfe618000 r--p 0002f000 08:07 4068313                    /usr/lib/gtk-2.0/2.10.0/engines/libmurrine.so
+7f9cfe618000-7f9cfe619000 rw-p 00030000 08:07 4068313                    /usr/lib/gtk-2.0/2.10.0/engines/libmurrine.so
+7f9cfe619000-7f9cfe61f000 r-xp 00000000 08:07 4071535                    /usr/lib/x86_64-linux-gnu/libogg.so.0.7.1
+7f9cfe61f000-7f9cfe81e000 ---p 00006000 08:07 4071535                    /usr/lib/x86_64-linux-gnu/libogg.so.0.7.1
+7f9cfe81e000-7f9cfe81f000 r--p 00005000 08:07 4071535                    /usr/lib/x86_64-linux-gnu/libogg.so.0.7.1
+7f9cfe81f000-7f9cfe820000 rw-p 00006000 08:07 4071535                    /usr/lib/x86_64-linux-gnu/libogg.so.0.7.1
+7f9cfe820000-7f9cfe84b000 r-xp 00000000 08:07 4071617                    /usr/lib/x86_64-linux-gnu/libvorbis.so.0.4.5
+7f9cfe84b000-7f9cfea4a000 ---p 0002b000 08:07 4071617                    /usr/lib/x86_64-linux-gnu/libvorbis.so.0.4.5
+7f9cfea4a000-7f9cfea4b000 r--p 0002a000 08:07 4071617                    /usr/lib/x86_64-linux-gnu/libvorbis.so.0.4.5
+7f9cfea4b000-7f9cfea4c000 rw-p 0002b000 08:07 4071617                    /usr/lib/x86_64-linux-gnu/libvorbis.so.0.4.5
+7f9cfea4c000-7f9cfea54000 r-xp 00000000 08:07 4066460                    /usr/lib/libltdl.so.7.3.0
+7f9cfea54000-7f9cfec54000 ---p 00008000 08:07 4066460                    /usr/lib/libltdl.so.7.3.0
+7f9cfec54000-7f9cfec55000 r--p 00008000 08:07 4066460                    /usr/lib/libltdl.so.7.3.0
+7f9cfec55000-7f9cfec56000 rw-p 00009000 08:07 4066460                    /usr/lib/libltdl.so.7.3.0
+7f9cfec56000-7f9cfec66000 r-xp 00000000 08:07 4071604                    /usr/lib/x86_64-linux-gnu/libtdb.so.1.2.9
+7f9cfec66000-7f9cfee65000 ---p 00010000 08:07 4071604                    /usr/lib/x86_64-linux-gnu/libtdb.so.1.2.9
+7f9cfee65000-7f9cfee66000 r--p 0000f000 08:07 4071604                    /usr/lib/x86_64-linux-gnu/libtdb.so.1.2.9
+7f9cfee66000-7f9cfee67000 rw-p 00010000 08:07 4071604                    /usr/lib/x86_64-linux-gnu/libtdb.so.1.2.9
+7f9cfee67000-7f9cfee6e000 r-xp 00000000 08:07 4071621                    /usr/lib/x86_64-linux-gnu/libvorbisfile.so.3.3.4
+7f9cfee6e000-7f9cff06d000 ---p 00007000 08:07 4071621                    /usr/lib/x86_64-linux-gnu/libvorbisfile.so.3.3.4
+7f9cff06d000-7f9cff06e000 r--p 00006000 08:07 4071621                    /usr/lib/x86_64-linux-gnu/libvorbisfile.so.3.3.4
+7f9cff06e000-7f9cff06f000 rw-p 00007000 08:07 4071621                    /usr/lib/x86_64-linux-gnu/libvorbisfile.so.3.3.4
+7f9cff06f000-7f9cff07e000 r-xp 00000000 08:07 4063441                    /usr/lib/libcanberra.so.0.2.5
+7f9cff07e000-7f9cff27d000 ---p 0000f000 08:07 4063441                    /usr/lib/libcanberra.so.0.2.5
+7f9cff27d000-7f9cff27e000 r--p 0000e000 08:07 4063441                    /usr/lib/libcanberra.so.0.2.5
+7f9cff27e000-7f9cff27f000 rw-p 0000f000 08:07 4063441                    /usr/lib/libcanberra.so.0.2.5
+7f9cff27f000-7f9cff283000 r-xp 00000000 08:07 4068521                    /usr/lib/libcanberra-gtk.so.0.1.8
+7f9cff283000-7f9cff482000 ---p 00004000 08:07 4068521                    /usr/lib/libcanberra-gtk.so.0.1.8
+7f9cff482000-7f9cff483000 r--p 00003000 08:07 4068521                    /usr/lib/libcanberra-gtk.so.0.1.8
+7f9cff483000-7f9cff484000 rw-p 00004000 08:07 4068521                    /usr/lib/libcanberra-gtk.so.0.1.8
+7f9cff484000-7f9cff489000 r-xp 00000000 08:07 4067795                    /usr/lib/gtk-2.0/modules/libcanberra-gtk-module.so
+7f9cff489000-7f9cff688000 ---p 00005000 08:07 4067795                    /usr/lib/gtk-2.0/modules/libcanberra-gtk-module.so
+7f9cff688000-7f9cff689000 r--p 00004000 08:07 4067795                    /usr/lib/gtk-2.0/modules/libcanberra-gtk-module.so
+7f9cff689000-7f9cff68a000 rw-p 00005000 08:07 4067795                    /usr/lib/gtk-2.0/modules/libcanberra-gtk-module.so
+7f9cff68a000-7f9cff698000 r-xp 00000000 08:07 4066552                    /usr/lib/liboverlay-scrollbar-0.2.so.0.0.11
+7f9cff698000-7f9cff897000 ---p 0000e000 08:07 4066552                    /usr/lib/liboverlay-scrollbar-0.2.so.0.0.11
+7f9cff897000-7f9cff898000 r--p 0000d000 08:07 4066552                    /usr/lib/liboverlay-scrollbar-0.2.so.0.0.11
+7f9cff898000-7f9cff899000 rw-p 0000e000 08:07 4066552                    /usr/lib/liboverlay-scrollbar-0.2.so.0.0.11
+7f9cff899000-7f9cff89d000 rw-s 00000000 00:04 14909448                   /SYSV00000000 (deleted)
+7f9cff89d000-7f9cff89e000 r--s 00000000 08:07 1054454                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle206/version0.0/bundle.jar
+7f9cff89e000-7f9cff89f000 r--s 00000000 08:07 1054446                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle205/version0.0/bundle.jar
+7f9cff89f000-7f9cff8a0000 r--s 00000000 08:07 1054438                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle204/version0.0/bundle.jar
+7f9cff8a0000-7f9cff8a1000 r--s 00000000 08:07 1054430                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle203/version0.0/bundle.jar
+7f9cff8a1000-7f9cff8a2000 r--s 00000000 08:07 1054422                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle202/version0.0/bundle.jar
+7f9cff8a2000-7f9cff8a3000 r--s 00000000 08:07 1054414                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle201/version0.0/bundle.jar
+7f9cff8a3000-7f9cff8a4000 r--s 00000000 08:07 1054406                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle200/version0.0/bundle.jar
+7f9cff8a4000-7f9cff8a5000 r--s 00000000 08:07 1054398                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle199/version0.0/bundle.jar
+7f9cff8a5000-7f9cff8a6000 r--s 00000000 08:07 1054390                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle198/version0.0/bundle.jar
+7f9cff8a6000-7f9cff8a7000 r--s 00000000 08:07 1054382                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle197/version0.0/bundle.jar
+7f9cff8a7000-7f9cff8a8000 r--s 00000000 08:07 1054374                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle196/version0.0/bundle.jar
+7f9cff8a8000-7f9cff8a9000 r--s 00000000 08:07 1054366                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle195/version0.0/bundle.jar
+7f9cff8a9000-7f9cff8aa000 r--s 00000000 08:07 1054358                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle194/version0.0/bundle.jar
+7f9cff8aa000-7f9cff8ab000 r--s 00000000 08:07 1054350                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle193/version0.0/bundle.jar
+7f9cff8ab000-7f9cff8ac000 r--s 00000000 08:07 1054342                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle192/version0.0/bundle.jar
+7f9cff8ac000-7f9cff8ad000 r--s 00000000 08:07 1054334                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle191/version0.0/bundle.jar
+7f9cff8ad000-7f9cff8ae000 r--s 00000000 08:07 1054326                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle190/version0.0/bundle.jar
+7f9cff8ae000-7f9cff8af000 r--s 00000000 08:07 1054318                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle189/version0.0/bundle.jar
+7f9cff8af000-7f9cff8b0000 r--s 00000000 08:07 1054310                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle188/version0.0/bundle.jar
+7f9cff8b0000-7f9cff8b1000 r--s 00000000 08:07 1054302                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle187/version0.0/bundle.jar
+7f9cff8b1000-7f9cff8b2000 r--s 00000000 08:07 1054294                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle186/version0.0/bundle.jar
+7f9cff8b2000-7f9cff8b3000 r--s 00000000 08:07 1054286                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle185/version0.0/bundle.jar
+7f9cff8b3000-7f9cff8b4000 r--s 00000000 08:07 1054278                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle184/version0.0/bundle.jar
+7f9cff8b4000-7f9cff8b5000 r--s 00000000 08:07 1054270                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle183/version0.0/bundle.jar
+7f9cff8b5000-7f9cff8b6000 r--s 00000000 08:07 1054262                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle182/version0.0/bundle.jar
+7f9cff8b6000-7f9cff8b7000 r--s 00000000 08:07 1054254                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle181/version0.0/bundle.jar
+7f9cff8b7000-7f9cff8b8000 r--s 00000000 08:07 1054246                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle180/version0.0/bundle.jar
+7f9cff8b8000-7f9cff8b9000 r--s 00000000 08:07 1054238                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle179/version0.0/bundle.jar
+7f9cff8b9000-7f9cff8ba000 r--s 00000000 08:07 1054230                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle178/version0.0/bundle.jar
+7f9cff8ba000-7f9cff8bb000 r--s 00000000 08:07 1054222                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle177/version0.0/bundle.jar
+7f9cff8bb000-7f9cff8bc000 r--s 00000000 08:07 1054214                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle176/version0.0/bundle.jar
+7f9cff8bc000-7f9cff8bd000 r--s 00000000 08:07 1054206                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle175/version0.0/bundle.jar
+7f9cff8bd000-7f9cff8be000 r--s 00000000 08:07 1054198                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle174/version0.0/bundle.jar
+7f9cff8be000-7f9cff8bf000 r--s 00000000 08:07 1054190                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle173/version0.0/bundle.jar
+7f9cff8bf000-7f9cff8c0000 r--s 00000000 08:07 1054182                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle172/version0.0/bundle.jar
+7f9cff8c0000-7f9cff8c1000 r--s 00000000 08:07 1054174                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle171/version0.0/bundle.jar
+7f9cff8c1000-7f9cff8c2000 r--s 00000000 08:07 1054166                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle170/version0.0/bundle.jar
+7f9cff8c2000-7f9cff8c3000 r--s 00000000 08:07 1054158                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle169/version0.0/bundle.jar
+7f9cff8c3000-7f9cff8c4000 r--s 00000000 08:07 1054150                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle168/version0.0/bundle.jar
+7f9cff8c4000-7f9cff8c5000 r--s 00000000 08:07 1054142                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle167/version0.0/bundle.jar
+7f9cff8c5000-7f9cff8c6000 r--s 00000000 08:07 1054134                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle166/version0.0/bundle.jar
+7f9cff8c6000-7f9cff8c7000 r--s 00000000 08:07 1054126                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle165/version0.0/bundle.jar
+7f9cff8c7000-7f9cff8c8000 r--s 00000000 08:07 1054118                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle164/version0.0/bundle.jar
+7f9cff8c8000-7f9cff8c9000 r--s 00000000 08:07 1054110                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle163/version0.0/bundle.jar
+7f9cff8c9000-7f9cff8ca000 r--s 00000000 08:07 1054102                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle162/version0.0/bundle.jar
+7f9cff8ca000-7f9cff8cb000 r--s 00000000 08:07 1054094                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle161/version0.0/bundle.jar
+7f9cff8cb000-7f9cff8cc000 r--s 00000000 08:07 1054086                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle160/version0.0/bundle.jar
+7f9cff8cc000-7f9cff8cd000 r--s 00000000 08:07 1054078                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle159/version0.0/bundle.jar
+7f9cff8cd000-7f9cff8ce000 r--s 00000000 08:07 1054070                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle158/version0.0/bundle.jar
+7f9cff8ce000-7f9cff8cf000 r--s 00000000 08:07 1054062                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle157/version0.0/bundle.jar
+7f9cff8cf000-7f9cff8d0000 r--s 00000000 08:07 1054054                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle156/version0.0/bundle.jar
+7f9cff8d0000-7f9cff8d1000 r--s 00000000 08:07 1054046                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle155/version0.0/bundle.jar
+7f9cff8d1000-7f9cff8d2000 r--s 00000000 08:07 1054038                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle154/version0.0/bundle.jar
+7f9cff8d2000-7f9cff8d3000 r--s 00000000 08:07 1054030                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle153/version0.0/bundle.jar
+7f9cff8d3000-7f9cff8d4000 r--s 00000000 08:07 1054022                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle152/version0.0/bundle.jar
+7f9cff8d4000-7f9cff8d5000 r--s 00000000 08:07 1054014                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle151/version0.0/bundle.jar
+7f9cff8d5000-7f9cff8d6000 r--s 00000000 08:07 1054006                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle150/version0.0/bundle.jar
+7f9cff8d6000-7f9cff8d7000 r--s 00000000 08:07 1053979                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle149/version0.0/bundle.jar
+7f9cff8d7000-7f9cff8d8000 r--s 00000000 08:07 1053938                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle148/version0.0/bundle.jar
+7f9cff8d8000-7f9cff8d9000 r--s 00000000 08:07 1053930                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle147/version0.0/bundle.jar
+7f9cff8d9000-7f9cff8da000 r--s 00000000 08:07 1053922                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle146/version0.0/bundle.jar
+7f9cff8da000-7f9cff8db000 r--s 00000000 08:07 1053914                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle145/version0.0/bundle.jar
+7f9cff8db000-7f9cff8dc000 r--s 00000000 08:07 1053906                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle144/version0.0/bundle.jar
+7f9cff8dc000-7f9cff8dd000 r--s 00000000 08:07 1053028                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle143/version0.0/bundle.jar
+7f9cff8dd000-7f9cff8de000 r--s 00000000 08:07 1052708                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle142/version0.0/bundle.jar
+7f9cff8de000-7f9cff8df000 r--s 00000000 08:07 1052692                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle141/version0.0/bundle.jar
+7f9cff8df000-7f9cff8e0000 r--s 00000000 08:07 1052319                    /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle140/version0.0/bundle.jar
+7f9cff8e0000-7f9cff8e1000 r--s 00000000 08:07 927111                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle139/version0.0/bundle.jar
+7f9cff8e1000-7f9cff8e2000 r--s 00000000 08:07 927103                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle138/version0.0/bundle.jar
+7f9cff8e2000-7f9cff8e3000 r--s 00000000 08:07 927095                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle137/version0.0/bundle.jar
+7f9cff8e3000-7f9cff8e4000 r--s 00000000 08:07 927087                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle136/version0.0/bundle.jar
+7f9cff8e4000-7f9cff8e5000 r--s 00000000 08:07 927078                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle135/version0.0/bundle.jar
+7f9cff8e5000-7f9cff8e6000 r--s 00000000 08:07 927070                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle134/version0.0/bundle.jar
+7f9cff8e6000-7f9cff8e7000 r--s 00000000 08:07 927061                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle133/version0.0/bundle.jar
+7f9cff8e7000-7f9cff8e8000 r--s 00000000 08:07 927052                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle132/version0.0/bundle.jar
+7f9cff8e8000-7f9cff8e9000 r--s 00000000 08:07 927043                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle131/version0.0/bundle.jar
+7f9cff8e9000-7f9cff8ea000 r--s 00000000 08:07 927035                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle130/version0.0/bundle.jar
+7f9cff8ea000-7f9cff8eb000 r--s 00000000 08:07 927026                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle129/version0.0/bundle.jar
+7f9cff8eb000-7f9cff8ec000 r--s 00000000 08:07 927017                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle128/version0.0/bundle.jar
+7f9cff8ec000-7f9cff8ed000 r--s 00000000 08:07 927007                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle127/version0.0/bundle.jar
+7f9cff8ed000-7f9cff8ee000 r--s 00000000 08:07 926999                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle126/version0.0/bundle.jar
+7f9cff8ee000-7f9cff8ef000 r--s 00000000 08:07 926990                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle125/version0.0/bundle.jar
+7f9cff8ef000-7f9cff8f0000 r--s 00000000 08:07 926982                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle124/version0.0/bundle.jar
+7f9cff8f0000-7f9cff8f1000 r--s 00000000 08:07 926971                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle123/version0.0/bundle.jar
+7f9cff8f1000-7f9cff8f2000 r--s 00000000 08:07 926963                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle122/version0.0/bundle.jar
+7f9cff8f2000-7f9cff8f3000 r--s 00000000 08:07 926954                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle121/version0.0/bundle.jar
+7f9cff8f3000-7f9cff8f4000 r--s 00000000 08:07 926945                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle120/version0.0/bundle.jar
+7f9cff8f4000-7f9cff8f5000 r--s 00000000 08:07 926937                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle119/version0.0/bundle.jar
+7f9cff8f5000-7f9cff8f6000 r--s 00000000 08:07 926923                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle118/version0.0/bundle.jar
+7f9cff8f6000-7f9cff8f7000 r--s 00000000 08:07 926908                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle117/version0.0/bundle.jar
+7f9cff8f7000-7f9cff8f8000 r--s 00000000 08:07 926898                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle116/version0.0/bundle.jar
+7f9cff8f8000-7f9cff8f9000 r--s 00000000 08:07 926885                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle115/version0.0/bundle.jar
+7f9cff8f9000-7f9cff8fa000 r--s 00000000 08:07 809572                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle114/version0.0/bundle.jar
+7f9cff8fa000-7f9cff8fb000 r--s 00000000 08:07 809564                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle113/version0.0/bundle.jar
+7f9cff8fb000-7f9cff8fc000 r--s 00000000 08:07 809556                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle112/version0.0/bundle.jar
+7f9cff8fc000-7f9cff8fd000 r--s 00000000 08:07 809548                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle111/version0.0/bundle.jar
+7f9cff8fd000-7f9cff8fe000 r--s 00000000 08:07 809540                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle110/version0.0/bundle.jar
+7f9cff8fe000-7f9cff8ff000 r--s 00000000 08:07 809532                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle109/version0.0/bundle.jar
+7f9cff8ff000-7f9cff902000 ---p 00000000 00:00 0 
+7f9cff902000-7f9cffa00000 rw-p 00000000 00:00 0 
+7f9cffa00000-7f9cffa03000 ---p 00000000 00:00 0 
+7f9cffa03000-7f9cffb01000 rw-p 00000000 00:00 0 
+7f9cffb01000-7f9cffb04000 ---p 00000000 00:00 0 
+7f9cffb04000-7f9cffc02000 rw-p 00000000 00:00 0 
+7f9cffc02000-7f9cffc18000 r--s 001ab000 08:07 1574774                    /home/slowcoach/netbeans-7.0.1/ide/modules/ext/svnkit-1.3.4.jar
+7f9cffc18000-7f9cffc27000 r--s 000ae000 08:07 1574806                    /home/slowcoach/netbeans-7.0.1/ide/modules/ext/sqljet-1.0.3.jar
+7f9cffc27000-7f9cffc2b000 r--s 0004f000 08:07 1573898                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-editor-codetemplates.jar
+7f9cffc2b000-7f9cffc2f000 rw-s 00000000 00:04 16056361                   /SYSV00000000 (deleted)
+7f9cffc2f000-7f9cffc39000 r--s 000ee000 08:07 1574369                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-bugtracking.jar
+7f9cffc39000-7f9cffc3a000 r--s 00000000 08:07 809524                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle108/version0.0/bundle.jar
+7f9cffc3a000-7f9cffc3b000 r--s 00000000 08:07 809516                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle107/version0.0/bundle.jar
+7f9cffc3b000-7f9cffc3c000 r--s 00000000 08:07 809508                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle106/version0.0/bundle.jar
+7f9cffc3c000-7f9cffc3d000 r--s 00000000 08:07 809500                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle105/version0.0/bundle.jar
+7f9cffc3d000-7f9cffc42000 r--s 00058000 08:07 1574271                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-db-sql-editor.jar
+7f9cffc42000-7f9cffc46000 r--s 00042000 08:07 1574532                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-db-core.jar
+7f9cffc46000-7f9cffc47000 r--s 00000000 08:07 809492                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle104/version0.0/bundle.jar
+7f9cffc47000-7f9cffc48000 r--s 00000000 08:07 809484                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle103/version0.0/bundle.jar
+7f9cffc48000-7f9cffc49000 r--s 00000000 08:07 809476                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle102/version0.0/bundle.jar
+7f9cffc49000-7f9cffc4a000 r--s 00000000 08:07 809468                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle101/version0.0/bundle.jar
+7f9cffc4a000-7f9cffc4b000 r--s 00000000 08:07 809460                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle100/version0.0/bundle.jar
+7f9cffc4b000-7f9cffc4c000 r--s 00000000 08:07 809452                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle99/version0.0/bundle.jar
+7f9cffc4c000-7f9cffc4d000 r--s 00000000 08:07 809444                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle98/version0.0/bundle.jar
+7f9cffc4d000-7f9cffc4e000 r--s 00000000 08:07 809436                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle97/version0.0/bundle.jar
+7f9cffc4e000-7f9cffc4f000 r--s 00000000 08:07 809428                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle96/version0.0/bundle.jar
+7f9cffc4f000-7f9cffc50000 r--s 00000000 08:07 809420                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle95/version0.0/bundle.jar
+7f9cffc50000-7f9cffc51000 r--s 00000000 08:07 809412                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle94/version0.0/bundle.jar
+7f9cffc51000-7f9cffc52000 r--s 00000000 08:07 657228                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle93/version0.0/bundle.jar
+7f9cffc52000-7f9cffc53000 r--s 00000000 08:07 657220                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle92/version0.0/bundle.jar
+7f9cffc53000-7f9cffc54000 r--s 00000000 08:07 657212                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle91/version0.0/bundle.jar
+7f9cffc54000-7f9cffc55000 r--s 00000000 08:07 657204                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle90/version0.0/bundle.jar
+7f9cffc55000-7f9cffc56000 r--s 00000000 08:07 657196                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle89/version0.0/bundle.jar
+7f9cffc56000-7f9cffc57000 r--s 00000000 08:07 657188                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle88/version0.0/bundle.jar
+7f9cffc57000-7f9cffc58000 r--s 00000000 08:07 657180                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle87/version0.0/bundle.jar
+7f9cffc58000-7f9cffc59000 r--s 00000000 08:07 657172                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle86/version0.0/bundle.jar
+7f9cffc59000-7f9cffc5a000 r--s 00000000 08:07 657164                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle85/version0.0/bundle.jar
+7f9cffc5a000-7f9cffc5b000 r--s 00000000 08:07 657156                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle84/version0.0/bundle.jar
+7f9cffc5b000-7f9cffc5c000 r--s 00000000 08:07 657148                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle83/version0.0/bundle.jar
+7f9cffc5c000-7f9cffc5d000 r--s 00000000 08:07 657140                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle82/version0.0/bundle.jar
+7f9cffc5d000-7f9cffc5e000 r--s 00000000 08:07 657132                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle81/version0.0/bundle.jar
+7f9cffc5e000-7f9cffc5f000 r--s 00001000 08:07 1574645                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-libs-swingx.jar
+7f9cffc5f000-7f9cffc65000 r--s 00089000 08:07 1573962                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-db-sql-visualeditor.jar
+7f9cffc65000-7f9cffc71000 r--s 00142000 08:07 1183856                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-netbeans-api-visual.jar
+7f9cffc71000-7f9cffc73000 r--s 00006000 08:07 1574598                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-dbapi.jar
+7f9cffc73000-7f9cffc75000 r--s 00029000 08:07 1574595                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-derby.jar
+7f9cffc75000-7f9cffc78000 r--s 0004d000 08:07 1574813                    /home/slowcoach/netbeans-7.0.1/ide/modules/ext/ddl.jar
+7f9cffc78000-7f9cffc89000 r--s 00196000 08:07 1574675                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-db.jar
+7f9cffc89000-7f9cffc8c000 r--s 00035000 08:07 1574063                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-db-metadata-model.jar
+7f9cffc8c000-7f9cffc8e000 r--s 0000b000 08:07 1183591                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-netbeans-modules-editor-mimelookup-impl.jar
+7f9cffc8e000-7f9cffc90000 r--s 00007000 08:07 1574563                    /home/slowcoach/netbeans-7.0.1/ide/modules/ext/processtreekiller-1.0.1.jar
+7f9cffc92000-7f9cffc93000 r--s 00000000 08:07 657124                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle80/version0.0/bundle.jar
+7f9cffc93000-7f9cffc96000 r--s 00018000 08:07 1574749                    /home/slowcoach/netbeans-7.0.1/ide/modules/ext/commons-io-1.4.jar
+7f9cffc96000-7f9cffc97000 r--s 00000000 08:07 1573897                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-extexecution-destroy.jar
+7f9cffc97000-7f9cffc98000 r--s 00000000 08:07 1575155                    /home/slowcoach/netbeans-7.0.1/java/modules/ext/AbsoluteLayout.jar
+7f9cffc98000-7f9cffcc4000 r--s 0055d000 08:07 1313686                    /home/slowcoach/netbeans-7.0.1/java/modules/org-netbeans-modules-form.jar
+7f9cffcc4000-7f9cffccb000 r--s 00094000 08:07 1575123                    /home/slowcoach/netbeans-7.0.1/java/modules/ext/beansbinding-1.2.1.jar
+7f9cffccb000-7f9cffccc000 r--s 00000000 08:07 1313687                    /home/slowcoach/netbeans-7.0.1/java/modules/org-jdesktop-beansbinding.jar
+7f9cffccc000-7f9cffccd000 r--s 00000000 08:07 657116                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle79/version0.0/bundle.jar
+7f9cffccd000-7f9cffcce000 r--s 00000000 08:07 657108                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle78/version0.0/bundle.jar
+7f9cffcce000-7f9cffccf000 r--s 00000000 08:07 657099                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle77/version0.0/bundle.jar
+7f9cffccf000-7f9cffcd5000 r--s 00079000 08:07 1574569                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-hudson.jar
+7f9cffcd5000-7f9cffcd7000 r--s 00000000 08:07 1574528                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-ide-kit.jar
+7f9cffcd7000-7f9cffcd9000 r--s 00043000 08:07 1574493                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-defaults.jar
+7f9cffcd9000-7f9cffcdb000 r--s 00023000 08:07 1574428                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-extbrowser.jar
+7f9cffcdb000-7f9cffcde000 r--s 00028000 08:07 1574272                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-editor-macros.jar
+7f9cffcde000-7f9cffcdf000 r--s 00009000 08:07 1574709                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-core-ide.jar
+7f9cffcdf000-7f9cffce0000 r--s 00000000 08:07 1183786                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-netbeans-modules-core-kit.jar
+7f9cffce0000-7f9cffce1000 r--s 00000000 08:07 4591901                    /home/slowcoach/codecamp/java/dreamcatcher/build/cluster/modules/locale/org-netbeans-core-windows_dreamcatcher.jar
+7f9cffce1000-7f9cffced000 r--s 001b9000 08:07 1183838                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-netbeans-core-windows.jar
+7f9cffced000-7f9cffcee000 r--s 00000000 08:07 656081                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle76/version0.0/bundle.jar
+7f9cffcee000-7f9cffcef000 r--s 00000000 08:07 529033                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle75/version0.0/bundle.jar
+7f9cffcef000-7f9cffcf0000 r--s 00000000 08:07 529025                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle74/version0.0/bundle.jar
+7f9cffcf0000-7f9cffcf1000 r--s 00000000 08:07 529017                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle73/version0.0/bundle.jar
+7f9cffcf1000-7f9cffcf2000 r--s 00000000 08:07 1183854                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-netbeans-libs-felix.jar
+7f9cffcf2000-7f9cffcf9000 r--s 0002e000 08:07 1572969                    /home/slowcoach/netbeans-7.0.1/platform/modules/ext/osgi.cmpn-4.2.jar
+7f9cffcf9000-7f9cffcfc000 r--s 00015000 08:07 1572968                    /home/slowcoach/netbeans-7.0.1/platform/modules/ext/osgi.core-4.2.jar
+7f9cffcfc000-7f9cffcfd000 r--s 00000000 08:07 1183862                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-netbeans-libs-osgi.jar
+7f9cffcfd000-7f9cffd05000 r--s 000e2000 08:07 1183714                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-netbeans-modules-autoupdate-ui.jar
+7f9cffd05000-7f9cffd06000 r--s 00000000 08:07 529002                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle72/version0.0/bundle.jar
+7f9cffd06000-7f9cffd08000 r--s 00010000 08:07 1574164                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-dlight-terminal.jar
+7f9cffd08000-7f9cffd09000 r--s 00000000 08:07 528990                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle71/version0.0/bundle.jar
+7f9cffd09000-7f9cffd0a000 r--s 00000000 08:07 528982                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle70/version0.0/bundle.jar
+7f9cffd0a000-7f9cffd0b000 r--s 00000000 08:07 528974                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle69/version0.0/bundle.jar
+7f9cffd0b000-7f9cffd0c000 r--s 00000000 08:07 528966                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle68/version0.0/bundle.jar
+7f9cffd0c000-7f9cffd0d000 r--s 00000000 08:07 528958                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle67/version0.0/bundle.jar
+7f9cffd0d000-7f9cffd0e000 r--s 00000000 08:07 528950                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle66/version0.0/bundle.jar
+7f9cffd0e000-7f9cffd0f000 r--s 00000000 08:07 528942                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle65/version0.0/bundle.jar
+7f9cffd0f000-7f9cffd10000 r--s 00000000 08:07 528934                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle64/version0.0/bundle.jar
+7f9cffd10000-7f9cffd11000 r--s 00000000 08:07 528926                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle63/version0.0/bundle.jar
+7f9cffd11000-7f9cffd12000 r--s 00000000 08:07 528918                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle62/version0.0/bundle.jar
+7f9cffd12000-7f9cffd13000 r--s 00000000 08:07 1574415                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-editor-kit.jar
+7f9cffd13000-7f9cffd15000 r--s 0001c000 08:07 1574791                    /home/slowcoach/netbeans-7.0.1/ide/modules/ext/non-schema.jar
+7f9cffd15000-7f9cffd18000 r--s 00022000 08:07 1574814                    /home/slowcoach/netbeans-7.0.1/ide/modules/ext/iri.jar
+7f9cffd18000-7f9cffd23000 r--s 00183000 08:07 1574798                    /home/slowcoach/netbeans-7.0.1/ide/modules/ext/validator.jar
+7f9cffd23000-7f9cffd2b000 r--s 00057000 08:07 1574773                    /home/slowcoach/netbeans-7.0.1/ide/modules/ext/log4j-1.2.15.jar
+7f9cffd2b000-7f9cffd45000 r--s 004b3000 08:07 1574802                    /home/slowcoach/netbeans-7.0.1/ide/modules/ext/saxon9B.jar
+7f9cffd45000-7f9cffd47000 r--s 0000d000 08:07 1574620                    /home/slowcoach/netbeans-7.0.1/ide/modules/ext/commons-logging-1.1.1.jar
+7f9cffd47000-7f9cffd59000 r--s 00085000 08:07 1574808                    /home/slowcoach/netbeans-7.0.1/ide/modules/ext/jing.jar
+7f9cffd59000-7f9cffd5e000 r--s 00031000 08:07 1574742                    /home/slowcoach/netbeans-7.0.1/ide/modules/ext/html5-datatypes.jar
+7f9cffd5e000-7f9cffd5f000 r--s 00000000 08:07 528910                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle61/version0.0/bundle.jar
+7f9cffd5f000-7f9cffd60000 r--s 00000000 08:07 528902                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle60/version0.0/bundle.jar
+7f9cffd60000-7f9cffd61000 r--s 00000000 08:07 528894                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle59/version0.0/bundle.jar
+7f9cffd61000-7f9cffd62000 r--s 00000000 08:07 528885                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle58/version0.0/bundle.jar
+7f9cffd62000-7f9cffd63000 r--s 00000000 08:07 528877                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle57/version0.0/bundle.jar
+7f9cffd63000-7f9cffd6a000 r--s 000af000 08:07 1574815                    /home/slowcoach/netbeans-7.0.1/ide/modules/ext/js.jar
+7f9cffd6a000-7f9cffd6e000 r--s 0002a000 08:07 1574784                    /home/slowcoach/netbeans-7.0.1/ide/modules/ext/io-xml-util.jar
+7f9cffd6e000-7f9cffd70000 r--s 0001a000 08:07 1574165                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-html-validation.jar
+7f9cffd70000-7f9cffd74000 r--s 00043000 08:07 1574776                    /home/slowcoach/netbeans-7.0.1/ide/modules/ext/html5-parser.jar
+7f9cffd74000-7f9cffd75000 r--s 00000000 08:07 528865                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle56/version0.0/bundle.jar
+7f9cffd75000-7f9cffd89000 r--s 00392000 08:07 4592057                    /home/slowcoach/codecamp/java/dreamcatcher/build/cluster/modules/ext/pdfbox-1.6.0.jar
+7f9cffd89000-7f9cffd92000 r--s 000ba000 08:07 1572967                    /home/slowcoach/netbeans-7.0.1/platform/modules/ext/platform-3.2.7.jar
+7f9cffd94000-7f9cffd9a000 r--s 00071000 08:07 1574623                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-html.jar
+7f9cffd9a000-7f9cffd9c000 r--s 00010000 08:07 1574796                    /home/slowcoach/netbeans-7.0.1/ide/modules/ext/flute-1.3.jar
+7f9cffd9c000-7f9cffd9d000 r--s 00000000 08:07 528847                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle55/version0.0/bundle.jar
+7f9cffd9d000-7f9cffd9e000 r--s 00000000 08:07 528839                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle54/version0.0/bundle.jar
+7f9cffd9e000-7f9cffda8000 r--s 000a8000 08:07 1574420                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-css-visual.jar
+7f9cffda8000-7f9cffdab000 r--s 00050000 08:07 1183839                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-netbeans-core-output2.jar
+7f9cffdab000-7f9cffdac000 r--s 00001000 08:07 1574616                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-core-browser.jar
+7f9cffdac000-7f9cffdae000 r--s 00003000 08:07 1574252                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-editor-actions.jar
+7f9cffdae000-7f9cffdb1000 r--s 00017000 08:07 1574117                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-editor-bookmarks.jar
+7f9cffdb1000-7f9cffdb2000 r--s 00000000 08:07 528831                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle53/version0.0/bundle.jar
+7f9cffdb2000-7f9cffdb3000 r--s 00000000 08:07 528823                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle52/version0.0/bundle.jar
+7f9cffdb3000-7f9cffdb5000 r--s 00006000 08:07 1313653                    /home/slowcoach/netbeans-7.0.1/java/modules/org-netbeans-modules-java-guards.jar
+7f9cffdb5000-7f9cffdb7000 r--s 00000000 08:07 1574226                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-javascript-kit.jar
+7f9cffdb7000-7f9cffdb9000 r--s 0001b000 08:07 1574120                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-javascript-hints.jar
+7f9cffdb9000-7f9cffdbc000 r--s 00037000 08:07 1573786                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-javascript-refactoring.jar
+7f9cffdbc000-7f9cffdc2000 r--s 000d7000 08:07 1573998                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-javascript-editing.jar
+7f9cffdc2000-7f9cffdc8000 r--s 00102000 08:07 1574618                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-mozilla-rhino-patched.jar
+7f9cffdc8000-7f9cffdd3000 r--s 00176000 08:07 1574368                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-html-editor.jar
+7f9cffdd3000-7f9cffdd7000 r--s 00049000 08:07 1574167                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-html-editor-lib.jar
+7f9cffdd7000-7f9cffddf000 r--s 000e9000 08:07 1574413                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-css-editor.jar
+7f9cffddf000-7f9cffde1000 r--s 00010000 08:07 1183724                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-netbeans-modules-keyring-impl.jar
+7f9cffde3000-7f9cffde4000 r--s 00006000 08:07 1574000                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-languages-manifest.jar
+7f9cffde4000-7f9cffde6000 r--s 00021000 08:07 1574231                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-languages-yaml.jar
+7f9cffde6000-7f9cffdec000 r--s 00033000 08:07 1574762                    /home/slowcoach/netbeans-7.0.1/ide/modules/ext/jvyamlb-0.2.3.jar
+7f9cffdec000-7f9cffded000 r--s 00000000 08:07 528815                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle51/version0.0/bundle.jar
+7f9cffded000-7f9cffdef000 r--s 00001000 08:07 1574775                    /home/slowcoach/netbeans-7.0.1/ide/modules/ext/bytelist-0.1.jar
+7f9cffdef000-7f9cffdf0000 r--s 00000000 08:07 1574597                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-libs-bytelist.jar
+7f9cffdf0000-7f9cffdf2000 r--s 00002000 08:07 1574223                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-lexer-nbbridge.jar
+7f9cffdf2000-7f9cffdf6000 r--s 0003b000 08:07 1574319                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-localhistory.jar
+7f9cffdf6000-7f9cffdf7000 r--s 00007000 08:07 1313629                    /home/slowcoach/netbeans-7.0.1/java/modules/org-netbeans-modules-maven-coverage.jar
+7f9cffdf7000-7f9cffdfa000 r--s 0001d000 08:07 1574122                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-gsf-codecoverage.jar
+7f9cffdfa000-7f9cffdfb000 r--s 00000000 08:07 528807                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle50/version0.0/bundle.jar
+7f9cffdfb000-7f9cffdfd000 r--s 00016000 08:07 4592066                    /home/slowcoach/codecamp/java/dreamcatcher/build/cluster/modules/org-dreamcatcher-budgeting_2.jar
+7f9cffdfd000-7f9cffdfe000 r--s 00000000 08:07 528792                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle48/version0.0/bundle.jar
+7f9cffdfe000-7f9cffdff000 r--s 00000000 08:07 528784                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle47/version0.0/bundle.jar
+7f9cffdff000-7f9cffe00000 r--s 00000000 08:07 528776                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle46/version0.0/bundle.jar
+7f9cffe00000-7f9cffe01000 r--s 00000000 08:07 528768                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle45/version0.0/bundle.jar
+7f9cffe01000-7f9cffe0c000 r--s 00084000 08:07 1574728                    /home/slowcoach/netbeans-7.0.1/ide/modules/ext/freemarker-2.3.8.jar
+7f9cffe0c000-7f9cffe10000 r--s 00038000 08:07 1574801                    /home/slowcoach/netbeans-7.0.1/ide/modules/ext/trilead.jar
+7f9cffe10000-7f9cffe14000 r--s 00021000 08:07 1574680                    /home/slowcoach/netbeans-7.0.1/ide/modules/ext/antlr-runtime-3.1.3.jar
+7f9cffe14000-7f9cffe18000 r--s 00049000 08:07 1574617                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-api-debugger.jar
+7f9cffe18000-7f9cffe20000 r--s 000c5000 08:07 1313623                    /home/slowcoach/netbeans-7.0.1/java/modules/org-netbeans-modules-java-api-common.jar
+7f9cffe20000-7f9cffe21000 r--s 00000000 08:07 528760                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle44/version0.0/bundle.jar
+7f9cffe21000-7f9cffe22000 r--s 00000000 08:07 528752                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle43/version0.0/bundle.jar
+7f9cffe22000-7f9cffe23000 r--s 00000000 08:07 528744                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle42/version0.0/bundle.jar
+7f9cffe23000-7f9cffe28000 r--s 0007a000 08:07 1574381                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-db-dataview.jar
+7f9cffe28000-7f9cffe2e000 r--s 0007e000 08:07 1313679                    /home/slowcoach/netbeans-7.0.1/java/modules/org-apache-tools-ant-module.jar
+7f9cffe2e000-7f9cffe31000 r--s 00031000 08:07 1313640                    /home/slowcoach/netbeans-7.0.1/java/modules/org-netbeans-modules-java-sourceui.jar
+7f9cffe31000-7f9cffe32000 r--s 00000000 08:07 528736                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle41/version0.0/bundle.jar
+7f9cffe32000-7f9cffe33000 r--s 00000000 08:07 528728                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle40/version0.0/bundle.jar
+7f9cffe33000-7f9cffe34000 r--s 00000000 08:07 528644                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle39/version0.0/bundle.jar
+7f9cffe34000-7f9cffe38000 r--s 0002a000 08:07 1574315                    /home/slowcoach/netbeans-7.0.1/ide/modules/ext/org.eclipse.mylyn.bugzilla.core_3.3.1.jar
+7f9cffe38000-7f9cffe3f000 r--s 0004d000 08:07 1574447                    /home/slowcoach/netbeans-7.0.1/ide/modules/ext/org.eclipse.mylyn.tasks.core_3.3.1.jar
+7f9cffe3f000-7f9cffe45000 r--s 00044000 08:07 1574593                    /home/slowcoach/netbeans-7.0.1/ide/modules/ext/commons-httpclient-3.1.jar
+7f9cffe45000-7f9cffe46000 r--s 00000000 08:07 526513                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle38/version0.0/bundle.jar
+7f9cffe46000-7f9cffe47000 r--s 00000000 08:07 526505                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle37/version0.0/bundle.jar
+7f9cffe47000-7f9cffe5d000 r--s 0017b000 08:07 1575095                    /home/slowcoach/netbeans-7.0.1/java/modules/ext/javac-impl-nb-7.0-b07.jar
+7f9cffe5d000-7f9cffe5e000 r--s 00001000 08:07 1313680                    /home/slowcoach/netbeans-7.0.1/java/modules/org-netbeans-libs-javacimpl.jar
+7f9cffe5e000-7f9cffe61000 r--s 00025000 08:07 1313671                    /home/slowcoach/netbeans-7.0.1/java/modules/org-netbeans-modules-classfile.jar
+7f9cffe61000-7f9cffe63000 r--s 0000c000 08:07 1313663                    /home/slowcoach/netbeans-7.0.1/java/modules/org-netbeans-modules-java-lexer.jar
+7f9cffe63000-7f9cffe66000 r--s 00027000 08:07 1313638                    /home/slowcoach/netbeans-7.0.1/java/modules/org-netbeans-modules-java-platform.jar
+7f9cffe66000-7f9cffe67000 r--s 00000000 08:07 526497                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle36/version0.0/bundle.jar
+7f9cffe67000-7f9cffe68000 r--s 00000000 08:07 526489                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle35/version0.0/bundle.jar
+7f9cffe68000-7f9cffe6d000 r--s 0001b000 08:07 1575108                    /home/slowcoach/netbeans-7.0.1/java/modules/ext/javac-api-nb-7.0-b07.jar
+7f9cffe6d000-7f9cffe6e000 r--s 00002000 08:07 1313683                    /home/slowcoach/netbeans-7.0.1/java/modules/org-netbeans-libs-javacapi.jar
+7f9cffe6e000-7f9cffe6f000 r--s 00000000 08:07 526447                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle34/version0.0/bundle.jar
+7f9cffe6f000-7f9cffe70000 r--s 00000000 08:07 526222                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle33/version0.0/bundle.jar
+7f9cffe73000-7f9cffe74000 r--s 00005000 08:07 1574998                    /home/slowcoach/netbeans-7.0.1/java/modules/ext/maven/indexer-artifact-4.1.0.jar
+7f9cffe74000-7f9cffe7a000 r--s 00030000 08:07 1575062                    /home/slowcoach/netbeans-7.0.1/java/modules/ext/maven/indexer-core-4.1.0.jar
+7f9cffe7a000-7f9cffe7d000 r--s 00386000 08:07 1313637                    /home/slowcoach/netbeans-7.0.1/java/modules/org-netbeans-modules-maven-indexer.jar
+7f9cffe7d000-7f9cffe7e000 r--s 00000000 08:07 526206                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle32/version0.0/bundle.jar
+7f9cffe7e000-7f9cffe7f000 r--s 00000000 08:07 526107                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle31/version0.0/bundle.jar
+7f9cffe7f000-7f9cffe85000 r--s 00087000 08:07 1313657                    /home/slowcoach/netbeans-7.0.1/java/modules/org-netbeans-modules-maven-model.jar
+7f9cffe85000-7f9cffe88000 r--s 00012000 08:07 1575166                    /home/slowcoach/netbeans-7.0.1/java/maven/lib/aether-api-1.11.jar
+7f9cffe88000-7f9cffe89000 r--s 00002000 08:07 1575120                    /home/slowcoach/netbeans-7.0.1/java/maven/lib/wagon-file-1.0-beta-7.jar
+7f9cffe89000-7f9cffe8b000 r--s 00002000 08:07 1575148                    /home/slowcoach/netbeans-7.0.1/java/maven/lib/plexus-cipher-1.4.jar
+7f9cffe8b000-7f9cffe91000 r--s 0003e000 08:07 1575143                    /home/slowcoach/netbeans-7.0.1/java/maven/lib/maven-compat-3.0.3.jar
+7f9cffe91000-7f9cffe93000 r--s 0000b000 08:07 1575126                    /home/slowcoach/netbeans-7.0.1/java/maven/lib/maven-artifact-3.0.3.jar
+7f9cffe93000-7f9cffe96000 r--s 0001b000 08:07 1575160                    /home/slowcoach/netbeans-7.0.1/java/maven/lib/aether-impl-1.11.jar
+7f9cffe96000-7f9cffe97000 r--s 00000000 08:07 526089                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle30/version0.0/bundle.jar
+7f9cffe97000-7f9cffe9a000 r--s 00033000 08:07 1575142                    /home/slowcoach/netbeans-7.0.1/java/maven/lib/plexus-utils-2.0.6.jar
+7f9cffe9a000-7f9cffe9b000 r--s 00000000 08:07 526072                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle29/version0.0/bundle.jar
+7f9cffe9b000-7f9cffe9c000 r--s 00000000 08:07 524826                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle28/version0.0/bundle.jar
+7f9cffe9c000-7f9cffe9d000 r--s 00000000 08:07 524818                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle27/version0.0/bundle.jar
+7f9cffe9d000-7f9cffea3000 r--s 00031000 08:07 1575113                    /home/slowcoach/netbeans-7.0.1/java/maven/lib/sisu-inject-bean-2.1.1.jar
+7f9cffea3000-7f9cffea7000 r--s 00020000 08:07 1575076                    /home/slowcoach/netbeans-7.0.1/java/maven/lib/maven-model-builder-3.0.3.jar
+7f9cffea9000-7f9cffeab000 r--s 0000d000 08:07 1575075                    /home/slowcoach/netbeans-7.0.1/java/maven/lib/plexus-interpolation-1.14.jar
+7f9cffeab000-7f9cffead000 r--s 00008000 08:07 1575040                    /home/slowcoach/netbeans-7.0.1/java/maven/lib/maven-settings-builder-3.0.3.jar
+7f9cffead000-7f9cffeae000 r--s 00003000 08:07 1575167                    /home/slowcoach/netbeans-7.0.1/java/maven/lib/aether-spi-1.11.jar
+7f9cffeae000-7f9cffeb0000 r--s 0000a000 08:07 1575127                    /home/slowcoach/netbeans-7.0.1/java/maven/lib/maven-settings-3.0.3.jar
+7f9cffeb0000-7f9cffeb1000 r--s 00003000 08:07 1574954                    /home/slowcoach/netbeans-7.0.1/java/maven/lib/wagon-http-lightweight-1.0-beta-7.jar
+7f9cffeb1000-7f9cffebc000 r--s 0006a000 08:07 1575105                    /home/slowcoach/netbeans-7.0.1/java/maven/lib/sisu-guice-2.9.4-no_aop.jar
+7f9cffebc000-7f9cffebf000 r--s 0001a000 08:07 1575157                    /home/slowcoach/netbeans-7.0.1/java/maven/lib/aether-util-1.11.jar
+7f9cffebf000-7f9cffec0000 r--s 00000000 08:07 524809                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle26/version0.0/bundle.jar
+7f9cffec0000-7f9cffec1000 r--s 00000000 08:07 524800                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle25/version0.0/bundle.jar
+7f9cffec1000-7f9cffec3000 r--s 0000a000 08:07 1575104                    /home/slowcoach/netbeans-7.0.1/java/maven/boot/plexus-classworlds-2.4.jar
+7f9cffec3000-7f9cffec4000 r--s 00000000 08:07 524792                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle24/version0.0/bundle.jar
+7f9cffec4000-7f9cffec5000 r--s 00000000 08:07 524783                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle23/version0.0/bundle.jar
+7f9cffec5000-7f9cffec6000 r--s 00000000 08:07 524775                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle22/version0.0/bundle.jar
+7f9cffec6000-7f9cffec8000 r--s 0000c000 08:07 1575056                    /home/slowcoach/netbeans-7.0.1/java/maven/lib/maven-aether-provider-3.0.3.jar
+7f9cffec8000-7f9cffeca000 r--s 00008000 08:07 1575121                    /home/slowcoach/netbeans-7.0.1/java/maven/lib/xercesMinimal-1.9.6.2.jar
+7f9cffed0000-7f9cffed2000 r--s 00007000 08:07 1574946                    /home/slowcoach/netbeans-7.0.1/java/modules/ext/maven/maven-dependency-tree-1.2.jar
+7f9cffed2000-7f9cffed4000 r--s 00019000 08:07 1575158                    /home/slowcoach/netbeans-7.0.1/java/maven/lib/nekohtml-1.9.6.2.jar
+7f9cffed4000-7f9cffed6000 r--s 00023000 08:07 1575156                    /home/slowcoach/netbeans-7.0.1/java/modules/ext/maven/jdom-1.0.jar
+7f9cffed6000-7f9cffed7000 r--s 00006000 08:07 1575077                    /home/slowcoach/netbeans-7.0.1/java/maven/lib/plexus-sec-dispatcher-1.3.jar
+7f9cffed7000-7f9cffed9000 r--s 00009000 08:07 1575125                    /home/slowcoach/netbeans-7.0.1/java/maven/lib/maven-embedder-3.0.3.jar
+7f9cffed9000-7f9cffee4000 r--s 0007b000 08:07 1575159                    /home/slowcoach/netbeans-7.0.1/java/maven/lib/maven-core-3.0.3.jar
+7f9cffee4000-7f9cffee6000 r--s 00000000 08:07 1574938                    /home/slowcoach/netbeans-7.0.1/java/maven/lib/plexus-component-annotations-1.5.5.jar
+7f9cffee6000-7f9cffee8000 r--s 00006000 08:07 1574989                    /home/slowcoach/netbeans-7.0.1/java/maven/lib/maven-repository-metadata-3.0.3.jar
+7f9cffee8000-7f9cffeea000 r--s 00012000 08:07 1313632                    /home/slowcoach/netbeans-7.0.1/java/modules/org-netbeans-modules-maven-embedder.jar
+7f9cffeea000-7f9cffeeb000 r--s 0000c000 08:07 1574679                    /home/slowcoach/netbeans-7.0.1/ide/modules/ext/commons-logging-1.1.jar
+7f9cffeeb000-7f9cffeec000 r--s 00000000 08:07 524767                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle21/version0.0/bundle.jar
+7f9cffeec000-7f9cffeef000 r--s 00010000 08:07 1574230                    /home/slowcoach/netbeans-7.0.1/ide/modules/docs/org-netbeans-modules-mercurial.jar
+7f9cffeef000-7f9cffef0000 r--s 00000000 08:07 396393                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle20/version0.0/bundle.jar
+7f9cffef0000-7f9cffef5000 r--s 00048000 08:07 4592121                    /home/slowcoach/codecamp/java/dreamcatcher/build/cluster/modules/ext/commons-lang3-3.0.1.jar
+7f9cffef5000-7f9cffefe000 r--s 00058000 08:07 4592127                    /home/slowcoach/codecamp/java/dreamcatcher/build/cluster/modules/ext/jgoodies-looks-2.4.1.jar
+7f9cffefe000-7f9cfff02000 r--s 0003e000 08:07 1183830                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-netbeans-modules-print.jar
+7f9cfff02000-7f9cfff03000 r--s 00002000 08:07 1574317                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-print-editor.jar
+7f9cfff03000-7f9cfff06000 r--s 00020000 08:07 1183742                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-netbeans-modules-progress-ui.jar
+7f9cfff06000-7f9cfff0c000 r--s 00030000 08:07 4592128                    /home/slowcoach/codecamp/java/dreamcatcher/build/cluster/modules/ext/junit-4.6.jar
+7f9cfff0e000-7f9cfff10000 r--s 00000000 08:07 139018                     /var/cache/fontconfig/99e8ed0e538f840c565b6ed5dad60d56-le64.cache-3
+7f9cfff10000-7f9cfff1a000 r--s 000fe000 08:07 1574456                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-projectui.jar
+7f9cfff1a000-7f9cfff1d000 r--s 00033000 08:07 1183770                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-netbeans-modules-favorites.jar
+7f9cfff1d000-7f9cfff1e000 r--s 00000000 08:07 396376                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle19/version0.0/bundle.jar
+7f9cfff1e000-7f9cfff1f000 r--s 00000000 08:07 396360                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle18/version0.0/bundle.jar
+7f9cfff1f000-7f9cfff20000 r--s 00000000 08:07 396344                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle17/version0.0/bundle.jar
+7f9cfff20000-7f9cfff22000 r--s 0003e000 08:07 1183791                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-netbeans-modules-settings.jar
+7f9cfff22000-7f9cfff24000 r--s 0000d000 08:07 4592053                    /home/slowcoach/codecamp/java/dreamcatcher/build/cluster/modules/ext/commons-logging-1.1.1.jar
+7f9cfff24000-7f9cfff25000 r--s 0000a000 08:07 1574416                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-html-lexer.jar
+7f9cfff25000-7f9cfff26000 r--s 00003000 08:07 1573435                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-spellchecker-bindings-properties.jar
+7f9cfff26000-7f9cfff28000 r--s 00009000 08:07 1574099                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-properties-syntax.jar
+7f9cfff28000-7f9cfff2a000 r--s 0002a000 08:07 4592113                    /home/slowcoach/codecamp/java/dreamcatcher/build/cluster/modules/org-dreamcatcher-main.jar
+7f9cfff2a000-7f9cfff2e000 r--s 00017000 08:07 1574760                    /home/slowcoach/netbeans-7.0.1/ide/modules/ext/svnkit-javahl.jar
+7f9cfff2e000-7f9cfff30000 r--s 00000000 08:07 1573594                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-spellchecker-dictionary_en.jar
+7f9cfff30000-7f9cfff31000 r--s 00001000 08:07 1574115                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-spellchecker-kit.jar
+7f9cfff31000-7f9cfff35000 r--s 00034000 08:07 1574320                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-spellchecker.jar
+7f9cfff35000-7f9cfff36000 r--s 00001000 08:07 1574118                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-editor-plain-lib.jar
+7f9cfff36000-7f9cfff3a000 r--s 0001c000 08:07 1574169                    /home/slowcoach/netbeans-7.0.1/ide/modules/docs/org-netbeans-modules-subversion.jar
+7f9cfff3a000-7f9cfff50000 r--s 002ce000 08:07 1574414                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-subversion.jar
+7f9cfff50000-7f9cfff53000 r--s 00015000 08:07 1574783                    /home/slowcoach/netbeans-7.0.1/ide/modules/ext/ini4j-0.5.1.jar
+7f9cfff53000-7f9cfff54000 r--s 00000000 08:07 1574682                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-libs-ini4j.jar
+7f9cfff54000-7f9cfff55000 r--s 00000000 08:07 396327                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle16/version0.0/bundle.jar
+7f9cfff55000-7f9cfff56000 r--s 00000000 08:07 396311                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle15/version0.0/bundle.jar
+7f9cfff56000-7f9cfff57000 r--s 00000000 08:07 396294                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle14/version0.0/bundle.jar
+7f9cfff57000-7f9cfff59000 r--s 00001000 08:07 1574269                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-libs-svnClientAdapter.jar
+7f9cfff59000-7f9cfff5b000 r--s 00039000 08:07 1572982                    /home/slowcoach/netbeans-7.0.1/platform/modules/ext/updater.jar
+7f9cfff5b000-7f9cfff60000 r--s 000ac000 08:07 1183630                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-netbeans-modules-autoupdate-services.jar
+7f9cfff60000-7f9cfff63000 r--s 00036000 08:07 1574761                    /home/slowcoach/netbeans-7.0.1/ide/modules/ext/ValidationAPI.jar
+7f9cfff63000-7f9cfff65000 r--s 00006000 08:07 1574529                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-libs-freemarker.jar
+7f9cfff65000-7f9cfff67000 r--s 0000d000 08:07 1574166                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-target-iterator.jar
+7f9cfff67000-7f9cfff68000 r--s 00000000 08:07 1574329                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-tasklist-kit.jar
+7f9cfff68000-7f9cfff69000 r--s 00000000 08:07 4592084                    /home/slowcoach/codecamp/java/dreamcatcher/build/cluster/modules/org-dreamcatcher-logging.jar
+7f9cfff6b000-7f9cfff70000 r--s 00069000 08:07 1574366                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-tasklist-ui.jar
+7f9cfff70000-7f9cfff73000 r--s 00031000 08:07 1574503                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-terminal.jar
+7f9cfff73000-7f9cfff79000 r--s 00069000 08:07 1574318                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-lib-terminalemulator.jar
+7f9cfff79000-7f9cfff7a000 r--s 00000000 08:07 396278                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle13/version0.0/bundle.jar
+7f9cfff7a000-7f9cfff7b000 r--s 00000000 08:07 396262                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle12/version0.0/bundle.jar
+7f9cfff7b000-7f9cfff7d000 r--s 0000e000 08:07 4594288                    /home/slowcoach/codecamp/java/dreamcatcher/build/cluster/modules/org-dreamcatcher-filesAPI.jar
+7f9cfff7d000-7f9cfff80000 r--s 00023000 08:07 4594281                    /home/slowcoach/codecamp/java/dreamcatcher/build/cluster/modules/org-dreamcatcher-editorSuite.jar
+7f9cfff80000-7f9cfff83000 r--s 00028000 08:07 4592055                    /home/slowcoach/codecamp/java/dreamcatcher/build/cluster/modules/ext/fontbox-1.6.0.jar
+7f9cfff83000-7f9cfff84000 r--s 00000000 08:07 4592049                    /home/slowcoach/codecamp/java/dreamcatcher/build/cluster/modules/org-dreamcatcher-apachepdfbox.jar
+7f9cfff84000-7f9cfff85000 r--s 00003000 08:07 1574412                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-usersguide.jar
+7f9cfff86000-7f9cfff8b000 r--s 0009c000 08:07 1574450                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-utilities.jar
+7f9cfff8b000-7f9cfff8d000 r--s 00011000 08:07 1183788                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-netbeans-modules-sendopts.jar
+7f9cfff8d000-7f9cfff8e000 r--s 00001000 08:07 1573674                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-versioning-indexingbridge.jar
+7f9cfff8e000-7f9cfff92000 r--s 0001e000 08:07 1573556                    /home/slowcoach/netbeans-7.0.1/ide/modules/docs/org-netbeans-modules-versioning-system-cvss.jar
+7f9cfff92000-7f9cfffa2000 r--s 001a6000 08:07 1573785                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-versioning-system-cvss.jar
+7f9cfffa2000-7f9cfffa5000 r--s 00013000 08:07 1574743                    /home/slowcoach/netbeans-7.0.1/ide/modules/ext/svnjavahl-1.6.0.jar
+7f9cfffa5000-7f9cfffa6000 r--s 00001000 08:07 1574700                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-libs-jsch.jar
+7f9cfffa6000-7f9cfffa8000 r--s 00015000 08:07 1574786                    /home/slowcoach/netbeans-7.0.1/ide/modules/ext/jzlib-1.0.7.jar
+7f9cfffa8000-7f9cfffa9000 r--s 00000000 08:07 1574674                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-libs-jzlib.jar
+7f9cfffa9000-7f9cfffb0000 r--s 000b3000 08:07 1574590                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-lib-cvsclient.jar
+7f9cfffb0000-7f9cfffbb000 r--s 000f0000 08:07 1574202                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-versioning-util.jar
+7f9cfffbb000-7f9cfffbf000 r--s 0006b000 08:07 1574419                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-versioning.jar
+7f9cfffbf000-7f9cfffc1000 r--s 00004000 08:07 1573783                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-spellchecker-apimodule.jar
+7f9cfffc1000-7f9cfffc2000 r--s 00013000 08:07 1574411                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-web-common.jar
+7f9cfffc2000-7f9cfffc6000 r--s 00046000 08:07 1574379                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-xml-catalog.jar
+7f9cfffc6000-7f9cfffc8000 r--s 0003a000 08:07 1573829                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-xml-schema-completion.jar
+7f9cfffc8000-7f9cfffca000 r--s 0001e000 08:07 1574448                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-xml-tools.jar
+7f9cfffca000-7f9cfffd0000 r--s 0007c000 08:07 1574729                    /home/slowcoach/netbeans-7.0.1/ide/modules/ext/org-netbeans-tax.jar
+7f9cfffd0000-7f9cfffd7000 r--s 0006f000 08:07 1574527                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-xml-tax.jar
+7f9cfffd7000-7f9cfffee000 r--s 0010b000 08:07 1574771                    /home/slowcoach/netbeans-7.0.1/ide/modules/ext/xerces-2.8.0.jar
+7f9cfffee000-7f9cfffef000 r--s 00000000 08:07 396244                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle11/version0.0/bundle.jar
+7f9cfffef000-7f9cffff3000 r--s 0005f000 08:07 1574525                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-xml-xdm.jar
+7f9cffff4000-7f9cffff6000 r--s 00004000 08:07 1574423                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-db-drivers.jar
+7f9cffff6000-7f9cffffc000 r--s 0005c000 08:07 1574797                    /home/slowcoach/netbeans-7.0.1/ide/modules/ext/webserver.jar
+7f9cffffc000-7f9cffffe000 r--s 00011000 08:07 1574410                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-httpserver.jar
+7f9cffffe000-7f9d00000000 r--s 00000000 08:07 1574592                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-libs-bugzilla.jar
+7f9d00000000-7f9d01267000 rw-p 00000000 00:00 0 
+7f9d01267000-7f9d04000000 ---p 00000000 00:00 0 
+7f9d04000000-7f9d04001000 r--s 00000000 08:07 1574417                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-servletapi.jar
+7f9d04001000-7f9d04007000 r--s 0007d000 08:07 1574647                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-xml.jar
+7f9d04007000-7f9d0400a000 r--s 00040000 08:07 1574277                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-xml-retriever.jar
+7f9d0400a000-7f9d0400c000 r--s 00014000 08:07 1574769                    /home/slowcoach/netbeans-7.0.1/ide/modules/ext/resolver-1.2.jar
+7f9d0400c000-7f9d0400d000 r--s 00000000 08:07 396228                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle10/version0.0/bundle.jar
+7f9d0400d000-7f9d04012000 r--s 00082000 08:07 1574533                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-xml-axi.jar
+7f9d04012000-7f9d0401a000 r--s 000a1000 08:07 1574119                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-xml-schema-model.jar
+7f9d0401a000-7f9d0401d000 r--s 00038000 08:07 1574524                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-xml-xam.jar
+7f9d0401d000-7f9d0401f000 r--s 00005000 08:07 4592116                    /home/slowcoach/codecamp/java/dreamcatcher/build/cluster/modules/org-dreamcatcher-util.jar
+7f9d0401f000-7f9d04025000 r--s 00023000 08:07 4592125                    /home/slowcoach/codecamp/java/dreamcatcher/build/cluster/modules/ext/jcalendar-1.4.jar
+7f9d04025000-7f9d04027000 r--s 00014000 08:07 1573830                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-editor-bracesmatching.jar
+7f9d04027000-7f9d04029000 r--s 00025000 08:07 1574123                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-editor-structure.jar
+7f9d04029000-7f9d0402b000 r--s 00027000 08:07 1573421                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-editor-deprecated-pre65formatting.jar
+7f9d0402b000-7f9d0402c000 r--s 00007000 08:07 1574462                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-xml-lexer.jar
+7f9d0402c000-7f9d04039000 r--s 00124000 08:07 1574526                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-csl-api.jar
+7f9d04039000-7f9d04040000 r--s 0007b000 08:07 1574171                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-refactoring-api.jar
+7f9d04040000-7f9d04042000 r--s 00013000 08:07 1574294                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-editor-guards.jar
+7f9d04042000-7f9d04047000 r--s 00055000 08:07 1574562                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-jumpto.jar
+7f9d04047000-7f9d0404f000 r--s 000ed000 08:07 1574367                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-parsing-api.jar
+7f9d0404f000-7f9d04052000 r--s 00023000 08:07 1574224                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-parsing-lucene.jar
+7f9d04052000-7f9d04065000 r--s 000e7000 08:07 1574715                    /home/slowcoach/netbeans-7.0.1/ide/modules/ext/lucene-core-3.0.3.jar
+7f9d04065000-7f9d04066000 r--s 00000000 08:07 1574646                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-libs-lucene.jar
+7f9d04066000-7f9d0406b000 r--s 00071000 08:07 1183787                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-netbeans-modules-masterfs.jar
+7f9d0406b000-7f9d0406f000 r--s 000e3000 08:07 1572975                    /home/slowcoach/netbeans-7.0.1/platform/modules/ext/jna-3.2.7.jar
+7f9d04070000-7f9d04073000 r--s 00000000 08:07 139017                     /var/cache/fontconfig/e383d7ea5fbe662a33d9b44caf393297-le64.cache-3
+7f9d04073000-7f9d04077000 r--s 00000000 08:07 139016                     /var/cache/fontconfig/2cd17615ca594fa2959ae173292e504c-le64.cache-3
+7f9d04077000-7f9d04078000 r--s 00000000 08:07 139015                     /var/cache/fontconfig/e7071f4a29fa870f4323321c154eba04-le64.cache-3
+7f9d04078000-7f9d0407d000 r--s 00000000 08:07 139014                     /var/cache/fontconfig/6eb3985aa4124903f6ff08ba781cd364-le64.cache-3
+7f9d0407d000-7f9d0407e000 r--s 00000000 08:07 139013                     /var/cache/fontconfig/4c73fe0c47614734b17d736dbde7580a-le64.cache-3
+7f9d0407e000-7f9d0407f000 r--s 00000000 08:07 139012                     /var/cache/fontconfig/0d8c3b2ac0904cb8a57a757ad11a4a08-le64.cache-3
+7f9d0407f000-7f9d04080000 r--s 00000000 08:07 139011                     /var/cache/fontconfig/6a53c69dea097a2d716e069445527da8-le64.cache-3
+7f9d04080000-7f9d04086000 r--s 00000000 08:07 139010                     /var/cache/fontconfig/a755afe4a08bf5b97852ceb7400b47bc-le64.cache-3
+7f9d04086000-7f9d04087000 r--s 00000000 08:07 135883                     /var/cache/fontconfig/7ee55724f82591cb35c3d9771e9e69ed-le64.cache-3
+7f9d04087000-7f9d04090000 r--s 00000000 08:07 138997                     /var/cache/fontconfig/6d41288fd70b0be22e8c3a91e032eec0-le64.cache-3
+7f9d04090000-7f9d040a0000 r--s 00000000 08:07 138995                     /var/cache/fontconfig/0f34bcd4b6ee430af32735b75db7f02b-le64.cache-3
+7f9d040a0000-7f9d040a3000 r--s 00000000 08:07 138993                     /var/cache/fontconfig/d60319d88cac85ba9e1a07bd06cfbb8c-le64.cache-3
+7f9d040a3000-7f9d040a4000 r--s 00000000 08:07 138960                     /var/cache/fontconfig/4794a0821666d79190d59a36cb4f44b5-le64.cache-3
+7f9d040a4000-7f9d040d2000 r--s 00000000 08:07 138959                     /var/cache/fontconfig/365b55f210c0a22e9a19e35191240f32-le64.cache-3
+7f9d040d2000-7f9d040e2000 r--s 00000000 08:07 138958                     /var/cache/fontconfig/d52a8644073d54c13679302ca1180695-le64.cache-3
+7f9d040e2000-7f9d040e5000 r--s 00000000 08:07 137988                     /var/cache/fontconfig/e13b20fdb08344e0e664864cc2ede53d-le64.cache-3
+7f9d040e5000-7f9d040e9000 r--s 00000000 08:07 135881                     /var/cache/fontconfig/7ef2298fde41cc6eeb7af42e48b7d293-le64.cache-3
+7f9d040e9000-7f9d040ef000 r--s 00000000 08:07 137973                     /var/cache/fontconfig/8f469f570c05086ec8fe041cc1dbd291-le64.cache-3
+7f9d040f8000-7f9d040fa000 r--s 0000e000 08:07 1574274                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-tasklist-todo.jar
+7f9d040fa000-7f9d040fe000 r--s 00046000 08:07 1574098                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-project-libraries.jar
+7f9d040fe000-7f9d04101000 r--s 0000e000 08:07 1574373                    /home/slowcoach/netbeans-7.0.1/ide/modules/ext/svnClientAdapter-main-1.6.13.jar
+7f9d04101000-7f9d04105000 rw-s 00000000 00:04 15892516                   /SYSV00000000 (deleted)
+7f9d04105000-7f9d0410a000 r--s 00081000 08:07 1183889                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-openide-nodes.jar
+7f9d0410a000-7f9d0410c000 r--s 00027000 08:07 1183820                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-netbeans-core-multiview.jar
+7f9d0410c000-7f9d0410f000 ---p 00000000 00:00 0 
+7f9d0410f000-7f9d0420d000 rw-p 00000000 00:00 0 
+7f9d0420d000-7f9d04210000 ---p 00000000 00:00 0 
+7f9d04210000-7f9d0430e000 rw-p 00000000 00:00 0 
+7f9d0430e000-7f9d04348000 r-xp 00000000 08:07 4076677                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libfontmanager.so
+7f9d04348000-7f9d04548000 ---p 0003a000 08:07 4076677                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libfontmanager.so
+7f9d04548000-7f9d0454a000 r--p 0003a000 08:07 4076677                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libfontmanager.so
+7f9d0454a000-7f9d0454b000 rw-p 0003c000 08:07 4076677                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libfontmanager.so
+7f9d0454b000-7f9d0454e000 ---p 00000000 00:00 0 
+7f9d0454e000-7f9d0464c000 rw-p 00000000 00:00 0 
+7f9d0464c000-7f9d0464f000 ---p 00000000 00:00 0 
+7f9d0464f000-7f9d0474d000 rw-p 00000000 00:00 0 
+7f9d0474d000-7f9d04750000 r-xp 00000000 08:07 265986                     /lib/x86_64-linux-gnu/libgpg-error.so.0.8.0
+7f9d04750000-7f9d0494f000 ---p 00003000 08:07 265986                     /lib/x86_64-linux-gnu/libgpg-error.so.0.8.0
+7f9d0494f000-7f9d04950000 r--p 00002000 08:07 265986                     /lib/x86_64-linux-gnu/libgpg-error.so.0.8.0
+7f9d04950000-7f9d04951000 rw-p 00003000 08:07 265986                     /lib/x86_64-linux-gnu/libgpg-error.so.0.8.0
+7f9d04951000-7f9d04953000 r-xp 00000000 08:07 265988                     /lib/x86_64-linux-gnu/libkeyutils.so.1.3
+7f9d04953000-7f9d04b52000 ---p 00002000 08:07 265988                     /lib/x86_64-linux-gnu/libkeyutils.so.1.3
+7f9d04b52000-7f9d04b53000 r--p 00001000 08:07 265988                     /lib/x86_64-linux-gnu/libkeyutils.so.1.3
+7f9d04b53000-7f9d04b54000 rw-p 00002000 08:07 265988                     /lib/x86_64-linux-gnu/libkeyutils.so.1.3
+7f9d04b54000-7f9d04b96000 r-xp 00000000 08:07 265969                     /lib/x86_64-linux-gnu/libdbus-1.so.3.5.7
+7f9d04b96000-7f9d04d95000 ---p 00042000 08:07 265969                     /lib/x86_64-linux-gnu/libdbus-1.so.3.5.7
+7f9d04d95000-7f9d04d96000 r--p 00041000 08:07 265969                     /lib/x86_64-linux-gnu/libdbus-1.so.3.5.7
+7f9d04d96000-7f9d04d97000 rw-p 00042000 08:07 265969                     /lib/x86_64-linux-gnu/libdbus-1.so.3.5.7
+7f9d04d97000-7f9d04e11000 r-xp 00000000 08:07 265982                     /lib/x86_64-linux-gnu/libgcrypt.so.11.7.0
+7f9d04e11000-7f9d05011000 ---p 0007a000 08:07 265982                     /lib/x86_64-linux-gnu/libgcrypt.so.11.7.0
+7f9d05011000-7f9d05012000 r--p 0007a000 08:07 265982                     /lib/x86_64-linux-gnu/libgcrypt.so.11.7.0
+7f9d05012000-7f9d05015000 rw-p 0007b000 08:07 265982                     /lib/x86_64-linux-gnu/libgcrypt.so.11.7.0
+7f9d05015000-7f9d05025000 r-xp 00000000 08:07 4071602                    /usr/lib/x86_64-linux-gnu/libtasn1.so.3.1.11
+7f9d05025000-7f9d05224000 ---p 00010000 08:07 4071602                    /usr/lib/x86_64-linux-gnu/libtasn1.so.3.1.11
+7f9d05224000-7f9d05225000 r--p 0000f000 08:07 4071602                    /usr/lib/x86_64-linux-gnu/libtasn1.so.3.1.11
+7f9d05225000-7f9d05226000 rw-p 00010000 08:07 4071602                    /usr/lib/x86_64-linux-gnu/libtasn1.so.3.1.11
+7f9d05226000-7f9d0522d000 r-xp 00000000 08:07 4076635                    /usr/lib/x86_64-linux-gnu/libkrb5support.so.0.1
+7f9d0522d000-7f9d0542c000 ---p 00007000 08:07 4076635                    /usr/lib/x86_64-linux-gnu/libkrb5support.so.0.1
+7f9d0542c000-7f9d0542d000 r--p 00006000 08:07 4076635                    /usr/lib/x86_64-linux-gnu/libkrb5support.so.0.1
+7f9d0542d000-7f9d0542e000 rw-p 00007000 08:07 4076635                    /usr/lib/x86_64-linux-gnu/libkrb5support.so.0.1
+7f9d0542e000-7f9d05431000 r-xp 00000000 08:07 265964                     /lib/x86_64-linux-gnu/libcom_err.so.2.1
+7f9d05431000-7f9d05630000 ---p 00003000 08:07 265964                     /lib/x86_64-linux-gnu/libcom_err.so.2.1
+7f9d05630000-7f9d05631000 r--p 00002000 08:07 265964                     /lib/x86_64-linux-gnu/libcom_err.so.2.1
+7f9d05631000-7f9d05632000 rw-p 00003000 08:07 265964                     /lib/x86_64-linux-gnu/libcom_err.so.2.1
+7f9d05632000-7f9d05658000 r-xp 00000000 08:07 4076629                    /usr/lib/x86_64-linux-gnu/libk5crypto.so.3.1
+7f9d05658000-7f9d05857000 ---p 00026000 08:07 4076629                    /usr/lib/x86_64-linux-gnu/libk5crypto.so.3.1
+7f9d05857000-7f9d05859000 r--p 00025000 08:07 4076629                    /usr/lib/x86_64-linux-gnu/libk5crypto.so.3.1
+7f9d05859000-7f9d0585a000 rw-p 00027000 08:07 4076629                    /usr/lib/x86_64-linux-gnu/libk5crypto.so.3.1
+7f9d0585a000-7f9d05919000 r-xp 00000000 08:07 4076632                    /usr/lib/x86_64-linux-gnu/libkrb5.so.3.3
+7f9d05919000-7f9d05b19000 ---p 000bf000 08:07 4076632                    /usr/lib/x86_64-linux-gnu/libkrb5.so.3.3
+7f9d05b19000-7f9d05b22000 r--p 000bf000 08:07 4076632                    /usr/lib/x86_64-linux-gnu/libkrb5.so.3.3
+7f9d05b22000-7f9d05b23000 rw-p 000c8000 08:07 4076632                    /usr/lib/x86_64-linux-gnu/libkrb5.so.3.3
+7f9d05b23000-7f9d05b2a000 r-xp 00000000 08:07 4071625                    /usr/lib/x86_64-linux-gnu/libxcb-render.so.0.0.0
+7f9d05b2a000-7f9d05d2a000 ---p 00007000 08:07 4071625                    /usr/lib/x86_64-linux-gnu/libxcb-render.so.0.0.0
+7f9d05d2a000-7f9d05d2b000 r--p 00007000 08:07 4071625                    /usr/lib/x86_64-linux-gnu/libxcb-render.so.0.0.0
+7f9d05d2b000-7f9d05d2c000 rw-p 00008000 08:07 4071625                    /usr/lib/x86_64-linux-gnu/libxcb-render.so.0.0.0
+7f9d05d2c000-7f9d05d2e000 r-xp 00000000 08:07 4071629                    /usr/lib/x86_64-linux-gnu/libxcb-shm.so.0.0.0
+7f9d05d2e000-7f9d05f2d000 ---p 00002000 08:07 4071629                    /usr/lib/x86_64-linux-gnu/libxcb-shm.so.0.0.0
+7f9d05f2d000-7f9d05f2e000 r--p 00001000 08:07 4071629                    /usr/lib/x86_64-linux-gnu/libxcb-shm.so.0.0.0
+7f9d05f2e000-7f9d05f2f000 rw-p 00002000 08:07 4071629                    /usr/lib/x86_64-linux-gnu/libxcb-shm.so.0.0.0
+7f9d05f2f000-7f9d05f55000 r-xp 00000000 08:07 266018                     /lib/x86_64-linux-gnu/libpng12.so.0.46.0
+7f9d05f55000-7f9d06154000 ---p 00026000 08:07 266018                     /lib/x86_64-linux-gnu/libpng12.so.0.46.0
+7f9d06154000-7f9d06155000 r--p 00025000 08:07 266018                     /lib/x86_64-linux-gnu/libpng12.so.0.46.0
+7f9d06155000-7f9d06156000 rw-p 00026000 08:07 266018                     /lib/x86_64-linux-gnu/libpng12.so.0.46.0
+7f9d06156000-7f9d061c4000 r-xp 00000000 08:07 4071555                    /usr/lib/x86_64-linux-gnu/libpixman-1.so.0.22.2
+7f9d061c4000-7f9d063c4000 ---p 0006e000 08:07 4071555                    /usr/lib/x86_64-linux-gnu/libpixman-1.so.0.22.2
+7f9d063c4000-7f9d063c9000 r--p 0006e000 08:07 4071555                    /usr/lib/x86_64-linux-gnu/libpixman-1.so.0.22.2
+7f9d063c9000-7f9d063ca000 rw-p 00073000 08:07 4071555                    /usr/lib/x86_64-linux-gnu/libpixman-1.so.0.22.2
+7f9d063ca000-7f9d063cf000 r-xp 00000000 08:07 4071343                    /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f9d063cf000-7f9d065ce000 ---p 00005000 08:07 4071343                    /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f9d065ce000-7f9d065cf000 r--p 00004000 08:07 4071343                    /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f9d065cf000-7f9d065d0000 rw-p 00005000 08:07 4071343                    /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f9d065d0000-7f9d065d2000 r-xp 00000000 08:07 4071335                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f9d065d2000-7f9d067d1000 ---p 00002000 08:07 4071335                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f9d067d1000-7f9d067d2000 r--p 00001000 08:07 4071335                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f9d067d2000-7f9d067d3000 rw-p 00002000 08:07 4071335                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f9d067d3000-7f9d067e4000 r-xp 00000000 08:07 4071375                    /usr/lib/x86_64-linux-gnu/libavahi-client.so.3.2.9
+7f9d067e4000-7f9d069e4000 ---p 00011000 08:07 4071375                    /usr/lib/x86_64-linux-gnu/libavahi-client.so.3.2.9
+7f9d069e4000-7f9d069e5000 r--p 00011000 08:07 4071375                    /usr/lib/x86_64-linux-gnu/libavahi-client.so.3.2.9
+7f9d069e5000-7f9d069e6000 rw-p 00012000 08:07 4071375                    /usr/lib/x86_64-linux-gnu/libavahi-client.so.3.2.9
+7f9d069e6000-7f9d069f3000 r-xp 00000000 08:07 4071377                    /usr/lib/x86_64-linux-gnu/libavahi-common.so.3.5.3
+7f9d069f3000-7f9d06bf2000 ---p 0000d000 08:07 4071377                    /usr/lib/x86_64-linux-gnu/libavahi-common.so.3.5.3
+7f9d06bf2000-7f9d06bf3000 r--p 0000c000 08:07 4071377                    /usr/lib/x86_64-linux-gnu/libavahi-common.so.3.5.3
+7f9d06bf3000-7f9d06bf4000 rw-p 0000d000 08:07 4071377                    /usr/lib/x86_64-linux-gnu/libavahi-common.so.3.5.3
+7f9d06bf4000-7f9d06c95000 r-xp 00000000 08:07 4071463                    /usr/lib/x86_64-linux-gnu/libgnutls.so.26.16.14
+7f9d06c95000-7f9d06e94000 ---p 000a1000 08:07 4071463                    /usr/lib/x86_64-linux-gnu/libgnutls.so.26.16.14
+7f9d06e94000-7f9d06e9b000 r--p 000a0000 08:07 4071463                    /usr/lib/x86_64-linux-gnu/libgnutls.so.26.16.14
+7f9d06e9b000-7f9d06e9c000 rw-p 000a7000 08:07 4071463                    /usr/lib/x86_64-linux-gnu/libgnutls.so.26.16.14
+7f9d06e9c000-7f9d06ed7000 r-xp 00000000 08:07 4076631                    /usr/lib/x86_64-linux-gnu/libgssapi_krb5.so.2.2
+7f9d06ed7000-7f9d070d7000 ---p 0003b000 08:07 4076631                    /usr/lib/x86_64-linux-gnu/libgssapi_krb5.so.2.2
+7f9d070d7000-7f9d070d8000 r--p 0003b000 08:07 4076631                    /usr/lib/x86_64-linux-gnu/libgssapi_krb5.so.2.2
+7f9d070d8000-7f9d070da000 rw-p 0003c000 08:07 4076631                    /usr/lib/x86_64-linux-gnu/libgssapi_krb5.so.2.2
+7f9d070da000-7f9d07101000 r-xp 00000000 08:07 265975                     /lib/x86_64-linux-gnu/libexpat.so.1.5.2
+7f9d07101000-7f9d07301000 ---p 00027000 08:07 265975                     /lib/x86_64-linux-gnu/libexpat.so.1.5.2
+7f9d07301000-7f9d07303000 r--p 00027000 08:07 265975                     /lib/x86_64-linux-gnu/libexpat.so.1.5.2
+7f9d07303000-7f9d07304000 rw-p 00029000 08:07 265975                     /lib/x86_64-linux-gnu/libexpat.so.1.5.2
+7f9d07304000-7f9d07396000 r-xp 00000000 08:07 4071438                    /usr/lib/x86_64-linux-gnu/libfreetype.so.6.6.2
+7f9d07396000-7f9d07595000 ---p 00092000 08:07 4071438                    /usr/lib/x86_64-linux-gnu/libfreetype.so.6.6.2
+7f9d07595000-7f9d0759b000 r--p 00091000 08:07 4071438                    /usr/lib/x86_64-linux-gnu/libfreetype.so.6.6.2
+7f9d0759b000-7f9d0759c000 rw-p 00097000 08:07 4071438                    /usr/lib/x86_64-linux-gnu/libfreetype.so.6.6.2
+7f9d0759c000-7f9d0759e000 r-xp 00000000 08:07 4071341                    /usr/lib/x86_64-linux-gnu/libXdamage.so.1.1.0
+7f9d0759e000-7f9d0779d000 ---p 00002000 08:07 4071341                    /usr/lib/x86_64-linux-gnu/libXdamage.so.1.1.0
+7f9d0779d000-7f9d0779e000 r--p 00001000 08:07 4071341                    /usr/lib/x86_64-linux-gnu/libXdamage.so.1.1.0
+7f9d0779e000-7f9d0779f000 rw-p 00002000 08:07 4071341                    /usr/lib/x86_64-linux-gnu/libXdamage.so.1.1.0
+7f9d0779f000-7f9d077a1000 r-xp 00000000 08:07 4071337                    /usr/lib/x86_64-linux-gnu/libXcomposite.so.1.0.0
+7f9d077a1000-7f9d079a0000 ---p 00002000 08:07 4071337                    /usr/lib/x86_64-linux-gnu/libXcomposite.so.1.0.0
+7f9d079a0000-7f9d079a1000 r--p 00001000 08:07 4071337                    /usr/lib/x86_64-linux-gnu/libXcomposite.so.1.0.0
+7f9d079a1000-7f9d079a2000 rw-p 00002000 08:07 4071337                    /usr/lib/x86_64-linux-gnu/libXcomposite.so.1.0.0
+7f9d079a2000-7f9d079ab000 r-xp 00000000 08:07 4071339                    /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f9d079ab000-7f9d07baa000 ---p 00009000 08:07 4071339                    /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f9d07baa000-7f9d07bab000 r--p 00008000 08:07 4071339                    /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f9d07bab000-7f9d07bac000 rw-p 00009000 08:07 4071339                    /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f9d07bac000-7f9d07bb4000 r-xp 00000000 08:07 4071355                    /usr/lib/x86_64-linux-gnu/libXrandr.so.2.2.0
+7f9d07bb4000-7f9d07db3000 ---p 00008000 08:07 4071355                    /usr/lib/x86_64-linux-gnu/libXrandr.so.2.2.0
+7f9d07db3000-7f9d07db4000 r--p 00007000 08:07 4071355                    /usr/lib/x86_64-linux-gnu/libXrandr.so.2.2.0
+7f9d07db4000-7f9d07db5000 rw-p 00008000 08:07 4071355                    /usr/lib/x86_64-linux-gnu/libXrandr.so.2.2.0
+7f9d07db5000-7f9d07db7000 r-xp 00000000 08:07 4071353                    /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+7f9d07db7000-7f9d07fb6000 ---p 00002000 08:07 4071353                    /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+7f9d07fb6000-7f9d07fb7000 r--p 00001000 08:07 4071353                    /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+7f9d07fb7000-7f9d07fb8000 rw-p 00002000 08:07 4071353                    /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+7f9d07fb8000-7f9d07fe2000 r-xp 00000000 08:07 4071541                    /usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0.2903.0
+7f9d07fe2000-7f9d081e1000 ---p 0002a000 08:07 4071541                    /usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0.2903.0
+7f9d081e1000-7f9d081e2000 r--p 00029000 08:07 4071541                    /usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0.2903.0
+7f9d081e2000-7f9d081e3000 rw-p 0002a000 08:07 4071541                    /usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0.2903.0
+7f9d081e3000-7f9d0829c000 r-xp 00000000 08:07 4071397                    /usr/lib/x86_64-linux-gnu/libcairo.so.2.11000.2
+7f9d0829c000-7f9d0849b000 ---p 000b9000 08:07 4071397                    /usr/lib/x86_64-linux-gnu/libcairo.so.2.11000.2
+7f9d0849b000-7f9d0849d000 r--p 000b8000 08:07 4071397                    /usr/lib/x86_64-linux-gnu/libcairo.so.2.11000.2
+7f9d0849d000-7f9d0849e000 rw-p 000ba000 08:07 4071397                    /usr/lib/x86_64-linux-gnu/libcairo.so.2.11000.2
+7f9d0849e000-7f9d084a1000 rw-p 00000000 00:00 0 
+7f9d084a1000-7f9d084c0000 r-xp 00000000 08:07 4071371                    /usr/lib/x86_64-linux-gnu/libatk-1.0.so.0.20209.1
+7f9d084c0000-7f9d086c0000 ---p 0001f000 08:07 4071371                    /usr/lib/x86_64-linux-gnu/libatk-1.0.so.0.20209.1
+7f9d086c0000-7f9d086c2000 r--p 0001f000 08:07 4071371                    /usr/lib/x86_64-linux-gnu/libatk-1.0.so.0.20209.1
+7f9d086c2000-7f9d086c3000 rw-p 00021000 08:07 4071371                    /usr/lib/x86_64-linux-gnu/libatk-1.0.so.0.20209.1
+7f9d086c3000-7f9d086c8000 r-xp 00000000 08:07 4071347                    /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f9d086c8000-7f9d088c7000 ---p 00005000 08:07 4071347                    /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f9d088c7000-7f9d088c8000 r--p 00004000 08:07 4071347                    /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f9d088c8000-7f9d088c9000 rw-p 00005000 08:07 4071347                    /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f9d088c9000-7f9d088d4000 r-xp 00000000 08:07 4071539                    /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so.0.2903.0
+7f9d088d4000-7f9d08ad4000 ---p 0000b000 08:07 4071539                    /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so.0.2903.0
+7f9d08ad4000-7f9d08ad5000 r--p 0000b000 08:07 4071539                    /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so.0.2903.0
+7f9d08ad5000-7f9d08ad6000 rw-p 0000c000 08:07 4071539                    /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so.0.2903.0
+7f9d08ad6000-7f9d08af1000 r-xp 00000000 08:07 4071631                    /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f9d08af1000-7f9d08cf0000 ---p 0001b000 08:07 4071631                    /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f9d08cf0000-7f9d08cf1000 r--p 0001a000 08:07 4071631                    /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f9d08cf1000-7f9d08cf2000 rw-p 0001b000 08:07 4071631                    /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f9d08cf2000-7f9d08d40000 r-xp 00000000 08:07 4079733                    /usr/lib/x86_64-linux-gnu/libcups.so.2
+7f9d08d40000-7f9d08f40000 ---p 0004e000 08:07 4079733                    /usr/lib/x86_64-linux-gnu/libcups.so.2
+7f9d08f40000-7f9d08f44000 r--p 0004e000 08:07 4079733                    /usr/lib/x86_64-linux-gnu/libcups.so.2
+7f9d08f44000-7f9d08f45000 rw-p 00052000 08:07 4079733                    /usr/lib/x86_64-linux-gnu/libcups.so.2
+7f9d08f45000-7f9d08f79000 r-xp 00000000 08:07 4071436                    /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.4.4
+7f9d08f79000-7f9d09179000 ---p 00034000 08:07 4071436                    /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.4.4
+7f9d09179000-7f9d0917a000 r--p 00034000 08:07 4071436                    /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.4.4
+7f9d0917a000-7f9d0917b000 rw-p 00035000 08:07 4071436                    /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.4.4
+7f9d0917b000-7f9d091c2000 r-xp 00000000 08:07 4071537                    /usr/lib/x86_64-linux-gnu/libpango-1.0.so.0.2903.0
+7f9d091c2000-7f9d093c2000 ---p 00047000 08:07 4071537                    /usr/lib/x86_64-linux-gnu/libpango-1.0.so.0.2903.0
+7f9d093c2000-7f9d093c4000 r--p 00047000 08:07 4071537                    /usr/lib/x86_64-linux-gnu/libpango-1.0.so.0.2903.0
+7f9d093c4000-7f9d093c5000 rw-p 00049000 08:07 4071537                    /usr/lib/x86_64-linux-gnu/libpango-1.0.so.0.2903.0
+7f9d093c5000-7f9d093e3000 r-xp 00000000 08:07 4071449                    /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so.0.2400.0
+7f9d093e3000-7f9d095e2000 ---p 0001e000 08:07 4071449                    /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so.0.2400.0
+7f9d095e2000-7f9d095e3000 r--p 0001d000 08:07 4071449                    /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so.0.2400.0
+7f9d095e3000-7f9d095e4000 rw-p 0001e000 08:07 4071449                    /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so.0.2400.0
+7f9d095e4000-7f9d09691000 r-xp 00000000 08:07 4071447                    /usr/lib/x86_64-linux-gnu/libgdk-x11-2.0.so.0.2400.6
+7f9d09691000-7f9d09890000 ---p 000ad000 08:07 4071447                    /usr/lib/x86_64-linux-gnu/libgdk-x11-2.0.so.0.2400.6
+7f9d09890000-7f9d09894000 r--p 000ac000 08:07 4071447                    /usr/lib/x86_64-linux-gnu/libgdk-x11-2.0.so.0.2400.6
+7f9d09894000-7f9d09896000 rw-p 000b0000 08:07 4071447                    /usr/lib/x86_64-linux-gnu/libgdk-x11-2.0.so.0.2400.6
+7f9d09896000-7f9d09cc5000 r-xp 00000000 08:07 4071473                    /usr/lib/x86_64-linux-gnu/libgtk-x11-2.0.so.0.2400.6
+7f9d09cc5000-7f9d09ec5000 ---p 0042f000 08:07 4071473                    /usr/lib/x86_64-linux-gnu/libgtk-x11-2.0.so.0.2400.6
+7f9d09ec5000-7f9d09ecc000 r--p 0042f000 08:07 4071473                    /usr/lib/x86_64-linux-gnu/libgtk-x11-2.0.so.0.2400.6
+7f9d09ecc000-7f9d09ed0000 rw-p 00436000 08:07 4071473                    /usr/lib/x86_64-linux-gnu/libgtk-x11-2.0.so.0.2400.6
+7f9d09ed0000-7f9d09ed2000 rw-p 00000000 00:00 0 
+7f9d09ed2000-7f9d09ee1000 r-xp 00000000 08:07 4071351                    /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f9d09ee1000-7f9d0a0e0000 ---p 0000f000 08:07 4071351                    /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f9d0a0e0000-7f9d0a0e1000 r--p 0000e000 08:07 4071351                    /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f9d0a0e1000-7f9d0a0e2000 rw-p 0000f000 08:07 4071351                    /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f9d0a0e2000-7f9d0a0e7000 r-xp 00000000 08:07 4066025                    /usr/lib/libXtst.so.6.1.0
+7f9d0a0e7000-7f9d0a2e6000 ---p 00005000 08:07 4066025                    /usr/lib/libXtst.so.6.1.0
+7f9d0a2e6000-7f9d0a2e7000 r--p 00004000 08:07 4066025                    /usr/lib/libXtst.so.6.1.0
+7f9d0a2e7000-7f9d0a2e8000 rw-p 00005000 08:07 4066025                    /usr/lib/libXtst.so.6.1.0
+7f9d0a2e8000-7f9d0a2f1000 r-xp 00000000 08:07 4071357                    /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f9d0a2f1000-7f9d0a4f1000 ---p 00009000 08:07 4071357                    /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f9d0a4f1000-7f9d0a4f2000 r--p 00009000 08:07 4071357                    /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f9d0a4f2000-7f9d0a4f3000 rw-p 0000a000 08:07 4071357                    /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f9d0a4f3000-7f9d0a626000 r-xp 00000000 08:07 4071333                    /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f9d0a626000-7f9d0a826000 ---p 00133000 08:07 4071333                    /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f9d0a826000-7f9d0a827000 r--p 00133000 08:07 4071333                    /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f9d0a827000-7f9d0a82b000 rw-p 00134000 08:07 4071333                    /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f9d0a82b000-7f9d0a83d000 r-xp 00000000 08:07 4071345                    /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f9d0a83d000-7f9d0aa3c000 ---p 00012000 08:07 4071345                    /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f9d0aa3c000-7f9d0aa3d000 r--p 00011000 08:07 4071345                    /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f9d0aa3d000-7f9d0aa3e000 rw-p 00012000 08:07 4071345                    /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f9d0aa3e000-7f9d0aa90000 r-xp 00000000 08:07 4077258                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/xawt/libmawt.so
+7f9d0aa90000-7f9d0ac90000 ---p 00052000 08:07 4077258                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/xawt/libmawt.so
+7f9d0ac90000-7f9d0ac91000 r--p 00052000 08:07 4077258                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/xawt/libmawt.so
+7f9d0ac91000-7f9d0ac94000 rw-p 00053000 08:07 4077258                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/xawt/libmawt.so
+7f9d0ac94000-7f9d0ac95000 rw-p 00000000 00:00 0 
+7f9d0ac95000-7f9d0ad37000 r-xp 00000000 08:07 4076675                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libawt.so
+7f9d0ad37000-7f9d0af36000 ---p 000a2000 08:07 4076675                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libawt.so
+7f9d0af36000-7f9d0af37000 r--p 000a1000 08:07 4076675                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libawt.so
+7f9d0af37000-7f9d0af42000 rw-p 000a2000 08:07 4076675                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libawt.so
+7f9d0af42000-7f9d0af67000 rw-p 00000000 00:00 0 
+7f9d0af67000-7f9d0af6a000 ---p 00000000 00:00 0 
+7f9d0af6a000-7f9d0b068000 rw-p 00000000 00:00 0 
+7f9d0b068000-7f9d0b06b000 ---p 00000000 00:00 0 
+7f9d0b06b000-7f9d0b169000 rw-p 00000000 00:00 0 
+7f9d0b169000-7f9d0b179000 r-xp 00000000 08:07 4076971                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libnio.so
+7f9d0b179000-7f9d0b378000 ---p 00010000 08:07 4076971                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libnio.so
+7f9d0b378000-7f9d0b379000 r--p 0000f000 08:07 4076971                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libnio.so
+7f9d0b379000-7f9d0b37a000 rw-p 00010000 08:07 4076971                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libnio.so
+7f9d0b37a000-7f9d0b3b5000 r-xp 00000000 08:07 266016                     /lib/x86_64-linux-gnu/libpcre.so.3.12.1
+7f9d0b3b5000-7f9d0b5b4000 ---p 0003b000 08:07 266016                     /lib/x86_64-linux-gnu/libpcre.so.3.12.1
+7f9d0b5b4000-7f9d0b5b5000 r--p 0003a000 08:07 266016                     /lib/x86_64-linux-gnu/libpcre.so.3.12.1
+7f9d0b5b5000-7f9d0b5b6000 rw-p 0003b000 08:07 266016                     /lib/x86_64-linux-gnu/libpcre.so.3.12.1
+7f9d0b5b6000-7f9d0b5bd000 r-xp 00000000 08:07 4071434                    /usr/lib/x86_64-linux-gnu/libffi.so.6.0.0
+7f9d0b5bd000-7f9d0b7bc000 ---p 00007000 08:07 4071434                    /usr/lib/x86_64-linux-gnu/libffi.so.6.0.0
+7f9d0b7bc000-7f9d0b7bd000 r--p 00006000 08:07 4071434                    /usr/lib/x86_64-linux-gnu/libffi.so.6.0.0
+7f9d0b7bd000-7f9d0b7be000 rw-p 00007000 08:07 4071434                    /usr/lib/x86_64-linux-gnu/libffi.so.6.0.0
+7f9d0b7be000-7f9d0b7c2000 r-xp 00000000 08:07 4071471                    /usr/lib/x86_64-linux-gnu/libgthread-2.0.so.0.3000.0
+7f9d0b7c2000-7f9d0b9c1000 ---p 00004000 08:07 4071471                    /usr/lib/x86_64-linux-gnu/libgthread-2.0.so.0.3000.0
+7f9d0b9c1000-7f9d0b9c2000 r--p 00003000 08:07 4071471                    /usr/lib/x86_64-linux-gnu/libgthread-2.0.so.0.3000.0
+7f9d0b9c2000-7f9d0b9c3000 rw-p 00004000 08:07 4071471                    /usr/lib/x86_64-linux-gnu/libgthread-2.0.so.0.3000.0
+7f9d0b9c3000-7f9d0b9da000 r-xp 00000000 08:07 266021                     /lib/x86_64-linux-gnu/libresolv-2.13.so
+7f9d0b9da000-7f9d0bbda000 ---p 00017000 08:07 266021                     /lib/x86_64-linux-gnu/libresolv-2.13.so
+7f9d0bbda000-7f9d0bbdb000 r--p 00017000 08:07 266021                     /lib/x86_64-linux-gnu/libresolv-2.13.so
+7f9d0bbdb000-7f9d0bbdc000 rw-p 00018000 08:07 266021                     /lib/x86_64-linux-gnu/libresolv-2.13.so
+7f9d0bbdc000-7f9d0bbde000 rw-p 00000000 00:00 0 
+7f9d0bbde000-7f9d0bbfa000 r-xp 00000000 08:07 266025                     /lib/x86_64-linux-gnu/libselinux.so.1
+7f9d0bbfa000-7f9d0bdf9000 ---p 0001c000 08:07 266025                     /lib/x86_64-linux-gnu/libselinux.so.1
+7f9d0bdf9000-7f9d0bdfa000 r--p 0001b000 08:07 266025                     /lib/x86_64-linux-gnu/libselinux.so.1
+7f9d0bdfa000-7f9d0bdfb000 rw-p 0001c000 08:07 266025                     /lib/x86_64-linux-gnu/libselinux.so.1
+7f9d0bdfb000-7f9d0bdfc000 rw-p 00000000 00:00 0 
+7f9d0bdfc000-7f9d0bdff000 r-xp 00000000 08:07 4071457                    /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.3000.0
+7f9d0bdff000-7f9d0bffe000 ---p 00003000 08:07 4071457                    /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.3000.0
+7f9d0bffe000-7f9d0bfff000 r--p 00002000 08:07 4071457                    /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.3000.0
+7f9d0bfff000-7f9d0c000000 rw-p 00003000 08:07 4071457                    /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.3000.0
+7f9d0c000000-7f9d0d92c000 rw-p 00000000 00:00 0 
+7f9d0d92c000-7f9d10000000 ---p 00000000 00:00 0 
+7f9d10000000-7f9d10001000 r--s 00000000 08:07 1574566                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-db-kit.jar
+7f9d10001000-7f9d10003000 r--s 00000000 08:07 1183866                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-netbeans-libs-jna.jar
+7f9d10003000-7f9d10006000 r--s 0001e000 08:07 1574421                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-api-java-classpath.jar
+7f9d10006000-7f9d10007000 r--s 00000000 08:07 396212                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle9/version0.0/bundle.jar
+7f9d10007000-7f9d1000b000 r--s 00038000 08:07 1574730                    /home/slowcoach/netbeans-7.0.1/ide/modules/ext/commons-lang-2.3.jar
+7f9d1000b000-7f9d1000d000 r--s 00008000 08:07 1183855                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-netbeans-core-io-ui.jar
+7f9d1000d000-7f9d1000f000 r--s 00009000 08:07 1183840                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-netbeans-core-netigso.jar
+7f9d1000f000-7f9d10012000 r--s 00042000 08:07 1574061                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-editor-completion.jar
+7f9d10012000-7f9d1001b000 r--s 00109000 08:07 1574621                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-diff.jar
+7f9d1001b000-7f9d10020000 r--s 0006e000 08:07 1574253                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-options-editor.jar
+7f9d10020000-7f9d10024000 r--s 0004b000 08:07 1183699                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-netbeans-modules-options-keymap.jar
+7f9d10024000-7f9d1002d000 r--s 000c6000 08:07 1574560                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-editor.jar
+7f9d1002d000-7f9d1002e000 r--s 00000000 08:07 396195                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle8/version0.0/bundle.jar
+7f9d1002e000-7f9d10030000 r--s 00000000 08:07 1183878                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-jdesktop-layout.jar
+7f9d10030000-7f9d10033000 r--s 00051000 08:07 1573724                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-editor-settings-storage.jar
+7f9d10033000-7f9d1003c000 r--s 0007d000 08:07 1572970                    /home/slowcoach/netbeans-7.0.1/platform/modules/ext/jhall-2.0_05.jar
+7f9d1003c000-7f9d1003f000 r--s 0002c000 08:07 1183806                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-netbeans-modules-javahelp.jar
+7f9d1003f000-7f9d10043000 r--s 00062000 08:07 1183740                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-netbeans-modules-options-api.jar
+7f9d10043000-7f9d10049000 r--s 0008f000 08:07 1183888                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-netbeans-core.jar
+7f9d10049000-7f9d1004b000 r--s 00001000 08:07 1183810                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-netbeans-modules-keyring.jar
+7f9d1004b000-7f9d1004d000 r--s 00015000 08:07 1573999                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-editor-errorstripe.jar
+7f9d1004d000-7f9d1004e000 r--s 00000000 08:07 396179                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle7/version0.0/bundle.jar
+7f9d1004e000-7f9d10050000 r--s 00024000 08:07 1574502                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-xml-core.jar
+7f9d10050000-7f9d10052000 r--s 00016000 08:07 1574727                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-api-xml.jar
+7f9d10052000-7f9d10057000 r--s 00045000 08:07 1574322                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-projectuiapi.jar
+7f9d10057000-7f9d1005b000 r--s 0003f000 08:07 1574499                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-spi-editor-hints.jar
+7f9d1005b000-7f9d1006b000 r--s 001e8000 08:07 1574425                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-editor-lib.jar
+7f9d1006b000-7f9d1006d000 r--s 00013000 08:07 1574273                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-editor-indent.jar
+7f9d1006d000-7f9d10070000 r--s 00023000 08:07 1574372                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-editor-fold.jar
+7f9d10070000-7f9d10078000 r--s 000d9000 08:07 1574365                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-editor-lib2.jar
+7f9d10078000-7f9d10079000 r--s 00000000 08:07 396162                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle6/version0.0/bundle.jar
+7f9d10079000-7f9d1007a000 r--s 00000000 08:07 396146                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle5/version0.0/bundle.jar
+7f9d1007a000-7f9d1007c000 r--s 0000b000 08:07 4592056                    /home/slowcoach/codecamp/java/dreamcatcher/build/cluster/modules/ext/jempbox-1.6.0.jar
+7f9d1007c000-7f9d1007e000 r--s 00021000 08:07 1574371                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-editor-util.jar
+7f9d1007e000-7f9d1007f000 r--s 00000000 08:07 396130                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle4/version0.0/bundle.jar
+7f9d1007f000-7f9d10080000 r--s 00000000 08:07 396113                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle3/version0.0/bundle.jar
+7f9d10080000-7f9d10082000 r--s 0000e000 08:07 1574596                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-spi-navigator.jar
+7f9d10082000-7f9d10086000 r--s 00069000 08:07 1574649                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-spi-palette.jar
+7f9d10086000-7f9d10089000 r--s 00022000 08:07 1183811                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-netbeans-spi-quicksearch.jar
+7f9d10089000-7f9d1008a000 r--s 00002000 08:07 1183712                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-netbeans-api-annotations-common.jar
+7f9d1008a000-7f9d1008b000 r--s 0000a000 08:07 1574622                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-spi-tasklist.jar
+7f9d1008b000-7f9d1008c000 r--s 00000000 08:07 139020                     /var/cache/fontconfig/c05880de57d1f5e948fdfacc138775d9-le64.cache-3
+7f9d1008c000-7f9d1008d000 r--s 00000000 08:07 135894                     /home/slowcoach/.fontconfig/f305919476f6558bb82c50f5e5926578-le64.cache-3
+7f9d1008d000-7f9d1008f000 r--s 00015000 08:07 1574170                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-editor-settings.jar
+7f9d1008f000-7f9d10092000 r--s 0002c000 08:07 1574501                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-swing-dirchooser.jar
+7f9d10092000-7f9d10096000 r--s 0003e000 08:07 1574424                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-modules-projectapi.jar
+7f9d10096000-7f9d10099000 r--s 00036000 08:07 1183857                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-netbeans-swing-plaf.jar
+7f9d10099000-7f9d1009a000 r--s 00008000 08:07 1183865                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-openide-execution.jar
+7f9d1009a000-7f9d1009c000 r--s 0000a000 08:07 1183896                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-openide-io.jar
+7f9d1009c000-7f9d1009d000 r--s 0000f000 08:07 1574758                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-openidex-util.jar
+7f9d1009d000-7f9d1009e000 r--s 00000000 08:07 396097                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle2/version0.0/bundle.jar
+7f9d1009e000-7f9d100a0000 r--s 0000f000 08:07 1574409                    /home/slowcoach/netbeans-7.0.1/ide/modules/ext/org.eclipse.mylyn.commons.net_3.3.0.jar
+7f9d100a0000-7f9d100a2000 r--s 0000e000 08:07 1574275                    /home/slowcoach/netbeans-7.0.1/ide/modules/ext/svnClientAdapter-javahl-1.6.13.jar
+7f9d100a2000-7f9d100a4000 r--s 0000f000 08:07 1574496                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-libs-bugtracking.jar
+7f9d100a4000-7f9d100a6000 r--s 0000a000 08:07 1574531                    /home/slowcoach/netbeans-7.0.1/ide/modules/ext/apache-commons-codec-1.3.jar
+7f9d100a6000-7f9d100a9000 r--s 00032000 08:07 1183882                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-openide-actions.jar
+7f9d100a9000-7f9d100ad000 r--s 0005f000 08:07 1183892                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-openide-text.jar
+7f9d100ad000-7f9d100af000 r--s 0000b000 08:07 1183676                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-netbeans-modules-editor-mimelookup.jar
+7f9d100af000-7f9d100bc000 r--s 0019e000 08:07 1183869                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-openide-explorer.jar
+7f9d100bc000-7f9d100bd000 r--s 00000000 08:07 396080                     /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir/var/cache/netigso/bundle1/version0.0/bundle.jar
+7f9d100bd000-7f9d100bf000 r--s 00016000 08:07 4594270                    /home/slowcoach/codecamp/java/dreamcatcher/build/cluster/modules/org-dreamcatcher-scheduling.jar
+7f9d100bf000-7f9d100cc000 r--s 000de000 08:07 1183790                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-netbeans-swing-tabcontrol.jar
+7f9d100cc000-7f9d100ce000 r--s 00025000 08:07 1183880                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-openide-windows.jar
+7f9d100ce000-7f9d100d1000 ---p 00000000 00:00 0 
+7f9d100d1000-7f9d100e8000 rw-p 00000000 00:00 0 
+7f9d100e8000-7f9d100eb000 ---p 00000000 00:00 0 
+7f9d100eb000-7f9d101e9000 rw-p 00000000 00:00 0 
+7f9d101e9000-7f9d102dd000 r-xp 00000000 08:07 265984                     /lib/x86_64-linux-gnu/libglib-2.0.so.0.3000.0
+7f9d102dd000-7f9d104dc000 ---p 000f4000 08:07 265984                     /lib/x86_64-linux-gnu/libglib-2.0.so.0.3000.0
+7f9d104dc000-7f9d104dd000 r--p 000f3000 08:07 265984                     /lib/x86_64-linux-gnu/libglib-2.0.so.0.3000.0
+7f9d104dd000-7f9d104de000 rw-p 000f4000 08:07 265984                     /lib/x86_64-linux-gnu/libglib-2.0.so.0.3000.0
+7f9d104de000-7f9d104df000 rw-p 00000000 00:00 0 
+7f9d104df000-7f9d1052d000 r-xp 00000000 08:07 4071465                    /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.3000.0
+7f9d1052d000-7f9d1072d000 ---p 0004e000 08:07 4071465                    /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.3000.0
+7f9d1072d000-7f9d1072e000 r--p 0004e000 08:07 4071465                    /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.3000.0
+7f9d1072e000-7f9d1072f000 rw-p 0004f000 08:07 4071465                    /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.3000.0
+7f9d1072f000-7f9d10730000 rw-p 00000000 00:00 0 
+7f9d10730000-7f9d1086b000 r-xp 00000000 08:07 4071453                    /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.3000.0
+7f9d1086b000-7f9d10a6a000 ---p 0013b000 08:07 4071453                    /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.3000.0
+7f9d10a6a000-7f9d10a6e000 r--p 0013a000 08:07 4071453                    /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.3000.0
+7f9d10a6e000-7f9d10a70000 rw-p 0013e000 08:07 4071453                    /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.3000.0
+7f9d10a70000-7f9d10a72000 rw-p 00000000 00:00 0 
+7f9d10a72000-7f9d10a73000 r--s 00000000 08:07 4592099                    /home/slowcoach/codecamp/java/dreamcatcher/build/cluster/modules/org-dreamcatcher-selection.jar
+7f9d10a73000-7f9d10a74000 r--s 00000000 08:07 1574370                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-libs-antlr3-runtime.jar
+7f9d10a74000-7f9d10a76000 r--s 0000f000 08:07 1574276                    /home/slowcoach/netbeans-7.0.1/ide/modules/ext/svnClientAdapter-svnkit-1.6.13.jar
+7f9d10a76000-7f9d10a77000 r--s 00002000 08:07 4592106                    /home/slowcoach/codecamp/java/dreamcatcher/build/cluster/modules/org-dreamcatcher-textFilter.jar
+7f9d10a77000-7f9d10a79000 r--s 0002e000 08:07 1183883                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-openide-dialogs.jar
+7f9d10a79000-7f9d10a7a000 r--s 00006000 08:07 4592126                    /home/slowcoach/codecamp/java/dreamcatcher/build/cluster/modules/ext/jgoodies-common-1.2.0.jar
+7f9d10a7a000-7f9d10a7b000 r--s 00001000 08:07 1183768                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-netbeans-core-nativeaccess.jar
+7f9d10a7b000-7f9d10a80000 r--s 00087000 08:07 1183894                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-openide-awt.jar
+7f9d10a80000-7f9d10a82000 r--s 0000a000 08:07 1183812                    /home/slowcoach/netbeans-7.0.1/platform/modules/org-netbeans-modules-queries.jar
+7f9d10a82000-7f9d10a83000 r--p 00000000 00:00 0 
+7f9d10a83000-7f9d10a87000 r--s 0009f000 08:07 4071211                    /usr/lib/jvm/java-7-openjdk-common/jre/lib/jsse.jar
+7f9d10a87000-7f9d10a9d000 r-xp 00000000 08:07 4076970                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libnet.so
+7f9d10a9d000-7f9d10c9c000 ---p 00016000 08:07 4076970                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libnet.so
+7f9d10c9c000-7f9d10c9d000 r--p 00015000 08:07 4076970                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libnet.so
+7f9d10c9d000-7f9d10c9e000 rw-p 00016000 08:07 4076970                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libnet.so
+7f9d10c9e000-7f9d10d08000 r--s 00f90000 08:07 4077277                    /usr/lib/jvm/java-7-openjdk-amd64/lib/tools.jar
+7f9d10d08000-7f9d10d0e000 r--s 0001f000 08:07 4077281                    /usr/lib/jvm/java-7-openjdk-amd64/lib/dt.jar
+7f9d10d0e000-7f9d10d0f000 r--s 00001000 08:07 1572946                    /home/slowcoach/netbeans-7.0.1/platform/lib/locale/org-openide-util_zh_CN.jar
+7f9d10d0f000-7f9d10d10000 r--s 00001000 08:07 1572955                    /home/slowcoach/netbeans-7.0.1/platform/lib/locale/org-openide-util_ru.jar
+7f9d10d10000-7f9d10d11000 r--s 00001000 08:07 1572947                    /home/slowcoach/netbeans-7.0.1/platform/lib/locale/org-openide-util_pt_BR.jar
+7f9d10d11000-7f9d10d12000 r--s 00001000 08:07 1572954                    /home/slowcoach/netbeans-7.0.1/platform/lib/locale/org-openide-util_ja.jar
+7f9d10d12000-7f9d10d13000 r--s 00000000 08:07 1572938                    /home/slowcoach/netbeans-7.0.1/platform/lib/locale/org-openide-util-lookup_zh_CN.jar
+7f9d10d13000-7f9d10d14000 r--s 00000000 08:07 1572941                    /home/slowcoach/netbeans-7.0.1/platform/lib/locale/org-openide-util-lookup_ru.jar
+7f9d10d14000-7f9d10d15000 r--s 00000000 08:07 1572937                    /home/slowcoach/netbeans-7.0.1/platform/lib/locale/org-openide-util-lookup_pt_BR.jar
+7f9d10d15000-7f9d10d16000 r--s 00000000 08:07 1572942                    /home/slowcoach/netbeans-7.0.1/platform/lib/locale/org-openide-util-lookup_ja.jar
+7f9d10d16000-7f9d10d17000 r--s 00000000 08:07 1572943                    /home/slowcoach/netbeans-7.0.1/platform/lib/locale/org-openide-modules_zh_CN.jar
+7f9d10d17000-7f9d10d18000 r--s 00000000 08:07 1572945                    /home/slowcoach/netbeans-7.0.1/platform/lib/locale/org-openide-modules_ru.jar
+7f9d10d18000-7f9d10d19000 r--s 00000000 08:07 1572944                    /home/slowcoach/netbeans-7.0.1/platform/lib/locale/org-openide-modules_pt_BR.jar
+7f9d10d19000-7f9d10d1a000 r--s 00000000 08:07 1572948                    /home/slowcoach/netbeans-7.0.1/platform/lib/locale/org-openide-modules_ja.jar
+7f9d10d1a000-7f9d10d1b000 r--s 00000000 08:07 1572979                    /home/slowcoach/netbeans-7.0.1/platform/lib/locale/boot_zh_CN.jar
+7f9d10d1b000-7f9d10d1c000 r--s 00000000 08:07 1572991                    /home/slowcoach/netbeans-7.0.1/platform/lib/locale/boot_ru.jar
+7f9d10d1c000-7f9d10d1d000 r--s 00000000 08:07 1572978                    /home/slowcoach/netbeans-7.0.1/platform/lib/locale/boot_pt_BR.jar
+7f9d10d1d000-7f9d10d1e000 r--s 00000000 08:07 1572990                    /home/slowcoach/netbeans-7.0.1/platform/lib/locale/boot_ja.jar
+7f9d10d1e000-7f9d10d21000 ---p 00000000 00:00 0 
+7f9d10d21000-7f9d10e1f000 rw-p 00000000 00:00 0 
+7f9d10e1f000-7f9d10e22000 ---p 00000000 00:00 0 
+7f9d10e22000-7f9d10f20000 rw-p 00000000 00:00 0 
+7f9d10f20000-7f9d10f27000 r--s 000a7000 08:07 1572981                    /home/slowcoach/netbeans-7.0.1/platform/lib/org-openide-util.jar
+7f9d10f27000-7f9d10f28000 r--s 0002e000 08:07 4591898                    /home/slowcoach/codecamp/java/dreamcatcher/build/cluster/core/locale/core_dreamcatcher.jar
+7f9d10f28000-7f9d10f29000 r--s 00003000 08:07 1573899                    /home/slowcoach/netbeans-7.0.1/ide/modules/org-netbeans-libs-svnClientAdapter-javahl.jar
+7f9d10f29000-7f9d10f2a000 r--s 00000000 08:07 4592119                    /home/slowcoach/codecamp/java/dreamcatcher/build/cluster/modules/org-dreamcathcer-commons.jar
+7f9d10f2a000-7f9d10f2b000 r--s 00001000 08:07 1572974                    /home/slowcoach/netbeans-7.0.1/platform/core/locale/core_zh_CN.jar
+7f9d10f2b000-7f9d10f2c000 r--s 00001000 08:07 1572989                    /home/slowcoach/netbeans-7.0.1/platform/core/locale/core_ja.jar
+7f9d10f2c000-7f9d10f2d000 r--s 00001000 08:07 1572934                    /home/slowcoach/netbeans-7.0.1/platform/core/locale/org-openide-filesystems_zh_CN.jar
+7f9d10f2d000-7f9d10f2e000 r--s 00001000 08:07 1572940                    /home/slowcoach/netbeans-7.0.1/platform/core/locale/org-openide-filesystems_ru.jar
+7f9d10f2e000-7f9d10f35000 r--s 000d0000 08:07 1443743                    /home/slowcoach/netbeans-7.0.1/platform/core/org-openide-filesystems.jar
+7f9d10f35000-7f9d10f36000 ---p 00000000 00:00 0 
+7f9d10f36000-7f9d11036000 rw-p 00000000 00:00 0 
+7f9d11036000-7f9d11039000 ---p 00000000 00:00 0 
+7f9d11039000-7f9d11137000 rw-p 00000000 00:00 0 
+7f9d11137000-7f9d1113a000 ---p 00000000 00:00 0 
+7f9d1113a000-7f9d11238000 rw-p 00000000 00:00 0 
+7f9d11238000-7f9d1123b000 ---p 00000000 00:00 0 
+7f9d1123b000-7f9d11339000 rw-p 00000000 00:00 0 
+7f9d11339000-7f9d1133c000 ---p 00000000 00:00 0 
+7f9d1133c000-7f9d1143a000 rw-p 00000000 00:00 0 
+7f9d1143a000-7f9d1143d000 ---p 00000000 00:00 0 
+7f9d1143d000-7f9d1153b000 rw-p 00000000 00:00 0 
+7f9d1153b000-7f9d1153e000 ---p 00000000 00:00 0 
+7f9d1153e000-7f9d1163c000 rw-p 00000000 00:00 0 
+7f9d1163c000-7f9d11640000 r-xp 00000000 08:07 4076676                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libdt_socket.so
+7f9d11640000-7f9d1183f000 ---p 00004000 08:07 4076676                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libdt_socket.so
+7f9d1183f000-7f9d11840000 r--p 00003000 08:07 4076676                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libdt_socket.so
+7f9d11840000-7f9d11841000 rw-p 00004000 08:07 4076676                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libdt_socket.so
+7f9d11841000-7f9d11844000 ---p 00000000 00:00 0 
+7f9d11844000-7f9d11942000 rw-p 00000000 00:00 0 
+7f9d11942000-7f9d11945000 ---p 00000000 00:00 0 
+7f9d11945000-7f9d11a43000 rw-p 00000000 00:00 0 
+7f9d11a43000-7f9d11a46000 ---p 00000000 00:00 0 
+7f9d11a46000-7f9d11b44000 rw-p 00000000 00:00 0 
+7f9d11b44000-7f9d11b45000 ---p 00000000 00:00 0 
+7f9d11b45000-7f9d121b6000 rw-p 00000000 00:00 0 
+7f9d121b6000-7f9d12364000 r--s 03e76000 08:07 4076664                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar
+7f9d12364000-7f9d1238c000 rw-p 00000000 00:00 0 
+7f9d1238c000-7f9d1238d000 ---p 00000000 00:00 0 
+7f9d1238d000-7f9d1248d000 rw-p 00000000 00:00 0 
+7f9d1248d000-7f9d1248e000 ---p 00000000 00:00 0 
+7f9d1248e000-7f9d1258e000 rw-p 00000000 00:00 0 
+7f9d1258e000-7f9d1258f000 ---p 00000000 00:00 0 
+7f9d1258f000-7f9d1268f000 rw-p 00000000 00:00 0 
+7f9d1268f000-7f9d12690000 ---p 00000000 00:00 0 
+7f9d12690000-7f9d127c0000 rw-p 00000000 00:00 0 
+7f9d127c0000-7f9d127e3000 rw-p 00000000 00:00 0 
+7f9d127e3000-7f9d12801000 rw-p 00000000 00:00 0 
+7f9d12801000-7f9d128ce000 rw-p 00000000 00:00 0 
+7f9d128ce000-7f9d128fe000 rw-p 00000000 00:00 0 
+7f9d128fe000-7f9d12921000 rw-p 00000000 00:00 0 
+7f9d12921000-7f9d1293f000 rw-p 00000000 00:00 0 
+7f9d1293f000-7f9d12a0b000 rw-p 00000000 00:00 0 
+7f9d12a0b000-7f9d12a79000 rw-p 00000000 00:00 0 
+7f9d12a79000-7f9d12a81000 ---p 00000000 00:00 0 
+7f9d12a81000-7f9d12a82000 rw-p 00000000 00:00 0 
+7f9d12a82000-7f9d12f62000 rwxp 00000000 00:00 0 
+7f9d12f62000-7f9d15a82000 rw-p 00000000 00:00 0 
+7f9d15a82000-7f9d15a8a000 r-xp 00000000 08:07 4076978                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libzip.so
+7f9d15a8a000-7f9d15c89000 ---p 00008000 08:07 4076978                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libzip.so
+7f9d15c89000-7f9d15c8a000 r--p 00007000 08:07 4076978                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libzip.so
+7f9d15c8a000-7f9d15c8b000 rw-p 00008000 08:07 4076978                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libzip.so
+7f9d15c8b000-7f9d15c97000 r-xp 00000000 08:07 266000                     /lib/x86_64-linux-gnu/libnss_files-2.13.so
+7f9d15c97000-7f9d15e96000 ---p 0000c000 08:07 266000                     /lib/x86_64-linux-gnu/libnss_files-2.13.so
+7f9d15e96000-7f9d15e97000 r--p 0000b000 08:07 266000                     /lib/x86_64-linux-gnu/libnss_files-2.13.so
+7f9d15e97000-7f9d15e98000 rw-p 0000c000 08:07 266000                     /lib/x86_64-linux-gnu/libnss_files-2.13.so
+7f9d15e98000-7f9d15ea2000 r-xp 00000000 08:07 266004                     /lib/x86_64-linux-gnu/libnss_nis-2.13.so
+7f9d15ea2000-7f9d160a2000 ---p 0000a000 08:07 266004                     /lib/x86_64-linux-gnu/libnss_nis-2.13.so
+7f9d160a2000-7f9d160a3000 r--p 0000a000 08:07 266004                     /lib/x86_64-linux-gnu/libnss_nis-2.13.so
+7f9d160a3000-7f9d160a4000 rw-p 0000b000 08:07 266004                     /lib/x86_64-linux-gnu/libnss_nis-2.13.so
+7f9d160a4000-7f9d160bb000 r-xp 00000000 08:07 265994                     /lib/x86_64-linux-gnu/libnsl-2.13.so
+7f9d160bb000-7f9d162ba000 ---p 00017000 08:07 265994                     /lib/x86_64-linux-gnu/libnsl-2.13.so
+7f9d162ba000-7f9d162bb000 r--p 00016000 08:07 265994                     /lib/x86_64-linux-gnu/libnsl-2.13.so
+7f9d162bb000-7f9d162bc000 rw-p 00017000 08:07 265994                     /lib/x86_64-linux-gnu/libnsl-2.13.so
+7f9d162bc000-7f9d162be000 rw-p 00000000 00:00 0 
+7f9d162be000-7f9d162c6000 r-xp 00000000 08:07 265996                     /lib/x86_64-linux-gnu/libnss_compat-2.13.so
+7f9d162c6000-7f9d164c5000 ---p 00008000 08:07 265996                     /lib/x86_64-linux-gnu/libnss_compat-2.13.so
+7f9d164c5000-7f9d164c6000 r--p 00007000 08:07 265996                     /lib/x86_64-linux-gnu/libnss_compat-2.13.so
+7f9d164c6000-7f9d164c7000 rw-p 00008000 08:07 265996                     /lib/x86_64-linux-gnu/libnss_compat-2.13.so
+7f9d164c7000-7f9d16bab000 r--p 00000000 08:07 4069896                    /usr/lib/locale/locale-archive
+7f9d16bab000-7f9d16bae000 r-xp 00000000 08:07 4076972                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libnpt.so
+7f9d16bae000-7f9d16dad000 ---p 00003000 08:07 4076972                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libnpt.so
+7f9d16dad000-7f9d16dae000 r--p 00002000 08:07 4076972                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libnpt.so
+7f9d16dae000-7f9d16daf000 rw-p 00003000 08:07 4076972                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libnpt.so
+7f9d16daf000-7f9d16de9000 r-xp 00000000 08:07 4076964                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libjdwp.so
+7f9d16de9000-7f9d16fe8000 ---p 0003a000 08:07 4076964                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libjdwp.so
+7f9d16fe8000-7f9d16fe9000 r--p 00039000 08:07 4076964                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libjdwp.so
+7f9d16fe9000-7f9d16fea000 rw-p 0003a000 08:07 4076964                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libjdwp.so
+7f9d16fea000-7f9d17013000 r-xp 00000000 08:07 4076959                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libjava.so
+7f9d17013000-7f9d17212000 ---p 00029000 08:07 4076959                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libjava.so
+7f9d17212000-7f9d17213000 r--p 00028000 08:07 4076959                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libjava.so
+7f9d17213000-7f9d17215000 rw-p 00029000 08:07 4076959                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libjava.so
+7f9d17215000-7f9d17223000 r-xp 00000000 08:07 4076977                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libverify.so
+7f9d17223000-7f9d17422000 ---p 0000e000 08:07 4076977                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libverify.so
+7f9d17422000-7f9d17424000 r--p 0000d000 08:07 4076977                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libverify.so
+7f9d17424000-7f9d17425000 rw-p 0000f000 08:07 4076977                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libverify.so
+7f9d17425000-7f9d1742c000 r-xp 00000000 08:07 266023                     /lib/x86_64-linux-gnu/librt-2.13.so
+7f9d1742c000-7f9d1762b000 ---p 00007000 08:07 266023                     /lib/x86_64-linux-gnu/librt-2.13.so
+7f9d1762b000-7f9d1762c000 r--p 00006000 08:07 266023                     /lib/x86_64-linux-gnu/librt-2.13.so
+7f9d1762c000-7f9d1762d000 rw-p 00007000 08:07 266023                     /lib/x86_64-linux-gnu/librt-2.13.so
+7f9d1762d000-7f9d17642000 r-xp 00000000 08:07 265980                     /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f9d17642000-7f9d17841000 ---p 00015000 08:07 265980                     /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f9d17841000-7f9d17842000 r--p 00014000 08:07 265980                     /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f9d17842000-7f9d17843000 rw-p 00015000 08:07 265980                     /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f9d17843000-7f9d178c6000 r-xp 00000000 08:07 265989                     /lib/x86_64-linux-gnu/libm-2.13.so
+7f9d178c6000-7f9d17ac5000 ---p 00083000 08:07 265989                     /lib/x86_64-linux-gnu/libm-2.13.so
+7f9d17ac5000-7f9d17ac6000 r--p 00082000 08:07 265989                     /lib/x86_64-linux-gnu/libm-2.13.so
+7f9d17ac6000-7f9d17ac7000 rw-p 00083000 08:07 265989                     /lib/x86_64-linux-gnu/libm-2.13.so
+7f9d17ac7000-7f9d17baf000 r-xp 00000000 08:07 4071598                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.16
+7f9d17baf000-7f9d17daf000 ---p 000e8000 08:07 4071598                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.16
+7f9d17daf000-7f9d17db7000 r--p 000e8000 08:07 4071598                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.16
+7f9d17db7000-7f9d17db9000 rw-p 000f0000 08:07 4071598                    /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.16
+7f9d17db9000-7f9d17dce000 rw-p 00000000 00:00 0 
+7f9d17dce000-7f9d18755000 r-xp 00000000 08:07 4076980                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f9d18755000-7f9d18954000 ---p 00987000 08:07 4076980                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f9d18954000-7f9d189d2000 r--p 00986000 08:07 4076980                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f9d189d2000-7f9d189ed000 rw-p 00a04000 08:07 4076980                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f9d189ed000-7f9d18a18000 rw-p 00000000 00:00 0 
+7f9d18a18000-7f9d18a30000 r-xp 00000000 08:07 266019                     /lib/x86_64-linux-gnu/libpthread-2.13.so
+7f9d18a30000-7f9d18c2f000 ---p 00018000 08:07 266019                     /lib/x86_64-linux-gnu/libpthread-2.13.so
+7f9d18c2f000-7f9d18c30000 r--p 00017000 08:07 266019                     /lib/x86_64-linux-gnu/libpthread-2.13.so
+7f9d18c30000-7f9d18c31000 rw-p 00018000 08:07 266019                     /lib/x86_64-linux-gnu/libpthread-2.13.so
+7f9d18c31000-7f9d18c35000 rw-p 00000000 00:00 0 
+7f9d18c35000-7f9d18c4c000 r-xp 00000000 08:07 266042                     /lib/x86_64-linux-gnu/libz.so.1.2.3.4
+7f9d18c4c000-7f9d18e4b000 ---p 00017000 08:07 266042                     /lib/x86_64-linux-gnu/libz.so.1.2.3.4
+7f9d18e4b000-7f9d18e4c000 r--p 00016000 08:07 266042                     /lib/x86_64-linux-gnu/libz.so.1.2.3.4
+7f9d18e4c000-7f9d18e4d000 rw-p 00017000 08:07 266042                     /lib/x86_64-linux-gnu/libz.so.1.2.3.4
+7f9d18e4d000-7f9d18e4f000 r-xp 00000000 08:07 265970                     /lib/x86_64-linux-gnu/libdl-2.13.so
+7f9d18e4f000-7f9d1904f000 ---p 00002000 08:07 265970                     /lib/x86_64-linux-gnu/libdl-2.13.so
+7f9d1904f000-7f9d19050000 r--p 00002000 08:07 265970                     /lib/x86_64-linux-gnu/libdl-2.13.so
+7f9d19050000-7f9d19051000 rw-p 00003000 08:07 265970                     /lib/x86_64-linux-gnu/libdl-2.13.so
+7f9d19051000-7f9d191e6000 r-xp 00000000 08:07 265959                     /lib/x86_64-linux-gnu/libc-2.13.so
+7f9d191e6000-7f9d193e5000 ---p 00195000 08:07 265959                     /lib/x86_64-linux-gnu/libc-2.13.so
+7f9d193e5000-7f9d193e9000 r--p 00194000 08:07 265959                     /lib/x86_64-linux-gnu/libc-2.13.so
+7f9d193e9000-7f9d193ea000 rw-p 00198000 08:07 265959                     /lib/x86_64-linux-gnu/libc-2.13.so
+7f9d193ea000-7f9d193f0000 rw-p 00000000 00:00 0 
+7f9d193f0000-7f9d193fc000 r-xp 00000000 08:07 4076672                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/jli/libjli.so
+7f9d193fc000-7f9d195fb000 ---p 0000c000 08:07 4076672                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/jli/libjli.so
+7f9d195fb000-7f9d195fc000 r--p 0000b000 08:07 4076672                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/jli/libjli.so
+7f9d195fc000-7f9d195fd000 rw-p 0000c000 08:07 4076672                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/jli/libjli.so
+7f9d195fd000-7f9d1961e000 r-xp 00000000 08:07 265946                     /lib/x86_64-linux-gnu/ld-2.13.so
+7f9d1961e000-7f9d19623000 r--s 000b9000 08:07 1443744                    /home/slowcoach/netbeans-7.0.1/platform/core/core.jar
+7f9d19623000-7f9d19626000 r--s 00047000 08:07 1572966                    /home/slowcoach/netbeans-7.0.1/platform/lib/org-openide-util-lookup.jar
+7f9d19626000-7f9d19627000 r--s 00009000 08:07 1572972                    /home/slowcoach/netbeans-7.0.1/platform/lib/org-openide-modules.jar
+7f9d19627000-7f9d19630000 r--s 00263000 08:07 4071407                    /usr/lib/jvm/java-7-openjdk-common/jre/lib/resources.jar
+7f9d19630000-7f9d19632000 r--s 0005b000 08:07 1572992                    /home/slowcoach/netbeans-7.0.1/platform/lib/boot.jar
+7f9d19632000-7f9d19635000 r--s 00085000 08:07 4068394                    /usr/lib/jvm/java-7-openjdk-common/jre/lib/ext/localedata.jar
+7f9d19635000-7f9d1963d000 r--s 00066000 08:07 4468419                    /usr/share/java/gnome-java-bridge.jar
+7f9d1963d000-7f9d19640000 r--s 0000f000 08:07 4069924                    /usr/lib/jvm/java-7-openjdk-common/jre/lib/ext/pulse-java.jar
+7f9d19640000-7f9d19654000 rw-p 00000000 00:00 0 
+7f9d19654000-7f9d19700000 rw-p 00000000 00:00 0 
+7f9d19700000-7f9d19703000 ---p 00000000 00:00 0 
+7f9d19703000-7f9d19806000 rw-p 00000000 00:00 0 
+7f9d19806000-7f9d19807000 r--s 00001000 08:07 1572973                    /home/slowcoach/netbeans-7.0.1/platform/core/locale/core_pt_BR.jar
+7f9d19807000-7f9d19808000 r--s 00001000 08:07 1572988                    /home/slowcoach/netbeans-7.0.1/platform/core/locale/core_ru.jar
+7f9d19808000-7f9d1980b000 r--s 00032000 08:07 4068402                    /usr/lib/jvm/java-7-openjdk-common/jre/lib/ext/sunjce_provider.jar
+7f9d1980b000-7f9d1980d000 r--s 00012000 08:07 4068522                    /usr/lib/jvm/java-7-openjdk-common/jre/lib/ext/zipfs.jar
+7f9d1980d000-7f9d19810000 r--s 0003c000 08:07 4068318                    /usr/lib/jvm/java-7-openjdk-common/jre/lib/ext/sunpkcs11.jar
+7f9d19810000-7f9d19811000 r--s 00002000 08:07 4068346                    /usr/lib/jvm/java-7-openjdk-common/jre/lib/ext/dnsns.jar
+7f9d19811000-7f9d19819000 rw-s 00000000 08:07 529043                     /tmp/hsperfdata_slowcoach/6132
+7f9d19819000-7f9d1981a000 rw-p 00000000 00:00 0 
+7f9d1981a000-7f9d1981b000 r--p 00000000 00:00 0 
+7f9d1981b000-7f9d1981d000 rw-p 00000000 00:00 0 
+7f9d1981d000-7f9d1981e000 r--p 00020000 08:07 265946                     /lib/x86_64-linux-gnu/ld-2.13.so
+7f9d1981e000-7f9d19820000 rw-p 00021000 08:07 265946                     /lib/x86_64-linux-gnu/ld-2.13.so
+7fffd217e000-7fffd21a0000 rw-p 00000000 00:00 0                          [stack]
+7fffd21ff000-7fffd2200000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Djdk.home=/usr/lib/jvm/java-7-openjdk-amd64 -Dnetbeans.system_socks_proxy=10.2.21.7:80 -Dnetbeans.system_http_proxy=10.2.21.7:80 -Dnetbeans.system_http_non_proxy_hosts=[localhost,127.0.0.0/8,*.local -Dnetbeans.dirs=/home/slowcoach/codecamp/java/dreamcatcher/build/cluster:/home/slowcoach/netbeans-7.0.1/harness:/home/slowcoach/netbeans-7.0.1/ide:/home/slowcoach/netbeans-7.0.1/java:/home/slowcoach/netbeans-7.0.1/platform -Dnetbeans.home=/home/slowcoach/netbeans-7.0.1/platform -Dnetbeans.logger.console=true -ea -Xdebug -Xrunjdwp:transport=dt_socket,suspend=y,server=n,address=localhost:35617 
+java_command: org.netbeans.Main --userdir /home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir --branding dreamcatcher
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+USERNAME=slowcoach
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0x7fca30], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGBUS: [libjvm.so+0x7fca30], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGFPE: [libjvm.so+0x6a1150], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGPIPE: SIG_IGN, sa_mask[0]=0x00001000, sa_flags=0x10000000
+SIGXFSZ: [libjvm.so+0x6a1150], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGILL: [libjvm.so+0x6a1150], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGUSR1: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGUSR2: [libjvm.so+0x6a1520], sa_mask[0]=0x00000004, sa_flags=0x10000004
+SIGHUP: [libjvm.so+0x6a1660], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGINT: SIG_IGN, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGTERM: [libjvm.so+0x6a1660], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGQUIT: [libjvm.so+0x6a1660], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+
+
+---------------  S Y S T E M  ---------------
+
+OS:Ubuntu 11.10 (oneiric)
+uname:Linux 3.0.0-12-generic #20-Ubuntu SMP Fri Oct 7 14:56:25 UTC 2011 x86_64
+libc:glibc 2.13 NPTL 2.13 
+rlimit: STACK 8192k, CORE 0k, NPROC 22385, NOFILE 4096, AS infinity
+load average:0.01 0.08 0.14
+
+/proc/meminfo:
+MemTotal:        2881156 kB
+MemFree:          306292 kB
+Buffers:           41600 kB
+Cached:           754984 kB
+SwapCached:         6376 kB
+Active:          1651816 kB
+Inactive:         752796 kB
+Active(anon):    1401232 kB
+Inactive(anon):   414448 kB
+Active(file):     250584 kB
+Inactive(file):   338348 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:        106492 kB
+SwapFree:          74636 kB
+Dirty:               516 kB
+Writeback:             0 kB
+AnonPages:       1604908 kB
+Mapped:           145284 kB
+Shmem:            207464 kB
+Slab:              66060 kB
+SReclaimable:      40888 kB
+SUnreclaim:        25172 kB
+KernelStack:        3896 kB
+PageTables:        26012 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     1547068 kB
+Committed_AS:    4229280 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:      436560 kB
+VmallocChunk:   34359296256 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:       53248 kB
+DirectMap2M:     2953216 kB
+
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 37 stepping 5, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, ht
+
+Memory: 4k page, physical 2881156k(306292k free), swap 106492k(74636k free)
+
+vm_info: OpenJDK 64-Bit Server VM (21.0-b17) for linux-amd64 JRE (1.7.0_147-b147), built on Sep 30 2011 00:36:33 by "buildd" with gcc 4.6.1
+
+time: Thu Nov  3 18:05:56 2011
+elapsed time: 958 seconds
+

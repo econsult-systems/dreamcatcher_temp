@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+OpenIDE-Module: org.dreamcatcher.textFilter
+OpenIDE-Module-Layer: org/dreamcatcher/textFilter/layer.xml
+OpenIDE-Module-Localizing-Bundle: org/dreamcatcher/textFilter/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.0
+

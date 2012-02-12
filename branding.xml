@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : branding.xml
+    Created on : May 28, 2011, 12:01 PM
+    Author     : slowcoach
+    Description:
+        Purpose of the document follows.
+-->
+
+<theme name="Tan">
+    <!--below are properties defined in MetalTheme-->
+  <color key="primary1" r="170" g="144" b="119"/>
+  <color key="primary2" r="190" g="170" b="140"/>
+  <color key="primary3" r="250" g="240" b="210"/>
+  <color key="secondary1" r="198" g="183" b="157"/>
+  <color key="secondary2" r="180" g="162" b="145"/>
+  <color key="secondary3" r="240" g="218" b="190"/>
+  <color key="black" r="10" g="10" b="60"/>  
+  <color key="white" r="231" g="207" b="181"/>
+  <color key="window" r="231" g="207" b="181"/>
+  <color key="controlText" r="190" g="170" b="140"/>
+  <color key="info" r="190" g="170" b="140"/>
+  <color key="controlDkShadow" r="190" g="170" b="140"/>
+
+    <!--these are some specific colors stored in UIDefaults-->
+  <color key="ScrollBar.darkShadow" r="190" g="170" b="140"/>
+  <color key="MenuItem.acceleratorForeground" r="130" g="100" b="35"/>
+  <color key="Menu.acceleratorForeground" r="130" g="100" b="35"/>
+  <color key="Menu.selectionBackground" r="240" g="218" b="190"/>
+ </theme>
+
+ <theme name="SmallScrollBars">
+  <metric key="ScrollBar.width" value="12"/>
+ </theme>
+
+<theme name="SmallTabs">
+    <metric key="TabbedPane.textIconGap" value="2"/>
+    <insets key="TabbedPane.tabInsets" top="0" bottom="1" left="3" right="1"/>
+</theme>
+
+ <theme name="LargerFonts">
+    <!--below are properties defined in MetalTheme-->
+  <font key="systemfont" name="Dialog" style="Plain" size="12"/>
+  <font key="userFont" name="Dialog" style="Plain" size="12"/>
+  <font key="subFont" name="Dialog" style="Plain" size="12"/>
+  <font key="menuFont" name="SansSerif" style="Plain" size="12"/>
+  <font key="windowTitleFont" name="SansSerif" style="Plain" size="12"/>
+  <font key="controlFont" name="SansSerif" style="Plain" size="12"/>
+
+    <!--these are some specific fonts stored in UIDefaults-->
+  <font key="List.font" name="SansSerif" style="Plain" size="12"/>
+  <font key="Tree.font" name="SansSerif" style="Plain" size="12"/>
+  <font key="Panel.font" name="SansSerif" style="Plain" size="12"/>
+ </theme>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module codename="org.dreamcatcher.drmProjectType">
+    <module_version install_time="1328718505061" last="true" origin="installer" specification_version="1.0">
+        <file crc="3088232887" name="config/Modules/org-dreamcatcher-drmProjectType.xml"/>
+        <file crc="3459839020" name="modules/org-dreamcatcher-drmProjectType.jar"/>
+    </module_version>
+</module>

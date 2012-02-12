@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+OpenIDE-Module: org.dreamcatcher.main
+OpenIDE-Module-Layer: org/dreamcatcher/main/layer.xml
+OpenIDE-Module-Localizing-Bundle: org/dreamcatcher/main/Bundle.properties
+OpenIDE-Module-Requires: org.openide.windows.WindowManager
+OpenIDE-Module-Specification-Version: 1.0
+

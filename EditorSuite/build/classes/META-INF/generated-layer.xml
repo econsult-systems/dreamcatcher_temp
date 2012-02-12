@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.2//EN"
+                            "http://www.netbeans.org/dtds/filesystem-1_2.dtd">
+<filesystem>
+    <folder name="Actions">
+        <folder name="Project">
+            <file name="org-dreamcatcher-editorsuite-ViewScript.instance">
+                <!--org.dreamcatcher.editorsuite.ViewScript-->
+                <attr
+                    bundlevalue="org.dreamcatcher.editorsuite.Bundle#CTL_ViewScript" name="displayName"/>
+                <attr
+                    methodvalue="org.openide.awt.Actions.alwaysEnabled" name="instanceCreate"/>
+                <attr name="delegate" newvalue="org.dreamcatcher.editorsuite.ViewScript"/>
+                <attr name="iconBase" stringvalue="org/dreamcatcher/editorsuite/ViewScript.png"/>
+                <attr boolvalue="false" name="noIconInMenu"/>
+            </file>
+        </folder>
+        <folder name="Window">
+            <file name="org-dreamcatcher-filesAPI-Projects-sceneViewerTopComponent.instance">
+                <!--org.dreamcatcher.editorsuite.ScriptViewerTopComponent-->
+                <attr
+                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
+                <attr name="component" newvalue="org.dreamcatcher.editorsuite.ScriptViewerTopComponent"/>
+                <attr name="preferredID" stringvalue="ScriptViewerTopComponent"/>
+                <attr
+                    bundlevalue="org.dreamcatcher.editorsuite.Bundle#CTL_ScriptViewerAction" name="displayName"/>
+                <attr name="iconBase" stringvalue="org/dreamcatcher/customEditor/ViewScript.png"/>
+            </file>
+        </folder>
+    </folder>
+    <folder name="Menu">
+        <folder name="Project">
+            <file name="org-dreamcatcher-editorsuite-ViewScript.shadow">
+                <!--org.dreamcatcher.editorsuite.ViewScript-->
+                <attr name="originalFile" stringvalue="Actions/Project/org-dreamcatcher-editorsuite-ViewScript.instance"/>
+                <attr intvalue="200" name="position"/>
+            </file>
+        </folder>
+        <folder name="Window">
+            <file name="org-dreamcatcher-filesAPI-Projects-sceneViewerTopComponent.shadow">
+                <!--org.dreamcatcher.editorsuite.ScriptViewerTopComponent-->
+                <attr name="originalFile" stringvalue="Actions/Window/org-dreamcatcher-filesAPI-Projects-sceneViewerTopComponent.instance"/>
+            </file>
+        </folder>
+    </folder>
+    <folder name="Toolbars">
+        <folder name="File">
+            <file name="org-dreamcatcher-editorsuite-ViewScript.shadow">
+                <!--org.dreamcatcher.editorsuite.ViewScript-->
+                <attr name="originalFile" stringvalue="Actions/Project/org-dreamcatcher-editorsuite-ViewScript.instance"/>
+                <attr intvalue="350" name="position"/>
+            </file>
+        </folder>
+    </folder>
+    <folder name="xml">
+        <folder name="entities">
+            <folder name="org_dreamcatcher_editorsuite">
+                <file name="ScriptViewer" url="nbres:/org/netbeans/modules/settings/resources/properties-1_0.dtd">
+                    <!--org.dreamcatcher.editorsuite.ScriptViewerTopComponent-->
+                    <attr name="hint.originalPublicID" stringvalue="-//org.dreamcatcher.editorsuite//ScriptViewer//EN"/>
+                </file>
+            </folder>
+        </folder>
+        <folder name="memory">
+            <folder name="org">
+                <folder name="dreamcatcher">
+                    <folder name="editorsuite">
+                        <file name="ScriptViewerTopComponent">
+                            <!--org.dreamcatcher.editorsuite.ScriptViewerTopComponent-->
+                            <attr name="settings.providerPath" stringvalue="xml/lookups//org_dreamcatcher_editorsuite/ScriptViewer.instance"/>
+                        </file>
+                    </folder>
+                </folder>
+            </folder>
+        </folder>
+        <folder name="lookups">
+            <folder name="org_dreamcatcher_editorsuite">
+                <file name="ScriptViewer.instance">
+                    <!--org.dreamcatcher.editorsuite.ScriptViewerTopComponent-->
+                    <attr
+                        methodvalue="org.netbeans.api.settings.Factory.create" name="instanceCreate"/>
+                    <attr
+                        methodvalue="org.netbeans.api.settings.Factory.properties" name="settings.convertor"/>
+                    <attr name="settings.instanceClass" stringvalue="org.dreamcatcher.editorsuite.ScriptViewerTopComponent"/>
+                    <attr name="settings.instanceOf" stringvalue="org.dreamcatcher.editorsuite.ScriptViewerTopComponent"/>
+                    <attr boolvalue="true" name="xmlproperties.preventStoring"/>
+                </file>
+            </folder>
+        </folder>
+    </folder>
+    <folder name="Windows2">
+        <folder name="Components">
+            <file name="sceneViewerTopComponent.settings">
+                <!--org.dreamcatcher.editorsuite.ScriptViewerTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="org.dreamcatcher.editorsuite.ScriptViewerTopComponent"/>
+</settings>
+]]></file>
+        </folder>
+        <folder name="Modes">
+            <folder name="editor">
+                <file name="sceneViewerTopComponent.wstcref">
+                    <!--org.dreamcatcher.editorsuite.ScriptViewerTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="sceneViewerTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+            </folder>
+        </folder>
+    </folder>
+</filesystem>

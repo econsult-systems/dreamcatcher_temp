@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.2//EN"
+                            "http://www.netbeans.org/dtds/filesystem-1_2.dtd">
+<filesystem>
+    <folder name="Actions">
+        <folder name="Help">
+            <file name="org-dreamcatcher-main-Help.instance">
+                <!--org.dreamcatcher.main.Help-->
+                <attr
+                    bundlevalue="org.dreamcatcher.main.Bundle#CTL_Help" name="displayName"/>
+                <attr
+                    methodvalue="org.openide.awt.Actions.alwaysEnabled" name="instanceCreate"/>
+                <attr name="delegate" newvalue="org.dreamcatcher.main.Help"/>
+                <attr boolvalue="false" name="noIconInMenu"/>
+            </file>
+        </folder>
+        <folder name="Edit">
+            <file name="org-dreamcatcher-main-projectExplorer-openToTag.instance">
+                <!--org.dreamcatcher.main.projectExplorer.openToTag-->
+                <attr
+                    bundlevalue="org.dreamcatcher.main.projectExplorer.Bundle#CTL_openToTag" name="displayName"/>
+                <attr methodvalue="org.openide.awt.Actions.context" name="instanceCreate"/>
+                <attr name="type" stringvalue="org.openide.loaders.DataObject"/>
+                <attr methodvalue="org.openide.awt.Actions.inject" name="delegate"/>
+                <attr name="injectable" stringvalue="org.dreamcatcher.main.projectExplorer.openToTag"/>
+                <attr name="selectionType" stringvalue="EXACTLY_ONE"/>
+                <attr boolvalue="false" name="noIconInMenu"/>
+            </file>
+        </folder>
+        <folder name="Window">
+            <file name="org-dreamcatcher-main-componentsTopComponent.instance">
+                <!--org.dreamcatcher.main.componentsTopComponent-->
+                <attr
+                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
+                <attr name="component" newvalue="org.dreamcatcher.main.componentsTopComponent"/>
+                <attr name="preferredID" stringvalue="componentsTopComponent"/>
+                <attr
+                    bundlevalue="org.dreamcatcher.main.Bundle#CTL_componentsAction" name="displayName"/>
+            </file>
+            <file name="org-dreamcatcher-main-outputTopComponent.instance">
+                <!--org.dreamcatcher.main.outputTopComponent-->
+                <attr
+                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
+                <attr name="component" newvalue="org.dreamcatcher.main.outputTopComponent"/>
+                <attr name="preferredID" stringvalue="outputTopComponent"/>
+                <attr
+                    bundlevalue="org.dreamcatcher.main.Bundle#CTL_outputAction" name="displayName"/>
+            </file>
+            <file name="org-dreamcatcher-main-projectsTopComponent.instance">
+                <!--org.dreamcatcher.main.projectsTopComponent-->
+                <attr
+                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
+                <attr name="component" newvalue="org.dreamcatcher.main.projectsTopComponent"/>
+                <attr name="preferredID" stringvalue="projectsTopComponent"/>
+                <attr
+                    bundlevalue="org.dreamcatcher.main.Bundle#CTL_projectsAction" name="displayName"/>
+            </file>
+            <file name="org-dreamcatcher-main-propertiesTopComponent.instance">
+                <!--org.dreamcatcher.main.propertiesTopComponent-->
+                <attr
+                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
+                <attr name="component" newvalue="org.dreamcatcher.main.propertiesTopComponent"/>
+                <attr name="preferredID" stringvalue="propertiesTopComponent"/>
+                <attr
+                    bundlevalue="org.dreamcatcher.main.Bundle#CTL_propertiesAction" name="displayName"/>
+            </file>
+            <file name="org-dreamcatcher-main-scriptTopComponent.instance">
+                <!--org.dreamcatcher.main.scriptTopComponent-->
+                <attr
+                    methodvalue="org.openide.windows.TopComponent.openAction" name="instanceCreate"/>
+                <attr name="component" newvalue="org.dreamcatcher.main.scriptTopComponent"/>
+                <attr name="preferredID" stringvalue="scriptTopComponent"/>
+                <attr
+                    bundlevalue="org.dreamcatcher.main.Bundle#CTL_scriptAction" name="displayName"/>
+            </file>
+        </folder>
+    </folder>
+    <folder name="Menu">
+        <folder name="Help">
+            <file name="org-dreamcatcher-main-Help.shadow">
+                <!--org.dreamcatcher.main.Help-->
+                <attr name="originalFile" stringvalue="Actions/Help/org-dreamcatcher-main-Help.instance"/>
+                <attr intvalue="100" name="position"/>
+            </file>
+            <file name="org-dreamcatcher-main-Help-separatorAfter.instance">
+                <!--org.dreamcatcher.main.Help-->
+                <attr name="instanceCreate" newvalue="javax.swing.JSeparator"/>
+                <attr intvalue="150" name="position"/>
+            </file>
+        </folder>
+        <folder name="Window">
+            <file name="org-dreamcatcher-main-componentsTopComponent.shadow">
+                <!--org.dreamcatcher.main.componentsTopComponent-->
+                <attr name="originalFile" stringvalue="Actions/Window/org-dreamcatcher-main-componentsTopComponent.instance"/>
+            </file>
+            <file name="org-dreamcatcher-main-outputTopComponent.shadow">
+                <!--org.dreamcatcher.main.outputTopComponent-->
+                <attr name="originalFile" stringvalue="Actions/Window/org-dreamcatcher-main-outputTopComponent.instance"/>
+            </file>
+            <file name="org-dreamcatcher-main-projectsTopComponent.shadow">
+                <!--org.dreamcatcher.main.projectsTopComponent-->
+                <attr name="originalFile" stringvalue="Actions/Window/org-dreamcatcher-main-projectsTopComponent.instance"/>
+            </file>
+            <file name="org-dreamcatcher-main-propertiesTopComponent.shadow">
+                <!--org.dreamcatcher.main.propertiesTopComponent-->
+                <attr name="originalFile" stringvalue="Actions/Window/org-dreamcatcher-main-propertiesTopComponent.instance"/>
+            </file>
+            <file name="org-dreamcatcher-main-scriptTopComponent.shadow">
+                <!--org.dreamcatcher.main.scriptTopComponent-->
+                <attr name="originalFile" stringvalue="Actions/Window/org-dreamcatcher-main-scriptTopComponent.instance"/>
+            </file>
+        </folder>
+    </folder>
+    <folder name="Shortcuts">
+        <file name="WINDOWS F1.shadow">
+            <!--org.dreamcatcher.main.Help-->
+            <attr name="originalFile" stringvalue="Actions/Help/org-dreamcatcher-main-Help.instance"/>
+        </file>
+    </folder>
+    <folder name="Loaders">
+        <folder name="text">
+            <folder name="drmextension">
+                <folder name="Actions">
+                    <file name="org-dreamcatcher-main-projectExplorer-openToTag.shadow">
+                        <!--org.dreamcatcher.main.projectExplorer.openToTag-->
+                        <attr name="originalFile" stringvalue="Actions/Edit/org-dreamcatcher-main-projectExplorer-openToTag.instance"/>
+                        <attr intvalue="0" name="position"/>
+                    </file>
+                </folder>
+            </folder>
+        </folder>
+    </folder>
+    <folder name="Windows2">
+        <folder name="Components">
+            <file name="componentsTopComponent.settings">
+                <!--org.dreamcatcher.main.componentsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="org.dreamcatcher.main.componentsTopComponent"/>
+</settings>
+]]></file>
+            <file name="outputTopComponent.settings">
+                <!--org.dreamcatcher.main.outputTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="org.dreamcatcher.main.outputTopComponent"/>
+</settings>
+]]></file>
+            <file name="projectsTopComponent.settings">
+                <!--org.dreamcatcher.main.projectsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="org.dreamcatcher.main.projectsTopComponent"/>
+</settings>
+]]></file>
+            <file name="propertiesTopComponent.settings">
+                <!--org.dreamcatcher.main.propertiesTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="org.dreamcatcher.main.propertiesTopComponent"/>
+</settings>
+]]></file>
+            <file name="scriptTopComponent.settings">
+                <!--org.dreamcatcher.main.scriptTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
+<settings version="1.0">
+  <instance class="org.dreamcatcher.main.scriptTopComponent"/>
+</settings>
+]]></file>
+        </folder>
+        <folder name="Modes">
+            <folder name="leftSlidingSide">
+                <file name="componentsTopComponent.wstcref">
+                    <!--org.dreamcatcher.main.componentsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="componentsTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+            </folder>
+            <folder name="output">
+                <file name="outputTopComponent.wstcref">
+                    <!--org.dreamcatcher.main.outputTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="outputTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+            </folder>
+            <folder name="explorer">
+                <file name="projectsTopComponent.wstcref">
+                    <!--org.dreamcatcher.main.projectsTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="projectsTopComponent"/>
+  <state opened="true"/>
+</tc-ref>
+]]></file>
+            </folder>
+            <folder name="properties">
+                <file name="propertiesTopComponent.wstcref">
+                    <!--org.dreamcatcher.main.propertiesTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="propertiesTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+            </folder>
+            <folder name="editor">
+                <file name="scriptTopComponent.wstcref">
+                    <!--org.dreamcatcher.main.scriptTopComponent--><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tc-ref PUBLIC "-//NetBeans//DTD Top Component in Mode Properties 2.0//EN" "http://www.netbeans.org/dtds/tc-ref2_0.dtd">
+<tc-ref version="2.0">
+  <tc-id id="scriptTopComponent"/>
+  <state opened="false"/>
+</tc-ref>
+]]></file>
+            </folder>
+        </folder>
+    </folder>
+    <folder name="xml">
+        <folder name="entities">
+            <folder name="org_dreamcatcher_main">
+                <file name="components" url="nbres:/org/netbeans/modules/settings/resources/properties-1_0.dtd">
+                    <!--org.dreamcatcher.main.componentsTopComponent-->
+                    <attr name="hint.originalPublicID" stringvalue="-//org.dreamcatcher.main//components//EN"/>
+                </file>
+                <file name="output" url="nbres:/org/netbeans/modules/settings/resources/properties-1_0.dtd">
+                    <!--org.dreamcatcher.main.outputTopComponent-->
+                    <attr name="hint.originalPublicID" stringvalue="-//org.dreamcatcher.main//output//EN"/>
+                </file>
+                <file name="projects" url="nbres:/org/netbeans/modules/settings/resources/properties-1_0.dtd">
+                    <!--org.dreamcatcher.main.projectsTopComponent-->
+                    <attr name="hint.originalPublicID" stringvalue="-//org.dreamcatcher.main//projects//EN"/>
+                </file>
+                <file name="properties" url="nbres:/org/netbeans/modules/settings/resources/properties-1_0.dtd">
+                    <!--org.dreamcatcher.main.propertiesTopComponent-->
+                    <attr name="hint.originalPublicID" stringvalue="-//org.dreamcatcher.main//properties//EN"/>
+                </file>
+                <file name="script" url="nbres:/org/netbeans/modules/settings/resources/properties-1_0.dtd">
+                    <!--org.dreamcatcher.main.scriptTopComponent-->
+                    <attr name="hint.originalPublicID" stringvalue="-//org.dreamcatcher.main//script//EN"/>
+                </file>
+            </folder>
+        </folder>
+        <folder name="memory">
+            <folder name="org">
+                <folder name="dreamcatcher">
+                    <folder name="main">
+                        <file name="componentsTopComponent">
+                            <!--org.dreamcatcher.main.componentsTopComponent-->
+                            <attr name="settings.providerPath" stringvalue="xml/lookups//org_dreamcatcher_main/components.instance"/>
+                        </file>
+                        <file name="outputTopComponent">
+                            <!--org.dreamcatcher.main.outputTopComponent-->
+                            <attr name="settings.providerPath" stringvalue="xml/lookups//org_dreamcatcher_main/output.instance"/>
+                        </file>
+                        <file name="projectsTopComponent">
+                            <!--org.dreamcatcher.main.projectsTopComponent-->
+                            <attr name="settings.providerPath" stringvalue="xml/lookups//org_dreamcatcher_main/projects.instance"/>
+                        </file>
+                        <file name="propertiesTopComponent">
+                            <!--org.dreamcatcher.main.propertiesTopComponent-->
+                            <attr name="settings.providerPath" stringvalue="xml/lookups//org_dreamcatcher_main/properties.instance"/>
+                        </file>
+                        <file name="scriptTopComponent">
+                            <!--org.dreamcatcher.main.scriptTopComponent-->
+                            <attr name="settings.providerPath" stringvalue="xml/lookups//org_dreamcatcher_main/script.instance"/>
+                        </file>
+                    </folder>
+                </folder>
+            </folder>
+        </folder>
+        <folder name="lookups">
+            <folder name="org_dreamcatcher_main">
+                <file name="components.instance">
+                    <!--org.dreamcatcher.main.componentsTopComponent-->
+                    <attr
+                        methodvalue="org.netbeans.api.settings.Factory.create" name="instanceCreate"/>
+                    <attr
+                        methodvalue="org.netbeans.api.settings.Factory.properties" name="settings.convertor"/>
+                    <attr name="settings.instanceClass" stringvalue="org.dreamcatcher.main.componentsTopComponent"/>
+                    <attr name="settings.instanceOf" stringvalue="org.dreamcatcher.main.componentsTopComponent"/>
+                    <attr boolvalue="true" name="xmlproperties.preventStoring"/>
+                </file>
+                <file name="output.instance">
+                    <!--org.dreamcatcher.main.outputTopComponent-->
+                    <attr
+                        methodvalue="org.netbeans.api.settings.Factory.create" name="instanceCreate"/>
+                    <attr
+                        methodvalue="org.netbeans.api.settings.Factory.properties" name="settings.convertor"/>
+                    <attr name="settings.instanceClass" stringvalue="org.dreamcatcher.main.outputTopComponent"/>
+                    <attr name="settings.instanceOf" stringvalue="org.dreamcatcher.main.outputTopComponent"/>
+                    <attr boolvalue="true" name="xmlproperties.preventStoring"/>
+                </file>
+                <file name="projects.instance">
+                    <!--org.dreamcatcher.main.projectsTopComponent-->
+                    <attr
+                        methodvalue="org.netbeans.api.settings.Factory.create" name="instanceCreate"/>
+                    <attr
+                        methodvalue="org.netbeans.api.settings.Factory.properties" name="settings.convertor"/>
+                    <attr name="settings.instanceClass" stringvalue="org.dreamcatcher.main.projectsTopComponent"/>
+                    <attr name="settings.instanceOf" stringvalue="org.dreamcatcher.main.projectsTopComponent"/>
+                    <attr boolvalue="false" name="xmlproperties.preventStoring"/>
+                </file>
+                <file name="properties.instance">
+                    <!--org.dreamcatcher.main.propertiesTopComponent-->
+                    <attr
+                        methodvalue="org.netbeans.api.settings.Factory.create" name="instanceCreate"/>
+                    <attr
+                        methodvalue="org.netbeans.api.settings.Factory.properties" name="settings.convertor"/>
+                    <attr name="settings.instanceClass" stringvalue="org.dreamcatcher.main.propertiesTopComponent"/>
+                    <attr name="settings.instanceOf" stringvalue="org.dreamcatcher.main.propertiesTopComponent"/>
+                    <attr boolvalue="true" name="xmlproperties.preventStoring"/>
+                </file>
+                <file name="script.instance">
+                    <!--org.dreamcatcher.main.scriptTopComponent-->
+                    <attr
+                        methodvalue="org.netbeans.api.settings.Factory.create" name="instanceCreate"/>
+                    <attr
+                        methodvalue="org.netbeans.api.settings.Factory.properties" name="settings.convertor"/>
+                    <attr name="settings.instanceClass" stringvalue="org.dreamcatcher.main.scriptTopComponent"/>
+                    <attr name="settings.instanceOf" stringvalue="org.dreamcatcher.main.scriptTopComponent"/>
+                    <attr boolvalue="true" name="xmlproperties.preventStoring"/>
+                </file>
+            </folder>
+        </folder>
+    </folder>
+</filesystem>
