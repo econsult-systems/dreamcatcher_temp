@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module codename="org.dreamcatcher.util">
-    <module_version install_time="1328718508079" last="true" origin="installer" specification_version="1.0">
+    <module_version install_time="1328942145107" last="true" origin="installer" specification_version="1.0">
         <file crc="1884972422" name="config/Modules/org-dreamcatcher-util.xml"/>
-        <file crc="1030734199" name="modules/org-dreamcatcher-util.jar"/>
+        <file crc="882149909" name="modules/org-dreamcatcher-util.jar"/>
     </module_version>
 </module>

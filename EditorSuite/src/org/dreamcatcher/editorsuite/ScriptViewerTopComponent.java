@@ -136,6 +136,9 @@ public final class ScriptViewerTopComponent extends TopComponent {
         associateLookup(new AbstractLookup(content));
 
         //set up the initial scene numbers
+        
+        jButton1.setEnabled(false);
+        jButton2.setEnabled(false);
 
     }
 
@@ -187,11 +190,12 @@ public final class ScriptViewerTopComponent extends TopComponent {
         jSeparator2 = new javax.swing.JToolBar.Separator();
         jSeparator4 = new javax.swing.JToolBar.Separator();
         jButton1 = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox();
         jButton2 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
         jPanel2 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextPane2 = new javax.swing.JTextPane();
 
         org.openide.awt.Mnemonics.setLocalizedText(Actor, org.openide.util.NbBundle.getMessage(ScriptViewerTopComponent.class, "ScriptViewerTopComponent.Actor.text")); // NOI18N
         Actor.addActionListener(new java.awt.event.ActionListener() {
@@ -371,6 +375,7 @@ public final class ScriptViewerTopComponent extends TopComponent {
         jPopupMenu1.add(visualEffects);
 
         jTabbedPane1.setMaximumSize(new java.awt.Dimension(160, 32767));
+        jTabbedPane1.setMinimumSize(new java.awt.Dimension(56, 66));
 
         jToolBar1.setRollover(true);
 
@@ -411,9 +416,6 @@ public final class ScriptViewerTopComponent extends TopComponent {
         });
         jToolBar1.add(jButton1);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1. INT.PRESIDENT’S LIMO IN THE SAME DAY OF - DAY", "2. INT.PRESIDENT’S LIMO IN THE SAME DAY OF - NIGHT", "3. INT.PRESIDENT’S LIMO IN THE SAME DAY OF - DAY", "4. INT.PRESIDENT’S LIMO IN THE SAME DAY OF - DAY", "5. INT.PRESIDENT’S LIMO IN THE SAME DAY OF - NIGHT", "6. INT.PRESIDENT’S LIMO IN THE SAME DAY OF - DAY", " " }));
-        jToolBar1.add(jComboBox1);
-
         org.openide.awt.Mnemonics.setLocalizedText(jButton2, org.openide.util.NbBundle.getMessage(ScriptViewerTopComponent.class, "ScriptViewerTopComponent.jButton2.text")); // NOI18N
         jButton2.setFocusable(false);
         jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -436,8 +438,8 @@ public final class ScriptViewerTopComponent extends TopComponent {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 887, Short.MAX_VALUE)
-            .addComponent(jToolBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 649, Short.MAX_VALUE)
+            .addComponent(jToolBar1, javax.swing.GroupLayout.DEFAULT_SIZE, 649, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -449,15 +451,22 @@ public final class ScriptViewerTopComponent extends TopComponent {
 
         jTabbedPane1.addTab(org.openide.util.NbBundle.getMessage(ScriptViewerTopComponent.class, "ScriptViewerTopComponent.jPanel1.TabConstraints.tabTitle"), jPanel1); // NOI18N
 
+        jScrollPane2.setViewportView(jTextPane2);
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 887, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 625, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 334, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 322, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab(org.openide.util.NbBundle.getMessage(ScriptViewerTopComponent.class, "ScriptViewerTopComponent.jPanel2.TabConstraints.tabTitle"), jPanel2); // NOI18N
@@ -466,7 +475,7 @@ public final class ScriptViewerTopComponent extends TopComponent {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 657, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -953,6 +962,8 @@ private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
 
 private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
     // TODO add your handling code here:
+   
+    jButton2.setEnabled(true);
     jToggleButton2.setSelected(true);
     jToggleButton1.setSelected(false);
     StyledDocument doc = jTextPane1.getStyledDocument();
@@ -976,6 +987,8 @@ private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GE
 
 private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
     // TODO add your handling code here:
+    jButton1.setEnabled(false);
+    jButton2.setEnabled(false);
     jToggleButton2.setSelected(false);
     jToggleButton1.setSelected(true);
     StyledDocument doc = jTextPane1.getStyledDocument();
@@ -1010,16 +1023,17 @@ private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GE
     private javax.swing.JMenuItem greenery;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JComboBox jComboBox1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JToolBar.Separator jSeparator1;
     private javax.swing.JToolBar.Separator jSeparator2;
     private javax.swing.JToolBar.Separator jSeparator4;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextPane jTextPane1;
+    private javax.swing.JTextPane jTextPane2;
     private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JToggleButton jToggleButton2;
     private javax.swing.JToolBar jToolBar1;
