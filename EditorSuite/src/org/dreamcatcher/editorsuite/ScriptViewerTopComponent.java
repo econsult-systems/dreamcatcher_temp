@@ -139,8 +139,8 @@ public final class ScriptViewerTopComponent extends TopComponent {
 
         //set up the initial scene numbers
         
-        jButton1.setEnabled(false);
-        jButton2.setEnabled(false);
+        BtnPreviousScene.setEnabled(false);
+        BtnNextScene.setEnabled(false);
         
         projectName=name;
     }
@@ -187,13 +187,13 @@ public final class ScriptViewerTopComponent extends TopComponent {
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jToolBar1 = new javax.swing.JToolBar();
-        jToggleButton1 = new javax.swing.JToggleButton();
+        ToggleSheetView = new javax.swing.JToggleButton();
         jSeparator1 = new javax.swing.JToolBar.Separator();
-        jToggleButton2 = new javax.swing.JToggleButton();
+        ToggleSceneView = new javax.swing.JToggleButton();
         jSeparator2 = new javax.swing.JToolBar.Separator();
         jSeparator4 = new javax.swing.JToolBar.Separator();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        BtnPreviousScene = new javax.swing.JButton();
+        BtnNextScene = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
         jPanel2 = new javax.swing.JPanel();
@@ -202,12 +202,9 @@ public final class ScriptViewerTopComponent extends TopComponent {
         jScrollPane3 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList();
         jLabel1 = new javax.swing.JLabel();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        jList2 = new javax.swing.JList();
         jScrollPane5 = new javax.swing.JScrollPane();
         jList3 = new javax.swing.JList();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
 
         org.openide.awt.Mnemonics.setLocalizedText(Actor, org.openide.util.NbBundle.getMessage(ScriptViewerTopComponent.class, "ScriptViewerTopComponent.Actor.text")); // NOI18N
         Actor.addActionListener(new java.awt.event.ActionListener() {
@@ -390,75 +387,71 @@ public final class ScriptViewerTopComponent extends TopComponent {
         jTabbedPane1.setMinimumSize(new java.awt.Dimension(56, 66));
 
         jToolBar1.setRollover(true);
+        jToolBar1.setMinimumSize(new java.awt.Dimension(56, 32));
 
-        jToggleButton1.setSelected(true);
-        org.openide.awt.Mnemonics.setLocalizedText(jToggleButton1, org.openide.util.NbBundle.getMessage(ScriptViewerTopComponent.class, "ScriptViewerTopComponent.jToggleButton1.text")); // NOI18N
-        jToggleButton1.setFocusable(false);
-        jToggleButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jToggleButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+        ToggleSheetView.setSelected(true);
+        org.openide.awt.Mnemonics.setLocalizedText(ToggleSheetView, org.openide.util.NbBundle.getMessage(ScriptViewerTopComponent.class, "ScriptViewerTopComponent.ToggleSheetView.text")); // NOI18N
+        ToggleSheetView.setFocusable(false);
+        ToggleSheetView.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        ToggleSheetView.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        ToggleSheetView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton1ActionPerformed(evt);
+                ToggleSheetViewActionPerformed(evt);
             }
         });
-        jToolBar1.add(jToggleButton1);
+        jToolBar1.add(ToggleSheetView);
         jToolBar1.add(jSeparator1);
 
-        org.openide.awt.Mnemonics.setLocalizedText(jToggleButton2, org.openide.util.NbBundle.getMessage(ScriptViewerTopComponent.class, "ScriptViewerTopComponent.jToggleButton2.text")); // NOI18N
-        jToggleButton2.setFocusable(false);
-        jToggleButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jToggleButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jToggleButton2.addActionListener(new java.awt.event.ActionListener() {
+        org.openide.awt.Mnemonics.setLocalizedText(ToggleSceneView, org.openide.util.NbBundle.getMessage(ScriptViewerTopComponent.class, "ScriptViewerTopComponent.ToggleSceneView.text")); // NOI18N
+        ToggleSceneView.setFocusable(false);
+        ToggleSceneView.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        ToggleSceneView.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        ToggleSceneView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton2ActionPerformed(evt);
+                ToggleSceneViewActionPerformed(evt);
             }
         });
-        jToolBar1.add(jToggleButton2);
+        jToolBar1.add(ToggleSceneView);
         jToolBar1.add(jSeparator2);
         jToolBar1.add(jSeparator4);
 
-        org.openide.awt.Mnemonics.setLocalizedText(jButton1, org.openide.util.NbBundle.getMessage(ScriptViewerTopComponent.class, "ScriptViewerTopComponent.jButton1.text")); // NOI18N
-        jButton1.setFocusable(false);
-        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        org.openide.awt.Mnemonics.setLocalizedText(BtnPreviousScene, org.openide.util.NbBundle.getMessage(ScriptViewerTopComponent.class, "ScriptViewerTopComponent.BtnPreviousScene.text")); // NOI18N
+        BtnPreviousScene.setFocusable(false);
+        BtnPreviousScene.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        BtnPreviousScene.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        BtnPreviousScene.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BtnPreviousSceneActionPerformed(evt);
             }
         });
-        jToolBar1.add(jButton1);
+        jToolBar1.add(BtnPreviousScene);
 
-        org.openide.awt.Mnemonics.setLocalizedText(jButton2, org.openide.util.NbBundle.getMessage(ScriptViewerTopComponent.class, "ScriptViewerTopComponent.jButton2.text")); // NOI18N
-        jButton2.setFocusable(false);
-        jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        org.openide.awt.Mnemonics.setLocalizedText(BtnNextScene, org.openide.util.NbBundle.getMessage(ScriptViewerTopComponent.class, "ScriptViewerTopComponent.BtnNextScene.text")); // NOI18N
+        BtnNextScene.setFocusable(false);
+        BtnNextScene.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        BtnNextScene.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        BtnNextScene.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                BtnNextSceneActionPerformed(evt);
             }
         });
-        jToolBar1.add(jButton2);
+        jToolBar1.add(BtnNextScene);
 
-        jTextPane1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextPane1MouseClicked(evt);
-            }
-        });
         jScrollPane1.setViewportView(jTextPane1);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 839, Short.MAX_VALUE)
-            .addComponent(jToolBar1, javax.swing.GroupLayout.DEFAULT_SIZE, 839, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 593, Short.MAX_VALUE)
+            .addComponent(jToolBar1, javax.swing.GroupLayout.DEFAULT_SIZE, 593, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 383, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 414, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab(org.openide.util.NbBundle.getMessage(ScriptViewerTopComponent.class, "ScriptViewerTopComponent.jPanel1.TabConstraints.tabTitle"), jPanel1); // NOI18N
@@ -474,13 +467,6 @@ public final class ScriptViewerTopComponent extends TopComponent {
 
         org.openide.awt.Mnemonics.setLocalizedText(jLabel1, org.openide.util.NbBundle.getMessage(ScriptViewerTopComponent.class, "ScriptViewerTopComponent.jLabel1.text")); // NOI18N
 
-        jList2.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane4.setViewportView(jList2);
-
         jList3.setModel(new javax.swing.AbstractListModel() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
@@ -490,8 +476,6 @@ public final class ScriptViewerTopComponent extends TopComponent {
 
         org.openide.awt.Mnemonics.setLocalizedText(jLabel2, org.openide.util.NbBundle.getMessage(ScriptViewerTopComponent.class, "ScriptViewerTopComponent.jLabel2.text")); // NOI18N
 
-        org.openide.awt.Mnemonics.setLocalizedText(jLabel3, org.openide.util.NbBundle.getMessage(ScriptViewerTopComponent.class, "ScriptViewerTopComponent.jLabel3.text")); // NOI18N
-
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -499,25 +483,16 @@ public final class ScriptViewerTopComponent extends TopComponent {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 815, Short.MAX_VALUE)
-                        .addContainerGap())
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 561, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
                             .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addGap(177, 177, 177))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 312, Short.MAX_VALUE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(12, 12, 12))))
+                            .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 293, Short.MAX_VALUE)
+                            .addComponent(jLabel2))))
+                .addGap(20, 20, 20))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -525,34 +500,29 @@ public final class ScriptViewerTopComponent extends TopComponent {
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3))
+                    .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)
-                    .addComponent(jScrollPane4, 0, 0, Short.MAX_VALUE)
-                    .addComponent(jScrollPane5, 0, 0, Short.MAX_VALUE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 228, Short.MAX_VALUE))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 229, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
-        jTabbedPane1.addTab(org.openide.util.NbBundle.getMessage(ScriptViewerTopComponent.class, "ScriptViewerTopComponent.jPanel2.TabConstraints.tabTitle"), jPanel2); // NOI18N
+        jTabbedPane1.addTab(org.openide.util.NbBundle.getMessage(ScriptViewerTopComponent.class, "ScriptViewerTopComponent.jPanel2.TabConstraints.tabTitle_1"), jPanel2); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 851, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 605, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 475, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 506, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jTextPane1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextPane1MouseClicked
-    }
-        // TODO add your handling code here:     }//GEN-LAST:event_jTextPane1MouseClicked
 
         private void ActorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ActorActionPerformed
             try {
@@ -963,13 +933,60 @@ private void visualEffectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN
     }
 }//GEN-LAST:event_visualEffectsActionPerformed
 
-private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    // TODO add your handling code here:
-    if (currentScene <= 1) {
-        jButton1.setEnabled(false);
-        jButton2.setEnabled(true);
+    private void ToggleSheetViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ToggleSheetViewActionPerformed
+        // TODO add your handling code here:
+        
+    BtnPreviousScene.setEnabled(false);
+    BtnNextScene.setEnabled(false);
+    ToggleSceneView.setSelected(false);
+    ToggleSheetView.setSelected(true);
+    StyledDocument doc = jTextPane1.getStyledDocument();
+    try {
+        doc.remove(0, doc.getLength());
+        doc.insertString(doc.getLength(), Script, doc.getStyle(initStyles[0]));
+        jTextPane1.setCaretPosition(0);
+    } catch (BadLocationException ble) {
+        //throw new ScriptLoadError("Script could not be loaded correctly"+ble.getMessage());
+    }
+    APIObject apiobj = new APIObject("STATUS");
+    apiobj.setToggle("disable");
+    content.set(Collections.singleton(apiobj), null);
+    }//GEN-LAST:event_ToggleSheetViewActionPerformed
+
+    private void ToggleSceneViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ToggleSceneViewActionPerformed
+        // TODO add your handling code here:
+        
+        
+    BtnNextScene.setEnabled(true);
+    ToggleSceneView.setSelected(true);
+    ToggleSheetView.setSelected(false);
+    StyledDocument doc = jTextPane1.getStyledDocument();
+    Object Scene[] = SceneContent.toArray();
+    SceneElement sceneelement = (SceneElement) Scene[0];
+    String initString = sceneelement.getSceneContent();
+
+
+    try {
+        doc.remove(0, doc.getLength());
+        doc.insertString(doc.getLength(), initString, doc.getStyle(initStyles[0]));
+        jTextPane1.setCaretPosition(0);
+    } catch (BadLocationException ble) {
+        //throw new ScriptLoadError("Script could not be loaded correctly"+ble.getMessage());
+    }
+    APIObject apiobj = new APIObject("STATUS");
+    apiobj.setToggle("enable");
+    content.set(Collections.singleton(apiobj), null);
+    getElements();
+    }//GEN-LAST:event_ToggleSceneViewActionPerformed
+
+    private void BtnPreviousSceneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnPreviousSceneActionPerformed
+        // TODO add your handling code here:
+        
+        if (currentScene <= 1) {
+        BtnPreviousScene.setEnabled(false);
+        BtnNextScene.setEnabled(true);
     } else {
-        jButton1.setEnabled(true);
+        BtnPreviousScene.setEnabled(true);
     }
     StyledDocument doc = jTextPane1.getStyledDocument();
     Object Scene[] = SceneContent.toArray();
@@ -992,22 +1009,23 @@ private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
     APIObject apiobjct = new APIObject(sceneelement);
     content.set(Collections.singleton(apiobjct), null);
     getElements();
-}//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_BtnPreviousSceneActionPerformed
 
-private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-    // TODO add your handling code here:
-
-    StyledDocument doc = jTextPane1.getStyledDocument();
+    private void BtnNextSceneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnNextSceneActionPerformed
+        // TODO add your handling code here:
+        
+         StyledDocument doc = jTextPane1.getStyledDocument();
     Object Scene[] = SceneContent.toArray();
     SceneElement sceneelement = (SceneElement) Scene[currentScene + 1];
     String initString = sceneelement.getSceneContent();
 
     currentScene = currentScene == Scene.length - 1 ? currentScene : currentScene + 1;
+    BtnPreviousScene.setEnabled(true);
     if (currentScene == Scene.length - 1) {
-        jButton2.setEnabled(false);
-        jButton1.setEnabled(true);
+        BtnNextScene.setEnabled(false);
+        BtnPreviousScene.setEnabled(true);
     } else {
-        jButton2.setEnabled(true);
+        BtnNextScene.setEnabled(true);
     }
 
 
@@ -1025,54 +1043,13 @@ private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
     APIObject apiobjct = new APIObject(sceneelement);
     content.set(Collections.singleton(apiobjct), null);
     getElements();
-}//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_BtnNextSceneActionPerformed
 
-private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
-    // TODO add your handling code here:
-   
-    jButton2.setEnabled(true);
-    jToggleButton2.setSelected(true);
-    jToggleButton1.setSelected(false);
-    StyledDocument doc = jTextPane1.getStyledDocument();
-    Object Scene[] = SceneContent.toArray();
-    SceneElement sceneelement = (SceneElement) Scene[0];
-    String initString = sceneelement.getSceneContent();
-
-
-    try {
-        doc.remove(0, doc.getLength());
-        doc.insertString(doc.getLength(), initString, doc.getStyle(initStyles[0]));
-        jTextPane1.setCaretPosition(0);
-    } catch (BadLocationException ble) {
-        //throw new ScriptLoadError("Script could not be loaded correctly"+ble.getMessage());
-    }
-    APIObject apiobj = new APIObject("STATUS");
-    apiobj.setToggle("enable");
-    content.set(Collections.singleton(apiobj), null);
-    getElements();
-}//GEN-LAST:event_jToggleButton2ActionPerformed
-
-private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-    // TODO add your handling code here:
-    jButton1.setEnabled(false);
-    jButton2.setEnabled(false);
-    jToggleButton2.setSelected(false);
-    jToggleButton1.setSelected(true);
-    StyledDocument doc = jTextPane1.getStyledDocument();
-    try {
-        doc.remove(0, doc.getLength());
-        doc.insertString(doc.getLength(), Script, doc.getStyle(initStyles[0]));
-        jTextPane1.setCaretPosition(0);
-    } catch (BadLocationException ble) {
-        //throw new ScriptLoadError("Script could not be loaded correctly"+ble.getMessage());
-    }
-    APIObject apiobj = new APIObject("STATUS");
-    apiobj.setToggle("disable");
-    content.set(Collections.singleton(apiobj), null);
-}//GEN-LAST:event_jToggleButton1ActionPerformed
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem Actor;
     private javax.swing.JMenuItem Animal;
+    private javax.swing.JButton BtnNextScene;
+    private javax.swing.JButton BtnPreviousScene;
     private javax.swing.JMenuItem Camera;
     private javax.swing.JMenuItem Makeup;
     private javax.swing.JMenuItem Music;
@@ -1080,6 +1057,8 @@ private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GE
     private javax.swing.JMenuItem Security;
     private javax.swing.JMenuItem Sound;
     private javax.swing.JMenuItem SpecialEffects;
+    private javax.swing.JToggleButton ToggleSceneView;
+    private javax.swing.JToggleButton ToggleSheetView;
     private javax.swing.JMenuItem Vehicle;
     private javax.swing.JMenuItem Wardrobe;
     private javax.swing.JMenuItem ZAddNew;
@@ -1088,13 +1067,9 @@ private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GE
     private javax.swing.JMenuItem artDepartment;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JMenuItem greenery;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JList jList1;
-    private javax.swing.JList jList2;
     private javax.swing.JList jList3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -1102,7 +1077,6 @@ private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GE
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JToolBar.Separator jSeparator1;
     private javax.swing.JToolBar.Separator jSeparator2;
@@ -1110,8 +1084,6 @@ private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GE
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextPane jTextPane1;
     private javax.swing.JTextPane jTextPane2;
-    private javax.swing.JToggleButton jToggleButton1;
-    private javax.swing.JToggleButton jToggleButton2;
     private javax.swing.JToolBar jToolBar1;
     private javax.swing.JMenuItem mechanicalEffect;
     private javax.swing.JMenuItem miscellaneous;

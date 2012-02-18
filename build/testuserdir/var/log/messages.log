@@ -1,36 +1,36 @@
 -------------------------------------------------------------------------------
->Log Session: Saturday, February 11, 2012 9:35:54 AM EAT
+>Log Session: Saturday, February 18, 2012 9:15:53 AM EAT
 >System Info: 
   Product Version         = Dreamcatcher
-  Operating System        = Linux version 3.0.0-15-generic-pae running on i386
+  Operating System        = Linux version 3.0.0-16-generic-pae running on i386
   Java; VM; Vendor        = 1.7.0_147-icedtea; OpenJDK Server VM 21.0-b17; Oracle Corporation
   Runtime                 = OpenJDK Runtime Environment 1.7.0_147-icedtea-b147
   Java Home               = /usr/lib/jvm/java-7-openjdk-i386/jre
   System Locale; Encoding = en_US (dreamcatcher); UTF-8
   Home Directory          = /home/royrutto
-  Current Directory       = /home/royrutto/Desktop/work/dc/dreamcatcher
-  User Directory          = /home/royrutto/Desktop/work/dc/dreamcatcher/build/testuserdir
-  Installation            = /home/royrutto/Desktop/work/dc/dreamcatcher/build/cluster
+  Current Directory       = /home/royrutto/Desktop/work/dc/dreamcatcher_temp
+  User Directory          = /home/royrutto/Desktop/work/dc/dreamcatcher_temp/build/testuserdir
+  Installation            = /home/royrutto/Desktop/work/dc/dreamcatcher_temp/build/cluster
                             /home/royrutto/netbeans-7.0.1/ide
                             /home/royrutto/netbeans-7.0.1/java
                             /home/royrutto/netbeans-7.0.1/platform
                             /home/royrutto/netbeans-7.0.1/platform
   Boot & Ext. Classpath   = /usr/lib/jvm/java-7-openjdk-i386/jre/lib/resources.jar:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/rt.jar:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/jsse.jar:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/jce.jar:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/charsets.jar:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/netx.jar:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/plugin.jar:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/rhino.jar:/usr/lib/jvm/java-7-openjdk-i386/jre/classes:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/zipfs.jar:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/gnome-java-bridge.jar:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/pulse-java.jar:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/sunpkcs11.jar:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/sunjce_provider.jar:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/dnsns.jar:/usr/lib/jvm/java-7-openjdk-i386/jre/lib/ext/localedata.jar
   Application Classpath   = /home/royrutto/netbeans-7.0.1/platform/lib/boot.jar:/home/royrutto/netbeans-7.0.1/platform/lib/org-openide-modules.jar:/home/royrutto/netbeans-7.0.1/platform/lib/org-openide-util-lookup.jar:/home/royrutto/netbeans-7.0.1/platform/lib/org-openide-util.jar:/home/royrutto/netbeans-7.0.1/platform/lib/locale/boot_ja.jar:/home/royrutto/netbeans-7.0.1/platform/lib/locale/boot_pt_BR.jar:/home/royrutto/netbeans-7.0.1/platform/lib/locale/boot_ru.jar:/home/royrutto/netbeans-7.0.1/platform/lib/locale/boot_zh_CN.jar:/home/royrutto/netbeans-7.0.1/platform/lib/locale/org-openide-modules_ja.jar:/home/royrutto/netbeans-7.0.1/platform/lib/locale/org-openide-modules_pt_BR.jar:/home/royrutto/netbeans-7.0.1/platform/lib/locale/org-openide-modules_ru.jar:/home/royrutto/netbeans-7.0.1/platform/lib/locale/org-openide-modules_zh_CN.jar:/home/royrutto/netbeans-7.0.1/platform/lib/locale/org-openide-util-lookup_ja.jar:/home/royrutto/netbeans-7.0.1/platform/lib/locale/org-openide-util-lookup_pt_BR.jar:/home/royrutto/netbeans-7.0.1/platform/lib/locale/org-openide-util-lookup_ru.jar:/home/royrutto/netbeans-7.0.1/platform/lib/locale/org-openide-util-lookup_zh_CN.jar:/home/royrutto/netbeans-7.0.1/platform/lib/locale/org-openide-util_ja.jar:/home/royrutto/netbeans-7.0.1/platform/lib/locale/org-openide-util_pt_BR.jar:/home/royrutto/netbeans-7.0.1/platform/lib/locale/org-openide-util_ru.jar:/home/royrutto/netbeans-7.0.1/platform/lib/locale/org-openide-util_zh_CN.jar:/usr/lib/jvm/java-7-openjdk-i386/lib/dt.jar:/usr/lib/jvm/java-7-openjdk-i386/lib/tools.jar
-  Startup Classpath       = /home/royrutto/netbeans-7.0.1/platform/core/core.jar:/home/royrutto/netbeans-7.0.1/platform/core/org-openide-filesystems.jar:/home/royrutto/netbeans-7.0.1/platform/core/locale/org-openide-filesystems_ru.jar:/home/royrutto/netbeans-7.0.1/platform/core/locale/core_pt_BR.jar:/home/royrutto/netbeans-7.0.1/platform/core/locale/org-openide-filesystems_zh_CN.jar:/home/royrutto/netbeans-7.0.1/platform/core/locale/core_ru.jar:/home/royrutto/netbeans-7.0.1/platform/core/locale/org-openide-filesystems_ja.jar:/home/royrutto/netbeans-7.0.1/platform/core/locale/core_zh_CN.jar:/home/royrutto/netbeans-7.0.1/platform/core/locale/org-openide-filesystems_pt_BR.jar:/home/royrutto/netbeans-7.0.1/platform/core/locale/core_ja.jar:/home/royrutto/Desktop/work/dc/dreamcatcher/build/cluster/core/locale/core_dreamcatcher.jar
+  Startup Classpath       = /home/royrutto/netbeans-7.0.1/platform/core/core.jar:/home/royrutto/netbeans-7.0.1/platform/core/org-openide-filesystems.jar:/home/royrutto/netbeans-7.0.1/platform/core/locale/org-openide-filesystems_ru.jar:/home/royrutto/netbeans-7.0.1/platform/core/locale/core_pt_BR.jar:/home/royrutto/netbeans-7.0.1/platform/core/locale/org-openide-filesystems_zh_CN.jar:/home/royrutto/netbeans-7.0.1/platform/core/locale/core_ru.jar:/home/royrutto/netbeans-7.0.1/platform/core/locale/org-openide-filesystems_ja.jar:/home/royrutto/netbeans-7.0.1/platform/core/locale/core_zh_CN.jar:/home/royrutto/netbeans-7.0.1/platform/core/locale/org-openide-filesystems_pt_BR.jar:/home/royrutto/netbeans-7.0.1/platform/core/locale/core_ja.jar:/home/royrutto/Desktop/work/dc/dreamcatcher_temp/build/cluster/core/locale/core_dreamcatcher.jar
 -------------------------------------------------------------------------------
-WARNING [org.netbeans.core.startup.NbEvents]: The extension /home/royrutto/Desktop/work/dc/dreamcatcher/build/cluster/modules/ext/commons-logging-1.1.1.jar may be multiply loaded by modules: [/home/royrutto/Desktop/work/dc/dreamcatcher/build/cluster/modules/org-dreamcatcher-logging.jar, /home/royrutto/Desktop/work/dc/dreamcatcher/build/cluster/modules/org-dreamcatcher-apachepdfbox.jar]; see: http://www.netbeans.org/download/dev/javadoc/org-openide-modules/org/openide/modules/doc-files/classpath.html#class-path
-WARNING [org.netbeans.core.startup.NbEvents]: The extension /home/royrutto/Desktop/work/dc/dreamcatcher/build/cluster/modules/ext/jempbox-1.6.0.jar may be multiply loaded by modules: [/home/royrutto/Desktop/work/dc/dreamcatcher/build/cluster/modules/org-dreamcatcher-jempbox.jar, /home/royrutto/Desktop/work/dc/dreamcatcher/build/cluster/modules/org-dreamcatcher-apachepdfbox.jar]; see: http://www.netbeans.org/download/dev/javadoc/org-openide-modules/org/openide/modules/doc-files/classpath.html#class-path
-WARNING [org.netbeans.core.startup.NbEvents]: The extension /home/royrutto/Desktop/work/dc/dreamcatcher/build/cluster/modules/ext/fontbox-1.6.0.jar may be multiply loaded by modules: [/home/royrutto/Desktop/work/dc/dreamcatcher/build/cluster/modules/org-dreamcatcher-font.jar, /home/royrutto/Desktop/work/dc/dreamcatcher/build/cluster/modules/org-dreamcatcher-apachepdfbox.jar]; see: http://www.netbeans.org/download/dev/javadoc/org-openide-modules/org/openide/modules/doc-files/classpath.html#class-path
+WARNING [org.netbeans.core.startup.NbEvents]: The extension /home/royrutto/Desktop/work/dc/dreamcatcher_temp/build/cluster/modules/ext/commons-logging-1.1.1.jar may be multiply loaded by modules: [/home/royrutto/Desktop/work/dc/dreamcatcher_temp/build/cluster/modules/org-dreamcatcher-logging.jar, /home/royrutto/Desktop/work/dc/dreamcatcher_temp/build/cluster/modules/org-dreamcatcher-apachepdfbox.jar]; see: http://www.netbeans.org/download/dev/javadoc/org-openide-modules/org/openide/modules/doc-files/classpath.html#class-path
+WARNING [org.netbeans.core.startup.NbEvents]: The extension /home/royrutto/Desktop/work/dc/dreamcatcher_temp/build/cluster/modules/ext/jempbox-1.6.0.jar may be multiply loaded by modules: [/home/royrutto/Desktop/work/dc/dreamcatcher_temp/build/cluster/modules/org-dreamcatcher-jempbox.jar, /home/royrutto/Desktop/work/dc/dreamcatcher_temp/build/cluster/modules/org-dreamcatcher-apachepdfbox.jar]; see: http://www.netbeans.org/download/dev/javadoc/org-openide-modules/org/openide/modules/doc-files/classpath.html#class-path
+WARNING [org.netbeans.core.startup.NbEvents]: The extension /home/royrutto/Desktop/work/dc/dreamcatcher_temp/build/cluster/modules/ext/fontbox-1.6.0.jar may be multiply loaded by modules: [/home/royrutto/Desktop/work/dc/dreamcatcher_temp/build/cluster/modules/org-dreamcatcher-font.jar, /home/royrutto/Desktop/work/dc/dreamcatcher_temp/build/cluster/modules/org-dreamcatcher-apachepdfbox.jar]; see: http://www.netbeans.org/download/dev/javadoc/org-openide-modules/org/openide/modules/doc-files/classpath.html#class-path
 WARNING [org.netbeans.core.modules]: the modules [org.netbeans.modules.diff, org.netbeans.modules.editor.codetemplates, org.netbeans.modules.editor.indent.project, org.netbeans.modules.jumpto, org.netbeans.modules.options.editor, org.netbeans.modules.refactoring.api] use org.jdesktop.layout which is deprecated: Use javax.swing.GroupLayout instead. (In form editor: select Form ... in Inspector; change Layout Generation Style to Standard Java 6 code.)
-WARNING [org.netbeans.core.projects.cache]: Inefficient to include an empty layer in a module: jar:file:/home/royrutto/Desktop/work/dc/dreamcatcher/build/cluster/modules/org-dreamcatcher-util.jar!/org/dreamcatcher/util/layer.xml
-WARNING [org.netbeans.core.projects.cache]: Inefficient to include an empty layer in a module: jar:file:/home/royrutto/Desktop/work/dc/dreamcatcher/build/cluster/modules/org-dreamcatcher-selection.jar!/org/dreamcatcher/selection/layer.xml
-WARNING [org.netbeans.core.projects.cache]: Inefficient to include an empty layer in a module: jar:file:/home/royrutto/Desktop/work/dc/dreamcatcher/build/cluster/modules/org-dreamcatcher-editorsuite.jar!/org/dreamcatcher/editorsuite/layer.xml
+WARNING [org.netbeans.core.projects.cache]: Inefficient to include an empty layer in a module: jar:file:/home/royrutto/Desktop/work/dc/dreamcatcher_temp/build/cluster/modules/org-dreamcatcher-util.jar!/org/dreamcatcher/util/layer.xml
+WARNING [org.netbeans.core.projects.cache]: Inefficient to include an empty layer in a module: jar:file:/home/royrutto/Desktop/work/dc/dreamcatcher_temp/build/cluster/modules/org-dreamcatcher-selection.jar!/org/dreamcatcher/selection/layer.xml
+WARNING [org.netbeans.core.projects.cache]: Inefficient to include an empty layer in a module: jar:file:/home/royrutto/Desktop/work/dc/dreamcatcher_temp/build/cluster/modules/org-dreamcatcher-editorsuite.jar!/org/dreamcatcher/editorsuite/layer.xml
 WARNING [org.openide.filesystems.Ordering]: Not all children in Services/MIMEResolver/ marked with the position attribute: [ScriptResolver.xml, editorResolver.xml, EditorResolver.xml], but some are: [instance-mime-resolver.xml, Diff.xml, org-netbeans-modules-editor-settings-storage-mime-resolver.xml, org-netbeans-modules-editor-codetemplates-mime-resolver.xml]
 INFO [org.netbeans.modules.openide.filesystems.declmime.DefaultParser]
-While parsing: MultiFileObject@11e0209[Services/MIMEResolver/ScriptResolver.xml]
-While parsing: MultiFileObject@11e0209[Services/MIMEResolver/ScriptResolver.xml]
-Caused: java.io.FileNotFoundException: jar:file:/home/royrutto/Desktop/work/dc/dreamcatcher/build/cluster/modules/org-dreamcatcher-main.jar!/org/dreamcatcher/main/ScriptResolver.xml
+While parsing: MultiFileObject@2e1615[Services/MIMEResolver/ScriptResolver.xml]
+While parsing: MultiFileObject@2e1615[Services/MIMEResolver/ScriptResolver.xml]
+Caused: java.io.FileNotFoundException: jar:file:/home/royrutto/Desktop/work/dc/dreamcatcher_temp/build/cluster/modules/org-dreamcatcher-main.jar!/org/dreamcatcher/main/ScriptResolver.xml
 	at org.netbeans.JarClassLoader$NbJarURLConnection.connect(JarClassLoader.java:944)
 	at org.netbeans.JarClassLoader$NbJarURLConnection.getInputStream(JarClassLoader.java:980)
 	at org.netbeans.core.startup.layers.BinaryFS$BFSFile.getInputStream(BinaryFS.java:759)
@@ -77,11 +77,11 @@ Caused: java.io.FileNotFoundException
 	at org.openide.loaders.FolderList$ListTask.run(FolderList.java:970)
 	at org.openide.util.RequestProcessor$Task.run(RequestProcessor.java:1424)
 	at org.openide.util.RequestProcessor$Processor.run(RequestProcessor.java:1968)
-ALL [null]: While parsing: MultiFileObject@11e0209[Services/MIMEResolver/ScriptResolver.xml]
+ALL [null]: While parsing: MultiFileObject@2e1615[Services/MIMEResolver/ScriptResolver.xml]
 INFO [org.netbeans.modules.openide.filesystems.declmime.DefaultParser]
-While parsing: MultiFileObject@1d6e3af[Services/MIMEResolver/editorResolver.xml]
-While parsing: MultiFileObject@1d6e3af[Services/MIMEResolver/editorResolver.xml]
-Caused: java.io.FileNotFoundException: jar:file:/home/royrutto/Desktop/work/dc/dreamcatcher/build/cluster/modules/org-dreamcatcher-main.jar!/org/dreamcatcher/main/editorResolver.xml
+While parsing: MultiFileObject@1cea89c[Services/MIMEResolver/editorResolver.xml]
+While parsing: MultiFileObject@1cea89c[Services/MIMEResolver/editorResolver.xml]
+Caused: java.io.FileNotFoundException: jar:file:/home/royrutto/Desktop/work/dc/dreamcatcher_temp/build/cluster/modules/org-dreamcatcher-main.jar!/org/dreamcatcher/main/editorResolver.xml
 	at org.netbeans.JarClassLoader$NbJarURLConnection.connect(JarClassLoader.java:944)
 	at org.netbeans.JarClassLoader$NbJarURLConnection.getInputStream(JarClassLoader.java:980)
 	at org.netbeans.core.startup.layers.BinaryFS$BFSFile.getInputStream(BinaryFS.java:759)
@@ -128,10 +128,10 @@ Caused: java.io.FileNotFoundException
 	at org.openide.loaders.FolderList$ListTask.run(FolderList.java:970)
 	at org.openide.util.RequestProcessor$Task.run(RequestProcessor.java:1424)
 	at org.openide.util.RequestProcessor$Processor.run(RequestProcessor.java:1968)
-ALL [null]: While parsing: MultiFileObject@1d6e3af[Services/MIMEResolver/editorResolver.xml]
+ALL [null]: While parsing: MultiFileObject@1cea89c[Services/MIMEResolver/editorResolver.xml]
 WARNING [org.openide.filesystems.Ordering]: Not all children in Services/MIMEResolver/ marked with the position attribute: [EditorResolver.xml, ScriptResolver.xml, editorResolver.xml], but some are: [instance-mime-resolver.xml, Diff.xml, org-netbeans-modules-editor-settings-storage-mime-resolver.xml, org-netbeans-modules-editor-codetemplates-mime-resolver.xml]
-INFO [org.openide.loaders.XMLDataObject]: I/O exception while opening MultiFileObject@11e0209[Services/MIMEResolver/ScriptResolver.xml]
-java.io.FileNotFoundException: jar:file:/home/royrutto/Desktop/work/dc/dreamcatcher/build/cluster/modules/org-dreamcatcher-main.jar!/org/dreamcatcher/main/ScriptResolver.xml
+INFO [org.openide.loaders.XMLDataObject]: I/O exception while opening MultiFileObject@2e1615[Services/MIMEResolver/ScriptResolver.xml]
+java.io.FileNotFoundException: jar:file:/home/royrutto/Desktop/work/dc/dreamcatcher_temp/build/cluster/modules/org-dreamcatcher-main.jar!/org/dreamcatcher/main/ScriptResolver.xml
 	at org.netbeans.JarClassLoader$NbJarURLConnection.connect(JarClassLoader.java:944)
 	at org.netbeans.JarClassLoader$NbJarURLConnection.getInputStream(JarClassLoader.java:980)
 	at org.netbeans.core.startup.layers.BinaryFS$BFSFile.getInputStream(BinaryFS.java:759)
@@ -175,8 +175,8 @@ Caused: java.io.FileNotFoundException
 	at org.openide.loaders.FolderList$ListTask.run(FolderList.java:970)
 	at org.openide.util.RequestProcessor$Task.run(RequestProcessor.java:1424)
 	at org.openide.util.RequestProcessor$Processor.run(RequestProcessor.java:1968)
-INFO [org.openide.loaders.XMLDataObject]: I/O exception while opening MultiFileObject@1d6e3af[Services/MIMEResolver/editorResolver.xml]
-java.io.FileNotFoundException: jar:file:/home/royrutto/Desktop/work/dc/dreamcatcher/build/cluster/modules/org-dreamcatcher-main.jar!/org/dreamcatcher/main/editorResolver.xml
+INFO [org.openide.loaders.XMLDataObject]: I/O exception while opening MultiFileObject@1cea89c[Services/MIMEResolver/editorResolver.xml]
+java.io.FileNotFoundException: jar:file:/home/royrutto/Desktop/work/dc/dreamcatcher_temp/build/cluster/modules/org-dreamcatcher-main.jar!/org/dreamcatcher/main/editorResolver.xml
 	at org.netbeans.JarClassLoader$NbJarURLConnection.connect(JarClassLoader.java:944)
 	at org.netbeans.JarClassLoader$NbJarURLConnection.getInputStream(JarClassLoader.java:980)
 	at org.netbeans.core.startup.layers.BinaryFS$BFSFile.getInputStream(BinaryFS.java:759)
@@ -308,143 +308,41 @@ INFO [org.netbeans.core.startup.NbEvents]: Turning on modules:
 	org.netbeans.core.nativeaccess/1 [1.12.1 201107282000]
 	org.netbeans.core.io.ui/1 [1.12.1 201107282000]
 	org.jdesktop.beansbinding/1 [1.11.1.121 121 201107282000]
-	org.gabwell.jcalender [1.0 120211]
-	org.dreamcathcer.commons [1.0 120211]
-	org.dreamcatcher.util [1.0 120211]
-	org.dreamcatcher.textFilter [1.0 120211]
-	org.dreamcatcher.selection [1.0 120211]
-	org.dreamcatcher.scheduling [1.0 120211]
-	org.dreamcatcher.main [1.0 120211]
-	org.dreamcatcher.logging [1.0 120211]
-	org.dreamcatcher.editorsuite [1.0 120211]
-	org.dreamcatcher.apachepdfbox [1.0 120211]
-	org.dreamcatcher.filesAPI [1.0 120211]
-	org.dreamcatcher.drmProjectType [1.0 120211]
-	org.dreamcatcher.budget [1.0 120211]
+	org.gabwell.jcalender [1.0 120218]
+	org.dreamcathcer.commons [1.0 120218]
+	org.dreamcatcher.util [1.0 120218]
+	org.dreamcatcher.textFilter [1.0 120218]
+	org.dreamcatcher.selection [1.0 120218]
+	org.dreamcatcher.scheduling [1.0 120218]
+	org.dreamcatcher.main [1.0 120218]
+	org.dreamcatcher.logging [1.0 120218]
+	org.dreamcatcher.editorsuite [1.0 120218]
+	org.dreamcatcher.apachepdfbox [1.0 120218]
+	org.dreamcatcher.filesAPI [1.0 120218]
+	org.dreamcatcher.drmProjectType [1.0 120218]
+	org.dreamcatcher.budget [1.0 120218]
 WARNING [org.openide.filesystems.Ordering]: Found same position 300 for both Toolbars/File/org-dreamcatcher-filesAPI-NewProjectWizardAction.shadow and Toolbars/File/org-netbeans-modules-project-ui-OpenProject.shadow
 WARNING [org.openide.filesystems.Ordering]: Not all children in Windows2/Modes/explorer/ marked with the position attribute: [projectsTopComponent.wstcref], but some are: [projectTabLogical_tc.wstcref, projectTab_tc.wstcref, favorites.wstcref]
 WARNING [org.openide.filesystems.Ordering]: Not all children in Windows2/Modes/output/ marked with the position attribute: [outputTopComponent.wstcref], but some are: [refactoring-preview.wstcref, find-usages.wstcref, output.wstcref]
 Diagnostic information
 Input arguments:
 	-Djdk.home=/usr/lib/jvm/java-7-openjdk-i386
-	-Dnetbeans.system_socks_proxy=192.168.170.25:3135
-	-Dnetbeans.system_http_proxy=192.168.170.25:3135
-	-Dnetbeans.system_http_non_proxy_hosts=[localhost,127.0.0.0/8,*.local
-	-Dnetbeans.dirs=/home/royrutto/Desktop/work/dc/dreamcatcher/build/cluster:/home/royrutto/netbeans-7.0.1/ide:/home/royrutto/netbeans-7.0.1/java:/home/royrutto/netbeans-7.0.1/platform
+	-Dnetbeans.system_http_proxy=DIRECT
+	-Dnetbeans.system_http_non_proxy_hosts=
+	-Dnetbeans.dirs=/home/royrutto/Desktop/work/dc/dreamcatcher_temp/build/cluster:/home/royrutto/netbeans-7.0.1/ide:/home/royrutto/netbeans-7.0.1/java:/home/royrutto/netbeans-7.0.1/platform
 	-Dnetbeans.home=/home/royrutto/netbeans-7.0.1/platform
 	-Dnetbeans.logger.console=true
 	-ea
 Compiler: HotSpot Tiered Compilers
 Heap memory usage: initial 61.3MB maximum 872.9MB
 Non heap memory usage: initial 18.2MB maximum 176.0MB
-Garbage collector: PS Scavenge (Collections=5 Total time spent=0s)
+Garbage collector: PS Scavenge (Collections=8 Total time spent=0s)
 Garbage collector: PS MarkSweep (Collections=0 Total time spent=0s)
-Classes: loaded=4584 total loaded=4584 unloaded 0
+Classes: loaded=4604 total loaded=4604 unloaded 0
 INFO [org.netbeans.core.ui.warmup.DiagnosticTask]: Total memory 4,116,926,464
 INFO [null]: Total physical memory 4,116,926,464
 WARNING [org.openide.filesystems.MIMESupport]: org.netbeans.modules.openide.filesystems.declmime.MIMEResolverImpl$Impl's constructor should call super(String...) with list of resolvable MIME types.
-WARNING [org.netbeans.ProxyClassLoader]: Will not load class org.apache.commons.logging.impl.Log4JLogger arbitrarily from one of ModuleCL@c35c97[org.netbeans.libs.commons_logging] and ModuleCL@13c8965[org.dreamcatcher.logging] starting from SystemClassLoader[100 modules]; see http://wiki.netbeans.org/DevFaqModuleCCE
-WARNING [org.netbeans.ProxyClassLoader]: Will not load class org.apache.commons.logging.impl.Jdk14Logger arbitrarily from one of ModuleCL@c35c97[org.netbeans.libs.commons_logging] and ModuleCL@13c8965[org.dreamcatcher.logging] starting from SystemClassLoader[100 modules]; see http://wiki.netbeans.org/DevFaqModuleCCE
-javax.swing.text.PlainDocument@1562fI have been updatedjavax.swing.text.PlainDocument@1562fI have been removedjavax.swing.text.PlainDocument@1562fI have been updatedjavax.swing.text.PlainDocument@1562fI have been updatedjavax.swing.text.PlainDocument@1562fI have been updatedjavax.swing.text.PlainDocument@1562fI have been updated/home/royrutto/Desktop/work/dc/NEPOTISM-THE OFFICE CLAN.pdf
-No Look up sourceMCKOY
-INFO [org.netbeans.core.windows.persistence]: [PersistenceManager.getTopComponentForID] Problem when deserializing TopComponent for tcID:'componentsTopComponent'. Reason: null
-Content: 
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="org.dreamcatcher.main.componentsTopComponent"/>
-</settings>
-Class: class org.dreamcatcher.main.componentsTopComponent
-Source: MultiFileObject@19683ed[Windows2Local/Components/componentsTopComponent.settings]
-Content: 
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="org.dreamcatcher.main.componentsTopComponent"/>
-</settings>
-Class: class org.dreamcatcher.main.componentsTopComponent
-Source: MultiFileObject@19683ed[Windows2Local/Components/componentsTopComponent.settings]
-Caused: java.lang.ArrayIndexOutOfBoundsException: 0 >= 0
-	at java.util.Vector.elementAt(Vector.java:470)
-	at javax.swing.table.DefaultTableColumnModel.getColumn(DefaultTableColumnModel.java:294)
-	at org.dreamcatcher.main.componentsTopComponent.initComponents(componentsTopComponent.java:85)
-	at org.dreamcatcher.main.componentsTopComponent.<init>(componentsTopComponent.java:34)
-Caused: java.lang.reflect.InvocationTargetException
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
-	at org.netbeans.modules.settings.convertors.XMLSettingsSupport$SettingsRecognizer.instanceCreate(XMLSettingsSupport.java:608)
-Caused: java.io.IOException
-	at org.netbeans.modules.settings.convertors.XMLSettingsSupport$SettingsRecognizer.instanceCreate(XMLSettingsSupport.java:610)
-	at org.netbeans.modules.settings.convertors.SerialDataConvertor$SettingsInstance.instanceCreate(SerialDataConvertor.java:424)
-[catch] at org.netbeans.core.windows.persistence.PersistenceManager.getTopComponentPersistentForID(PersistenceManager.java:545)
-	at org.netbeans.core.windows.persistence.PersistenceManager.getTopComponentForID(PersistenceManager.java:655)
-	at org.netbeans.core.windows.PersistenceHandler.getTopComponentForID(PersistenceHandler.java:460)
-	at org.netbeans.core.windows.WindowManagerImpl.getTopComponentForID(WindowManagerImpl.java:827)
-	at org.netbeans.core.windows.model.TopComponentSubModel.getTopComponent(TopComponentSubModel.java:363)
-	at org.netbeans.core.windows.model.TopComponentSubModel.getTopComponents(TopComponentSubModel.java:89)
-	at org.netbeans.core.windows.model.DefaultModeModel.getTopComponents(DefaultModeModel.java:270)
-	at org.netbeans.core.windows.model.DefaultModel.getModeTopComponents(DefaultModel.java:851)
-	at org.netbeans.core.windows.Central.getModeTopComponents(Central.java:1513)
-	at org.netbeans.core.windows.ModeImpl.getTopComponents(ModeImpl.java:189)
-	at org.netbeans.core.windows.model.ModesSubModel.getSlideInSizes(ModesSubModel.java:267)
-	at org.netbeans.core.windows.model.ModesSubModel$1.entrySet(ModesSubModel.java:397)
-	at java.util.AbstractMap.get(AbstractMap.java:171)
-	at org.netbeans.core.windows.view.SlidingView.getSlideBounds(SlidingView.java:106)
-	at org.netbeans.core.windows.view.ui.DesktopImpl.computeSlideInBounds(DesktopImpl.java:330)
-	at org.netbeans.core.windows.view.ui.DesktopImpl.performSlideIn(DesktopImpl.java:245)
-	at org.netbeans.core.windows.view.ViewHierarchy.performSlideIn(ViewHierarchy.java:772)
-	at org.netbeans.core.windows.view.DefaultView.userTriggeredSlideIn(DefaultView.java:888)
-	at org.netbeans.core.windows.view.ui.TabbedHandler.actionPerformed(TabbedHandler.java:363)
-	at org.netbeans.core.windows.view.ui.slides.TabbedSlideAdapter.postActionEvent(TabbedSlideAdapter.java:155)
-	at org.netbeans.core.windows.view.ui.slides.CommandManager.postEvent(CommandManager.java:418)
-	at org.netbeans.core.windows.view.ui.slides.CommandManager.slideIn(CommandManager.java:138)
-	at org.netbeans.core.windows.view.ui.slides.SlideBar.stateChanged(SlideBar.java:279)
-	at javax.swing.DefaultSingleSelectionModel.fireStateChanged(DefaultSingleSelectionModel.java:132)
-	at javax.swing.DefaultSingleSelectionModel.setSelectedIndex(DefaultSingleSelectionModel.java:67)
-	at org.netbeans.core.windows.view.ui.slides.TabbedSlideAdapter.setSelectedComponent(TabbedSlideAdapter.java:262)
-	at org.netbeans.core.windows.view.ui.TabbedHandler.setSelectedTopComponent(TabbedHandler.java:264)
-	at org.netbeans.core.windows.view.ui.AbstractModeContainer.setSelectedTopComponent(AbstractModeContainer.java:119)
-	at org.netbeans.core.windows.view.ui.AbstractModeContainer.setTopComponents(AbstractModeContainer.java:132)
-	at org.netbeans.core.windows.view.ui.slides.SlideBarContainer.setTopComponents(SlideBarContainer.java:108)
-	at org.netbeans.core.windows.view.ModeView.setTopComponents(ModeView.java:140)
-	at org.netbeans.core.windows.view.ViewHierarchy.updateViewForAccessor(ViewHierarchy.java:266)
-	at org.netbeans.core.windows.view.ViewHierarchy.updateSlidingViews(ViewHierarchy.java:374)
-	at org.netbeans.core.windows.view.ViewHierarchy.updateViewHierarchy(ViewHierarchy.java:176)
-	at org.netbeans.core.windows.view.DefaultView.changeGUI(DefaultView.java:152)
-	at org.netbeans.core.windows.ViewRequestor.dispatchRequest(ViewRequestor.java:272)
-	at org.netbeans.core.windows.ViewRequestor.processRequest(ViewRequestor.java:248)
-	at org.netbeans.core.windows.ViewRequestor.postRequest(ViewRequestor.java:186)
-	at org.netbeans.core.windows.ViewRequestor.scheduleRequest(ViewRequestor.java:126)
-	at org.netbeans.core.windows.Central.setModeSelectedTopComponent(Central.java:733)
-	at org.netbeans.core.windows.WindowManagerImpl.topComponentRequestVisible(WindowManagerImpl.java:1168)
-	at org.openide.windows.TopComponent.requestVisible(TopComponent.java:886)
-	at org.netbeans.core.windows.view.ui.slides.SlideBar.userTriggeredAutoSlideIn(SlideBar.java:360)
-	at org.netbeans.core.windows.view.ui.slides.SlideGestureRecognizer$AutoSlideTrigger.slideInTimerReaction(SlideGestureRecognizer.java:247)
-	at org.netbeans.core.windows.view.ui.slides.SlideGestureRecognizer$AutoSlideTrigger.actionPerformed(SlideGestureRecognizer.java:231)
-	at javax.swing.Timer.fireActionPerformed(Timer.java:312)
-	at javax.swing.Timer$DoPostEvent.run(Timer.java:244)
-	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:251)
-	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:705)
-	at java.awt.EventQueue.access$000(EventQueue.java:101)
-	at java.awt.EventQueue$3.run(EventQueue.java:666)
-	at java.awt.EventQueue$3.run(EventQueue.java:664)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:76)
-	at java.awt.EventQueue.dispatchEvent(EventQueue.java:675)
-	at org.netbeans.core.TimableEventQueue.dispatchEvent(TimableEventQueue.java:148)
-	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:211)
-	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:128)
-	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:117)
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:113)
-	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:105)
-	at java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
-Content: 
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE settings PUBLIC "-//NetBeans//DTD Session settings 1.0//EN" "http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">
-<settings version="1.0">
-  <instance class="org.dreamcatcher.main.componentsTopComponent"/>
-</settings>
-ALL [null]: Class: class org.dreamcatcher.main.componentsTopComponent
-ALL [null]: Source: MultiFileObject@19683ed[Windows2Local/Components/componentsTopComponent.settings]
+WARNING [org.netbeans.ProxyClassLoader]: Will not load class org.apache.commons.logging.impl.Log4JLogger arbitrarily from one of ModuleCL@18dca9e[org.netbeans.libs.commons_logging] and ModuleCL@890331[org.dreamcatcher.logging] starting from SystemClassLoader[100 modules]; see http://wiki.netbeans.org/DevFaqModuleCCE
+WARNING [org.netbeans.ProxyClassLoader]: Will not load class org.apache.commons.logging.impl.Jdk14Logger arbitrarily from one of ModuleCL@18dca9e[org.netbeans.libs.commons_logging] and ModuleCL@890331[org.dreamcatcher.logging] starting from SystemClassLoader[100 modules]; see http://wiki.netbeans.org/DevFaqModuleCCE
+javax.swing.text.PlainDocument@14eb350I have been updatedjavax.swing.text.PlainDocument@14eb350I have been updatedjavax.swing.text.PlainDocument@14eb350I have been updatedjavax.swing.text.PlainDocument@14eb350I have been updatedjavax.swing.text.PlainDocument@14eb350I have been updated/home/royrutto/NEPOTISM-THE OFFICE CLAN.pdf
+WARNING [org.netbeans.core.TimableEventQueue]: too much time in AWT thread null
