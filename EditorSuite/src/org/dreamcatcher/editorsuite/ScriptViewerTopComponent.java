@@ -12,6 +12,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Vector;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.DefaultListModel;
 import javax.swing.JTextPane;
@@ -462,6 +463,11 @@ public final class ScriptViewerTopComponent extends TopComponent {
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
+        jList1.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
+            public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
+                jList1ValueChanged(evt);
+            }
+        });
         jScrollPane3.setViewportView(jList1);
 
         org.openide.awt.Mnemonics.setLocalizedText(jLabel1, org.openide.util.NbBundle.getMessage(ScriptViewerTopComponent.class, "ScriptViewerTopComponent.jLabel1.text")); // NOI18N
@@ -538,7 +544,8 @@ public final class ScriptViewerTopComponent extends TopComponent {
                 Notifier.getInstance().giveMessage("No text Selected! Please sselect text to tag.",3);
                
             }
-           category();
+          // category();
+            breakdownReport(projectName);
     }//GEN-LAST:event_ActorActionPerformed
 
     private void AnimalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnimalActionPerformed
@@ -1046,6 +1053,18 @@ private void visualEffectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN
     getElements();
     }//GEN-LAST:event_BtnNextSceneActionPerformed
 
+    private void jList1ValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_jList1ValueChanged
+        // TODO add your handling code here:
+        if (evt.getValueIsAdjusting() == false)
+         {
+            if (jList1.getSelectedIndex() != -1)
+            {
+                // no selection, do something
+             }
+            System.out.println(jList1.getSelectedValue().toString());
+         }
+    }//GEN-LAST:event_jList1ValueChanged
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem Actor;
     private javax.swing.JMenuItem Animal;
@@ -1259,14 +1278,13 @@ private void visualEffectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN
             //Highlights scene headings
             String[] stringsToTag = {"INT.", "EXT."};
             populateSceneBreakdown(jTextPane1, stringsToTag, Color.LIGHT_GRAY);
-            
-             
-            
+                       
             for(int i=0; i<SceneContent.size(); i++){
                 SceneElement item = (SceneElement) SceneContent.get(i);
                 populateSceneBreakdown(jTextPane1, item.getSceneName(), Color.LIGHT_GRAY);
             }
-           
+           //end highlight scene headings
+            
             //HighlighTaggedItems
             ArrayList<TaggedItem> tElements = new ArrayList<TaggedItem>();
             tElements= XMLManager.getInstance().getAllTaggedElements();
@@ -1342,54 +1360,71 @@ private void visualEffectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN
         DefaultListModel listModel= new DefaultListModel();
         DefaultListModel catlistModel= new DefaultListModel();
         String heading = projectName;
+        
+        
         String Headings="";
         String Characters="Character";
         String Locations="Location";
         String Props="Props";
         
+        
+        
+       //s String [][] Category
+        
         try{
        //fill Scenes List
-        ArrayList<SceneElement> sceneElements = new ArrayList<SceneElement>();
+        ArrayList<TaggedItem> tElements = new ArrayList<TaggedItem>();
+        tElements= XMLManager.getInstance().getAllTaggedElements();
+        
         jList1.setModel(listModel);
         listModel.add(0, "ALL");
-         
-        sceneElements= XMLManager.getInstance().getAllSceneItems();
-        for(int i=0; i<sceneElements.size(); i++){
-            populateSceneBreakdown(jTextPane1, sceneElements.get(i).getSceneName(), Color.GRAY);
-            String sceneHeading = new Integer(i+1).toString()+". "+ sceneElements.get(i).getSceneName();
-            Headings= Headings+sceneElements.get(i).getSceneType()+" - "+sceneElements.get(i).getSceneName()
+ 
+        for(int i=0; i<SceneContent.size(); i++){
+            SceneElement item = (SceneElement) SceneContent.get(i);
+            populateSceneBreakdown(jTextPane1, item.getSceneName(), Color.GRAY);
+            String sceneHeading = new Integer(i+1).toString()+". "+ item.getSceneName();
+            
+            
+            for(int x=0; x<tElements.size(); x++){
+             String scences = tElements.get(x).getScenes();
+             
+             String [] occ = split(scences);
+            for(int z=0; z<occ.length; z++){
+                int sc = Integer.parseInt(occ[z]);
+                if(sc==i){
+                    Characters=Characters+"\n"+tElements.get(x).getItemName();
+                } 
+            }
+             
+            }
+            Headings= Headings+new Integer(i+1).toString()+" - "+item.getSceneName()
                 +"\n"
                 +Characters
                  +"\n"
                 +Locations
                  +"\n"
-                +Props;
+                +Props+"\n";
         
             int modelsize = jList1.getModel().getSize();
             listModel.add(modelsize, sceneHeading);   
         }
         
-         ArrayList<TaggedItem> tElements = new ArrayList<TaggedItem>();
-         tElements= XMLManager.getInstance().getAllTaggedElements();
-         jList3.setModel(catlistModel);
+         
+          jList3.setModel(catlistModel);
          catlistModel.add(0, "ALL");
          for(int i=0; i<tElements.size(); i++){
              String category = tElements.get(i).getItemType();
              
-             if (!getModelIndex(category, catlistModel)){
+             if (!getModelValues(category, catlistModel)){
                   int modelsize = jList3.getModel().getSize();
-                 catlistModel.add(modelsize, tElements);
+                 catlistModel.add(modelsize, tElements.get(i).getItemType());
              }
-             
          }
         }catch (Exception e) {
             //throw new TagHighlightException("Text highlight error: " + e.getMessage());
             System.out.println(e.getMessage());
         }
          
-        
-        
-        
         StyledDocument doc = jTextPane2.getStyledDocument();
         Style style = doc.addStyle("table", null);
         //StyleConstants.setComponent(style, getTableComponent());
@@ -1403,8 +1438,7 @@ private void visualEffectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN
     
     }
     
-    private boolean getModelIndex(String string, DefaultListModel model) {
-        int itemIndex = model.getSize();
+    private boolean getModelValues(String string, DefaultListModel model) {
         boolean exists=false;
         for (int i = 0; i < model.getSize(); i++) {
             String value = model.getElementAt(i).toString();
@@ -1429,11 +1463,35 @@ private void visualEffectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN
          for(int i=0; i<tElements.size(); i++){
              String category = tElements.get(i).getItemType();
              
-             if (!getModelIndex(category, catlistModel)){
+             if (!getModelValues(category, catlistModel)){
                   int modelsize = jList3.getModel().getSize();
                  catlistModel.add(modelsize, tElements.get(i).getItemType());
              }
-         
-    }}catch (Exception e){}
+         }
+        }catch (Exception e){}
     }
+     private String[] split(String original) {
+        Vector nodes = new Vector();
+        String separator = ",";
+        //System.out.println("split start...................");
+        // Parse nodes into vector
+        int index = original.indexOf(separator);
+        while(index>=0) {
+            nodes.addElement( original.substring(0, index) );
+            original = original.substring(index+separator.length());
+            index = original.indexOf(separator);
+        }
+        // Get the last node
+        nodes.addElement( original );
+        // Create splitted string array
+        String[] result = new String[ nodes.size()-1 ];
+        if( nodes.size()>0 ) {
+            for(int loop=0; loop<nodes.size()-1; loop++)
+            {
+                result[loop] = (String)nodes.elementAt(loop);
+                System.out.println("Result"+result[loop]);
+            }
+        }
+        return result;
+    } 
 }
