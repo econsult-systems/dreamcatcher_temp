@@ -1,5 +1,5 @@
 -------------------------------------------------------------------------------
->Log Session: Saturday, February 18, 2012 9:42:53 AM EAT
+>Log Session: Sunday, February 19, 2012 7:36:14 AM EAT
 >System Info: 
   Product Version         = Dreamcatcher
   Operating System        = Linux version 3.0.0-16-generic-pae running on i386
@@ -28,8 +28,8 @@ WARNING [org.netbeans.core.projects.cache]: Inefficient to include an empty laye
 WARNING [org.netbeans.core.projects.cache]: Inefficient to include an empty layer in a module: jar:file:/home/royrutto/Desktop/work/dc/dreamcatcher_temp/build/cluster/modules/org-dreamcatcher-editorsuite.jar!/org/dreamcatcher/editorsuite/layer.xml
 WARNING [org.openide.filesystems.Ordering]: Not all children in Services/MIMEResolver/ marked with the position attribute: [ScriptResolver.xml, editorResolver.xml, EditorResolver.xml], but some are: [instance-mime-resolver.xml, Diff.xml, org-netbeans-modules-editor-settings-storage-mime-resolver.xml, org-netbeans-modules-editor-codetemplates-mime-resolver.xml]
 INFO [org.netbeans.modules.openide.filesystems.declmime.DefaultParser]
-While parsing: MultiFileObject@26f904[Services/MIMEResolver/ScriptResolver.xml]
-While parsing: MultiFileObject@26f904[Services/MIMEResolver/ScriptResolver.xml]
+While parsing: MultiFileObject@1299e46[Services/MIMEResolver/ScriptResolver.xml]
+While parsing: MultiFileObject@1299e46[Services/MIMEResolver/ScriptResolver.xml]
 Caused: java.io.FileNotFoundException: jar:file:/home/royrutto/Desktop/work/dc/dreamcatcher_temp/build/cluster/modules/org-dreamcatcher-main.jar!/org/dreamcatcher/main/ScriptResolver.xml
 	at org.netbeans.JarClassLoader$NbJarURLConnection.connect(JarClassLoader.java:944)
 	at org.netbeans.JarClassLoader$NbJarURLConnection.getInputStream(JarClassLoader.java:980)
@@ -77,10 +77,10 @@ Caused: java.io.FileNotFoundException
 	at org.openide.loaders.FolderList$ListTask.run(FolderList.java:970)
 	at org.openide.util.RequestProcessor$Task.run(RequestProcessor.java:1424)
 	at org.openide.util.RequestProcessor$Processor.run(RequestProcessor.java:1968)
-ALL [null]: While parsing: MultiFileObject@26f904[Services/MIMEResolver/ScriptResolver.xml]
+ALL [null]: While parsing: MultiFileObject@1299e46[Services/MIMEResolver/ScriptResolver.xml]
 INFO [org.netbeans.modules.openide.filesystems.declmime.DefaultParser]
-While parsing: MultiFileObject@d9d32d[Services/MIMEResolver/editorResolver.xml]
-While parsing: MultiFileObject@d9d32d[Services/MIMEResolver/editorResolver.xml]
+While parsing: MultiFileObject@a6eba7[Services/MIMEResolver/editorResolver.xml]
+While parsing: MultiFileObject@a6eba7[Services/MIMEResolver/editorResolver.xml]
 Caused: java.io.FileNotFoundException: jar:file:/home/royrutto/Desktop/work/dc/dreamcatcher_temp/build/cluster/modules/org-dreamcatcher-main.jar!/org/dreamcatcher/main/editorResolver.xml
 	at org.netbeans.JarClassLoader$NbJarURLConnection.connect(JarClassLoader.java:944)
 	at org.netbeans.JarClassLoader$NbJarURLConnection.getInputStream(JarClassLoader.java:980)
@@ -128,9 +128,9 @@ Caused: java.io.FileNotFoundException
 	at org.openide.loaders.FolderList$ListTask.run(FolderList.java:970)
 	at org.openide.util.RequestProcessor$Task.run(RequestProcessor.java:1424)
 	at org.openide.util.RequestProcessor$Processor.run(RequestProcessor.java:1968)
-ALL [null]: While parsing: MultiFileObject@d9d32d[Services/MIMEResolver/editorResolver.xml]
+ALL [null]: While parsing: MultiFileObject@a6eba7[Services/MIMEResolver/editorResolver.xml]
 WARNING [org.openide.filesystems.Ordering]: Not all children in Services/MIMEResolver/ marked with the position attribute: [EditorResolver.xml, ScriptResolver.xml, editorResolver.xml], but some are: [instance-mime-resolver.xml, Diff.xml, org-netbeans-modules-editor-settings-storage-mime-resolver.xml, org-netbeans-modules-editor-codetemplates-mime-resolver.xml]
-INFO [org.openide.loaders.XMLDataObject]: I/O exception while opening MultiFileObject@26f904[Services/MIMEResolver/ScriptResolver.xml]
+INFO [org.openide.loaders.XMLDataObject]: I/O exception while opening MultiFileObject@1299e46[Services/MIMEResolver/ScriptResolver.xml]
 java.io.FileNotFoundException: jar:file:/home/royrutto/Desktop/work/dc/dreamcatcher_temp/build/cluster/modules/org-dreamcatcher-main.jar!/org/dreamcatcher/main/ScriptResolver.xml
 	at org.netbeans.JarClassLoader$NbJarURLConnection.connect(JarClassLoader.java:944)
 	at org.netbeans.JarClassLoader$NbJarURLConnection.getInputStream(JarClassLoader.java:980)
@@ -175,7 +175,7 @@ Caused: java.io.FileNotFoundException
 	at org.openide.loaders.FolderList$ListTask.run(FolderList.java:970)
 	at org.openide.util.RequestProcessor$Task.run(RequestProcessor.java:1424)
 	at org.openide.util.RequestProcessor$Processor.run(RequestProcessor.java:1968)
-INFO [org.openide.loaders.XMLDataObject]: I/O exception while opening MultiFileObject@d9d32d[Services/MIMEResolver/editorResolver.xml]
+INFO [org.openide.loaders.XMLDataObject]: I/O exception while opening MultiFileObject@a6eba7[Services/MIMEResolver/editorResolver.xml]
 java.io.FileNotFoundException: jar:file:/home/royrutto/Desktop/work/dc/dreamcatcher_temp/build/cluster/modules/org-dreamcatcher-main.jar!/org/dreamcatcher/main/editorResolver.xml
 	at org.netbeans.JarClassLoader$NbJarURLConnection.connect(JarClassLoader.java:944)
 	at org.netbeans.JarClassLoader$NbJarURLConnection.getInputStream(JarClassLoader.java:980)
@@ -308,21 +308,23 @@ INFO [org.netbeans.core.startup.NbEvents]: Turning on modules:
 	org.netbeans.core.nativeaccess/1 [1.12.1 201107282000]
 	org.netbeans.core.io.ui/1 [1.12.1 201107282000]
 	org.jdesktop.beansbinding/1 [1.11.1.121 121 201107282000]
-	org.gabwell.jcalender [1.0 120218]
-	org.dreamcathcer.commons [1.0 120218]
-	org.dreamcatcher.util [1.0 120218]
-	org.dreamcatcher.textFilter [1.0 120218]
-	org.dreamcatcher.selection [1.0 120218]
-	org.dreamcatcher.scheduling [1.0 120218]
-	org.dreamcatcher.main [1.0 120218]
-	org.dreamcatcher.logging [1.0 120218]
-	org.dreamcatcher.editorsuite [1.0 120218]
-	org.dreamcatcher.apachepdfbox [1.0 120218]
-	org.dreamcatcher.filesAPI [1.0 120218]
-	org.dreamcatcher.drmProjectType [1.0 120218]
-	org.dreamcatcher.budget [1.0 120218]
+	org.gabwell.jcalender [1.0 120219]
+	org.dreamcathcer.commons [1.0 120219]
+	org.dreamcatcher.util [1.0 120219]
+	org.dreamcatcher.textFilter [1.0 120219]
+	org.dreamcatcher.selection [1.0 120219]
+	org.dreamcatcher.scheduling [1.0 120219]
+	org.dreamcatcher.main [1.0 120219]
+	org.dreamcatcher.logging [1.0 120219]
+	org.dreamcatcher.editorsuite [1.0 120219]
+	org.dreamcatcher.apachepdfbox [1.0 120219]
+	org.dreamcatcher.filesAPI [1.0 120219]
+	org.dreamcatcher.drmProjectType [1.0 120219]
+	org.dreamcatcher.budget [1.0 120219]
 WARNING [org.openide.filesystems.Ordering]: Found same position 300 for both Toolbars/File/org-dreamcatcher-filesAPI-NewProjectWizardAction.shadow and Toolbars/File/org-netbeans-modules-project-ui-OpenProject.shadow
-The file containing project setting could not be found
+WARNING [org.openide.filesystems.Ordering]: Not all children in Windows2/Modes/explorer/ marked with the position attribute: [projectsTopComponent.wstcref], but some are: [projectTabLogical_tc.wstcref, projectTab_tc.wstcref, favorites.wstcref]
+WARNING [org.openide.filesystems.Ordering]: Not all children in Windows2/Modes/output/ marked with the position attribute: [outputTopComponent.wstcref], but some are: [refactoring-preview.wstcref, find-usages.wstcref, output.wstcref]
+WARNING [org.openide.filesystems.MIMESupport]: org.netbeans.modules.openide.filesystems.declmime.MIMEResolverImpl$Impl's constructor should call super(String...) with list of resolvable MIME types.
 Diagnostic information
 Input arguments:
 	-Djdk.home=/usr/lib/jvm/java-7-openjdk-i386
@@ -335,13 +337,11 @@ Input arguments:
 Compiler: HotSpot Tiered Compilers
 Heap memory usage: initial 61.3MB maximum 872.9MB
 Non heap memory usage: initial 18.2MB maximum 176.0MB
-Garbage collector: PS Scavenge (Collections=8 Total time spent=0s)
+Garbage collector: PS Scavenge (Collections=6 Total time spent=0s)
 Garbage collector: PS MarkSweep (Collections=0 Total time spent=0s)
-Classes: loaded=4883 total loaded=4883 unloaded 0
+Classes: loaded=5099 total loaded=5099 unloaded 0
 INFO [org.netbeans.core.ui.warmup.DiagnosticTask]: Total memory 4,116,926,464
 INFO [null]: Total physical memory 4,116,926,464
-WARNING [org.openide.filesystems.MIMESupport]: org.netbeans.modules.openide.filesystems.declmime.MIMEResolverImpl$Impl's constructor should call super(String...) with list of resolvable MIME types.
-WARNING [org.netbeans.ProxyClassLoader]: Will not load class org.apache.commons.logging.impl.Log4JLogger arbitrarily from one of ModuleCL@8bc42e[org.netbeans.libs.commons_logging] and ModuleCL@1afc20a[org.dreamcatcher.logging] starting from SystemClassLoader[100 modules]; see http://wiki.netbeans.org/DevFaqModuleCCE
-WARNING [org.netbeans.ProxyClassLoader]: Will not load class org.apache.commons.logging.impl.Jdk14Logger arbitrarily from one of ModuleCL@8bc42e[org.netbeans.libs.commons_logging] and ModuleCL@1afc20a[org.dreamcatcher.logging] starting from SystemClassLoader[100 modules]; see http://wiki.netbeans.org/DevFaqModuleCCE
-javax.swing.text.PlainDocument@e394afI have been updatedjavax.swing.text.PlainDocument@e394afI have been updatedjavax.swing.text.PlainDocument@e394afI have been updatedjavax.swing.text.PlainDocument@e394afI have been updatedjavax.swing.text.PlainDocument@e394afI have been updated/home/royrutto/NEPOTISM-THE OFFICE CLAN.pdf
-WARNING [org.netbeans.core.TimableEventQueue]: too much time in AWT thread null
+WARNING [org.netbeans.ProxyClassLoader]: Will not load class org.apache.commons.logging.impl.Log4JLogger arbitrarily from one of ModuleCL@172c35b[org.netbeans.libs.commons_logging] and ModuleCL@4649d0[org.dreamcatcher.logging] starting from SystemClassLoader[100 modules]; see http://wiki.netbeans.org/DevFaqModuleCCE
+WARNING [org.netbeans.ProxyClassLoader]: Will not load class org.apache.commons.logging.impl.Jdk14Logger arbitrarily from one of ModuleCL@172c35b[org.netbeans.libs.commons_logging] and ModuleCL@4649d0[org.dreamcatcher.logging] starting from SystemClassLoader[100 modules]; see http://wiki.netbeans.org/DevFaqModuleCCE
+javax.swing.text.PlainDocument@16e5a6dI have been updatedjavax.swing.text.PlainDocument@16e5a6dI have been updatedjavax.swing.text.PlainDocument@16e5a6dI have been updatedjavax.swing.text.PlainDocument@16e5a6dI have been updatedjavax.swing.text.PlainDocument@16e5a6dI have been updatedjavax.swing.text.PlainDocument@16e5a6dI have been updated/home/royrutto/NEPOTISM-THE OFFICE CLAN.pdf

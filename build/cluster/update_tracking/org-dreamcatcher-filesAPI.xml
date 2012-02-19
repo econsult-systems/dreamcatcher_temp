@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module codename="org.dreamcatcher.filesAPI">
-    <module_version install_time="1329547371864" last="true" origin="installer" specification_version="1.0">
+    <module_version install_time="1329626173828" last="true" origin="installer" specification_version="1.0">
         <file crc="2979588476" name="config/Modules/org-dreamcatcher-filesAPI.xml"/>
-        <file crc="105413570" name="modules/org-dreamcatcher-filesAPI.jar"/>
+        <file crc="2507569933" name="modules/org-dreamcatcher-filesAPI.jar"/>
     </module_version>
 </module>
