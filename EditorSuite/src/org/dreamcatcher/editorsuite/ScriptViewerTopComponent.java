@@ -1062,6 +1062,54 @@ private void visualEffectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN
                 // no selection, do something
              }
             System.out.println(jList1.getSelectedValue().toString());
+            
+            int i = jList1.getSelectedIndex();
+            i=i-1;
+            String Headings="";
+            SceneElement item = (SceneElement) SceneContent.get(i);
+           
+            String sceneHeading = new Integer(i).toString()+". "+ item.getSceneName();
+             ArrayList<TaggedItem> tElements = new ArrayList<TaggedItem>();
+              try {
+            tElements= XMLManager.getInstance().getAllTaggedElements();
+             }
+        catch (Exception ex) {
+        }
+            String Characters="Character";
+            for(int x=0; x<tElements.size(); x++){
+             String scences = tElements.get(x).getScenes();
+             
+             String [] occ = split(scences);
+            for(int z=0; z<occ.length; z++){
+                int sc = Integer.parseInt(occ[z]);
+                if(sc==i+1){
+                    Characters=Characters+"\n"+tElements.get(x).getItemName();
+                } 
+            }
+             
+            }
+            Headings= Headings+new Integer(i+1).toString()+" - "+item.getSceneName()
+                +"\n"
+                +Characters
+                 +"\n"
+                +"Location"
+                 +"\n"
+                +"pROPS"+"\n";
+            
+            
+            
+            StyledDocument doc = jTextPane2.getStyledDocument();
+        Style style = doc.addStyle("table", null);
+        //StyleConstants.setComponent(style, getTableComponent());
+
+        try {
+           
+            doc.remove(0,  doc.getLength());
+            doc.insertString(doc.getLength(), projectName+"\n\n"+Headings
+                   , doc.getStyle("table"));
+         }
+        catch (BadLocationException ex) {
+        }
          }
     }//GEN-LAST:event_jList1ValueChanged
 
@@ -1363,7 +1411,7 @@ private void visualEffectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN
         
         
         String Headings="";
-        String Characters="Character";
+        
         String Locations="Location";
         String Props="Props";
         
@@ -1384,14 +1432,14 @@ private void visualEffectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN
             populateSceneBreakdown(jTextPane1, item.getSceneName(), Color.GRAY);
             String sceneHeading = new Integer(i+1).toString()+". "+ item.getSceneName();
             
-            
+            String Characters="Character";
             for(int x=0; x<tElements.size(); x++){
              String scences = tElements.get(x).getScenes();
              
              String [] occ = split(scences);
             for(int z=0; z<occ.length; z++){
                 int sc = Integer.parseInt(occ[z]);
-                if(sc==i){
+                if(sc==i+1){
                     Characters=Characters+"\n"+tElements.get(x).getItemName();
                 } 
             }
@@ -1424,12 +1472,14 @@ private void visualEffectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN
             //throw new TagHighlightException("Text highlight error: " + e.getMessage());
             System.out.println(e.getMessage());
         }
-         
+        
         StyledDocument doc = jTextPane2.getStyledDocument();
         Style style = doc.addStyle("table", null);
         //StyleConstants.setComponent(style, getTableComponent());
 
         try {
+           
+            doc.remove(0,  doc.getLength());
             doc.insertString(doc.getLength(), heading+"\n\n"+Headings
                    , doc.getStyle("table"));
          }

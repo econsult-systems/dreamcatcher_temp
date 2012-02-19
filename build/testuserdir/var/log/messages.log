@@ -1,5 +1,5 @@
 -------------------------------------------------------------------------------
->Log Session: Sunday, February 19, 2012 7:21:41 PM EAT
+>Log Session: Sunday, February 19, 2012 8:31:17 PM EAT
 >System Info: 
   Product Version         = Dreamcatcher
   Operating System        = Linux version 3.0.0-16-generic-pae running on i386
@@ -28,8 +28,8 @@ WARNING [org.netbeans.core.projects.cache]: Inefficient to include an empty laye
 WARNING [org.netbeans.core.projects.cache]: Inefficient to include an empty layer in a module: jar:file:/home/royrutto/Desktop/work/dc/dreamcatcher_temp/build/cluster/modules/org-dreamcatcher-editorsuite.jar!/org/dreamcatcher/editorsuite/layer.xml
 WARNING [org.openide.filesystems.Ordering]: Not all children in Services/MIMEResolver/ marked with the position attribute: [ScriptResolver.xml, editorResolver.xml, EditorResolver.xml], but some are: [instance-mime-resolver.xml, Diff.xml, org-netbeans-modules-editor-settings-storage-mime-resolver.xml, org-netbeans-modules-editor-codetemplates-mime-resolver.xml]
 INFO [org.netbeans.modules.openide.filesystems.declmime.DefaultParser]
-While parsing: MultiFileObject@e175b2[Services/MIMEResolver/ScriptResolver.xml]
-While parsing: MultiFileObject@e175b2[Services/MIMEResolver/ScriptResolver.xml]
+While parsing: MultiFileObject@10b08ea[Services/MIMEResolver/ScriptResolver.xml]
+While parsing: MultiFileObject@10b08ea[Services/MIMEResolver/ScriptResolver.xml]
 Caused: java.io.FileNotFoundException: jar:file:/home/royrutto/Desktop/work/dc/dreamcatcher_temp/build/cluster/modules/org-dreamcatcher-main.jar!/org/dreamcatcher/main/ScriptResolver.xml
 	at org.netbeans.JarClassLoader$NbJarURLConnection.connect(JarClassLoader.java:944)
 	at org.netbeans.JarClassLoader$NbJarURLConnection.getInputStream(JarClassLoader.java:980)
@@ -77,10 +77,10 @@ Caused: java.io.FileNotFoundException
 	at org.openide.loaders.FolderList$ListTask.run(FolderList.java:970)
 	at org.openide.util.RequestProcessor$Task.run(RequestProcessor.java:1424)
 	at org.openide.util.RequestProcessor$Processor.run(RequestProcessor.java:1968)
-ALL [null]: While parsing: MultiFileObject@e175b2[Services/MIMEResolver/ScriptResolver.xml]
+ALL [null]: While parsing: MultiFileObject@10b08ea[Services/MIMEResolver/ScriptResolver.xml]
 INFO [org.netbeans.modules.openide.filesystems.declmime.DefaultParser]
-While parsing: MultiFileObject@12fad49[Services/MIMEResolver/editorResolver.xml]
-While parsing: MultiFileObject@12fad49[Services/MIMEResolver/editorResolver.xml]
+While parsing: MultiFileObject@16e6f28[Services/MIMEResolver/editorResolver.xml]
+While parsing: MultiFileObject@16e6f28[Services/MIMEResolver/editorResolver.xml]
 Caused: java.io.FileNotFoundException: jar:file:/home/royrutto/Desktop/work/dc/dreamcatcher_temp/build/cluster/modules/org-dreamcatcher-main.jar!/org/dreamcatcher/main/editorResolver.xml
 	at org.netbeans.JarClassLoader$NbJarURLConnection.connect(JarClassLoader.java:944)
 	at org.netbeans.JarClassLoader$NbJarURLConnection.getInputStream(JarClassLoader.java:980)
@@ -128,9 +128,9 @@ Caused: java.io.FileNotFoundException
 	at org.openide.loaders.FolderList$ListTask.run(FolderList.java:970)
 	at org.openide.util.RequestProcessor$Task.run(RequestProcessor.java:1424)
 	at org.openide.util.RequestProcessor$Processor.run(RequestProcessor.java:1968)
-ALL [null]: While parsing: MultiFileObject@12fad49[Services/MIMEResolver/editorResolver.xml]
+ALL [null]: While parsing: MultiFileObject@16e6f28[Services/MIMEResolver/editorResolver.xml]
 WARNING [org.openide.filesystems.Ordering]: Not all children in Services/MIMEResolver/ marked with the position attribute: [EditorResolver.xml, ScriptResolver.xml, editorResolver.xml], but some are: [instance-mime-resolver.xml, Diff.xml, org-netbeans-modules-editor-settings-storage-mime-resolver.xml, org-netbeans-modules-editor-codetemplates-mime-resolver.xml]
-INFO [org.openide.loaders.XMLDataObject]: I/O exception while opening MultiFileObject@e175b2[Services/MIMEResolver/ScriptResolver.xml]
+INFO [org.openide.loaders.XMLDataObject]: I/O exception while opening MultiFileObject@10b08ea[Services/MIMEResolver/ScriptResolver.xml]
 java.io.FileNotFoundException: jar:file:/home/royrutto/Desktop/work/dc/dreamcatcher_temp/build/cluster/modules/org-dreamcatcher-main.jar!/org/dreamcatcher/main/ScriptResolver.xml
 	at org.netbeans.JarClassLoader$NbJarURLConnection.connect(JarClassLoader.java:944)
 	at org.netbeans.JarClassLoader$NbJarURLConnection.getInputStream(JarClassLoader.java:980)
@@ -175,7 +175,7 @@ Caused: java.io.FileNotFoundException
 	at org.openide.loaders.FolderList$ListTask.run(FolderList.java:970)
 	at org.openide.util.RequestProcessor$Task.run(RequestProcessor.java:1424)
 	at org.openide.util.RequestProcessor$Processor.run(RequestProcessor.java:1968)
-INFO [org.openide.loaders.XMLDataObject]: I/O exception while opening MultiFileObject@12fad49[Services/MIMEResolver/editorResolver.xml]
+INFO [org.openide.loaders.XMLDataObject]: I/O exception while opening MultiFileObject@16e6f28[Services/MIMEResolver/editorResolver.xml]
 java.io.FileNotFoundException: jar:file:/home/royrutto/Desktop/work/dc/dreamcatcher_temp/build/cluster/modules/org-dreamcatcher-main.jar!/org/dreamcatcher/main/editorResolver.xml
 	at org.netbeans.JarClassLoader$NbJarURLConnection.connect(JarClassLoader.java:944)
 	at org.netbeans.JarClassLoader$NbJarURLConnection.getInputStream(JarClassLoader.java:980)
@@ -322,8 +322,7 @@ INFO [org.netbeans.core.startup.NbEvents]: Turning on modules:
 	org.dreamcatcher.drmProjectType [1.0 120219]
 	org.dreamcatcher.budget [1.0 120219]
 WARNING [org.openide.filesystems.Ordering]: Found same position 300 for both Toolbars/File/org-dreamcatcher-filesAPI-NewProjectWizardAction.shadow and Toolbars/File/org-netbeans-modules-project-ui-OpenProject.shadow
-WARNING [org.openide.filesystems.Ordering]: Not all children in Windows2/Modes/explorer/ marked with the position attribute: [projectsTopComponent.wstcref], but some are: [projectTabLogical_tc.wstcref, projectTab_tc.wstcref, favorites.wstcref]
-WARNING [org.openide.filesystems.Ordering]: Not all children in Windows2/Modes/output/ marked with the position attribute: [outputTopComponent.wstcref], but some are: [refactoring-preview.wstcref, find-usages.wstcref, output.wstcref]
+The file containing project setting could not be found
 Diagnostic information
 Input arguments:
 	-Djdk.home=/usr/lib/jvm/java-7-openjdk-i386
@@ -336,15 +335,16 @@ Input arguments:
 Compiler: HotSpot Tiered Compilers
 Heap memory usage: initial 61.3MB maximum 872.9MB
 Non heap memory usage: initial 18.2MB maximum 176.0MB
-Garbage collector: PS Scavenge (Collections=6 Total time spent=0s)
+Garbage collector: PS Scavenge (Collections=8 Total time spent=0s)
 Garbage collector: PS MarkSweep (Collections=0 Total time spent=0s)
-Classes: loaded=4602 total loaded=4602 unloaded 0
+Classes: loaded=4884 total loaded=4884 unloaded 0
 INFO [org.netbeans.core.ui.warmup.DiagnosticTask]: Total memory 4,116,926,464
 INFO [null]: Total physical memory 4,116,926,464
 WARNING [org.openide.filesystems.MIMESupport]: org.netbeans.modules.openide.filesystems.declmime.MIMEResolverImpl$Impl's constructor should call super(String...) with list of resolvable MIME types.
-WARNING [org.netbeans.ProxyClassLoader]: Will not load class org.apache.commons.logging.impl.Log4JLogger arbitrarily from one of ModuleCL@263aff[org.netbeans.libs.commons_logging] and ModuleCL@d6edc7[org.dreamcatcher.logging] starting from SystemClassLoader[100 modules]; see http://wiki.netbeans.org/DevFaqModuleCCE
-WARNING [org.netbeans.ProxyClassLoader]: Will not load class org.apache.commons.logging.impl.Jdk14Logger arbitrarily from one of ModuleCL@263aff[org.netbeans.libs.commons_logging] and ModuleCL@d6edc7[org.dreamcatcher.logging] starting from SystemClassLoader[100 modules]; see http://wiki.netbeans.org/DevFaqModuleCCE
-javax.swing.text.PlainDocument@1afbf53I have been updatedjavax.swing.text.PlainDocument@1afbf53I have been updatedjavax.swing.text.PlainDocument@1afbf53I have been updatedjavax.swing.text.PlainDocument@1afbf53I have been updatedjavax.swing.text.PlainDocument@1afbf53I have been updatedjavax.swing.text.PlainDocument@1afbf53I have been updated/home/royrutto/NEPOTISM-THE OFFICE CLAN.pdf
+WARNING [org.netbeans.ProxyClassLoader]: Will not load class org.apache.commons.logging.impl.Log4JLogger arbitrarily from one of ModuleCL@eb0858[org.netbeans.libs.commons_logging] and ModuleCL@7279fd[org.dreamcatcher.logging] starting from SystemClassLoader[100 modules]; see http://wiki.netbeans.org/DevFaqModuleCCE
+WARNING [org.netbeans.ProxyClassLoader]: Will not load class org.apache.commons.logging.impl.Jdk14Logger arbitrarily from one of ModuleCL@eb0858[org.netbeans.libs.commons_logging] and ModuleCL@7279fd[org.dreamcatcher.logging] starting from SystemClassLoader[100 modules]; see http://wiki.netbeans.org/DevFaqModuleCCE
+javax.swing.text.PlainDocument@11bcdeeI have been updatedjavax.swing.text.PlainDocument@11bcdeeI have been updatedjavax.swing.text.PlainDocument@11bcdeeI have been updatedjavax.swing.text.PlainDocument@11bcdeeI have been updatedjavax.swing.text.PlainDocument@11bcdeeI have been updated/home/royrutto/NEPOTISM-THE OFFICE CLAN.pdf
+WARNING [org.netbeans.core.TimableEventQueue]: too much time in AWT thread null
 Result1
 Result2
 Result3
@@ -369,243 +369,153 @@ Result1
 Result2
 Result3
 Result5
+1. PRESIDENT’S LIMO - DAY
 Result1
 Result2
 Result3
 Result5
-Result1
-Result2
-Result4
-Result1
-Result2
-Result3
-Result5
-Result1
-Result2
-Result4
+2. COMMON ROOM - DAY
 Result1
 Result2
 Result3
 Result5
-Result1
-Result2
-Result4
-Result1
-Result2
-Result3
-Result5
-Result1
-Result2
-Result4
+3. OLIVER’S OFFICE - DAY
 Result1
 Result2
 Result3
 Result5
-Result1
-Result2
-Result4
-Result1
-Result2
-Result3
-Result5
-Result1
-Result2
-Result4
+4. COMMON ROOM - DAY
 Result1
 Result2
 Result3
 Result5
-Result1
-Result2
-Result4
-Result1
-Result2
+5. OLIVER’S OFFICE - DAY
 Result1
 Result2
 Result3
 Result5
-Result1
-Result2
-Result4
-Result1
-Result2
+6. COMMON ROOM - DAY
 Result1
 Result2
 Result3
 Result5
-Result1
-Result2
-Result4
-Result1
-Result2
+3. OLIVER’S OFFICE - DAY
 Result1
 Result2
 Result3
 Result5
-Result1
-Result2
-Result4
-Result1
-Result2
+2. COMMON ROOM - DAY
 Result1
 Result2
 Result3
 Result5
-Result1
-Result2
-Result4
-Result1
-Result2
+1. PRESIDENT’S LIMO - DAY
 Result1
 Result2
 Result3
 Result5
-Result1
-Result2
-Result4
-Result1
-Result2
+2. COMMON ROOM - DAY
 Result1
 Result2
 Result3
 Result5
-Result1
-Result2
-Result4
-Result1
-Result2
-Result2
-Result4
+3. OLIVER’S OFFICE - DAY
 Result1
 Result2
 Result3
 Result5
-Result1
-Result2
-Result4
-Result1
-Result2
-Result2
-Result4
+4. COMMON ROOM - DAY
 Result1
 Result2
 Result3
 Result5
-Result1
-Result2
-Result4
-Result1
-Result2
-Result2
-Result4
+6. COMMON ROOM - DAY
 Result1
 Result2
 Result3
 Result5
-Result1
-Result2
-Result4
-Result1
-Result2
-Result2
-Result4
+5. OLIVER’S OFFICE - DAY
 Result1
 Result2
 Result3
 Result5
-Result1
-Result2
-Result4
-Result1
-Result2
-Result2
-Result4
+4. COMMON ROOM - DAY
 Result1
 Result2
 Result3
 Result5
-Result1
-Result2
-Result4
-Result1
-Result2
-Result2
-Result4
+3. OLIVER’S OFFICE - DAY
 Result1
 Result2
 Result3
 Result5
-Result1
-Result2
-Result4
-Result1
-Result2
-Result2
-Result4
-Result2
-Result4
+2. COMMON ROOM - DAY
 Result1
 Result2
 Result3
 Result5
-Result1
-Result2
-Result4
-Result1
-Result2
-Result2
-Result4
-Result2
-Result4
+1. PRESIDENT’S LIMO - DAY
 Result1
 Result2
 Result3
 Result5
-Result1
-Result2
-Result4
-Result1
-Result2
-Result2
-Result4
-Result2
-Result4
+2. COMMON ROOM - DAY
 Result1
 Result2
 Result3
 Result5
-Result1
-Result2
-Result4
-Result1
-Result2
-Result2
-Result4
-Result2
-Result4
+1. PRESIDENT’S LIMO - DAY
 Result1
 Result2
 Result3
 Result5
-Result1
-Result2
-Result4
-Result1
-Result2
-Result2
-Result4
-Result2
-Result4
+2. COMMON ROOM - DAY
 Result1
 Result2
 Result3
 Result5
+3. OLIVER’S OFFICE - DAY
 Result1
 Result2
-Result4
+Result3
+Result5
+4. COMMON ROOM - DAY
 Result1
 Result2
+Result3
+Result5
+5. OLIVER’S OFFICE - DAY
+Result1
 Result2
-Result4
+Result3
+Result5
+No Look up sourceNo Look up source1. PRESIDENT’S LIMO - DAY
+Result1
 Result2
-Result4
+Result3
+Result5
+2. COMMON ROOM - DAY
+Result1
+Result2
+Result3
+Result5
+3. OLIVER’S OFFICE - DAY
+Result1
+Result2
+Result3
+Result5
+4. COMMON ROOM - DAY
+Result1
+Result2
+Result3
+Result5
+5. OLIVER’S OFFICE - DAY
+Result1
+Result2
+Result3
+Result5
+6. COMMON ROOM - DAY
+Result1
+Result2
+Result3
+Result5
