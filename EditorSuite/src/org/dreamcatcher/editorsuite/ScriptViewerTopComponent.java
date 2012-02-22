@@ -133,7 +133,6 @@ public final class ScriptViewerTopComponent extends TopComponent {
 
         Font font = new Font("Courier", Font.PLAIN, 12);
         jTextPane1.setFont(font);
-        getElements();
         breakDown.open();
         associateLookup(new AbstractLookup(content));
 
@@ -143,6 +142,7 @@ public final class ScriptViewerTopComponent extends TopComponent {
         BtnNextScene.setEnabled(false);
         
         projectName=name;
+       
     }
 
     public void open(String script, int scenes, String name, ArrayList SceneContent) throws ScriptLoadError, TagHighlightException {
@@ -443,15 +443,15 @@ public final class ScriptViewerTopComponent extends TopComponent {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 593, Short.MAX_VALUE)
-            .addComponent(jToolBar1, javax.swing.GroupLayout.DEFAULT_SIZE, 593, Short.MAX_VALUE)
+            .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 414, Short.MAX_VALUE))
+                .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(6, 6, 6)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 560, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jTabbedPane1.addTab(org.openide.util.NbBundle.getMessage(ScriptViewerTopComponent.class, "ScriptViewerTopComponent.jPanel1.TabConstraints.tabTitle"), jPanel1); // NOI18N
@@ -487,15 +487,15 @@ public final class ScriptViewerTopComponent extends TopComponent {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 561, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 570, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
                             .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 256, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 293, Short.MAX_VALUE)
+                            .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 308, Short.MAX_VALUE)
                             .addComponent(jLabel2))))
                 .addGap(20, 20, 20))
         );
@@ -507,11 +507,11 @@ public final class ScriptViewerTopComponent extends TopComponent {
                     .addComponent(jLabel1)
                     .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane5, 0, 0, Short.MAX_VALUE)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 229, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 424, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -1183,6 +1183,7 @@ private void visualEffectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN
         // content.set(Collections.singleton(obj), null);
         content.set(Collections.singleton(obj2), null);
         breakdownReport(projectName);
+        getElements();
     }
 
     @Override
@@ -1429,7 +1430,7 @@ private void visualEffectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN
  
         for(int i=0; i<SceneContent.size(); i++){
             SceneElement item = (SceneElement) SceneContent.get(i);
-            populateSceneBreakdown(jTextPane1, item.getSceneName(), Color.GRAY);
+            populateSceneBreakdown(jTextPane1, item.getSceneName(), Color.LIGHT_GRAY);
             String sceneHeading = new Integer(i+1).toString()+". "+ item.getSceneName();
             
             String Characters="Character";
@@ -1502,7 +1503,6 @@ private void visualEffectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN
         }
          return exists;
     }
-    
     private void category(){
         try{
          DefaultListModel catlistModel= new DefaultListModel();
@@ -1520,7 +1520,7 @@ private void visualEffectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN
          }
         }catch (Exception e){}
     }
-     private String[] split(String original) {
+    private String[] split(String original) {
         Vector nodes = new Vector();
         String separator = ",";
         //System.out.println("split start...................");

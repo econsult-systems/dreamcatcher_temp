@@ -1,7 +1,7 @@
-/home/royrutto/netbeans-7.0.1/platform=1326716265000
-/home/royrutto/Desktop/work/dc/dreamcatcher_temp/build/cluster=1329672676000
-/home/royrutto/netbeans-7.0.1/ide=1326716266000
-/home/royrutto/netbeans-7.0.1/java=1326716265000
-/home/royrutto/netbeans-7.0.1/platform=1326716265000
-/home/royrutto/Desktop/work/dc/dreamcatcher_temp/build/testuserdir=1329672676000
+C:\Program Files\NetBeans 7.0.1\platform=1326633474300
+C:\Users\Roy Rutto\Desktop\updated\dreamcatcher_temp\build\cluster=1329939764399
+C:\Program Files\NetBeans 7.0.1\ide=1326633470385
+C:\Program Files\NetBeans 7.0.1\java=1326633482534
+C:\Program Files\NetBeans 7.0.1\platform=1326633474300
+C:\Users\Roy Rutto\Desktop\updated\dreamcatcher_temp\build\testuserdir=1329939764399
 crc=7

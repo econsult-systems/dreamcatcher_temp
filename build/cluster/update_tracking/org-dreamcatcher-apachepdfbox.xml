@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module codename="org.dreamcatcher.apachepdfbox">
-    <module_version install_time="1329672668516" last="true" origin="installer" specification_version="1.0">
-        <file crc="2358418154" name="config/Modules/org-dreamcatcher-apachepdfbox.xml"/>
+    <module_version install_time="1329939737458" last="true" origin="installer" specification_version="1.0">
+        <file crc="2209498444" name="config/Modules/org-dreamcatcher-apachepdfbox.xml"/>
         <file crc="2200871701" name="modules/ext/commons-logging-1.1.1.jar"/>
         <file crc="1965363782" name="modules/ext/fontbox-1.6.0.jar"/>
         <file crc="491439197" name="modules/ext/jempbox-1.6.0.jar"/>
         <file crc="43366369" name="modules/ext/pdfbox-1.6.0.jar"/>
-        <file crc="710128306" name="modules/org-dreamcatcher-apachepdfbox.jar"/>
+        <file crc="447047538" name="modules/org-dreamcatcher-apachepdfbox.jar"/>
     </module_version>
 </module>
