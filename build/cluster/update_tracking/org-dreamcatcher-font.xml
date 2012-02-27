@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module codename="org.dreamcatcher.font">
-    <module_version install_time="1329939741575" last="true" origin="installer" specification_version="1.0">
+    <module_version install_time="1329941023187" last="true" origin="installer" specification_version="1.0">
         <file crc="1547945003" name="config/Modules/org-dreamcatcher-font.xml"/>
         <file crc="1965363782" name="modules/ext/fontbox-1.6.0.jar"/>
         <file crc="838018812" name="modules/org-dreamcatcher-font.jar"/>

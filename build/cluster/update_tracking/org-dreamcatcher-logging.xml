@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module codename="org.dreamcatcher.logging">
-    <module_version install_time="1329939744142" last="true" origin="installer" specification_version="1.0">
+    <module_version install_time="1329941023800" last="true" origin="installer" specification_version="1.0">
         <file crc="3697466028" name="config/Modules/org-dreamcatcher-logging.xml"/>
         <file crc="2200871701" name="modules/ext/commons-logging-1.1.1.jar"/>
         <file crc="1797921881" name="modules/org-dreamcatcher-logging.jar"/>
