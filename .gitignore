@@ -17,3 +17,7 @@ dist/*
 /utilities/build/
 /budgeting/build/
 /pdfbox/build/
+/Scheduling/nbproject/private/
+/EditorSuite/nbproject/private/
+/utilities/nbproject/private/
+/fileManagement/nbproject/private/
