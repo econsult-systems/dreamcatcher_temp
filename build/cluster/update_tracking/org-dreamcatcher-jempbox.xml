@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module codename="org.dreamcatcher.jempbox">
-    <module_version install_time="1329941023492" last="true" origin="installer" specification_version="1.0">
-        <file crc="3535083871" name="config/Modules/org-dreamcatcher-jempbox.xml"/>
+    <module_version install_time="1332848487441" last="true" origin="installer" specification_version="1.0">
+        <file crc="961406304" name="config/Modules/org-dreamcatcher-jempbox.xml"/>
         <file crc="491439197" name="modules/ext/jempbox-1.6.0.jar"/>
-        <file crc="2709946840" name="modules/org-dreamcatcher-jempbox.jar"/>
+        <file crc="3124459108" name="modules/org-dreamcatcher-jempbox.jar"/>
     </module_version>
 </module>
