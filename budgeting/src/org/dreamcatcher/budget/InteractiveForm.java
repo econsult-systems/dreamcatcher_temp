@@ -119,7 +119,7 @@ public class InteractiveForm extends JPanel {
     
         String lables = globalLabels.toString();
         String []labels = lables.split(",");
-        
+        //JDK 7 needed for fot JCombobox parameter
         JComboBox<String> sortMenu = new JComboBox<String>(labels);
         sortMenu.addActionListener(new ActionListener() {
 			
