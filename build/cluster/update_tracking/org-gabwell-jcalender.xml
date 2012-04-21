@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module codename="org.gabwell.jcalender">
-    <module_version install_time="1329668495441" last="true" origin="installer" specification_version="1.0">
+    <module_version install_time="1334976127973" last="true" origin="installer" specification_version="1.0">
         <file crc="1818787451" name="config/Modules/org-gabwell-jcalender.xml"/>
         <file crc="61254841" name="modules/ext/jcalendar-1.4.jar"/>
         <file crc="1279022424" name="modules/ext/jgoodies-common-1.2.0.jar"/>

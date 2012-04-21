@@ -5,7 +5,7 @@
         <attr name="WinSys-TCRef-Order" serialvalue="aced0005737200316f72672e6f70656e6964652e66696c6573797374656d732e4d756c746946696c654f626a65637424566f696456616c7565d9ec9c94d5fd3ca40c0000787077040000000178"/>
     </fileobject>
     <fileobject name="editor">
-        <attr name="WinSys-TCRef-Order" stringvalue="sceneViewerTopComponent/CalenderTopComponent/budgetTopComponent/scriptTopComponent/ScheduleTopComponent/sceneViewerTopComponent_1"/>
+        <attr name="WinSys-TCRef-Order" stringvalue="sceneViewerTopComponent/CalenderTopComponent/budgetTopComponent/scriptTopComponent/ScheduleTopComponent/sceneViewerTopComponent_1/sceneViewerTopComponent_4/sceneViewerTopComponent_3/sceneViewerTopComponent_2/sceneViewerTopComponent_8/sceneViewerTopComponent_7/sceneViewerTopComponent_6/sceneViewerTopComponent_5/sceneViewerTopComponent_10/sceneViewerTopComponent_11/sceneViewerTopComponent_9/sceneViewerTopComponent_12"/>
     </fileobject>
     <fileobject name="explorer">
         <attr name="WinSys-TCRef-Order" stringvalue="projectTabLogical_tc/projectTab_tc/favorites/projectsTopComponent"/>
@@ -17,7 +17,7 @@
         <attr name="WinSys-TCRef-Order" stringvalue="refactoring-preview/find-usages/output/outputTopComponent"/>
     </fileobject>
     <fileobject name="properties">
-        <attr name="WinSys-TCRef-Order" stringvalue="propertiesTopComponent/breakdown_sheetTopComponent/properties/breakdown_sheetTopComponent_1"/>
+        <attr name="WinSys-TCRef-Order" stringvalue="propertiesTopComponent/breakdown_sheetTopComponent/properties/breakdown_sheetTopComponent_1/breakdown_sheetTopComponent_7/breakdown_sheetTopComponent_3/breakdown_sheetTopComponent_6/breakdown_sheetTopComponent_2/breakdown_sheetTopComponent_5/breakdown_sheetTopComponent_9/breakdown_sheetTopComponent_4/breakdown_sheetTopComponent_8/breakdown_sheetTopComponent_11/breakdown_sheetTopComponent_10/breakdown_sheetTopComponent_12"/>
     </fileobject>
     <fileobject name="rightSlidingSide">
         <attr name="WinSys-TCRef-Order" serialvalue="aced0005737200316f72672e6f70656e6964652e66696c6573797374656d732e4d756c746946696c654f626a65637424566f696456616c7565d9ec9c94d5fd3ca40c0000787077040000000178"/>
