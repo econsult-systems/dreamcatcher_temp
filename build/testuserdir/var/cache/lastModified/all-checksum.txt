@@ -1,7 +1,0 @@
-/home/slowcoach/netbeans-7.0.1/platform=1322905426000
-/home/slowcoach/codecamp/java/dreamcatcher/build/cluster=1334976129000
-/home/slowcoach/netbeans-7.0.1/ide=1321797019000
-/home/slowcoach/netbeans-7.0.1/java=1322905426000
-/home/slowcoach/netbeans-7.0.1/platform=1322905426000
-/home/slowcoach/codecamp/java/dreamcatcher/build/testuserdir=1334976129000
-crc=26

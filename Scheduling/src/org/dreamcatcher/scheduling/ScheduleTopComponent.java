@@ -71,10 +71,10 @@ public final class ScheduleTopComponent extends TopComponent {
     }
 
     private void createTable(){
-
+        MainPanel panel = new MainPanel();
         StyledDocument doc = jTextPane1.getStyledDocument();
         Style style = doc.addStyle("table", null);
-        StyleConstants.setComponent(style, getTableComponent());
+        StyleConstants.setComponent(style, panel.getTableComponent());
 
         try {
             doc.insertString(doc.getLength(), "Table", doc.getStyle("table"));
@@ -103,7 +103,7 @@ public void getdates(){
       getdates();
       TableModel catalog = null;
 
-        String [] columnNames={ "Month/Day", dateNow[0],dateNow[1],dateNow[2],dateNow[3],dateNow[4],dateNow[5],dateNow[6],};
+        String [] columnNames={ "Production Title:", dateNow[0],dateNow[1],dateNow[2],dateNow[3],dateNow[4],dateNow[5],dateNow[6],};
         
         
         
