@@ -124,6 +124,9 @@ public class Breakdown {
     public static ArrayList getTaggedItems(String category) throws ProjectSettingsException {
         ArrayList<TaggedItem> myCategory = new ArrayList<TaggedItem>();
         ArrayList tagged = XMLManager.getInstance().getAllTaggedElements();
+        if (category.length()<1 || category.isEmpty()) {
+            return tagged;
+        }
         for (int i = 0; i < tagged.size(); i++) {
             TaggedItem ti = (TaggedItem) tagged.get(i);
             if (ti.getItemType().equalsIgnoreCase(category)) {
