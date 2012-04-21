@@ -208,7 +208,7 @@ public class budgetTopComponent extends TopComponent {
         String lables = globalLabels.toString();
         String []labels = lables.split(",");
         
-        JComboBox<String> sortMenu = new JComboBox<String>(labels);
+        JComboBox sortMenu = new JComboBox(labels);
         sortMenu.addActionListener(new ActionListener() {
 			
 			@Override
