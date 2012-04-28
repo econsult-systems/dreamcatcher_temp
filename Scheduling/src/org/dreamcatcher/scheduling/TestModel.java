@@ -25,7 +25,7 @@ public class TestModel extends DefaultTableModel {
         rowListModel = lm;
     }
     public void addTest(Test t) {
-        Object[] obj = {t.getName(), t.getComment()};
+        Object[] obj = {t.getName(), t.getComment(), "ewew", "wew","wewe", "wewe"};
         super.addRow(obj);
         rowListModel.addElement("row"+number);
         number++;
