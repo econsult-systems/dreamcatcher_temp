@@ -8,6 +8,10 @@ import java.util.ArrayList;
 import javax.swing.*;
 import javax.swing.event.*;
 import javax.swing.table.*;
+import org.openide.util.Exceptions;
+import writer.Breakdown;
+import writer.ProjectSettingsException;
+import writer.SceneElement;
 
 public class MainPanel {
     private final DefaultListModel listModel = new DefaultListModel();
@@ -15,12 +19,14 @@ public class MainPanel {
     private final JTable table = new JTable(model);
     JScrollPane scroll=null;
     
+    private static ArrayList<SceneElement> scenes;
+    
     public MainPanel() {
-       
         
         ArrayList sceneitems = new ArrayList();
         sceneitems=new getBreakdown().details();
         
+        //getscences();
         for(int i=0;i<sceneitems.size();i++){
             
         model.addTest(new Test(sceneitems.get(i).toString(), "comment"));
@@ -76,7 +82,12 @@ public class MainPanel {
        
         return scroll;
     }
-
+     
+     
+     public void getscences(){
+       scenes =Breakdown.getAllScenes();
+           
+    } 
     class TestCreateAction extends AbstractAction{
         public TestCreateAction(String label, Icon icon) {
             super(label,icon);

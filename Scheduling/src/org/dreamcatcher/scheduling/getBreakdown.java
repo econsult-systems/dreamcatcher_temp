@@ -4,10 +4,8 @@
  */
 package org.dreamcatcher.scheduling;
 
-import java.awt.Color;
 import java.util.ArrayList;
 import writer.SceneElement;
-import writer.TaggedItem;
 import writer.XMLManager;
 
 /**

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module codename="org.dreamcatcher.scheduling">
-    <module_version install_time="1335543819627" last="true" origin="installer" specification_version="1.0">
+    <module_version install_time="1335617293645" last="true" origin="installer" specification_version="1.0">
         <file crc="2241274134" name="config/Modules/org-dreamcatcher-scheduling.xml"/>
-        <file crc="514896154" name="modules/org-dreamcatcher-scheduling.jar"/>
+        <file crc="2789851519" name="modules/org-dreamcatcher-scheduling.jar"/>
     </module_version>
 </module>

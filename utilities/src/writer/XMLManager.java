@@ -661,7 +661,7 @@ public class XMLManager {
 
     private static class XMLManagerHolder {
 
-        private static XMLManager INSTANCE;
+        private static XMLManager INSTANCE = null;
 
         private static synchronized XMLManager getXMLManager() {
             if (XMLManagerHolder.INSTANCE == null) {
