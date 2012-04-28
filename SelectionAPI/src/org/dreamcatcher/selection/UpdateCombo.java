@@ -19,7 +19,7 @@ import javax.swing.event.ListDataListener;
 public class UpdateCombo {
    private Vector element=null;
    //private int amount=0;
-    private DefaultComboBoxModel<String> model;
+    private DefaultComboBoxModel model;
 
 
    public UpdateCombo(Vector componentStrings) {
@@ -33,7 +33,7 @@ public class UpdateCombo {
     private void prepareModel(Vector element) {
         //Add stuff to the model
 
-        DefaultComboBoxModel<String> jcombo = new DefaultComboBoxModel<String>(element) {
+        DefaultComboBoxModel jcombo = new DefaultComboBoxModel(element) {
 
                                  /* @Override
                                   public void setSelectedItem(Object o) {

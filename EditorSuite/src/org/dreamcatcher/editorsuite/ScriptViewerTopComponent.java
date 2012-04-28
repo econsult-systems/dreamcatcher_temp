@@ -72,7 +72,7 @@ public final class ScriptViewerTopComponent extends TopComponent {
         initComponents();
         setName(NbBundle.getMessage(ScriptViewerTopComponent.class, "CTL_ScriptViewerTopComponent"));
         setToolTipText(NbBundle.getMessage(ScriptViewerTopComponent.class, "HINT_ScriptViewerTopComponent"));
-    
+
     }
 
     public ScriptViewerTopComponent(String script, int scenes, String name, ArrayList Content) throws ScriptLoadError, TagHighlightException {
@@ -137,12 +137,12 @@ public final class ScriptViewerTopComponent extends TopComponent {
         associateLookup(new AbstractLookup(content));
 
         //set up the initial scene numbers
-        
+        //A few corrections here
         BtnPreviousScene.setEnabled(false);
         BtnNextScene.setEnabled(false);
-        
+
         projectName=name;
-       
+
     }
 
     public void open(String script, int scenes, String name, ArrayList SceneContent) throws ScriptLoadError, TagHighlightException {
@@ -542,7 +542,7 @@ public final class ScriptViewerTopComponent extends TopComponent {
                 content.set(Collections.singleton(obj), null);
             } catch (Exception ex) {
                 Notifier.getInstance().giveMessage("No text Selected! Please sselect text to tag.",3);
-               
+
             }
           // category();
             breakdownReport(projectName);
@@ -942,7 +942,7 @@ private void visualEffectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN
 
     private void ToggleSheetViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ToggleSheetViewActionPerformed
         // TODO add your handling code here:
-        
+
     BtnPreviousScene.setEnabled(false);
     BtnNextScene.setEnabled(false);
     ToggleSceneView.setSelected(false);
@@ -963,8 +963,8 @@ private void visualEffectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN
 
     private void ToggleSceneViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ToggleSceneViewActionPerformed
         // TODO add your handling code here:
-        
-        
+
+
     BtnNextScene.setEnabled(true);
     ToggleSceneView.setSelected(true);
     ToggleSheetView.setSelected(false);
@@ -1021,7 +1021,7 @@ private void visualEffectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN
 
     private void BtnNextSceneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnNextSceneActionPerformed
         // TODO add your handling code here:
-        
+
          StyledDocument doc = jTextPane1.getStyledDocument();
     Object Scene[] = SceneContent.toArray();
     SceneElement sceneelement = (SceneElement) Scene[currentScene + 1];
@@ -1062,12 +1062,12 @@ private void visualEffectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN
                 // no selection, do something
              }
             System.out.println(jList1.getSelectedValue().toString());
-            
+
             int i = jList1.getSelectedIndex();
             i=i-1;
             String Headings="";
             SceneElement item = (SceneElement) SceneContent.get(i);
-           
+
             String sceneHeading = new Integer(i).toString()+". "+ item.getSceneName();
              ArrayList<TaggedItem> tElements = new ArrayList<TaggedItem>();
               try {
@@ -1078,15 +1078,15 @@ private void visualEffectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN
             String Characters="Character";
             for(int x=0; x<tElements.size(); x++){
              String scences = tElements.get(x).getScenes();
-             
+
              String [] occ = split(scences);
             for(int z=0; z<occ.length; z++){
                 int sc = Integer.parseInt(occ[z]);
                 if(sc==i+1){
                     Characters=Characters+"\n"+tElements.get(x).getItemName();
-                } 
+                }
             }
-             
+
             }
             Headings= Headings+new Integer(i+1).toString()+" - "+item.getSceneName()
                 +"\n"
@@ -1095,15 +1095,15 @@ private void visualEffectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN
                 +"Location"
                  +"\n"
                 +"pROPS"+"\n";
-            
-            
-            
+
+
+
             StyledDocument doc = jTextPane2.getStyledDocument();
         Style style = doc.addStyle("table", null);
         //StyleConstants.setComponent(style, getTableComponent());
 
         try {
-           
+
             doc.remove(0,  doc.getLength());
             doc.insertString(doc.getLength(), projectName+"\n\n"+Headings
                    , doc.getStyle("table"));
@@ -1320,85 +1320,85 @@ private void visualEffectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN
         }
         // }
     }
-    
-    
+
+
     public void getElements(){
         try{
             //Highlights scene headings
             String[] stringsToTag = {"INT.", "EXT."};
             populateSceneBreakdown(jTextPane1, stringsToTag, Color.LIGHT_GRAY);
-                       
+
             for(int i=0; i<SceneContent.size(); i++){
                 SceneElement item = (SceneElement) SceneContent.get(i);
                 populateSceneBreakdown(jTextPane1, item.getSceneName(), Color.LIGHT_GRAY);
             }
            //end highlight scene headings
-            
+
             //HighlighTaggedItems
             ArrayList<TaggedItem> tElements = new ArrayList<TaggedItem>();
             tElements= XMLManager.getInstance().getAllTaggedElements();
             for(int i=0; i<tElements.size(); i++){
                 if ("SCENE".equals(tElements.get(i).getItemType())){
                     populateSceneBreakdown(jTextPane1, tElements.get(i).getItemName(), Color.LIGHT_GRAY);
-                } else 
+                } else
                 if ("ACTOR".equals(tElements.get(i).getItemType())){
                     populateSceneBreakdown(jTextPane1, tElements.get(i).getItemName(), Color.RED);
-                } else 
+                } else
                 if ("ANIMAL".equals(tElements.get(i).getItemType())){
                     populateSceneBreakdown(jTextPane1, tElements.get(i).getItemName(), Color.GREEN);
-                }else 
+                }else
                 if ("CAMERA".equals(tElements.get(i).getItemType())){
                     populateSceneBreakdown(jTextPane1, tElements.get(i).getItemName(), Color.LIGHT_GRAY);
-                }else 
+                }else
                 if ("MUSIC".equals(tElements.get(i).getItemType())){
                     populateSceneBreakdown(jTextPane1, tElements.get(i).getItemName(), Color.MAGENTA);
-                }else 
+                }else
                 if ("SOUND".equals(tElements.get(i).getItemType())){
                     populateSceneBreakdown(jTextPane1, tElements.get(i).getItemName(), Color.CYAN);
-                }else 
+                }else
                 if ("PROP".equals(tElements.get(i).getItemType())){
                     populateSceneBreakdown(jTextPane1, tElements.get(i).getItemName(), Color.CYAN);
-                }else 
+                }else
                 if ("SECURITY".equals(tElements.get(i).getItemType())){
                     populateSceneBreakdown(jTextPane1, tElements.get(i).getItemName(),Color.LIGHT_GRAY);
-                }else 
+                }else
                 if ("VEHICLE".equals(tElements.get(i).getItemType())){
                     populateSceneBreakdown(jTextPane1, tElements.get(i).getItemName(), Color.CYAN);
-                }else 
+                }else
                 if ("WARDROBE".equals(tElements.get(i).getItemType())){
                     populateSceneBreakdown(jTextPane1, tElements.get(i).getItemName(), Color.YELLOW);
-                }else 
+                }else
                 if ("ADDITIONALLABOUR".equals(tElements.get(i).getItemType())){
                     populateSceneBreakdown(jTextPane1, tElements.get(i).getItemName(), Color.LIGHT_GRAY);
-                }else 
+                }else
                 if ("ANIMALWRANGLER".equals(tElements.get(i).getItemType())){
                     populateSceneBreakdown(jTextPane1, tElements.get(i).getItemName(), Color.BLUE);
-                }else 
+                }else
                 if ("ARTDEPARTMENT".equals(tElements.get(i).getItemType())){
                     populateSceneBreakdown(jTextPane1, tElements.get(i).getItemName(), Color.BLUE);
-                }else 
+                }else
                 if ("GREENERY".equals(tElements.get(i).getItemType())){
                     populateSceneBreakdown(jTextPane1, tElements.get(i).getItemName(), Color.BLUE);
-                }else 
+                }else
                 if ("MECHANICALEFFECTS".equals(tElements.get(i).getItemType())){
                     populateSceneBreakdown(jTextPane1, tElements.get(i).getItemName(), Color.CYAN);
-                }else 
+                }else
                 if ("MISCELLANEOUS".equals(tElements.get(i).getItemType())){
                     populateSceneBreakdown(jTextPane1, tElements.get(i).getItemName(), Color.CYAN);
-                }else 
+                }else
                 if ("DRESSING".equals(tElements.get(i).getItemType())){
                     populateSceneBreakdown(jTextPane1, tElements.get(i).getItemName(), Color.YELLOW);
-                }else 
+                }else
                 if ("SPECIALEQUIPMENT".equals(tElements.get(i).getItemType())){
                     populateSceneBreakdown(jTextPane1, tElements.get(i).getItemName(), Color.CYAN);
-                }else 
+                }else
                 if ("STUNT".equals(tElements.get(i).getItemType())){
                     populateSceneBreakdown(jTextPane1, tElements.get(i).getItemName(), Color.BLUE);
-                }else 
+                }else
                 if ("VISUALEFFECT".equals(tElements.get(i).getItemType())){
                     populateSceneBreakdown(jTextPane1, tElements.get(i).getItemName(), Color.PINK);
                 }
-           
+
             }
         }catch (Exception e) {
             //throw new TagHighlightException("Text highlight error: " + e.getMessage());
@@ -1409,42 +1409,41 @@ private void visualEffectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN
         DefaultListModel listModel= new DefaultListModel();
         DefaultListModel catlistModel= new DefaultListModel();
         String heading = projectName;
-        
-        
+
+
         String Headings="";
-        
+
         String Locations="Location";
         String Props="Props";
-        
-        
-        
+
+
+
        //s String [][] Category
-        
+
         try{
        //fill Scenes List
         ArrayList<TaggedItem> tElements = new ArrayList<TaggedItem>();
         tElements= XMLManager.getInstance().getAllTaggedElements();
-        
+
         jList1.setModel(listModel);
         listModel.add(0, "ALL");
- 
+
         for(int i=0; i<SceneContent.size(); i++){
             SceneElement item = (SceneElement) SceneContent.get(i);
             populateSceneBreakdown(jTextPane1, item.getSceneName(), Color.LIGHT_GRAY);
             String sceneHeading = new Integer(i+1).toString()+". "+ item.getSceneName();
-            
             String Characters="Character";
             for(int x=0; x<tElements.size(); x++){
              String scences = tElements.get(x).getScenes();
-             
+
              String [] occ = split(scences);
             for(int z=0; z<occ.length; z++){
                 int sc = Integer.parseInt(occ[z]);
                 if(sc==i+1){
                     Characters=Characters+"\n"+tElements.get(x).getItemName();
-                } 
+                }
             }
-             
+
             }
             Headings= Headings+new Integer(i+1).toString()+" - "+item.getSceneName()
                 +"\n"
@@ -1453,17 +1452,17 @@ private void visualEffectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN
                 +Locations
                  +"\n"
                 +Props+"\n";
-        
+
             int modelsize = jList1.getModel().getSize();
-            listModel.add(modelsize, sceneHeading);   
+            listModel.add(modelsize, sceneHeading);
         }
-        
-         
+
+
           jList3.setModel(catlistModel);
          catlistModel.add(0, "ALL");
          for(int i=0; i<tElements.size(); i++){
              String category = tElements.get(i).getItemType();
-             
+
              if (!getModelValues(category, catlistModel)){
                   int modelsize = jList3.getModel().getSize();
                  catlistModel.add(modelsize, tElements.get(i).getItemType());
@@ -1473,31 +1472,30 @@ private void visualEffectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN
             //throw new TagHighlightException("Text highlight error: " + e.getMessage());
             System.out.println(e.getMessage());
         }
-        
         StyledDocument doc = jTextPane2.getStyledDocument();
         Style style = doc.addStyle("table", null);
         //StyleConstants.setComponent(style, getTableComponent());
 
         try {
-           
+
             doc.remove(0,  doc.getLength());
             doc.insertString(doc.getLength(), heading+"\n\n"+Headings
                    , doc.getStyle("table"));
          }
         catch (BadLocationException ex) {
         }
-    
+
     }
-    
+
     private boolean getModelValues(String string, DefaultListModel model) {
         boolean exists=false;
         for (int i = 0; i < model.getSize(); i++) {
             String value = model.getElementAt(i).toString();
-           
+
             if (string.equals(value)) {
 
                 exists = true;
-             
+
             }
 
         }
@@ -1512,7 +1510,7 @@ private void visualEffectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN
          catlistModel.add(0, "ALL");
          for(int i=0; i<tElements.size(); i++){
              String category = tElements.get(i).getItemType();
-             
+
              if (!getModelValues(category, catlistModel)){
                   int modelsize = jList3.getModel().getSize();
                  catlistModel.add(modelsize, tElements.get(i).getItemType());
@@ -1543,5 +1541,5 @@ private void visualEffectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN
             }
         }
         return result;
-    } 
+    }
 }
