@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module codename="org.dreamcatcher.editorsuite">
-    <module_version install_time="1329941027169" last="true" origin="installer" specification_version="1.0">
-        <file crc="1414304950" name="config/Modules/org-dreamcatcher-editorsuite.xml"/>
-        <file crc="2089247767" name="modules/org-dreamcatcher-editorsuite.jar"/>
+    <module_version install_time="1335505847208" last="true" origin="installer" specification_version="1.0">
+        <file crc="582478407" name="config/Modules/org-dreamcatcher-editorsuite.xml"/>
+        <file crc="107683528" name="modules/org-dreamcatcher-editorsuite.jar"/>
     </module_version>
 </module>
