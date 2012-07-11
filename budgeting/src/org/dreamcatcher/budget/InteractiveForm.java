@@ -48,7 +48,7 @@ public class InteractiveForm extends JPanel {
 
     public  JTable table;
     protected JScrollPane scroller;
-    public  InteractiveTableModel tableModel;
+     public  InteractiveTableModel tableModel;
 
 	private JTextField searchTextField;
 

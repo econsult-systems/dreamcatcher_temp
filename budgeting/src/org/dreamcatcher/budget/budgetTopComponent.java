@@ -49,15 +49,16 @@ preferredID = "budgetTopComponent")
 public class budgetTopComponent extends TopComponent {
 
 
-    // Instance attributes used in this example
+      // Instance attributes used in this example
     public static final String[] columnNames = {
         "  ", "","In Use", "Name","Description","Calculation","Units","Total"
     };
     protected JTable table;
     protected JScrollPane scroller;
-    protected InteractiveTableModel tableModel;
+    protected BreakDownForBudget tableModel;
     private JTextField searchTextField;
     private ArrayList<String> globalLabels;
+
 
     public budgetTopComponent() {
         initComponents();
@@ -144,7 +145,7 @@ public class budgetTopComponent extends TopComponent {
     
     
     public void initComponent() {
-        tableModel = new InteractiveTableModel(columnNames);
+        tableModel = new BreakDownForBudget(columnNames);
         tableModel.addTableModelListener(new budgetTopComponent.InteractiveTableModelListener());
         
         table = new JTable(){
