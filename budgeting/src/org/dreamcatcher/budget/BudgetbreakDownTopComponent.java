@@ -6,20 +6,14 @@ package org.dreamcatcher.budget;
  */
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.Component;
 import java.awt.Dimension;
-import java.awt.FlowLayout;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.Insets;
-import java.awt.TextArea;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
-import java.util.ArrayList;
-import java.util.List;
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JDialog;
@@ -34,12 +28,23 @@ import javax.swing.JToolBar;
 import javax.swing.border.TitledBorder;
 import javax.swing.BorderFactory;
 import javax.swing.JTable;
+import javax.swing.ListSelectionModel;
 import javax.swing.border.EtchedBorder;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
+import javax.swing.table.TableColumn;
+import javax.swing.table.TableModel;
+import javax.swing.table.TableRowSorter;
+import org.dreamcatcher.util.Utility;
+import org.openide.util.Exceptions;
 import writer.Breakdown;
+import writer.ProjectSettingsException;
 
 public class BudgetbreakDownTopComponent extends JDialog{
 
-
+     public static final String[] columnNames = { "Scene No","Scene Title","Units Used","day","Time","Location", "Amount" };
+public  BreakDownForBudget tableModel;
     private JTextField itemNameTxt;
 	private JTextArea descriptionTxtArea;
 	private JTextField noOfUnitsTXT;
@@ -54,6 +59,7 @@ public class BudgetbreakDownTopComponent extends JDialog{
     /** Creates new form Elements */
     public BudgetbreakDownTopComponent(String selected) {
         super();
+       
         setPreferredSize(new Dimension(400, 300));
         setMinimumSize(new Dimension(900, 600));
         setMaximumSize(new Dimension(900, 600));
@@ -100,11 +106,58 @@ public class BudgetbreakDownTopComponent extends JDialog{
        JPanel returnPanel = new JPanel();
        returnPanel.setBorder(new TitledBorder(""));
        returnPanel.setLayout(new BorderLayout());
-       final String columnNames[] = { "Scene No","Scene Title","Units Used","day","Time","Location", "Amount" };
-       Object rowData[][] = { { "", "", "", "","","",""},{ "", "", "", "","","",""},{ "", "", "", "","","",""},
-       { "", "", "", "","","",""},{ "", "", "", "","","",""},{ "", "", "", "","","",""}};
+       //final String columnNames[] = { "Scene No","Scene Title","Units Used","day","Time","Location", "Amount" };
        
-       JTable table = new JTable(rowData, columnNames);
+       
+       
+   
+       tableModel = new BreakDownForBudget(columnNames);
+       //tableModel.addTableModelListener(new InteractiveForm.InteractiveTableModelListener());
+       
+       JTable table = new JTable();
+       table = new JTable(){
+            /**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+			public void editingStopped(ChangeEvent e) {
+                try {
+					super.editingStopped(e);
+					//calculateRowValue(getModel());
+					tableModel.calculateTotals(getModel());
+					repaint();
+				} catch (Exception e1) {
+					
+					e1.printStackTrace();
+				}
+              }
+            };
+        TableRowSorter<TableModel> sorter = new TableRowSorter<TableModel>(tableModel);
+        table.setRowSorter(sorter);
+        //String [] col ={"Name","Category","Scenes"};
+        
+        
+        table.setModel(tableModel);
+        table.setSurrendersFocusOnKeystroke(true);
+        if (!tableModel.hasEmptyRow()) {
+            tableModel.addEmptyRow(table.getSelectedRow());
+        }
+        
+
+        //scroller = new javax.swing.JScrollPane(table);
+        //table.setPreferredScrollableViewportSize(new java.awt.Dimension(500, 300));
+        
+        TableColumn hidden = table.getColumnModel().getColumn(0);
+        //hidden.setMinWidth(20);
+        //hidden.setPreferredWidth(20);
+        ///hidden.setMaxWidth(20);
+        
+        TableColumn col2 = table.getColumnModel().getColumn(1);
+        //col2.setMinWidth(20);
+        //col2.setPreferredWidth(20);
+        //col2.setMaxWidth(20);
+
        table.setSelectionForeground(Color.lightGray);
            table.setRowHeight(24);       
          JScrollPane scrollPane = new JScrollPane(table);
@@ -225,20 +278,40 @@ public class BudgetbreakDownTopComponent extends JDialog{
         JPanel budgetItemsPanel = new JPanel();
         budgetItemsPanel .setLayout(new BorderLayout());
         
-        model = new DefaultListModel();; 
+        model = new DefaultListModel();
         list = new JList(model);
+        list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+        list.addListSelectionListener(new ListSelectionListener() {
+
+            public void valueChanged(ListSelectionEvent evt) {
+                if (evt.getValueIsAdjusting()) {
+                    return;
+                }
+                //System.out.println("Selected from " + evt.getLastIndex());
+                //list.getSelectedValue();
+                populateDetailsTable(evt.getLastIndex());
+            }
+
+            
+        });
         JScrollPane pane = new JScrollPane(list);
         pane.setMinimumSize(new Dimension(300, 400));
         JButton addButton = new JButton("Add Element");
         addButton.setMaximumSize(new Dimension(50,30));
         JButton removeButton = new JButton("Remove Element");
         removeButton.setMaximumSize(new Dimension(50,30));
-        
-        //rrayList items = Breakdown.getTaggedItems("");
-        for (int i = 0; i < 15; i++){
-            model.addElement("Element " + i);
-            
-            
+        try {
+            //rrayList items = Breakdown.getTaggedItems("");
+            for (int i = 0; i < Breakdown.getTaggedItems("Actor").size(); i++){
+                try{
+                     model.addElement(Utility.budgetItems(2,Breakdown.getTaggedItems("Actor"))[0].toString());
+                }catch(Exception e){
+                    e.printStackTrace();
+                }
+               
+            }
+        } catch (ProjectSettingsException ex) {
+            Exceptions.printStackTrace(ex);
         }
         addButton.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {       
@@ -270,6 +343,16 @@ public class BudgetbreakDownTopComponent extends JDialog{
         
         return budgetItemsPanel;
     }
+    
+    public void populateDetailsTable(int lastIndex) {
+                itemNameTxt.setText("eterter");
+                descriptionTxtArea.setText("erterter");
+                
+                //add row to the table
+                
+                
+                
+            }
 
     
 }

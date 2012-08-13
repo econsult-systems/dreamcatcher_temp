@@ -190,7 +190,7 @@ public class budgetTopComponent extends TopComponent {
         col2.setMaxWidth(20);
         
         
-//        hidden.setCellRenderer(new InteractiveRenderer(InteractiveTableModel.ARTIST_INDEX));
+//        hidden.setCellRenderer(new InteractiveRenderer(BreakDownForBudget.ARTIST_INDEX));
         
         
 

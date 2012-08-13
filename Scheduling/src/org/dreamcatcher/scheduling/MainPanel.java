@@ -29,11 +29,9 @@ public class MainPanel {
         //getscences();
         for(int i=0;i<sceneitems.size();i++){
             
-        model.addTest(new Test(sceneitems.get(i).toString(), 
-                
-                
-                
-                "comment"));
+
+        model.addTest(new Test(sceneitems.get(i).toString(), "1/8"));
+
         }
         
         //model.addTest(new Test("Name 2", "test"));
