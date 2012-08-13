@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<module codename="org.dreamcatcher.textFilter">
-    <module_version install_time="1335619244436" last="true" origin="installer" specification_version="1.0">
-        <file crc="2738660782" name="config/Modules/org-dreamcatcher-textFilter.xml"/>
-        <file crc="4163933686" name="modules/org-dreamcatcher-textFilter.jar"/>
-    </module_version>
-</module>

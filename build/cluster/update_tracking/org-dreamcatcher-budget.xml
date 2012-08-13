@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<module codename="org.dreamcatcher.budget">
-    <module_version install_time="1335617291015" last="true" origin="installer" specification_version="1.0">
-        <file crc="2358827382" name="config/Modules/org-dreamcatcher-budget.xml"/>
-        <file crc="2766283334" name="modules/org-dreamcatcher-budget.jar"/>
-    </module_version>
-</module>
