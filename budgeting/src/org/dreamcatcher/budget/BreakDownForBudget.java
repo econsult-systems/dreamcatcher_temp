@@ -19,7 +19,7 @@ import writer.XMLManager;
  *
  */
 
-public class InteractiveTableModel extends AbstractTableModel {
+public class BreakDownForBudget extends AbstractTableModel {
 	/**
 	 * 
 	 */
@@ -43,7 +43,7 @@ public class InteractiveTableModel extends AbstractTableModel {
     protected Vector dataVector;
     final DecimalFormat formatter;
     
-    public InteractiveTableModel(String[] columnNames) {
+    public BreakDownForBudget(String[] columnNames) {
         this.columnNames = columnNames;
         dataVector = new Vector();
         formatter = new DecimalFormat("###,##0.00");

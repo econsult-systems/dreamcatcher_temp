@@ -55,7 +55,7 @@ public class budgetTopComponent extends TopComponent {
     };
     protected JTable table;
     protected JScrollPane scroller;
-    protected InteractiveTableModel tableModel;
+    protected BreakDownForBudget tableModel;
     private JTextField searchTextField;
     private ArrayList<String> globalLabels;
 
@@ -144,7 +144,7 @@ public class budgetTopComponent extends TopComponent {
     
     
     public void initComponent() {
-        tableModel = new InteractiveTableModel(columnNames);
+        tableModel = new BreakDownForBudget(columnNames);
         tableModel.addTableModelListener(new budgetTopComponent.InteractiveTableModelListener());
         
         table = new JTable(){
@@ -189,7 +189,7 @@ public class budgetTopComponent extends TopComponent {
         col2.setMaxWidth(20);
         
         
-//        hidden.setCellRenderer(new InteractiveRenderer(InteractiveTableModel.ARTIST_INDEX));
+//        hidden.setCellRenderer(new InteractiveRenderer(BreakDownForBudget.ARTIST_INDEX));
         
         
 
