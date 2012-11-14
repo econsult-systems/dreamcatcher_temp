@@ -13,34 +13,35 @@ import writer.Breakdown;
 import writer.ProjectSettingsException;
 import writer.SceneElement;
 
-public class MainPanel {
+
+public class ScheduleTable {
     private final DefaultListModel listModel = new DefaultListModel();
-    private final TestModel model = new TestModel(listModel);
+    private final ScheduleTableModel model = new ScheduleTableModel(listModel);
     private final JTable table = new JTable(model);
     JScrollPane scroll=null;
     
     private static ArrayList<SceneElement> scenes;
     
-    public MainPanel() {
+    public ScheduleTable() {
         
-        ArrayList sceneitems = new ArrayList();
-        sceneitems=new getBreakdown().details();
+        ArrayList<SceneElement> sceneitems = new ArrayList<SceneElement>();
+        sceneitems=new BreakDown().getSceneDetails();
         
         //getscences();
         for(int i=0;i<sceneitems.size();i++){
+            SceneElement item = (SceneElement) sceneitems.get(i);
             
-
-        model.addTest(new Test(sceneitems.get(i).toString(), "1/8"));
+            model.addRow(new SceneRow(item.getSceneName(), 
+                "1/8",
+                "time", 
+                item.getSceneType(),
+                "Scene set", 
+                "Cast" , 
+                "Est_time"));
+        
 
         }
-        
-        //model.addTest(new Test("Name 2", "test"));
-        //model.addTest(new Test("Name d", ""));
-        //model.addTest(new Test("Name c", "test cc"));
-        //model.addTest(new Test("Name b", "test bb"));
-        //model.addTest(new Test("Name a", ""));
-        //model.addTest(new Test("Name 0", "test aa"));
-        //ssmodel.addTest(new Test("Name 0", ""));
+       
         
         table.setRowHeight(40);
         table.setCellSelectionEnabled(true);
@@ -99,7 +100,13 @@ public class MainPanel {
         }
     }
     private void testCreateActionPerformed(ActionEvent e) {
-        model.addTest(new Test("add row", ""));
+        model.addRow(new SceneRow("name", 
+                "1/8",
+                "time", 
+                "location", 
+                "Scene set", 
+                "Cast" , 
+                "Est_time"));
         Rectangle rect = table.getCellRect(model.getRowCount()-1, 0, true);
         table.scrollRectToVisible(rect);
     }
@@ -137,7 +144,6 @@ public class MainPanel {
     }
 
 }
-
 class RowHeaderList extends JList {
     private final JTable table;
     private final ListSelectionModel tableSelection;

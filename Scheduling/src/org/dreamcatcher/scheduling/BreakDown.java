@@ -12,26 +12,24 @@ import writer.XMLManager;
  *
  * @author Roy Rutto
  */
-public class getBreakdown {
-    ArrayList scenedetails =new ArrayList();
+public class BreakDown {
+   ArrayList<SceneElement> sceneElements = new ArrayList<SceneElement>();
     
-    public ArrayList details(){
+    public ArrayList getSceneDetails(){
      try{
-       //fill Scenes List
+       
      
-        ArrayList<SceneElement> sceneElements = new ArrayList<SceneElement>();
         sceneElements= XMLManager.getInstance().getAllSceneItems();
         
-        
- 
-        for(int i=0; i<sceneElements.size(); i++){
+        /*for(int i=0; i<sceneElements.size(); i++){
             SceneElement item = (SceneElement) sceneElements.get(i);
-           scenedetails.add(item.getSceneName());
-        }
+            scenedetails.add(item.getSceneName());
+        }*/
+        
         }catch (Exception e) {
             
-            System.out.println(e.getMessage());
+            System.out.println("Getting scenes error!"+e.getMessage());
         }
-     return scenedetails;
+     return sceneElements;
     }
 }

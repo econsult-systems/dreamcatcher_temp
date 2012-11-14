@@ -20,6 +20,7 @@ public class SceneElement {
     private String _sceneContent;
     private boolean _isDay;
     private int _shootDays;
+    private String _sceneTime;
 
     public SceneElement(String toUpperCase) {
         setSceneName(toUpperCase);
@@ -111,6 +112,14 @@ public class SceneElement {
 
     public void setShootDays(int _shootDays) {
         this._shootDays = _shootDays;
+    }
+    
+    public String getSceneTime() {
+        return _sceneTime;
+    }
+
+    public void setSceneTime(String _sceneTime) {
+        this._sceneTime = _sceneTime;
     }
     
 

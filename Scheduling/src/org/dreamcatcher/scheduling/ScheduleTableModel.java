@@ -6,7 +6,7 @@ import java.awt.*;
 import javax.swing.*;
 import javax.swing.table.*;
 
-public class TestModel extends DefaultTableModel {
+public class ScheduleTableModel extends DefaultTableModel {
     private static final ColumnContext[] columnArray = {
         //new ColumnContext("No.",     Integer.class, false),
         new ColumnContext("SCENE",    String.class,  false),
@@ -20,13 +20,13 @@ public class TestModel extends DefaultTableModel {
     };
     private int number = 0;
     private final DefaultListModel rowListModel;
-    public TestModel(DefaultListModel lm) {
+    public ScheduleTableModel(DefaultListModel lm) {
         super();
         rowListModel = lm;
     }
-    public void addTest(Test t) {
+    public void addRow(SceneRow t) {
 
-        Object[] obj = {t.getName(), t.getComment(),"DAY", "INT","1", "1,2,3,4,5","0.00"};
+        Object[] obj = {t.getName(), t.getPageCount(),"DAY", "INT","1", "1,2,3,4,5","0.00"};
 
         super.addRow(obj);
         rowListModel.addElement("row"+number);
@@ -59,22 +59,59 @@ public class TestModel extends DefaultTableModel {
         }
     }
 }
-class Test{
-    private String name, comment;
-    public Test(String name, String comment) {
+class SceneRow{
+    private String name, pagecount, time, location, scene_set, cast , est_time;
+    public SceneRow(String name, String pagecount, String time, String location, String scene_set, String cast , String est_time) {
         this.name = name;
-        this.comment = comment;
+        this.pagecount = pagecount;
+        this.time = time;
+        this.location = location;
+        this.scene_set = scene_set;
+        this.cast = cast;
+        this.est_time = est_time;
     }
     public void setName(String str) {
         name = str;
     }
-    public void setComment(String str) {
-        comment = str;
+    public void setPageCount(String str) {
+        pagecount = str;
+    }
+    public void setTime(String str) {
+        time = str;
+    }
+    public void setLocation(String str) {
+       location = str;
+    }
+    public void setSceneSet(String str) {
+        scene_set = str;
+    }
+    public void setCast(String str) {
+        cast = str;
+    }
+    public void setEstTime(String str) {
+        est_time = str;
     }
     public String getName() {
         return name;
     }
-    public String getComment() {
-        return comment;
+    public String getPageCount() {
+        return pagecount;
     }
+    public String getTime() {
+        return time;
+    }
+    public String getLocation() {
+        return location;
+    }
+    public String getSceneSet() {
+        return scene_set;
+    }
+    public String getCast() {
+        return cast;
+    }
+    public String getEstTime() {
+        return est_time;
+    }
+    
+    
 }

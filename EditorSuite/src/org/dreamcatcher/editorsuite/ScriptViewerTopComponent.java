@@ -991,66 +991,71 @@ private void visualEffectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN
         // TODO add your handling code here:
         BtnNextScene.setEnabled(true);
         if (currentScene <= 1) {
-        BtnPreviousScene.setEnabled(false);
-        BtnNextScene.setEnabled(true);
-    } else {
+            BtnPreviousScene.setEnabled(false);
+            BtnNextScene.setEnabled(true);
+        } else {
         BtnPreviousScene.setEnabled(true);
-    }
-    StyledDocument doc = jTextPane1.getStyledDocument();
-    Object Scene[] = SceneContent.toArray();
-    SceneElement sceneelement = (SceneElement) Scene[currentScene - 1];
-    String initString = sceneelement.getSceneContent();
-    currentScene = currentScene == 0 ? currentScene : currentScene - 1;
+        }
+        StyledDocument doc = jTextPane1.getStyledDocument();
+        Object Scene[] = SceneContent.toArray();
+        SceneElement sceneelement = (SceneElement) Scene[currentScene - 1];
+        String initString = sceneelement.getSceneContent();
+        currentScene = currentScene == 0 ? currentScene : currentScene - 1;
 
 
-    try {
-        doc.remove(0, doc.getLength());
-        doc.insertString(doc.getLength(), initString, doc.getStyle(initStyles[0]));
-        jTextPane1.setCaretPosition(0);
-
-
-    } catch (BadLocationException ble) {
-        //throw new ScriptLoadError("Script could not be loaded correctly"+ble.getMessage());
-    }
-    //addChangesToElement(sceneelement);
-    sceneelement = (SceneElement) Scene[currentScene + 1];
-    APIObject apiobjct = new APIObject(sceneelement);
-    content.set(Collections.singleton(apiobjct), null);
-    getElements();
+        try {
+            doc.remove(0, doc.getLength());
+            doc.insertString(doc.getLength(), initString, doc.getStyle(initStyles[0]));
+            jTextPane1.setCaretPosition(0);
+        } catch (BadLocationException ble) {
+            //throw new ScriptLoadError("Script could not be loaded correctly"+ble.getMessage());
+        }
+        
+        //addChangesToElement(sceneelement);
+        if((currentScene-1)==-1){
+            APIObject apiobj = new APIObject("STATUS");
+            apiobj.setToggle("disable");
+            content.set(Collections.singleton(apiobj), null);
+            getElements();
+        } else{
+            sceneelement = (SceneElement) Scene[currentScene-1];
+            APIObject apiobjct = new APIObject(sceneelement);
+            content.set(Collections.singleton(apiobjct), null);
+            getElements();
+        }
     }//GEN-LAST:event_BtnPreviousSceneActionPerformed
 
     private void BtnNextSceneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnNextSceneActionPerformed
         // TODO add your handling code here:
+        StyledDocument doc = jTextPane1.getStyledDocument();
+        Object Scene[] = SceneContent.toArray();
+        SceneElement sceneelement = (SceneElement) Scene[currentScene + 1];
+        String initString = sceneelement.getSceneContent();
 
-         StyledDocument doc = jTextPane1.getStyledDocument();
-    Object Scene[] = SceneContent.toArray();
-    SceneElement sceneelement = (SceneElement) Scene[currentScene + 1];
-    String initString = sceneelement.getSceneContent();
-
-    currentScene = currentScene == Scene.length - 1 ? currentScene : currentScene + 1;
-    BtnPreviousScene.setEnabled(true);
-    if (currentScene == Scene.length - 1) {
-        BtnNextScene.setEnabled(false);
+        currentScene = currentScene == Scene.length - 1 ? currentScene : currentScene + 1;
         BtnPreviousScene.setEnabled(true);
-    } else {
-        BtnNextScene.setEnabled(true);
-    }
+        if (currentScene == Scene.length - 1) {
+            BtnNextScene.setEnabled(false);
+            BtnPreviousScene.setEnabled(true);
+        } else {
+            BtnNextScene.setEnabled(true);
+        }
 
 
-    try {
-        doc.remove(0, doc.getLength());
-        doc.insertString(doc.getLength(), initString, doc.getStyle(initStyles[0]));
-        jTextPane1.setCaretPosition(0);
+        try {
+            doc.remove(0, doc.getLength());
+            doc.insertString(doc.getLength(), initString, doc.getStyle(initStyles[0]));
+            jTextPane1.setCaretPosition(0);
 
-    } catch (BadLocationException ble) {
-        //throw new ScriptLoadError("Script could not be loaded correctly"+ble.getMessage());
-    }
+        } catch (BadLocationException ble) {
+            //throw new ScriptLoadError("Script could not be loaded correctly"+ble.getMessage());
+        }
 
-    //addChangesToElement(sceneelement);
-    sceneelement = (SceneElement) Scene[currentScene - 1];
-    APIObject apiobjct = new APIObject(sceneelement);
-    content.set(Collections.singleton(apiobjct), null);
-    getElements();
+        //addChangesToElement(sceneelement);
+        sceneelement = (SceneElement) Scene[currentScene-1];
+        APIObject apiobjct = new APIObject(sceneelement);
+        content.set(Collections.singleton(apiobjct), null);
+        getElements();
     }//GEN-LAST:event_BtnNextSceneActionPerformed
 
     private void jList1ValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_jList1ValueChanged

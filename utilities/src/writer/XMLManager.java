@@ -31,6 +31,7 @@ public class XMLManager {
 
     private static final String TAGGEDITEMSTAG = "taggedItems";
     private static final String SCENE_TAG = "sceneItems";
+    private static final String SCENE_APPEARANCE ="scenes";
     private static final String NAME_TAG = "name";
     private static final String OTHER_TAG = "other";
     private static final String DEFAULT_DESCRIPTION = "Description";
@@ -129,6 +130,7 @@ public class XMLManager {
                             SceneElement ti = new SceneElement(nodeOfInterest.item(3).getTextContent());
                             
                             ti.setSceneType(nodeOfInterest.item(4).getNodeValue());
+                            ti.setSceneTime(nodeOfInterest.item(10).getNodeValue());
                             //ti.setSceneType(nodeOfInterest.item(4).getTextContent());
                             tElements.add(ti);
                         }
@@ -417,6 +419,10 @@ public class XMLManager {
     private String getSceneTag() {
         return SCENE_TAG;
     }
+    
+    private String getSceneAppearanceTag() {
+        return SCENE_APPEARANCE;
+    }
 
     private String getNameTag() {
         return NAME_TAG;
@@ -547,7 +553,7 @@ public class XMLManager {
             node.appendChild(text);
             childElement.appendChild(node);
             //create the scenes tag
-            node = dom.createElement(getSceneTag());
+            node = dom.createElement(getSceneAppearanceTag());
             text = dom.createCDATASection(tiS.getScenes());
             node.appendChild(text);
             childElement.appendChild(node);
@@ -601,6 +607,12 @@ public class XMLManager {
             text = dom.createCDATASection(String.valueOf(scneobject.getShootDays()));
             node.appendChild(text);
             childElement.appendChild(node);
+             //create time(DAY/NIGHT) tags
+            node = dom.createElement("time");
+            text = dom.createCDATASection(String.valueOf(scneobject.getSceneTime()));
+            node.appendChild(text);
+            childElement.appendChild(node);
+            
             nodeElement = childElement;
 
         } else {

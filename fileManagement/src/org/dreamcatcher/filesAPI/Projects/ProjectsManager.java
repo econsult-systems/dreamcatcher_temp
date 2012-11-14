@@ -317,7 +317,12 @@ public class ProjectsManager {
                         scne.setSceneNumber(count);
                         int startIndex[] = {lines, 0};
                         scne.setSceneStartIndex(startIndex);
-//                        Scenes = Scenes + 1;
+                        
+                        /*get scene time - (DAY or NIGHT)*/
+                        String time = StringUtils.substring(str, str.length()-3, str.length());
+                        if(time.equalsIgnoreCase("GHT")) time = "NIGHT";
+                        scne.setSceneTime(time);
+                       //Scenes = Scenes + 1;
                        // sceneDetails.addElement(scne);
                        // ScenesList.add(scne);
                         lines++;
@@ -327,6 +332,7 @@ public class ProjectsManager {
                              scne.setSceneContent(SceneString.toString());
                              String [] num=SceneString.toString().split("\n");
                              scne.setSceneSizeInLines(num.length);
+                             
                              ScenesList.add(scne);
                              lines=0;SceneString.setLength(0);
                          }

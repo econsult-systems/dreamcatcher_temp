@@ -52,11 +52,11 @@ public final class ScheduleTopComponent extends TopComponent {
         page.setPageWidth(900);//595
         page.setPageHeight(842);
         jTextPane1.setEditorKit(page);
-         try {
+        /* try {
              CastMembers=Breakdown.getTaggedItems("ACTOR");
         } catch (ProjectSettingsException ex) {
             Exceptions.printStackTrace(ex);
-        }
+        }*/
         createTable();
 
 
@@ -71,7 +71,7 @@ public final class ScheduleTopComponent extends TopComponent {
     }
 
     private void createTable(){
-        MainPanel panel = new MainPanel();
+        ScheduleTable panel = new ScheduleTable();
         StyledDocument doc = jTextPane1.getStyledDocument();
         Style style = doc.addStyle("table", null);
         StyleConstants.setComponent(style, panel.getTableComponent());

@@ -26,6 +26,7 @@ import org.openide.windows.WindowManager;
 import writer.ProjectSettingsException;
 import writer.SceneElement;
 import writer.XMLManager;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * Top component which displays something.
@@ -44,7 +45,7 @@ public final class BreakdownTopComponent extends TopComponent implements LookupL
 
     private DefaultComboBoxModel comboModel;
     private final InstanceContent instanceContent = new InstanceContent();
-    private int count = 0;
+    private int count = 0, currentScene=0;
     private static SceneElement sceneWithName = null;
 
     public BreakdownTopComponent() {
@@ -419,15 +420,22 @@ private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
 private void jComboBox10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox10ActionPerformed
     // TODO add your handling code here:
     //Set the current scene to be the chosen one
+    
     String valueOf = String.valueOf(jComboBox10.getSelectedItem());
-    sceneWithName = Breakdown.getSceneWithName(valueOf);
+    String SceneNumber = StringUtils.substring(valueOf, 0, 1);
+    if(valueOf!="null")
+          sceneWithName= Breakdown.getSceneWithNumber(Integer.parseInt(SceneNumber));
+    
     jTextField5.setText(sceneWithName.getSceneName());
     jTextField4.setText(String.valueOf(sceneWithName.getSceneNumber()));
     jTextField6.setText(String.valueOf(sceneWithName.getSceneSizeInEigths()));
     jTextField7.setText(String.valueOf(sceneWithName.getSceneNumberOfSetups()));
     jTextField8.setText(String.valueOf(sceneWithName.getShootDays()));
-    jTextField1.setText(sceneWithName.getSceneType());
-    jTextField2.setText(sceneWithName.isDay()?"DAY":"NIGHT");
+    jTextField1.setText(sceneWithName.getSceneTime());
+    jTextField2.setText(sceneWithName.getSceneType().toUpperCase());
+    // System.out.println("The output is "+);
+    //jTextField1.setText(sceneWithName.getSceneType());
+    //jTextField2.setText(sceneWithName.isDay()?"DAY":"NIGHT");
     //save the saved details of the previous scene
 
 }//GEN-LAST:event_jComboBox10ActionPerformed
@@ -531,21 +539,32 @@ private void jTextField7FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:ev
         Object d;
         if (!c.isEmpty()) {
             APIObject o = (APIObject) c.iterator().next();
+            
+            if (o.getModelElement().getSize() >= 1) {
+                jComboBox10.setModel(o.getModelElement());
+                //totalScenes1.setText(String.valueOf(o.getNumberOfScenes()));
+                //daySceneNumber1.setText(String.valueOf(Breakdown.getNumberOfInternalScenes()));
+                //intSceneNumber1.setText(String.valueOf(Breakdown.getNumberOfAllDayScenes()));
+
+
+            }
             if (o.getSceneElement() != null) {
                 //Change the values of a scene
                 SceneElement sceneNumber = o.getSceneElement();
+                
                 jTextField4.setText(String.valueOf(sceneNumber.getSceneNumber()));
                 jTextField5.setText(sceneNumber.getSceneName());
                 jTextField6.setText(String.valueOf(sceneNumber.getSceneSizeInEigths()));
                 jTextField7.setText(String.valueOf(sceneNumber.getSceneNumberOfSetups()));
                 jTextField8.setText(String.valueOf(sceneNumber.getShootDays()));
-                jTextField1.setText(sceneNumber.getSceneType());
-//                jTextField2.setText(sceneWithName.isDay()?"DAY":"NIGHT");
-                //jComboBox10.setSelectedIndex(sceneNumber.getSceneNumber()-1);
+                jTextField1.setText(sceneNumber.getSceneTime());
+                jTextField2.setText(sceneNumber.getSceneType().toUpperCase());
+               
 
                 sceneWithName = sceneNumber;
-               // jComboBox10.setSelectedIndex(sceneNumber.getSceneNumber());
-
+                currentScene = sceneNumber.getSceneNumber();
+                jComboBox10.setSelectedIndex(currentScene-1);
+              
             }
             /*if (o.getToBeChanged() == null || o.getToBeChanged().equalsIgnoreCase("STATUS")) {
                 if (o.getToggle() == null || !(o.getToggle().equalsIgnoreCase("enable"))) {
@@ -557,14 +576,7 @@ private void jTextField7FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:ev
                 }
             }*/
 
-            if (o.getModelElement().getSize() >= 1) {
-                jComboBox10.setModel(o.getModelElement());
-                //totalScenes1.setText(String.valueOf(o.getNumberOfScenes()));
-                //daySceneNumber1.setText(String.valueOf(Breakdown.getNumberOfInternalScenes()));
-                //intSceneNumber1.setText(String.valueOf(Breakdown.getNumberOfAllDayScenes()));
-
-
-            }
+            
             if (o.getNumber() > 0) {
                 //Might occur in the event that the list is recreated
                 int modelsize = jList2.getModel().getSize();

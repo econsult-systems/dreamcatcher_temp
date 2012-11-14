@@ -39,7 +39,7 @@ public class APIObject {
         for (int i = 0; i < SceneContent.size(); i++) {
 
             SceneElement item = (SceneElement) SceneContent.get(i);
-            this.Defaultmodel.addElement(item.getSceneName());
+            this.Defaultmodel.addElement((i+1)+" - "+item.getSceneName());
         }
 
     }
