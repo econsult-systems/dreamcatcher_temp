@@ -1071,22 +1071,37 @@ private void visualEffectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN
             int i = jList1.getSelectedIndex();
             i=i-1;
             String Headings="";
+            if (i==-1){
+                
+                
+            for(int x=0; x<SceneContent.size(); x++){
+            SceneElement item = (SceneElement) SceneContent.get(x);
+            String sceneHeading = new Integer(x+1).toString()+". "+ item.getSceneName();
+
+            Headings= Headings+getAllTaggedItemsForScene(i+1, sceneHeading);
+
+            
+        }
+                
+            } else{
+            
             SceneElement item = (SceneElement) SceneContent.get(i);
 
             String sceneHeading = new Integer(i).toString()+". "+ item.getSceneName();
-             ArrayList<TaggedItem> tElements = new ArrayList<TaggedItem>();
-              try {
-            tElements= XMLManager.getInstance().getAllTaggedElements();
-             }
-        catch (Exception ex) {
-        }
+            ArrayList<TaggedItem> tElements = new ArrayList<TaggedItem>();
+            
+            try {
+                tElements= XMLManager.getInstance().getAllTaggedElements();
+            }
+            catch (Exception ex) {
+            }
             String Characters="Character";
             for(int x=0; x<tElements.size(); x++){
-             String scences = tElements.get(x).getScenes();
+            String scences = tElements.get(x).getScenes();
 
-             String [] occ = split(scences);
-            for(int z=0; z<occ.length; z++){
-                int sc = Integer.parseInt(occ[z]);
+            String [] sceneOccurrence = split(scences);
+            for(int z=0; z<sceneOccurrence.length; z++){
+                int sc = Integer.parseInt(sceneOccurrence[z]);
                 if(sc==i+1){
                     Characters=Characters+"\n"+tElements.get(x).getItemName();
                 }
@@ -1099,18 +1114,18 @@ private void visualEffectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN
                  +"\n"
                 +"Location"
                  +"\n"
-                +"pROPS"+"\n";
-
+                +"Props"+"\n";
+            }
 
 
             StyledDocument doc = jTextPane2.getStyledDocument();
-        Style style = doc.addStyle("table", null);
-        //StyleConstants.setComponent(style, getTableComponent());
-
+            Style style = doc.addStyle("table", null);
+            //StyleConstants.setComponent(style, getTableComponent());
+            
         try {
 
             doc.remove(0,  doc.getLength());
-            doc.insertString(doc.getLength(), projectName+"\n\n"+Headings
+            doc.insertString(doc.getLength(),Headings
                    , doc.getStyle("table"));
          }
         catch (BadLocationException ex) {
@@ -1437,33 +1452,15 @@ private void visualEffectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN
             SceneElement item = (SceneElement) SceneContent.get(i);
             populateSceneBreakdown(jTextPane1, item.getSceneName(), Color.LIGHT_GRAY);
             String sceneHeading = new Integer(i+1).toString()+". "+ item.getSceneName();
-            String Characters="Character";
-            for(int x=0; x<tElements.size(); x++){
-             String scences = tElements.get(x).getScenes();
 
-             String [] occ = split(scences);
-            for(int z=0; z<occ.length; z++){
-                int sc = Integer.parseInt(occ[z]);
-                if(sc==i+1){
-                    Characters=Characters+"\n"+tElements.get(x).getItemName();
-                }
-            }
-
-            }
-            Headings= Headings+new Integer(i+1).toString()+" - "+item.getSceneName()
-                +"\n"
-                +Characters
-                 +"\n"
-                +Locations
-                 +"\n"
-                +Props+"\n";
+            Headings= Headings+getAllTaggedItemsForScene(i+1, sceneHeading);
 
             int modelsize = jList1.getModel().getSize();
             listModel.add(modelsize, sceneHeading);
         }
 
 
-          jList3.setModel(catlistModel);
+         jList3.setModel(catlistModel);
          catlistModel.add(0, "ALL");
          for(int i=0; i<tElements.size(); i++){
              String category = tElements.get(i).getItemType();
@@ -1484,12 +1481,44 @@ private void visualEffectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN
         try {
 
             doc.remove(0,  doc.getLength());
-            doc.insertString(doc.getLength(), heading+"\n\n"+Headings
+            doc.insertString(doc.getLength(), Headings
                    , doc.getStyle("table"));
          }
         catch (BadLocationException ex) {
         }
 
+    }
+    
+    private String getAllTaggedItemsForScene(int SceneNumber, String SceneName){
+         String Headings ="";
+         ArrayList<TaggedItem> tElements = new ArrayList<TaggedItem>();
+         try {
+                tElements= XMLManager.getInstance().getAllTaggedElements();
+            }
+            catch (Exception ex) {
+            }
+            String Characters="Character";
+            for(int x=0; x<tElements.size(); x++){
+            String scences = tElements.get(x).getScenes();
+            
+            String [] sceneOccurrence = split(scences);
+            for(int z=0; z<sceneOccurrence.length; z++){
+                int sc = Integer.parseInt(sceneOccurrence[z]);
+                if(sc==SceneNumber+1){
+                    Characters=Characters+"\n"+tElements.get(x).getItemName()+" - "+tElements.get(x).getItemType();
+                }
+            }
+
+            }
+            Headings= Headings+SceneName
+                +"\n"
+                +Characters
+                 +"\n"
+                +"Location"
+                 +"\n"
+                +"Props"+"\n";
+
+            return Headings;
     }
 
     private boolean getModelValues(String string, DefaultListModel model) {
